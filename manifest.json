@@ -1,0 +1,11 @@
+{
+  "name": "diderot-mmalls-ml-wiki",
+  "version": "0.1.0",
+  "generated": "2026-06-18",
+  "counts": {
+    "concepts": 16,
+    "relations": 25,
+    "labs": 6,
+    "pathways": 3
+  }
+}

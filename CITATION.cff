@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: "Diderot — MMALS / ML Interactive Encyclopedia"
+message: "Please cite the repository release used for your article."
+type: software
+authors:
+  - family-names: Harbonnier
+    given-names: Guillaume
+version: 0.1.0
+date-released: 2026-06-18
+license: MIT
+repository-code: "https://github.com/gharbonnier78/mmals-ml-wiki"
+url: "https://gharbonnier78.github.io/mmals-ml-wiki/"

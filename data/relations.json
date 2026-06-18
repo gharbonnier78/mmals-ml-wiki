@@ -1,0 +1,152 @@
+[
+  {
+    "source": "biological-mapping",
+    "target": "host",
+    "label": "distinguishes",
+    "category": "semantics"
+  },
+  {
+    "source": "biological-mapping",
+    "target": "fungal-medium",
+    "label": "distinguishes",
+    "category": "semantics"
+  },
+  {
+    "source": "biological-mapping",
+    "target": "mycorrhiza",
+    "label": "distinguishes",
+    "category": "semantics"
+  },
+  {
+    "source": "host",
+    "target": "fungal-medium",
+    "label": "sends latent signals to",
+    "category": "architecture"
+  },
+  {
+    "source": "fungal-medium",
+    "target": "host",
+    "label": "returns mediated exchange to",
+    "category": "architecture"
+  },
+  {
+    "source": "mycorrhiza",
+    "target": "host",
+    "label": "governs mutual benefit of",
+    "category": "architecture"
+  },
+  {
+    "source": "inferred-context",
+    "target": "route",
+    "label": "conditions",
+    "category": "routing"
+  },
+  {
+    "source": "route",
+    "target": "probability-simplex",
+    "label": "lives on",
+    "category": "geometry"
+  },
+  {
+    "source": "route",
+    "target": "functional-route",
+    "label": "is part of",
+    "category": "memory"
+  },
+  {
+    "source": "functional-route",
+    "target": "functional-memory",
+    "label": "is preserved by",
+    "category": "memory"
+  },
+  {
+    "source": "functional-memory",
+    "target": "stability-plasticity",
+    "label": "controls",
+    "category": "continual-learning"
+  },
+  {
+    "source": "host-specialization",
+    "target": "host",
+    "label": "characterizes",
+    "category": "ecology"
+  },
+  {
+    "source": "host-specialization",
+    "target": "mycorrhiza",
+    "label": "supports ecosystem analysis of",
+    "category": "ecology"
+  },
+  {
+    "source": "cal",
+    "target": "inferred-context",
+    "label": "evaluates",
+    "category": "evaluation"
+  },
+  {
+    "source": "cal",
+    "target": "functional-memory",
+    "label": "audits",
+    "category": "evaluation"
+  },
+  {
+    "source": "cal",
+    "target": "tput",
+    "label": "gates",
+    "category": "control"
+  },
+  {
+    "source": "reconstructive-synthetic-memory",
+    "target": "functional-memory",
+    "label": "decomposes",
+    "category": "memory"
+  },
+  {
+    "source": "tput",
+    "target": "route",
+    "label": "prices and selects",
+    "category": "control"
+  },
+  {
+    "source": "torus",
+    "target": "inferred-context",
+    "label": "may model periodic structure in",
+    "category": "geometry"
+  },
+  {
+    "source": "probability-simplex",
+    "target": "cal",
+    "label": "represents prediction sets and posteriors in",
+    "category": "geometry"
+  },
+  {
+    "source": "mmals",
+    "target": "host",
+    "label": "contains",
+    "category": "architecture"
+  },
+  {
+    "source": "mmals",
+    "target": "fungal-medium",
+    "label": "contains",
+    "category": "architecture"
+  },
+  {
+    "source": "mmals",
+    "target": "inferred-context",
+    "label": "infers",
+    "category": "routing"
+  },
+  {
+    "source": "mmals",
+    "target": "functional-memory",
+    "label": "preserves",
+    "category": "memory"
+  },
+  {
+    "source": "mmals",
+    "target": "cal",
+    "label": "is evaluated by",
+    "category": "evaluation"
+  }
+]

@@ -1,0 +1,82 @@
+{
+  "mmals": {
+    "target": "/concepts/mmals/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "biological-mapping": {
+    "target": "/concepts/biological-mapping/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "host": {
+    "target": "/concepts/host/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "fungal-medium": {
+    "target": "/concepts/fungal-medium/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "mycorrhiza": {
+    "target": "/concepts/mycorrhiza/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "inferred-context": {
+    "target": "/concepts/inferred-context/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "route": {
+    "target": "/concepts/route/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "functional-route": {
+    "target": "/concepts/functional-route/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "functional-memory": {
+    "target": "/concepts/functional-memory/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "reconstructive-synthetic-memory": {
+    "target": "/concepts/reconstructive-synthetic-memory/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "host-specialization": {
+    "target": "/concepts/host-specialization/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "probability-simplex": {
+    "target": "/concepts/probability-simplex/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "torus": {
+    "target": "/concepts/torus/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "stability-plasticity": {
+    "target": "/concepts/stability-plasticity/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "cal": {
+    "target": "/concepts/cal/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  },
+  "tput": {
+    "target": "/concepts/tput/",
+    "status": "active",
+    "reviewed": "2026-06-18"
+  }
+}

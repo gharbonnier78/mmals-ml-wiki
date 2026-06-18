@@ -1,0 +1,10 @@
+{
+  "site_name": "Diderot \u2014 MMALS / ML Interactive Encyclopedia",
+  "short_name": "Diderot MMALS/ML",
+  "repository": "https://github.com/gharbonnier78/mmals-ml-wiki",
+  "pages_url": "https://gharbonnier78.github.io/mmals-ml-wiki/",
+  "default_language": "en",
+  "last_reviewed": "2026-06-18",
+  "content_license": "CC BY 4.0",
+  "code_license": "MIT"
+}

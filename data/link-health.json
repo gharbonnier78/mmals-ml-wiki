@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-06-18T00:00:00Z",
+  "mode": "package-build",
+  "summary": {
+    "internal_checked": 594,
+    "internal_ok": 594,
+    "internal_broken": 0,
+    "external_checked": 0,
+    "external_ok": 0,
+    "external_warning": 0,
+    "external_broken": 0
+  },
+  "notes": "Internal links are validated during package generation. External links are refreshed by the scheduled GitHub Action after publication.",
+  "links": []
+}

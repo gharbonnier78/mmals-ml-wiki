@@ -1,0 +1,44 @@
+[
+  {
+    "concept": "functional-route",
+    "status": "mechanistic-support",
+    "claim": "Route stability does not imply mediated-function stability.",
+    "basis": "Controlled counterexample and route/latent/output drift diagnostics in the v0.7–v0.9 line.",
+    "reviewed": "2026-06-18"
+  },
+  {
+    "concept": "inferred-context",
+    "status": "multi-seed-evidence",
+    "claim": "Context can be inferred and used for guarded routing in the RC1b overlap-chain setting.",
+    "basis": "Validation-selected context posterior and guarded global head across five seeds.",
+    "reviewed": "2026-06-18"
+  },
+  {
+    "concept": "host-specialization",
+    "status": "partial-support",
+    "claim": "A mixed host ecology appears on some MNIST analyses.",
+    "basis": "Dominance, contribution, and ablation signals are positive for only a subset of host-task pairs.",
+    "reviewed": "2026-06-18"
+  },
+  {
+    "concept": "stability-plasticity",
+    "status": "multi-seed-evidence",
+    "claim": "Stronger geometry or memory constraints can improve stability while harming plasticity.",
+    "basis": "Positive and negative ablations across multiple prototype branches.",
+    "reviewed": "2026-06-18"
+  },
+  {
+    "concept": "cal",
+    "status": "specification",
+    "claim": "Coverage must be reported separately from competence and actionability.",
+    "basis": "CAL five-axis decomposition and conformal calibration analyses.",
+    "reviewed": "2026-06-18"
+  },
+  {
+    "concept": "tput",
+    "status": "open-program",
+    "claim": "Goal-, cost-, memory-, and evidence-aware control can unify MMALS decisions.",
+    "basis": "Conceptual design; full implementation and confirmatory evidence pending.",
+    "reviewed": "2026-06-18"
+  }
+]
