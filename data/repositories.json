@@ -346,5 +346,28 @@
     "github_verified": true,
     "verified_at": "2026-06-19",
     "publication_role": "draft specification package"
+  },
+  {
+    "id": "mmals-ecospec",
+    "title": "MMALS EcoSpec 1.0",
+    "category": "core-control-specification",
+    "status": "public",
+    "updated": "2026-06-19",
+    "summary": "Systemic MMALS EcoSpec: axioms, mathematical model, TPUT loop, goal-conditioned routing, dual memory, RC2O/RL bridges, audit traces, toy demo, trace schema, and reference implementation.",
+    "branches": [
+      "ecospec",
+      "tput",
+      "goal-control",
+      "rc2o",
+      "functional-memory",
+      "geometry",
+      "evidence-contract"
+    ],
+    "url": "https://github.com/gharbonnier78/mmals-ecospec",
+    "github_verified": true,
+    "verified_at": "2026-06-19",
+    "publication_role": "public specification and smoke/reference implementation package",
+    "current_version": "1.0",
+    "release_status": "no-github-release"
   }
 ]

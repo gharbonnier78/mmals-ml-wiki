@@ -78,5 +78,10 @@
     "target": "/concepts/tput/",
     "status": "active",
     "reviewed": "2026-06-18"
+  },
+  "ecospec": {
+    "target": "/concepts/ecospec/",
+    "status": "active",
+    "reviewed": "2026-06-19"
   }
 }

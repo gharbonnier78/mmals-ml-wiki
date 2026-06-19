@@ -183,5 +183,23 @@
       "diderot"
     ],
     "notes": "Versioned static site intended for GitHub Pages publication."
+  },
+  {
+    "id": "ecospec-v10",
+    "title": "MMALS EcoSpec 1.0: Minimal Systemic Specification for Goal-Conditioned, Memory-Preserving Adaptive Learning",
+    "type": "arXiv-style specification paper and reference implementation package",
+    "status": "github-public",
+    "github": "mmals-ecospec",
+    "arxiv": "not-submitted",
+    "hal": "not-submitted",
+    "doi": null,
+    "branches": [
+      "ecospec",
+      "tput",
+      "goal-control",
+      "rc2o",
+      "functional-memory"
+    ],
+    "notes": "Public GitHub specification package with paper, engineering contract, trace schema, toy demo, tests, and reference implementation. Scientific status is specification plus smoke/reference implementation, not comparative evidence."
   }
 ]

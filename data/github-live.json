@@ -2,7 +2,7 @@
   "generated_at": "2026-06-19T00:00:00Z",
   "mode": "curated-profile-snapshot-with-manual-verification",
   "owner": "gharbonnier78",
-  "public_repository_count": 21,
+  "public_repository_count": 22,
   "verified_public_repositories": [
     "mmals-cal",
     "mmals-science-magazine",
@@ -24,7 +24,8 @@
     "stratq-ai",
     "airport-travel-border-identity-architecture",
     "docker-react",
-    "mmals-cal-evidence-contract"
+    "mmals-cal-evidence-contract",
+    "mmals-ecospec"
   ],
-  "notes": "Updated to include mmals-cal-evidence-contract as a public draft specification repository; scheduled workflow refreshes live metadata."
+  "notes": "Updated to include mmals-cal-evidence-contract and mmals-ecospec as public repositories; scheduled workflow refreshes live metadata."
 }

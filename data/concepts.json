@@ -341,5 +341,28 @@
       "reconstructive-synthetic-memory",
       "stability-plasticity"
     ]
+  },
+  {
+    "id": "ecospec",
+    "title": "EcoSpec",
+    "kicker": "System specification",
+    "summary": "A minimal MMALS system contract for goal-conditioned, memory-preserving, auditable adaptive learning.",
+    "status": "hypothesis",
+    "status_label": "Public specification v1.0",
+    "updated": "2026-06-19",
+    "formula": "a^*=\\arg\\min_a E(a;x,g,m)+\\lambda_C C(a)+\\lambda_R R(a)",
+    "discover": "EcoSpec is the bridge from many MMALS ideas to a single engineering contract. It says what information must be preserved, what action may be taken, when the system should abstain, and what audit trace must remain after a decision.",
+    "engineer": "EcoSpec packages typed state, context belief, adaptive complexity mode, goal-conditioned energy routing, dual memory, audit traces, RC2O adapters, RL/forward-backward interfaces, and smoke tests. Its role is to make TPUT executable without rewriting every upstream MMALS branch.",
+    "research": "EcoSpec is currently a public specification and smoke/reference implementation. It should not be treated as comparative evidence until traces, adapters, baselines, and evaluation contracts have been run on representative settings.",
+    "evidence": "Public GitHub repository with paper, specification docs, trace schema, toy demo, tests, and reference implementation.",
+    "limits": "The current status is not proof that the full architecture outperforms continual-learning or reinforcement-learning baselines.",
+    "related": [
+      "tput",
+      "cal",
+      "functional-memory",
+      "inferred-context",
+      "route",
+      "reconstructive-synthetic-memory"
+    ]
   }
 ]

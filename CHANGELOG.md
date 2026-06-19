@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.2.2 — 2026-06-19
+
+- Register `mmals-ecospec` as a public MMALS EcoSpec 1.0 repository.
+- Add EcoSpec as an active public specification branch linked to TPUT, goal-adaptive control, RC2O, functional memory, geometry, and the CAL evidence contract line.
+- Add EcoSpec to the publication registry as a GitHub-public specification package with HAL/arXiv/DOI still not submitted/assigned.
+- Add a stable `/go/ecospec` semantic link and a compact EcoSpec concept page.
+- Update repository counts, branch counts, manifest, and GitHub live snapshot.
+
 ## v0.2.1 — 2026-06-19
 
 - Marked `mmals-cal-evidence-contract` as a public draft specification repository instead of a planned repository.

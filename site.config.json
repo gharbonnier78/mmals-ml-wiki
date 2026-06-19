@@ -7,7 +7,7 @@
   "last_reviewed": "2026-06-19",
   "content_license": "CC BY 4.0",
   "code_license": "MIT",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "research_registry": {
     "events": "data/research-events.json",
     "branches": "data/branches.json",

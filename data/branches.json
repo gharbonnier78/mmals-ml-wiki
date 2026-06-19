@@ -14,7 +14,8 @@
       "rc2o",
       "geometry",
       "cal",
-      "tput"
+      "tput",
+      "ecospec"
     ],
     "repos": [
       "mmals",
@@ -95,7 +96,8 @@
     "children": [
       "stable-plastic-memory",
       "goal-control",
-      "cal"
+      "cal",
+      "ecospec"
     ],
     "repos": [
       "mmals-rc2o-splitcifar10-continual-learning",
@@ -235,7 +237,8 @@
       "cal"
     ],
     "children": [
-      "activity-replay"
+      "activity-replay",
+      "ecospec"
     ],
     "repos": [
       "mmals-cal-evidence-contract"
@@ -258,7 +261,8 @@
       "stable-plastic-memory"
     ],
     "children": [
-      "goal-control"
+      "goal-control",
+      "ecospec"
     ],
     "repos": [
       "mmals-tput"
@@ -282,7 +286,9 @@
       "geometry",
       "tput"
     ],
-    "children": [],
+    "children": [
+      "ecospec"
+    ],
     "repos": [
       "mmals-goal-adaptive-control"
     ],
@@ -423,5 +429,29 @@
     "publications": [],
     "claim": "Adjacent projects provide methods, datasets, and governance lessons; they are not MMALS experimental evidence.",
     "next": "Add explicit concept-level cross-links and keep boundaries visible."
+  },
+  {
+    "id": "ecospec",
+    "title": "MMALS EcoSpec 1.0",
+    "family": "control-specification",
+    "started": "2026-06-19",
+    "status": "active",
+    "maturity": "public specification and executable smoke/reference implementation",
+    "summary": "A systemic specification that turns TPUT, goal-conditioned routing, dual memory, RC2O/RL bridges, forward-backward control, audit traces, and adaptive complexity modes into an implementable contract.",
+    "parents": [
+      "tput",
+      "goal-control",
+      "rc2o",
+      "evidence-contract"
+    ],
+    "children": [],
+    "repos": [
+      "mmals-ecospec"
+    ],
+    "publications": [
+      "ecospec-v10"
+    ],
+    "claim": "EcoSpec defines a typed system contract for goal-conditioned routing, memory preservation, action governance, audit traces, and bridges to RC2O/RL/forward-backward control.",
+    "next": "Run the EcoSpec toy demo and smoke tests, validate representative traces, connect RC2O/CAL exporters, and tag the first stable GitHub release."
   }
 ]
