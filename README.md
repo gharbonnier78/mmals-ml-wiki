@@ -2,11 +2,11 @@
 
 A static, dependency-free knowledge site for MMALS and machine learning concepts. It connects canonical definitions, three reading levels, interactive laboratories, evidence status, research pathways, and stable links that can be cited from articles.
 
-[![GitHub Pages](https://img.shields.io/badge/live-GitHub%20Pages-2ea44f)](https://gharbonnier78.github.io/mmals-ml-wiki/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.2.0-blue.svg)](CHANGELOG.md)
+**Current release: v0.2.2** · Reviewed 2026-06-19
 
-## Included in v0.2.0
+Repository: `https://github.com/gharbonnier78/mmals-ml-wiki`
+
+## Included in v0.2.2
 
 - 16 canonical concept pages
 - interactive concept graph
@@ -17,6 +17,8 @@ A static, dependency-free knowledge site for MMALS and machine learning concepts
 - internal and external link-check scripts
 - GitHub Pages deployment and scheduled link-status refresh workflows
 - LaTeX and Markdown article-integration examples
+- MMALS research story, event chronicle, branch map, repository registry, and publication pipeline
+- public CAL evidence-contract registration and EcoSpec 1.0 integration
 
 ## Local preview
 
@@ -53,7 +55,7 @@ The internal checker is blocking in CI. External failures are recorded in the st
 - Source code: MIT
 
 
-## Research chronicle added in v0.2.0
+## Research chronicle introduced in v0.2.0
 
 The site now includes:
 

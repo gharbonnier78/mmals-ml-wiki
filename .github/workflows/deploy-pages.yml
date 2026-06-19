@@ -20,6 +20,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate internal links
         run: python scripts/check_internal_links.py
+      - name: Validate release metadata
+        run: python scripts/check_release_consistency.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

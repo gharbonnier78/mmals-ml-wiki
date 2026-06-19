@@ -9,6 +9,7 @@ Minimal registry update for the public `mmals-ecospec` repository.
 - Adds `ecospec-v10` to the publication registry with GitHub-public status and HAL/arXiv/DOI still not submitted/assigned.
 - Adds a compact concept page and stable `/go/ecospec` article link.
 - Updates branch/repository/publication pages, homepage counts, manifest, and link registry.
+- Normalizes README, citation metadata, research badges, and all rendered page footers to release v0.2.2.
 
 ## Scientific status
 

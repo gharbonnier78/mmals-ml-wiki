@@ -16,6 +16,8 @@ jobs:
         run: python scripts/refresh_github_registry.py
       - name: Validate internal links
         run: python scripts/check_internal_links.py
+      - name: Validate release metadata
+        run: python scripts/check_release_consistency.py
       - name: Commit refreshed registry
         run: |
           git config user.name "github-actions[bot]"

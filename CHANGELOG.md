@@ -7,6 +7,7 @@
 - Add EcoSpec to the publication registry as a GitHub-public specification package with HAL/arXiv/DOI still not submitted/assigned.
 - Add a stable `/go/ecospec` semantic link and a compact EcoSpec concept page.
 - Update repository counts, branch counts, manifest, and GitHub live snapshot.
+- Normalize release metadata across README, CITATION.cff, research badges, and all rendered HTML footers.
 
 ## v0.2.1 — 2026-06-19
 
