@@ -2,6 +2,10 @@
 
 A static, dependency-free knowledge site for MMALS and machine learning concepts. It connects canonical definitions, three reading levels, interactive laboratories, evidence status, research pathways, and stable links that can be cited from articles.
 
+[![GitHub Pages](https://img.shields.io/badge/live-GitHub%20Pages-2ea44f)](https://gharbonnier78.github.io/mmals-ml-wiki/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-0.2.2-blue.svg)](CHANGELOG.md)
+
 **Current release: v0.2.2** · Reviewed 2026-06-19
 
 Repository: `https://github.com/gharbonnier78/mmals-ml-wiki`
