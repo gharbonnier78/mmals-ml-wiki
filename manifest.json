@@ -1,6 +1,6 @@
 {
   "name": "diderot-mmalls-ml-wiki",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "generated": "2026-06-18",
   "counts": {
     "concepts": 16,
@@ -8,5 +8,6 @@
     "labs": 6,
     "pathways": 3
   },
-  "description": "Interactive MMALS/ML encyclopedia with concepts, laboratories, research chronicle, branch map, repository registry, and publication traceability."
+  "description": "Interactive MMALS/ML encyclopedia with concepts, laboratories, research chronicle, branch map, repository registry, and publication traceability.",
+  "last_reviewed": "2026-06-19"
 }

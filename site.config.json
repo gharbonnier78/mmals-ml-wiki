@@ -1,13 +1,13 @@
 {
-  "site_name": "Diderot \u2014 MMALS / ML Interactive Encyclopedia",
+  "site_name": "Diderot — MMALS / ML Interactive Encyclopedia",
   "short_name": "Diderot MMALS/ML",
   "repository": "https://github.com/gharbonnier78/mmals-ml-wiki",
   "pages_url": "https://gharbonnier78.github.io/mmals-ml-wiki/",
   "default_language": "en",
-  "last_reviewed": "2026-06-18",
+  "last_reviewed": "2026-06-19",
   "content_license": "CC BY 4.0",
   "code_license": "MIT",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "research_registry": {
     "events": "data/research-events.json",
     "branches": "data/branches.json",

@@ -336,15 +336,15 @@
     "id": "mmals-cal-evidence-contract",
     "title": "MMALS-CAL Evidence Contract",
     "category": "governance",
-    "status": "planned",
-    "updated": "2026-06-18",
-    "summary": "Versioned evidence schemas, ZIP profiles, adapters, and validators.",
+    "status": "public",
+    "updated": "2026-06-19",
+    "summary": "Versioned CSV/JSONL evidence contract, ZIP delivery profiles, schemas, adapters, and validation tooling for reproducible MMALS-CAL evaluation.",
     "branches": [
       "evidence-contract"
     ],
-    "url": null,
-    "github_verified": false,
-    "verified_at": null,
-    "publication_role": "adjacent project"
+    "url": "https://github.com/gharbonnier78/mmals-cal-evidence-contract",
+    "github_verified": true,
+    "verified_at": "2026-06-19",
+    "publication_role": "draft specification package"
   }
 ]

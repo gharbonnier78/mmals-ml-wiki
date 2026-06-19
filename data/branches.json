@@ -228,8 +228,8 @@
     "title": "CAL evidence contract",
     "family": "governance",
     "started": "2026-06-18",
-    "status": "planned",
-    "maturity": "draft specification",
+    "status": "active",
+    "maturity": "public draft specification",
     "summary": "Versioned CSV/JSONL schemas, ZIP delivery profiles, validators, adapters, and acceptance levels for reproducible CAL evaluation.",
     "parents": [
       "cal"
@@ -242,7 +242,7 @@
     ],
     "publications": [],
     "claim": "Evidence should be portable, machine-validatable, and decoupled from a single notebook.",
-    "next": "Publish the repository and connect notebook exporters."
+    "next": "Connect notebook exporters, run representative ZIP archives through the validator, and tag the first stable contract release."
   },
   {
     "id": "tput",

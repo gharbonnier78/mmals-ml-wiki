@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-18T00:00:00Z",
-  "mode": "curated-profile-snapshot",
+  "generated_at": "2026-06-19T00:00:00Z",
+  "mode": "curated-profile-snapshot-with-manual-verification",
   "owner": "gharbonnier78",
-  "public_repository_count": 20,
+  "public_repository_count": 21,
   "verified_public_repositories": [
     "mmals-cal",
     "mmals-science-magazine",
@@ -23,7 +23,8 @@
     "from-hyperautomation-to-systemic-engineering-capability",
     "stratq-ai",
     "airport-travel-border-identity-architecture",
-    "docker-react"
+    "docker-react",
+    "mmals-cal-evidence-contract"
   ],
-  "notes": "Initial snapshot from the public GitHub profile. The scheduled workflow refreshes live metadata."
+  "notes": "Updated to include mmals-cal-evidence-contract as a public draft specification repository; scheduled workflow refreshes live metadata."
 }

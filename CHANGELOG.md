@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.2.1 — 2026-06-19
+
+- Marked `mmals-cal-evidence-contract` as a public draft specification repository instead of a planned repository.
+- Updated the CAL evidence contract branch status from planned to active while preserving draft-specification maturity.
+- Updated the next research step toward notebook exporters, validator-backed representative ZIP archives, and a first stable contract tag.
+- Added the repository to the curated GitHub live snapshot.
+
 ## v0.2.0 — 2026-06-18
 
 - Added MMALS research story, interactive chronicle, branch map, repository registry, publication pipeline, and provenance governance.
