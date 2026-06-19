@@ -2,7 +2,7 @@
 
 A static, dependency-free knowledge site for MMALS and machine learning concepts. It connects canonical definitions, three reading levels, interactive laboratories, evidence status, research pathways, and stable links that can be cited from articles.
 
-## Included in v0.1.0
+## Included in v0.2.0
 
 - 16 canonical concept pages
 - interactive concept graph
@@ -47,3 +47,18 @@ The internal checker is blocking in CI. External failures are recorded in the st
 
 - Documentation and original explanatory content: CC BY 4.0
 - Source code: MIT
+
+
+## Research chronicle added in v0.2.0
+
+The site now includes:
+
+- a curated MMALS research story;
+- an interactive, filterable event timeline;
+- a branch and dependency map;
+- a repository registry mapped to branches;
+- a publication pipeline with separate GitHub, arXiv, HAL, and DOI fields;
+- provenance governance for conversation-derived research events;
+- a scheduled GitHub metadata refresh.
+
+Raw chats are not published. Conversation material is summarized into reviewed event records and linked to public artifacts when possible.

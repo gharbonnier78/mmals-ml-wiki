@@ -1,0 +1,427 @@
+[
+  {
+    "id": "core-trunk",
+    "title": "MMALS core trunk",
+    "family": "core",
+    "started": "2026-05-06",
+    "status": "active",
+    "maturity": "multi-seed evidence",
+    "summary": "The main architecture line: heterogeneous hosts, an active fungal medium, inferred context, functional route memory, and auditable continual learning.",
+    "parents": [],
+    "children": [
+      "functional-memory",
+      "inferred-context",
+      "rc2o",
+      "geometry",
+      "cal",
+      "tput"
+    ],
+    "repos": [
+      "mmals",
+      "mmals-v1.1-continual-learning-evidence"
+    ],
+    "publications": [
+      "mmals-full-story",
+      "mmals-v11-status"
+    ],
+    "claim": "The validated core remains deliberately narrow: inferred-context routing, route-function memory, and energy/stability-aware auditing.",
+    "next": "Broader datasets, hardened baselines, and cross-seed causal replication."
+  },
+  {
+    "id": "functional-memory",
+    "title": "Functional route memory",
+    "family": "memory",
+    "started": "2026-05-08",
+    "status": "active",
+    "maturity": "mechanistic support",
+    "summary": "The route is not the memory object by itself; memory must preserve the mediated computation produced through the route.",
+    "parents": [
+      "core-trunk"
+    ],
+    "children": [
+      "co-evolution",
+      "activity-replay"
+    ],
+    "repos": [
+      "mmals",
+      "mmals-v1.1-continual-learning-evidence"
+    ],
+    "publications": [
+      "mmals-full-story"
+    ],
+    "claim": "Route stability does not imply latent-function stability.",
+    "next": "Measure when route, latent, output, transform, and replay constraints each add causal value."
+  },
+  {
+    "id": "inferred-context",
+    "title": "Inferred-context MMALS",
+    "family": "routing",
+    "started": "2026-05-25",
+    "status": "active",
+    "maturity": "multi-seed evidence",
+    "summary": "Replace explicit task identity with q(c|x), propagate context uncertainty into routing, prediction, calibration, and action gating.",
+    "parents": [
+      "core-trunk"
+    ],
+    "children": [
+      "rc2o",
+      "stable-plastic-memory",
+      "cal"
+    ],
+    "repos": [
+      "mmals",
+      "mmals-stable-plastic-context-memory",
+      "mmals-cal"
+    ],
+    "publications": [
+      "mmals-full-story",
+      "mmals-cal-paper"
+    ],
+    "claim": "The system should infer the situation before choosing routes.",
+    "next": "Move from controlled overlap-chain contexts to broader class-incremental and task-free settings."
+  },
+  {
+    "id": "rc2o",
+    "title": "RC2O continual-learning evidence",
+    "family": "evidence",
+    "started": "2026-06-01",
+    "status": "active",
+    "maturity": "robust qualification in progress",
+    "summary": "External benchmark bridge and evidence line spanning MNIST-family foundations, SplitCIFAR10, SplitCIFAR100, CORe50, selector regret, and regime audits.",
+    "parents": [
+      "core-trunk",
+      "inferred-context"
+    ],
+    "children": [
+      "stable-plastic-memory",
+      "goal-control",
+      "cal"
+    ],
+    "repos": [
+      "mmals-rc2o-splitcifar10-continual-learning",
+      "mmals-rc2o-prep-selector-regret-regime-audit",
+      "mmals-v1.1-continual-learning-evidence"
+    ],
+    "publications": [
+      "mmals-v11-status"
+    ],
+    "claim": "Retention and auditability must be qualified beyond toy task-ID settings.",
+    "next": "Finish hardened baselines and broaden external datasets."
+  },
+  {
+    "id": "stable-plastic-memory",
+    "title": "Stable–plastic context memory",
+    "family": "memory",
+    "started": "2026-06-12",
+    "status": "active",
+    "maturity": "cross-dataset qualification",
+    "summary": "Dataset-agnostic context-memory fusion, deployed-posterior distillation, rescue ablations, and regression gates for difficult contexts.",
+    "parents": [
+      "inferred-context",
+      "rc2o"
+    ],
+    "children": [
+      "tput"
+    ],
+    "repos": [
+      "mmals-stable-plastic-context-memory"
+    ],
+    "publications": [
+      "stable-plastic-paper"
+    ],
+    "claim": "Context memory must preserve old competence without freezing context adaptation.",
+    "next": "Resolve oldest-context failure modes and validate across seeds and datasets."
+  },
+  {
+    "id": "geometry",
+    "title": "Geometry-MMALS",
+    "family": "geometry",
+    "started": "2026-06-05",
+    "status": "active",
+    "maturity": "partial mechanistic support",
+    "summary": "Context manifolds, route-simplex dynamics, functional transport, curvature, perturbation maps, and causal host-specialization tests.",
+    "parents": [
+      "core-trunk"
+    ],
+    "children": [
+      "tput",
+      "goal-control"
+    ],
+    "repos": [
+      "geometry-mmalls-g1"
+    ],
+    "publications": [
+      "geometry-g1-paper"
+    ],
+    "claim": "Geometry should explain and improve routing and memory only where it survives causal and held-out tests.",
+    "next": "Bridge isolation, common host banks, directional-prototype energy, SPD covariance, and memory transport."
+  },
+  {
+    "id": "co-evolution",
+    "title": "Route–function–transform co-evolution",
+    "family": "dynamics",
+    "started": "2026-05-19",
+    "status": "experimental",
+    "maturity": "negative and mixed smoke evidence",
+    "summary": "Tests whether transformation geometry and local sensitivity drift add explanatory or regularization value beyond route and latent preservation.",
+    "parents": [
+      "functional-memory"
+    ],
+    "children": [
+      "hydro"
+    ],
+    "repos": [
+      "mmals"
+    ],
+    "publications": [
+      "mmals-full-story"
+    ],
+    "claim": "Transformation drift is a plausible mechanism, not yet a default policy.",
+    "next": "Use warm, weak, decomposed regularizers and harder contexts without over-constraining plasticity."
+  },
+  {
+    "id": "hydro",
+    "title": "Hydro-MMALS",
+    "family": "dynamics",
+    "started": "2026-05-20",
+    "status": "diagnostic",
+    "maturity": "mechanistically positive, not statistically decisive",
+    "summary": "Fluid-inspired diagnostics for route drift, latent drift, output drift, adaptive viscosity, Reynolds-like instability, and turbulence-like behavior.",
+    "parents": [
+      "co-evolution"
+    ],
+    "children": [],
+    "repos": [],
+    "publications": [
+      "hydro-note"
+    ],
+    "claim": "A diagnostic mechanism contribution, not a default performance policy.",
+    "next": "Replicate under stronger stress and test whether diagnostics predict failures early."
+  },
+  {
+    "id": "cal",
+    "title": "MMALS-CAL",
+    "family": "evaluation",
+    "started": "2026-06-14",
+    "status": "active",
+    "maturity": "specification and evidence framework",
+    "summary": "Competence, Coverage, Compactness, Context, and ACTION: regime-aware calibration and decision safety for continual learning.",
+    "parents": [
+      "core-trunk",
+      "inferred-context",
+      "rc2o"
+    ],
+    "children": [
+      "evidence-contract"
+    ],
+    "repos": [
+      "mmals-cal"
+    ],
+    "publications": [
+      "mmals-cal-paper"
+    ],
+    "claim": "Calibration can restore coverage but cannot manufacture competence.",
+    "next": "Complete cross-dataset evidence contracts and delayed-label regime verification."
+  },
+  {
+    "id": "evidence-contract",
+    "title": "CAL evidence contract",
+    "family": "governance",
+    "started": "2026-06-18",
+    "status": "planned",
+    "maturity": "draft specification",
+    "summary": "Versioned CSV/JSONL schemas, ZIP delivery profiles, validators, adapters, and acceptance levels for reproducible CAL evaluation.",
+    "parents": [
+      "cal"
+    ],
+    "children": [
+      "activity-replay"
+    ],
+    "repos": [
+      "mmals-cal-evidence-contract"
+    ],
+    "publications": [],
+    "claim": "Evidence should be portable, machine-validatable, and decoupled from a single notebook.",
+    "next": "Publish the repository and connect notebook exporters."
+  },
+  {
+    "id": "tput",
+    "title": "MMALS-TPUT",
+    "family": "control",
+    "started": "2026-06-13",
+    "status": "active",
+    "maturity": "research specification",
+    "summary": "A minimal whole-system control loop unifying geometry, energy-guided routing, dual memory, goal-conditioned control, cost, and evidence.",
+    "parents": [
+      "core-trunk",
+      "geometry",
+      "stable-plastic-memory"
+    ],
+    "children": [
+      "goal-control"
+    ],
+    "repos": [
+      "mmals-tput"
+    ],
+    "publications": [
+      "tput-paper"
+    ],
+    "claim": "An MMALS element is evaluated by its contribution to the whole governed system, not only by isolated performance.",
+    "next": "Implement the narrow reference loop and validate the RC2O-to-control bridge."
+  },
+  {
+    "id": "goal-control",
+    "title": "Goal-adaptive control",
+    "family": "control",
+    "started": "2026-06-11",
+    "status": "active",
+    "maturity": "specification and smoke implementation",
+    "summary": "Geo/RL/forward–backward control that selects routes under accuracy, retention, cost, drift, specialization, and changing objectives.",
+    "parents": [
+      "rc2o",
+      "geometry",
+      "tput"
+    ],
+    "children": [],
+    "repos": [
+      "mmals-goal-adaptive-control"
+    ],
+    "publications": [
+      "goal-control-paper"
+    ],
+    "claim": "Policy quality depends on the current goal and constraints, not a single universal score.",
+    "next": "Qualify against stable baselines and avoid claiming positive backward transfer before evidence."
+  },
+  {
+    "id": "quantum-inspired",
+    "title": "MMALS-QI",
+    "family": "future",
+    "started": "2026-05-14",
+    "status": "hypothesis",
+    "maturity": "internal research note",
+    "summary": "Quantum-inspired density-state geometry for ambiguous functional routes, without claiming quantum hardware or quantum advantage.",
+    "parents": [
+      "functional-memory",
+      "inferred-context"
+    ],
+    "children": [],
+    "repos": [],
+    "publications": [
+      "mmals-qi-note"
+    ],
+    "claim": "Mixed-state functional memory may better represent uncertainty over possible route-functions.",
+    "next": "Defer implementation until inferred-context and comparative evidence are stronger."
+  },
+  {
+    "id": "synthetic-data",
+    "title": "Synthetic-data scaling and collapse",
+    "family": "adjacent-ml",
+    "started": "2026-06-16",
+    "status": "active",
+    "maturity": "research package",
+    "summary": "Experiments and conceptual analysis of recursive synthetic-data scaling, collapse signals, governance, and links to MMALS memory and control.",
+    "parents": [],
+    "children": [
+      "tput",
+      "cal"
+    ],
+    "repos": [
+      "synthetic-data-scaling-mmals"
+    ],
+    "publications": [
+      "synthetic-data-paper"
+    ],
+    "claim": "Synthetic scaling should be governed by evidence of diversity, competence, and collapse risk.",
+    "next": "Connect collapse signals to CAL and TPUT decision policies."
+  },
+  {
+    "id": "activity-replay",
+    "title": "Activity replay and audit UX",
+    "family": "observability",
+    "started": "2026-06-18",
+    "status": "planned",
+    "maturity": "repository design",
+    "summary": "Interactive replay of routing, specialization, drift, regime changes, mutualistic gain, cost signals, and evidence traces.",
+    "parents": [
+      "functional-memory",
+      "evidence-contract"
+    ],
+    "children": [
+      "diderot"
+    ],
+    "repos": [
+      "mmals-activity-replay"
+    ],
+    "publications": [],
+    "claim": "Reconstructive audit memory should be explorable, not only stored.",
+    "next": "Publish the first repository and connect evidence ZIPs."
+  },
+  {
+    "id": "diderot",
+    "title": "Diderot MMALS/ML Wiki",
+    "family": "pedagogy",
+    "started": "2026-06-18",
+    "status": "active",
+    "maturity": "v0.2.0",
+    "summary": "The living semantic, pedagogical, historical, and traceability layer connecting concepts, labs, events, branches, repositories, and publications.",
+    "parents": [
+      "core-trunk",
+      "activity-replay"
+    ],
+    "children": [],
+    "repos": [
+      "mmals-ml-wiki"
+    ],
+    "publications": [
+      "diderot-site"
+    ],
+    "claim": "One canonical meaning, several reading levels, and explicit evidence status.",
+    "next": "Publish to GitHub Pages and keep chronology and registries refreshed."
+  },
+  {
+    "id": "stratq-governance",
+    "title": "STRAT-Q and evidence governance",
+    "family": "adjacent-engineering",
+    "started": "2026-05-16",
+    "status": "active",
+    "maturity": "public research package",
+    "summary": "Evidence-centric observability, traceability, confidence-constrained economics, and quality-intelligence governance adjacent to MMALS.",
+    "parents": [],
+    "children": [
+      "cal",
+      "tput"
+    ],
+    "repos": [
+      "stratq-ai",
+      "confidence-constrained-engineering-economics",
+      "quality-intelligence-systems-governance",
+      "bayesian-economic-quality-governance"
+    ],
+    "publications": [
+      "confidence-economics-paper",
+      "quality-intelligence-paper"
+    ],
+    "claim": "Decision provenance and confidence constraints are part of system quality, not after-the-fact reporting.",
+    "next": "Keep adjacent governance concepts linked without presenting them as MMALS core evidence."
+  },
+  {
+    "id": "related-ml-labs",
+    "title": "Related machine-learning and identity labs",
+    "family": "adjacent-ml",
+    "started": "2026-05-16",
+    "status": "active",
+    "maturity": "public repositories",
+    "summary": "Classical vision, biometric feature extraction, digital identity, synthetic data, Bayesian decision support, and other learning projects that inform but do not validate MMALS.",
+    "parents": [],
+    "children": [],
+    "repos": [
+      "fingerprint-feature-extraction-lab",
+      "lac-digital-identity-opportunity-framework",
+      "airport-travel-border-identity-architecture",
+      "from-hyperautomation-to-systemic-engineering-capability"
+    ],
+    "publications": [],
+    "claim": "Adjacent projects provide methods, datasets, and governance lessons; they are not MMALS experimental evidence.",
+    "next": "Add explicit concept-level cross-links and keep boundaries visible."
+  }
+]

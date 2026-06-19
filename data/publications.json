@@ -1,0 +1,187 @@
+[
+  {
+    "id": "mmals-full-story",
+    "title": "Mycelium-Inspired Mutualistic Adaptive Learning Systems: A Research Chronicle from Bio-Inspired Functional Memory to Auditable Inferred-Context Continual Learning",
+    "type": "arXiv-style article",
+    "status": "internal-draft",
+    "github": null,
+    "arxiv": "not-submitted",
+    "hal": "not-submitted",
+    "doi": null,
+    "branches": [
+      "core-trunk",
+      "functional-memory",
+      "inferred-context"
+    ],
+    "notes": "Long-form PhD-level research chronicle; publication candidate after evidence and baseline hardening."
+  },
+  {
+    "id": "mmals-v11-status",
+    "title": "MMALS v1.1 Continual-Learning Evidence Status",
+    "type": "research status paper and reproducibility package",
+    "status": "github-public",
+    "github": "mmals-v1.1-continual-learning-evidence",
+    "arxiv": "not-submitted",
+    "hal": "not-submitted",
+    "doi": null,
+    "branches": [
+      "core-trunk",
+      "rc2o"
+    ],
+    "notes": "Public GitHub package; external preprint identifier not yet assigned."
+  },
+  {
+    "id": "geometry-g1-paper",
+    "title": "Geometry-MMALS G1: Grounded Functional Geometry for Continual Learning",
+    "type": "article, specification, and notebook package",
+    "status": "github-public",
+    "github": "geometry-mmalls-g1",
+    "arxiv": "not-submitted",
+    "hal": "not-submitted",
+    "doi": null,
+    "branches": [
+      "geometry"
+    ],
+    "notes": "Public GitHub research package with staged causal program."
+  },
+  {
+    "id": "stable-plastic-paper",
+    "title": "Stable–Plastic Context Memory for MMALS",
+    "type": "article and evidence package",
+    "status": "github-public",
+    "github": "mmals-stable-plastic-context-memory",
+    "arxiv": "not-submitted",
+    "hal": "not-submitted",
+    "doi": null,
+    "branches": [
+      "stable-plastic-memory"
+    ],
+    "notes": "Public GitHub branch; preprint submission remains pending."
+  },
+  {
+    "id": "tput-paper",
+    "title": "MMALS-TPUT: A Minimal Whole-System Model for Geometry, Memory, Energy, and Goal-Adaptive Control",
+    "type": "arXiv-style specification",
+    "status": "github-public",
+    "github": "mmals-tput",
+    "arxiv": "not-submitted",
+    "hal": "not-submitted",
+    "doi": null,
+    "branches": [
+      "tput"
+    ],
+    "notes": "Public specification and reference implementation."
+  },
+  {
+    "id": "goal-control-paper",
+    "title": "Goal-Adaptive Geo/RL/Forward–Backward Control for MMALS",
+    "type": "research specification",
+    "status": "github-public",
+    "github": "mmals-goal-adaptive-control",
+    "arxiv": "not-submitted",
+    "hal": "not-submitted",
+    "doi": null,
+    "branches": [
+      "goal-control"
+    ],
+    "notes": "Public package; positive backward-transfer claim intentionally withheld."
+  },
+  {
+    "id": "mmals-cal-paper",
+    "title": "MMALS-CAL: Competence, Coverage, Compactness, Context, and ACTION",
+    "type": "arXiv-style article and evidence framework",
+    "status": "github-public",
+    "github": "mmals-cal",
+    "arxiv": "not-submitted",
+    "hal": "not-submitted",
+    "doi": null,
+    "branches": [
+      "cal"
+    ],
+    "notes": "Public framework; live external preprint identifiers remain empty until submission."
+  },
+  {
+    "id": "mmals-qi-note",
+    "title": "MMALS-QI: Functional Memory as Mixed-State Route Dynamics",
+    "type": "internal research note",
+    "status": "internal-draft",
+    "github": null,
+    "arxiv": "not-submitted",
+    "hal": "not-submitted",
+    "doi": null,
+    "branches": [
+      "quantum-inspired"
+    ],
+    "notes": "Hypothesis-preservation note, not a quantum-advantage claim."
+  },
+  {
+    "id": "hydro-note",
+    "title": "Hydro-MMALS: Fluid-Inspired Diagnostics for Route–Function Stability",
+    "type": "mechanism note",
+    "status": "internal-draft",
+    "github": null,
+    "arxiv": "not-submitted",
+    "hal": "not-submitted",
+    "doi": null,
+    "branches": [
+      "hydro"
+    ],
+    "notes": "Mechanistically positive diagnostic contribution; not promoted as default policy."
+  },
+  {
+    "id": "synthetic-data-paper",
+    "title": "Synthetic-Data Scaling, Collapse, and Governed MMALS Extensions",
+    "type": "article and reproducible package",
+    "status": "github-public",
+    "github": "synthetic-data-scaling-mmals",
+    "arxiv": "not-submitted",
+    "hal": "not-submitted",
+    "doi": null,
+    "branches": [
+      "synthetic-data"
+    ],
+    "notes": "Adjacent ML branch linked to MMALS, STRAT-Q, and probabilistic governance."
+  },
+  {
+    "id": "confidence-economics-paper",
+    "title": "Confidence-Constrained Engineering Economics",
+    "type": "arXiv-style article",
+    "status": "github-public",
+    "github": "confidence-constrained-engineering-economics",
+    "arxiv": "not-submitted",
+    "hal": "not-submitted",
+    "doi": null,
+    "branches": [
+      "stratq-governance"
+    ],
+    "notes": "Adjacent governance contribution."
+  },
+  {
+    "id": "quality-intelligence-paper",
+    "title": "Quality Intelligence Systems Governance",
+    "type": "whitepaper",
+    "status": "github-public",
+    "github": "quality-intelligence-systems-governance",
+    "arxiv": "not-submitted",
+    "hal": "not-submitted",
+    "doi": null,
+    "branches": [
+      "stratq-governance"
+    ],
+    "notes": "Adjacent systems-governance contribution."
+  },
+  {
+    "id": "diderot-site",
+    "title": "Diderot — The Interactive MMALS & Machine Learning Encyclopedia",
+    "type": "living web publication",
+    "status": "local-release",
+    "github": "mmals-ml-wiki",
+    "arxiv": "not-applicable",
+    "hal": "not-applicable",
+    "doi": null,
+    "branches": [
+      "diderot"
+    ],
+    "notes": "Versioned static site intended for GitHub Pages publication."
+  }
+]

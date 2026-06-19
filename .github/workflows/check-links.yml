@@ -1,0 +1,11 @@
+name: Check links
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  internal-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/check_internal_links.py

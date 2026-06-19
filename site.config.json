@@ -6,5 +6,12 @@
   "default_language": "en",
   "last_reviewed": "2026-06-18",
   "content_license": "CC BY 4.0",
-  "code_license": "MIT"
+  "code_license": "MIT",
+  "version": "0.2.0",
+  "research_registry": {
+    "events": "data/research-events.json",
+    "branches": "data/branches.json",
+    "repositories": "data/repositories.json",
+    "publications": "data/publications.json"
+  }
 }

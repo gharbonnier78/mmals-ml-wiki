@@ -1,0 +1,350 @@
+[
+  {
+    "id": "mmals-cal",
+    "title": "MMALS-CAL",
+    "category": "core-evaluation",
+    "status": "public",
+    "updated": "2026-06-17",
+    "summary": "Reproducible evidence-verification framework for context-aware continual learning.",
+    "branches": [
+      "cal",
+      "inferred-context"
+    ],
+    "url": "https://github.com/gharbonnier78/mmals-cal",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "research package"
+  },
+  {
+    "id": "mmals-science-magazine",
+    "title": "MMALS Science Magazine",
+    "category": "pedagogy",
+    "status": "public",
+    "updated": "2026-06-16",
+    "summary": "Illustrated narrative of the MMALS research program.",
+    "branches": [
+      "diderot",
+      "core-trunk"
+    ],
+    "url": "https://github.com/gharbonnier78/mmals-science-magazine",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "knowledge layer"
+  },
+  {
+    "id": "bayesian-economic-quality-governance",
+    "title": "Bayesian Economic Quality Governance",
+    "category": "adjacent-governance",
+    "status": "public",
+    "updated": "2026-06-16",
+    "summary": "Bayesian risk-and-margin release governance under uncertainty.",
+    "branches": [
+      "stratq-governance"
+    ],
+    "url": "https://github.com/gharbonnier78/bayesian-economic-quality-governance",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "adjacent project"
+  },
+  {
+    "id": "quality-intelligence-systems-governance",
+    "title": "Quality Intelligence Systems Governance",
+    "category": "adjacent-governance",
+    "status": "public",
+    "updated": "2026-06-16",
+    "summary": "Auditable quality-intelligence architecture linking evidence, risk, economics, and obligations.",
+    "branches": [
+      "stratq-governance"
+    ],
+    "url": "https://github.com/gharbonnier78/quality-intelligence-systems-governance",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "adjacent project"
+  },
+  {
+    "id": "lac-digital-identity-opportunity-framework",
+    "title": "LAC Digital Identity Opportunity Framework",
+    "category": "adjacent-identity",
+    "status": "public",
+    "updated": "2026-06-16",
+    "summary": "Digital-identity maturity and opportunity mapping across Latin America and the Caribbean.",
+    "branches": [
+      "related-ml-labs"
+    ],
+    "url": "https://github.com/gharbonnier78/lac-digital-identity-opportunity-framework",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "adjacent project"
+  },
+  {
+    "id": "fingerprint-feature-extraction-lab",
+    "title": "Fingerprint Feature Extraction Lab",
+    "category": "adjacent-ml",
+    "status": "public",
+    "updated": "2026-06-16",
+    "summary": "Classical computer-vision pipeline for fingerprint structure and experimental core/delta detection.",
+    "branches": [
+      "related-ml-labs"
+    ],
+    "url": "https://github.com/gharbonnier78/fingerprint-feature-extraction-lab",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "adjacent project"
+  },
+  {
+    "id": "synthetic-data-scaling-mmals",
+    "title": "Synthetic Data Scaling for MMALS",
+    "category": "adjacent-ml",
+    "status": "public",
+    "updated": "2026-06-16",
+    "summary": "Synthetic-data scaling, collapse, and MMALS governance research.",
+    "branches": [
+      "synthetic-data"
+    ],
+    "url": "https://github.com/gharbonnier78/synthetic-data-scaling-mmals",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "adjacent project"
+  },
+  {
+    "id": "geometry-mmalls-g1",
+    "title": "Geometry-MMALS G1",
+    "category": "core-geometry",
+    "status": "public",
+    "updated": "2026-06-16",
+    "summary": "Grounded functional geometry for context, routes, specialization, and memory transport.",
+    "branches": [
+      "geometry"
+    ],
+    "url": "https://github.com/gharbonnier78/geometry-mmalls-g1",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "research package"
+  },
+  {
+    "id": "mmals-stable-plastic-context-memory",
+    "title": "Stable–Plastic Context Memory",
+    "category": "core-memory",
+    "status": "public",
+    "updated": "2026-06-13",
+    "summary": "Dataset-agnostic context-memory fusion, distillation, and regression gates.",
+    "branches": [
+      "stable-plastic-memory"
+    ],
+    "url": "https://github.com/gharbonnier78/mmals-stable-plastic-context-memory",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "research package"
+  },
+  {
+    "id": "mmals-tput",
+    "title": "MMALS-TPUT",
+    "category": "core-control",
+    "status": "public",
+    "updated": "2026-06-13",
+    "summary": "Reference model for geometry, energy-guided routing, dual memory, and control.",
+    "branches": [
+      "tput"
+    ],
+    "url": "https://github.com/gharbonnier78/mmals-tput",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "research package"
+  },
+  {
+    "id": "mmals-v1.1-continual-learning-evidence",
+    "title": "MMALS v1.1 Continual-Learning Evidence",
+    "category": "core-evidence",
+    "status": "public",
+    "updated": "2026-06-12",
+    "summary": "Consolidated benchmark status and external qualification evidence.",
+    "branches": [
+      "core-trunk",
+      "rc2o"
+    ],
+    "url": "https://github.com/gharbonnier78/mmals-v1.1-continual-learning-evidence",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "research package"
+  },
+  {
+    "id": "mmals-goal-adaptive-control",
+    "title": "MMALS Goal-Adaptive Control",
+    "category": "core-control",
+    "status": "public",
+    "updated": "2026-06-11",
+    "summary": "Objective-conditioned Geo/RL/forward–backward control layer.",
+    "branches": [
+      "goal-control"
+    ],
+    "url": "https://github.com/gharbonnier78/mmals-goal-adaptive-control",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "research package"
+  },
+  {
+    "id": "mmals-rc2o-splitcifar10-continual-learning",
+    "title": "MMALS RC2O SplitCIFAR10",
+    "category": "core-evidence",
+    "status": "public",
+    "updated": "2026-06-11",
+    "summary": "External continual-learning bridge on SplitCIFAR10.",
+    "branches": [
+      "rc2o"
+    ],
+    "url": "https://github.com/gharbonnier78/mmals-rc2o-splitcifar10-continual-learning",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "research package"
+  },
+  {
+    "id": "mmals-rc2o-prep-selector-regret-regime-audit",
+    "title": "RC2O Selector Regret and Regime Audit",
+    "category": "core-evidence",
+    "status": "public",
+    "updated": "2026-06-06",
+    "summary": "Selector regret, feature-only regimes, and certified deployment audit.",
+    "branches": [
+      "rc2o"
+    ],
+    "url": "https://github.com/gharbonnier78/mmals-rc2o-prep-selector-regret-regime-audit",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "research package"
+  },
+  {
+    "id": "confidence-constrained-engineering-economics",
+    "title": "Confidence-Constrained Engineering Economics",
+    "category": "adjacent-governance",
+    "status": "public",
+    "updated": "2026-05-29",
+    "summary": "Architecture and deployment decisions under confidence and economic constraints.",
+    "branches": [
+      "stratq-governance"
+    ],
+    "url": "https://github.com/gharbonnier78/confidence-constrained-engineering-economics",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "adjacent project"
+  },
+  {
+    "id": "mmals",
+    "title": "MMALS",
+    "category": "core",
+    "status": "public",
+    "updated": "2026-05-27",
+    "summary": "Primary research prototype for inferred context, functional memory, and comparative evaluation.",
+    "branches": [
+      "core-trunk",
+      "functional-memory",
+      "inferred-context"
+    ],
+    "url": "https://github.com/gharbonnier78/mmals",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "research package"
+  },
+  {
+    "id": "from-hyperautomation-to-systemic-engineering-capability",
+    "title": "From Hyperautomation to Systemic Engineering Capability",
+    "category": "adjacent-systems",
+    "status": "public",
+    "updated": "2026-05-23",
+    "summary": "Systems-engineering reflection on AI, organizational learning, and capability.",
+    "branches": [
+      "related-ml-labs"
+    ],
+    "url": "https://github.com/gharbonnier78/from-hyperautomation-to-systemic-engineering-capability",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "adjacent project"
+  },
+  {
+    "id": "stratq-ai",
+    "title": "STRAT-Q AI",
+    "category": "adjacent-governance",
+    "status": "public",
+    "updated": "2026-05-16",
+    "summary": "Evidence-centric and observability-driven AI-assisted testing framework.",
+    "branches": [
+      "stratq-governance"
+    ],
+    "url": "https://github.com/gharbonnier78/stratq-ai",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "adjacent project"
+  },
+  {
+    "id": "airport-travel-border-identity-architecture",
+    "title": "Airport Travel and Border Identity Architecture",
+    "category": "adjacent-identity",
+    "status": "public",
+    "updated": "2026-05-16",
+    "summary": "Architecture analysis of airport, airline, border, and identity ecosystems.",
+    "branches": [
+      "related-ml-labs"
+    ],
+    "url": "https://github.com/gharbonnier78/airport-travel-border-identity-architecture",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "adjacent project"
+  },
+  {
+    "id": "docker-react",
+    "title": "docker-react",
+    "category": "legacy-utility",
+    "status": "public",
+    "updated": "2026-02-13",
+    "summary": "Legacy JavaScript utility repository; not currently mapped to MMALS research.",
+    "branches": [],
+    "url": "https://github.com/gharbonnier78/docker-react",
+    "github_verified": true,
+    "verified_at": "2026-06-18",
+    "publication_role": "adjacent project"
+  },
+  {
+    "id": "mmals-ml-wiki",
+    "title": "Diderot MMALS/ML Wiki",
+    "category": "pedagogy",
+    "status": "local-release",
+    "updated": "2026-06-18",
+    "summary": "Interactive encyclopedia and research chronicle.",
+    "branches": [
+      "diderot"
+    ],
+    "url": null,
+    "github_verified": false,
+    "verified_at": null,
+    "publication_role": "knowledge layer"
+  },
+  {
+    "id": "mmals-activity-replay",
+    "title": "MMALS Activity Replay",
+    "category": "observability",
+    "status": "planned",
+    "updated": "2026-06-18",
+    "summary": "Interactive replay and scientific-audit tool for routes, specialization, drift, regimes, gain, and cost.",
+    "branches": [
+      "activity-replay"
+    ],
+    "url": null,
+    "github_verified": false,
+    "verified_at": null,
+    "publication_role": "adjacent project"
+  },
+  {
+    "id": "mmals-cal-evidence-contract",
+    "title": "MMALS-CAL Evidence Contract",
+    "category": "governance",
+    "status": "planned",
+    "updated": "2026-06-18",
+    "summary": "Versioned evidence schemas, ZIP profiles, adapters, and validators.",
+    "branches": [
+      "evidence-contract"
+    ],
+    "url": null,
+    "github_verified": false,
+    "verified_at": null,
+    "publication_role": "adjacent project"
+  }
+]
