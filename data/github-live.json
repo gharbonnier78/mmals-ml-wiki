@@ -1,31 +1,237 @@
 {
-  "generated_at": "2026-06-19T00:00:00Z",
-  "mode": "curated-profile-snapshot-with-manual-verification",
+  "generated_at": "2026-06-22T12:37:33.259851+00:00",
+  "mode": "github-api-refresh",
   "owner": "gharbonnier78",
-  "public_repository_count": 22,
-  "verified_public_repositories": [
-    "mmals-cal",
-    "mmals-science-magazine",
-    "bayesian-economic-quality-governance",
-    "quality-intelligence-systems-governance",
-    "lac-digital-identity-opportunity-framework",
-    "fingerprint-feature-extraction-lab",
-    "synthetic-data-scaling-mmals",
-    "geometry-mmalls-g1",
-    "mmals-stable-plastic-context-memory",
-    "mmals-tput",
-    "mmals-v1.1-continual-learning-evidence",
-    "mmals-goal-adaptive-control",
-    "mmals-rc2o-splitcifar10-continual-learning",
-    "mmals-rc2o-prep-selector-regret-regime-audit",
-    "confidence-constrained-engineering-economics",
-    "mmals",
-    "from-hyperautomation-to-systemic-engineering-capability",
-    "stratq-ai",
-    "airport-travel-border-identity-architecture",
-    "docker-react",
-    "mmals-cal-evidence-contract",
-    "mmals-ecospec"
+  "public_repository_count": 25,
+  "missing_from_live": [],
+  "unmapped_live": [
+    "mmals-symplectic-dynamics"
   ],
-  "notes": "Updated to include mmals-cal-evidence-contract and mmals-ecospec as public repositories; scheduled workflow refreshes live metadata."
+  "repositories": [
+    {
+      "name": "mmals-ml-wiki",
+      "html_url": "https://github.com/gharbonnier78/mmals-ml-wiki",
+      "description": "Interactive MMALS and machine-learning encyclopedia connecting concepts, geometry, experiments, evidence status, and stable article links.",
+      "language": "HTML",
+      "updated_at": "2026-06-22T12:28:47Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-symplectic-dynamics",
+      "html_url": "https://github.com/gharbonnier78/mmals-symplectic-dynamics",
+      "description": "A rigorous MMALS foundation for symplectic transport, port-Hamiltonian dissipation, Fisher--Rao learning, goal-conditioned control, and auditable adaptive memory.",
+      "language": "TeX",
+      "updated_at": "2026-06-21T15:04:22Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-activity-replay",
+      "html_url": "https://github.com/gharbonnier78/mmals-activity-replay",
+      "description": "Interactive replay and scientific-audit tool for MMALS routing, specialization, drift, regime changes, mutualistic gain, and cost signals.",
+      "language": "HTML",
+      "updated_at": "2026-06-19T15:56:08Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-ecospec",
+      "html_url": "https://github.com/gharbonnier78/mmals-ecospec",
+      "description": "Systemic MMALS EcoSpec: axioms, mathematical model, TPUT loop, goal-conditioned routing, dual memory, RC2O/RL bridges, audit traces, and reference implementation.",
+      "language": "TeX",
+      "updated_at": "2026-06-19T02:15:59Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-cal",
+      "html_url": "https://github.com/gharbonnier78/mmals-cal",
+      "description": "Reproducible evidence-verification framework for context-aware continual learning, combining regime-aware conformal calibration, no-leakage replay, uncertainty-set compactness, and ACTION/NO-DECISION auditing across seven MMALS benchmarks.",
+      "language": "TeX",
+      "updated_at": "2026-06-18T15:18:59Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-cal-evidence-contract",
+      "html_url": "https://github.com/gharbonnier78/mmals-cal-evidence-contract",
+      "description": "Versioned CSV/JSONL evidence contract, ZIP delivery profiles, schemas, adapters, and validation tooling for reproducible offline and regime-aware MMALS-CAL evaluation.",
+      "language": "Python",
+      "updated_at": "2026-06-18T15:14:48Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-science-magazine",
+      "html_url": "https://github.com/gharbonnier78/mmals-science-magazine",
+      "description": "An illustrated science magazine tracing MMALS from tree hosts and fungal mediation to functional memory, RC2O, Geometry-MMALS, TPUT, and governed adaptive control.",
+      "language": "TeX",
+      "updated_at": "2026-06-16T17:11:23Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "bayesian-economic-quality-governance",
+      "html_url": "https://github.com/gharbonnier78/bayesian-economic-quality-governance",
+      "description": "A PyMC-ready research package for joint risk-and-margin release governance, safe-zone detection, and evidence-driven system transformation under uncertainty.",
+      "language": "Jupyter Notebook",
+      "updated_at": "2026-06-16T16:41:28Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "quality-intelligence-systems-governance",
+      "html_url": "https://github.com/gharbonnier78/quality-intelligence-systems-governance",
+      "description": "A systems-engineering whitepaper defining Quality Intelligence as an auditable architecture connecting hypotheses, evidence, Bayesian confidence, risk, economics, legal obligations, and executive decisions.",
+      "language": "TeX",
+      "updated_at": "2026-06-16T16:36:25Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "lac-digital-identity-opportunity-framework",
+      "html_url": "https://github.com/gharbonnier78/lac-digital-identity-opportunity-framework",
+      "description": "ArXiv-style paper and reproducible dataset mapping digital identity maturity, citizen-service gaps, idLAC interoperability, and full-stack opportunities across 33 LAC countries.",
+      "language": "TeX",
+      "updated_at": "2026-06-16T14:41:18Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "fingerprint-feature-extraction-lab",
+      "html_url": "https://github.com/gharbonnier78/fingerprint-feature-extraction-lab",
+      "description": "Classical computer-vision pipeline for fingerprint skeletonization, minutiae and branch extraction, and experimental core/delta detection, with a reconstructed notebook, technical report, tests, and reproducible results.",
+      "language": "Jupyter Notebook",
+      "updated_at": "2026-06-16T14:10:46Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "synthetic-data-scaling-mmals",
+      "html_url": "https://github.com/gharbonnier78/synthetic-data-scaling-mmals",
+      "description": "Multilevel analysis of synthetic-data scaling and model collapse, inspired by Julia Kempe’s lecture, with reproducible experiments and research directions for MMALS, STRAT-Q, probabilistic MTP, and Test Data Governance.",
+      "language": "TeX",
+      "updated_at": "2026-06-16T04:25:14Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "geometry-mmalls-g1",
+      "html_url": "https://github.com/gharbonnier78/geometry-mmalls-g1",
+      "description": "Grounded functional geometry for MMALS continual learning: context manifolds, route-simplex dynamics, causal host specialization, and functional memory transport.",
+      "language": "Jupyter Notebook",
+      "updated_at": "2026-06-16T04:14:48Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-stable-plastic-context-memory",
+      "html_url": "https://github.com/gharbonnier78/mmals-stable-plastic-context-memory",
+      "description": "Dataset-agnostic and backward-compatible stable-plastic context memory for MMALS, with legacy reproduction, adaptive fusion, deployed-posterior distillation, cross-dataset regression gates, and reviewer-facing ablations.",
+      "language": "Jupyter Notebook",
+      "updated_at": "2026-06-13T22:15:23Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-tput",
+      "html_url": "https://github.com/gharbonnier78/mmals-tput",
+      "description": "Research specification and reference implementation of MMALS-TPUT, unifying latent geometry, energy-guided routing, dual memory, goal-conditioned control, RC2O-to-RL extensions, and Geometry-G1 validation.",
+      "language": "Python",
+      "updated_at": "2026-06-13T21:23:04Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-v1.1-continual-learning-evidence",
+      "html_url": "https://github.com/gharbonnier78/mmals-v1.1-continual-learning-evidence",
+      "description": "Full MMALS v1.1 research status, consolidating MNIST-family foundations, SplitCIFAR10 robust qualification, SplitCIFAR100 and CORe50 diagnostics, and the CORe50 v2.3 rescue ablation.",
+      "language": "Jupyter Notebook",
+      "updated_at": "2026-06-12T18:30:03Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-goal-adaptive-control",
+      "html_url": "https://github.com/gharbonnier78/mmals-goal-adaptive-control",
+      "description": "Goal-adaptive Geo/RL/Forward-Backward control layer for MMALS, extending RC2O routing with objective-conditioned route selection under accuracy, retention, cost, drift, and specialization trade-offs.",
+      "language": "Python",
+      "updated_at": "2026-06-11T19:42:49Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-rc2o-splitcifar10-continual-learning",
+      "html_url": "https://github.com/gharbonnier78/mmals-rc2o-splitcifar10-continual-learning",
+      "description": "External continual-learning bridge experiments for MMALS/RC2O, starting with robust SplitCIFAR10 evidence over frozen A1 visual features and audited policy selection.",
+      "language": "Jupyter Notebook",
+      "updated_at": "2026-06-11T17:15:46Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-rc2o-prep-selector-regret-regime-audit",
+      "html_url": "https://github.com/gharbonnier78/mmals-rc2o-prep-selector-regret-regime-audit",
+      "description": "MMALS RC2O-prep audit: selector regret, feature-only regime estimation, and regime-certified safe deployment for auditable continual learning.",
+      "language": "Python",
+      "updated_at": "2026-06-06T15:51:27Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "confidence-constrained-engineering-economics",
+      "html_url": "https://github.com/gharbonnier78/confidence-constrained-engineering-economics",
+      "description": "A Bayesian engineering economics framework for deciding architecture, deployment, security, sovereignty, staging, and AI inference trade-offs under confidence constraints.  Alternative shorter description:",
+      "language": "TeX",
+      "updated_at": "2026-05-29T16:02:58Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals",
+      "html_url": "https://github.com/gharbonnier78/mmals",
+      "description": "Mycelium-inspired continual learning research prototype for auditable inferred-context routing, functional memory, no-leakage policy selection, and comparative benchmark evaluation across MNIST-family tasks.",
+      "language": "Jupyter Notebook",
+      "updated_at": "2026-05-27T13:58:45Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "from-hyperautomation-to-systemic-engineering-capability",
+      "html_url": "https://github.com/gharbonnier78/from-hyperautomation-to-systemic-engineering-capability",
+      "description": "Reflective systems-engineering memo on hyperautomation, AI, sociotechnical systems, organizational learning, systemic capability, and the future of work.",
+      "language": "TeX",
+      "updated_at": "2026-05-23T01:46:11Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "stratq-ai",
+      "html_url": "https://github.com/gharbonnier78/stratq-ai",
+      "description": "Evidence-centric, observability-driven AI-assisted testing framework for complex identity, biometric, and mission-critical systems.",
+      "language": "TeX",
+      "updated_at": "2026-05-16T16:07:14Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "airport-travel-border-identity-architecture",
+      "html_url": "https://github.com/gharbonnier78/airport-travel-border-identity-architecture",
+      "description": "Strategic and technical architecture analysis of the airport, airline, border-control and digital identity ecosystem, covering passenger experience, airport operations, airline readiness, biometric trust, API/PNR risk assessment, and sovereign/hybrid deployment models.",
+      "language": null,
+      "updated_at": "2026-05-16T14:28:43Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "docker-react",
+      "html_url": "https://github.com/gharbonnier78/docker-react",
+      "description": null,
+      "language": "JavaScript",
+      "updated_at": "2020-03-23T16:04:05Z",
+      "archived": false,
+      "visibility": "public"
+    }
+  ]
 }
