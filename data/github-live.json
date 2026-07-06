@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-06-29T11:34:10.361144+00:00",
+  "generated_at": "2026-07-06T11:15:23.929254+00:00",
   "mode": "github-api-refresh",
   "owner": "gharbonnier78",
-  "public_repository_count": 25,
+  "public_repository_count": 26,
   "missing_from_live": [],
   "unmapped_live": [
+    "mmals-research-observatory",
     "mmals-symplectic-dynamics"
   ],
   "repositories": [
@@ -13,7 +14,16 @@
       "html_url": "https://github.com/gharbonnier78/mmals-ml-wiki",
       "description": "Interactive MMALS and machine-learning encyclopedia connecting concepts, geometry, experiments, evidence status, and stable article links.",
       "language": "HTML",
-      "updated_at": "2026-06-29T11:26:00Z",
+      "updated_at": "2026-07-06T11:07:21Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-research-observatory",
+      "html_url": "https://github.com/gharbonnier78/mmals-research-observatory",
+      "description": "Versioned MMALS research observatory for scientific watch, claim review, experiment planning, evidence tracking, and Diderot publication.",
+      "language": "Python",
+      "updated_at": "2026-07-01T16:08:50Z",
       "archived": false,
       "visibility": "public"
     },
