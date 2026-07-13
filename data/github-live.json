@@ -1,12 +1,13 @@
 {
-  "generated_at": "2026-07-06T11:15:23.929254+00:00",
+  "generated_at": "2026-07-13T09:56:34.096430+00:00",
   "mode": "github-api-refresh",
   "owner": "gharbonnier78",
-  "public_repository_count": 26,
+  "public_repository_count": 27,
   "missing_from_live": [],
   "unmapped_live": [
     "mmals-research-observatory",
-    "mmals-symplectic-dynamics"
+    "mmals-symplectic-dynamics",
+    "national-identity-fraud-risk-engine-gnn"
   ],
   "repositories": [
     {
@@ -14,7 +15,16 @@
       "html_url": "https://github.com/gharbonnier78/mmals-ml-wiki",
       "description": "Interactive MMALS and machine-learning encyclopedia connecting concepts, geometry, experiments, evidence status, and stable article links.",
       "language": "HTML",
-      "updated_at": "2026-07-06T11:07:21Z",
+      "updated_at": "2026-07-13T09:49:49Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "national-identity-fraud-risk-engine-gnn",
+      "html_url": "https://github.com/gharbonnier78/national-identity-fraud-risk-engine-gnn",
+      "description": "Synthetic identity-fraud research prototype evolving from manual neural networks to Graph ML, with reproducible benchmarks, PyTorch Geometric models, reviewer notebook, preprint, and technical carousel.",
+      "language": null,
+      "updated_at": "2026-07-13T09:45:30Z",
       "archived": false,
       "visibility": "public"
     },
