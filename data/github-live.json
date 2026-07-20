@@ -1,13 +1,19 @@
 {
-  "generated_at": "2026-07-13T09:56:34.096430+00:00",
+  "generated_at": "2026-07-20T09:44:18.304095+00:00",
   "mode": "github-api-refresh",
   "owner": "gharbonnier78",
-  "public_repository_count": 27,
+  "public_repository_count": 33,
   "missing_from_live": [],
   "unmapped_live": [
+    "diderot-machine-learning-specialization",
+    "identity-trust-inclusion-fabric",
+    "mmals-g2-geometric-perspective",
+    "mmals-regime-inference",
     "mmals-research-observatory",
     "mmals-symplectic-dynamics",
-    "national-identity-fraud-risk-engine-gnn"
+    "national-identity-fraud-risk-engine-gnn",
+    "stratq-cetra-nigeria-identity",
+    "track-b-test-prioritization"
   ],
   "repositories": [
     {
@@ -15,7 +21,70 @@
       "html_url": "https://github.com/gharbonnier78/mmals-ml-wiki",
       "description": "Interactive MMALS and machine-learning encyclopedia connecting concepts, geometry, experiments, evidence status, and stable article links.",
       "language": "HTML",
-      "updated_at": "2026-07-13T09:49:49Z",
+      "updated_at": "2026-07-20T09:37:22Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "stratq-cetra-nigeria-identity",
+      "html_url": "https://github.com/gharbonnier78/stratq-cetra-nigeria-identity",
+      "description": "Evidence-driven governance, risk intelligence and decision assurance for Nigeria NIN-BVN national Identity ecosystem",
+      "language": null,
+      "updated_at": "2026-07-20T08:40:19Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "identity-trust-inclusion-fabric",
+      "html_url": "https://github.com/gharbonnier78/identity-trust-inclusion-fabric",
+      "description": "Federated identity assurance combining biometrics, credentials, anomaly detection, graph ML, fraud prevention, inclusion monitoring, and accountable human decision-making.",
+      "language": "TeX",
+      "updated_at": "2026-07-19T22:54:45Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "diderot-machine-learning-specialization",
+      "html_url": "https://github.com/gharbonnier78/diderot-machine-learning-specialization",
+      "description": "Andrew NG Machine Learning Specliazation",
+      "language": "TeX",
+      "updated_at": "2026-07-19T22:09:23Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-regime-inference",
+      "html_url": "https://github.com/gharbonnier78/mmals-regime-inference",
+      "description": "Task-free continual-learning benchmark for evaluating latent-regime inference and energy-based routing in MMALS.",
+      "language": "TeX",
+      "updated_at": "2026-07-18T09:55:29Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "track-b-test-prioritization",
+      "html_url": "https://github.com/gharbonnier78/track-b-test-prioritization",
+      "description": "Research framework for risk-based test prioritization under constrained effort using latent regimes, supervised learning and leakage-aware evaluation.",
+      "language": "TeX",
+      "updated_at": "2026-07-18T09:50:47Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-g2-geometric-perspective",
+      "html_url": "https://github.com/gharbonnier78/mmals-g2-geometric-perspective",
+      "description": "Private research repository containing the frozen v0.2 internal specification of MMALS G2 (Geometric Perspective), including LaTeX sources, governance manifests, falsification framework, CI validation, and publication roadmap. Not intended for external publication.",
+      "language": "TeX",
+      "updated_at": "2026-07-17T15:37:14Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "fingerprint-feature-extraction-lab",
+      "html_url": "https://github.com/gharbonnier78/fingerprint-feature-extraction-lab",
+      "description": "Classical computer-vision pipeline for fingerprint skeletonization, minutiae and branch extraction, and experimental core/delta detection, with a reconstructed notebook, technical report, tests, and reproducible results.",
+      "language": "Jupyter Notebook",
+      "updated_at": "2026-07-16T23:58:05Z",
       "archived": false,
       "visibility": "public"
     },
@@ -23,8 +92,8 @@
       "name": "national-identity-fraud-risk-engine-gnn",
       "html_url": "https://github.com/gharbonnier78/national-identity-fraud-risk-engine-gnn",
       "description": "Synthetic identity-fraud research prototype evolving from manual neural networks to Graph ML, with reproducible benchmarks, PyTorch Geometric models, reviewer notebook, preprint, and technical carousel.",
-      "language": null,
-      "updated_at": "2026-07-13T09:45:30Z",
+      "language": "Jupyter Notebook",
+      "updated_at": "2026-07-13T10:23:00Z",
       "archived": false,
       "visibility": "public"
     },
@@ -115,15 +184,6 @@
       "description": "ArXiv-style paper and reproducible dataset mapping digital identity maturity, citizen-service gaps, idLAC interoperability, and full-stack opportunities across 33 LAC countries.",
       "language": "TeX",
       "updated_at": "2026-06-16T14:41:18Z",
-      "archived": false,
-      "visibility": "public"
-    },
-    {
-      "name": "fingerprint-feature-extraction-lab",
-      "html_url": "https://github.com/gharbonnier78/fingerprint-feature-extraction-lab",
-      "description": "Classical computer-vision pipeline for fingerprint skeletonization, minutiae and branch extraction, and experimental core/delta detection, with a reconstructed notebook, technical report, tests, and reproducible results.",
-      "language": "Jupyter Notebook",
-      "updated_at": "2026-06-16T14:10:46Z",
       "archived": false,
       "visibility": "public"
     },
