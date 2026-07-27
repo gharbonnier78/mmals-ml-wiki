@@ -1,13 +1,15 @@
 {
-  "generated_at": "2026-07-20T09:44:18.304095+00:00",
+  "generated_at": "2026-07-27T10:28:20.193358+00:00",
   "mode": "github-api-refresh",
   "owner": "gharbonnier78",
-  "public_repository_count": 33,
+  "public_repository_count": 35,
   "missing_from_live": [],
   "unmapped_live": [
     "diderot-machine-learning-specialization",
+    "eoir-domain-shift-diagnostics",
     "identity-trust-inclusion-fabric",
     "mmals-g2-geometric-perspective",
+    "mmals-geometric-path-memory",
     "mmals-regime-inference",
     "mmals-research-observatory",
     "mmals-symplectic-dynamics",
@@ -21,7 +23,34 @@
       "html_url": "https://github.com/gharbonnier78/mmals-ml-wiki",
       "description": "Interactive MMALS and machine-learning encyclopedia connecting concepts, geometry, experiments, evidence status, and stable article links.",
       "language": "HTML",
-      "updated_at": "2026-07-20T09:37:22Z",
+      "updated_at": "2026-07-27T10:12:34Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-tput",
+      "html_url": "https://github.com/gharbonnier78/mmals-tput",
+      "description": "Research specification and reference implementation of MMALS-TPUT, unifying latent geometry, energy-guided routing, dual memory, goal-conditioned control, RC2O-to-RL extensions, and Geometry-G1 validation.",
+      "language": "TeX",
+      "updated_at": "2026-07-26T10:10:52Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals-geometric-path-memory",
+      "html_url": "https://github.com/gharbonnier78/mmals-geometric-path-memory",
+      "description": "Synthetic identity-fraud research prototype evolving from manual neural networks to Graph ML, with reproducible benchmarks, PyTorch Geometric models, reviewer notebook, preprint, and technical carousel.",
+      "language": "HTML",
+      "updated_at": "2026-07-25T20:49:29Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "eoir-domain-shift-diagnostics",
+      "html_url": "https://github.com/gharbonnier78/eoir-domain-shift-diagnostics",
+      "description": "Reproducible Fisher–Rao, MMD, identifiability and directional-coverage diagnostics for EO/IR perception, with Python experiments, Diderot tools, and an auto-built LaTeX paper.",
+      "language": null,
+      "updated_at": "2026-07-22T23:41:27Z",
       "archived": false,
       "visibility": "public"
     },
@@ -30,7 +59,7 @@
       "html_url": "https://github.com/gharbonnier78/stratq-cetra-nigeria-identity",
       "description": "Evidence-driven governance, risk intelligence and decision assurance for Nigeria NIN-BVN national Identity ecosystem",
       "language": null,
-      "updated_at": "2026-07-20T08:40:19Z",
+      "updated_at": "2026-07-21T09:12:34Z",
       "archived": false,
       "visibility": "public"
     },
@@ -211,15 +240,6 @@
       "description": "Dataset-agnostic and backward-compatible stable-plastic context memory for MMALS, with legacy reproduction, adaptive fusion, deployed-posterior distillation, cross-dataset regression gates, and reviewer-facing ablations.",
       "language": "Jupyter Notebook",
       "updated_at": "2026-06-13T22:15:23Z",
-      "archived": false,
-      "visibility": "public"
-    },
-    {
-      "name": "mmals-tput",
-      "html_url": "https://github.com/gharbonnier78/mmals-tput",
-      "description": "Research specification and reference implementation of MMALS-TPUT, unifying latent geometry, energy-guided routing, dual memory, goal-conditioned control, RC2O-to-RL extensions, and Geometry-G1 validation.",
-      "language": "Python",
-      "updated_at": "2026-06-13T21:23:04Z",
       "archived": false,
       "visibility": "public"
     },
