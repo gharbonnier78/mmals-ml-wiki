@@ -1,13 +1,15 @@
 {
-  "generated_at": "2026-08-03T10:25:45.707171+00:00",
+  "generated_at": "2026-08-10T08:15:19.186602+00:00",
   "mode": "github-api-refresh",
   "owner": "gharbonnier78",
-  "public_repository_count": 36,
+  "public_repository_count": 40,
   "missing_from_live": [],
   "unmapped_live": [
     "diderot-machine-learning-specialization",
     "ed-pomdp",
     "eoir-domain-shift-diagnostics",
+    "evidence-guided-engineering-agents",
+    "geometric-latent-dynamics",
     "identity-trust-inclusion-fabric",
     "mmals-g2-geometric-perspective",
     "mmals-geometric-path-memory",
@@ -15,6 +17,8 @@
     "mmals-research-observatory",
     "mmals-symplectic-dynamics",
     "national-identity-fraud-risk-engine-gnn",
+    "scientific-research-harness",
+    "siamese-embedding-compression-lab",
     "stratq-cetra-nigeria-identity",
     "track-b-test-prioritization"
   ],
@@ -24,7 +28,43 @@
       "html_url": "https://github.com/gharbonnier78/mmals-ml-wiki",
       "description": "Interactive MMALS and machine-learning encyclopedia connecting concepts, geometry, experiments, evidence status, and stable article links.",
       "language": "HTML",
-      "updated_at": "2026-08-03T10:12:24Z",
+      "updated_at": "2026-08-10T08:08:34Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "evidence-guided-engineering-agents",
+      "html_url": "https://github.com/gharbonnier78/evidence-guided-engineering-agents",
+      "description": "Governed AI personas that turn authorized enterprise evidence into falsifiable engineering, BOM, IP, legal, funding and delivery recommendations.",
+      "language": null,
+      "updated_at": "2026-08-09T16:49:47Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "scientific-research-harness",
+      "html_url": "https://github.com/gharbonnier78/scientific-research-harness",
+      "description": "A reusable scientific workflow harness for reproducible research, explicit reasoning, evidence traceability, rigorous gates, replayable experiments, and progressive learning artifacts.",
+      "language": null,
+      "updated_at": "2026-08-09T15:06:57Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "geometric-latent-dynamics",
+      "html_url": "https://github.com/gharbonnier78/geometric-latent-dynamics",
+      "description": "Learning hidden dynamics on manifolds and Lie groups, with executable mathematics, pedagogical assurance, and reproducible experiments.",
+      "language": null,
+      "updated_at": "2026-08-09T11:45:46Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "siamese-embedding-compression-lab",
+      "html_url": "https://github.com/gharbonnier78/siamese-embedding-compression-lab",
+      "description": "Replayable experiment comparing raw, random, PCA and Siamese embedding compression with MMALS-compatible evidence replay.",
+      "language": "Jupyter Notebook",
+      "updated_at": "2026-08-08T07:55:09Z",
       "archived": false,
       "visibility": "public"
     },
@@ -33,7 +73,7 @@
       "html_url": "https://github.com/gharbonnier78/ed-pomdp",
       "description": "Evidence-Driven Decision Making under Partial Observability: a research framework for software assurance, evidence quality, and governed engineering decisions.",
       "language": "Python",
-      "updated_at": "2026-08-02T19:28:26Z",
+      "updated_at": "2026-08-03T14:01:57Z",
       "archived": false,
       "visibility": "public"
     },
