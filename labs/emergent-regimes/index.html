@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Discover when many weak local signals reveal emergent operating regimes through PCA, and when nuisance variance breaks the story.">
+  <title>Emergent regimes from weak local signals — Diderot MMALS/ML</title>
+  <link rel="stylesheet" href="../../assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav">
+  <a class="brand" href="../../index.html"><span class="brand-mark" aria-hidden="true">D</span><span>Diderot <small style="color:var(--muted);font-weight:500">MMALS / ML</small></span></a>
+  <div class="nav-links"><a href="../../explore/index.html">Explore</a><a href="../../concepts/mmals/index.html">Concepts</a><a href="../index.html" aria-current="page">Labs</a><a href="../../pathways/index.html">Pathways</a><a href="../../research/index.html">Research</a><a href="../../system/link-health/index.html">Link health</a><a href="../../docs/index.html">Docs</a></div>
+</nav></header>
+
+<main id="main"><div class="container">
+  <section class="page-hero er-hero">
+    <div class="breadcrumbs"><a href="../../index.html">Home</a> / <a href="../index.html">Labs</a> / Emergent regimes</div>
+    <div class="eyebrow">Interactive lab · exploratory data analysis</div>
+    <h1>Emergent regimes from weak local signals</h1>
+    <p class="lede">A complex system can have no convincing story in any single metric pair, yet expose distinct operating regimes when weak signals are combined. Make the pattern appear—then try to break it.</p>
+    <div class="meta-row"><span class="tag">teaching simulation</span><span class="tag">deterministic seed</span><span class="tag">PCA ≠ clustering</span><span class="tag">not experimental evidence</span></div>
+  </section>
+
+  <section class="prose">
+    <div class="callout gold"><strong>The question.</strong> When do many individually weak measurements carry a stable collective signal—and when does PCA merely turn nuisance variance into a persuasive picture?</div>
+  </section>
+
+  <section class="lab-shell er-lab" aria-labelledby="lab-title">
+    <div class="er-lab-head">
+      <div><div class="eyebrow">Manipulate the mechanism</div><h2 id="lab-title">Synthetic system-state laboratory</h2></div>
+      <button class="button" id="newSeed" type="button">New seed</button>
+    </div>
+
+    <div class="er-controls">
+      <div class="control-row"><label for="features">Observed features</label><input id="features" type="range" min="12" max="80" value="48" step="4"><output id="featuresO">48</output></div>
+      <div class="control-row"><label for="regimes">Latent regimes</label><input id="regimes" type="range" min="2" max="8" value="5" step="1"><output id="regimesO">5</output></div>
+      <div class="control-row"><label for="signal">Per-feature signal</label><input id="signal" type="range" min="0.10" max="2.50" value="1.40" step="0.05"><output id="signalO">1.40</output></div>
+      <div class="control-row"><label for="noise">Independent noise</label><input id="noise" type="range" min="0.40" max="2.40" value="1.15" step="0.05"><output id="noiseO">1.15</output></div>
+      <div class="control-row"><label for="nuisance">Nuisance variance</label><input id="nuisance" type="range" min="0" max="2.80" value="0.70" step="0.05"><output id="nuisanceO">0.70</output></div>
+      <div class="control-row"><label for="scale">Scale imbalance</label><input id="scale" type="range" min="0" max="2.20" value="0.90" step="0.05"><output id="scaleO">0.90</output></div>
+    </div>
+
+    <div class="er-options">
+      <label class="er-check"><input id="standardize" type="checkbox" checked> Standardize features before PCA</label>
+      <label>Colour by <select id="colourMode"><option value="latent">latent regime</option><option value="kmeans">K-means assignment</option><option value="hidden">nothing (blind EDA)</option></select></label>
+      <button class="button" id="nextPair" type="button">Next local pair</button>
+    </div>
+
+    <div class="metric-grid er-metrics">
+      <div class="metric"><div id="localSep" class="value">—</div><div class="label">local regime signal</div></div>
+      <div class="metric"><div id="globalSep" class="value">—</div><div class="label">PCA regime signal</div></div>
+      <div class="metric"><div id="variance" class="value">—</div><div class="label">variance in PC1 + PC2</div></div>
+      <div class="metric"><div id="ari" class="value">—</div><div class="label">K-means agreement (ARI)</div></div>
+    </div>
+
+    <div id="diagnosis" class="er-diagnosis" role="status" aria-live="polite"></div>
+
+    <div class="er-plots">
+      <article class="er-plot-card"><div class="er-plot-title"><div><span>01 · local view</span><h3 id="pairTitle">Feature pair</h3></div><span class="tag">two signals only</span></div><canvas id="localCanvas" width="680" height="410" aria-label="Scatter plot of two observed features"></canvas><p>Like checking two telemetry channels at a time. A real global pattern may remain visually weak here.</p></article>
+      <article class="er-plot-card"><div class="er-plot-title"><div><span>02 · collective view</span><h3>PCA projection</h3></div><span class="tag">all features combined</span></div><canvas id="pcaCanvas" width="680" height="410" aria-label="Scatter plot of the first two principal components"></canvas><p>PCA finds high-variance directions. It does not know the latent labels and does not itself create clusters.</p></article>
+    </div>
+
+    <article class="er-variance-card"><div class="er-plot-title"><div><span>03 · information budget</span><h3>Variance retained by the view</h3></div><span class="tag">projection audit</span></div><canvas id="varianceCanvas" width="1080" height="245" aria-label="Variance explained by the first two principal components and residual dimensions"></canvas></article>
+
+    <div class="er-stress">
+      <div><div class="eyebrow">Falsification move</div><h3>Does the picture survive other random worlds?</h3><p>Repeat the same mechanism across eight independent seeds. A stable claim should not depend on one aesthetically convenient draw.</p></div>
+      <button id="stressTest" class="button primary" type="button">Stress-test 8 seeds</button>
+      <output id="stressResult" aria-live="polite">Not run yet.</output>
+    </div>
+  </section>
+
+  <section class="section er-learning-grid">
+    <article class="card"><span class="tag">observe</span><h3>Local absence is not global absence</h3><p>Weak effects distributed across many variables may be invisible in pairwise inspection but coherent in aggregate.</p></article>
+    <article class="card"><span class="tag">distinguish</span><h3>PCA is not K-means</h3><p>PCA supplies coordinates; K-means proposes a partition. The ARI metric compares that partition with the toy’s hidden generating regimes.</p></article>
+    <article class="card"><span class="tag">challenge</span><h3>Variance is not relevance</h3><p>Increase nuisance variance. PCA may faithfully preserve the largest variation while destroying the regime separation you care about.</p></article>
+  </section>
+
+  <section class="prose er-prose">
+    <h2>Read the mechanism</h2>
+    <p>Each observation is a synthetic system state. Its regime contributes a small shift to every observed feature. Independent noise makes each two-feature view ambiguous, while aggregation can recover the common structure.</p>
+    <div class="formula">x<sub>ij</sub> = weak regime signal<sub>ij</sub> + nuisance<sub>ij</sub> + noise<sub>ij</sub></div>
+    <p>PCA chooses directions that maximize projected variance:</p>
+    <div class="formula">v₁ = arg max<sub>‖v‖=1</sub> Var(Xv)</div>
+    <p>That objective contains no notion of “correct regime”. K-means is applied afterwards in the two-dimensional PCA space, and may agree—or disagree—with the known synthetic generator.</p>
+
+    <h2>Falsify the visual story</h2>
+    <div class="table-wrap"><table><thead><tr><th>Intervention</th><th>What it tests</th><th>Failure interpretation</th></tr></thead><tbody>
+      <tr><td>Raise nuisance variance</td><td>Whether the largest variance is decision-relevant</td><td>PCA can be numerically correct but operationally unhelpful</td></tr>
+      <tr><td>Disable standardization</td><td>Whether measurement units dominate geometry</td><td>Apparent regimes may be a scale artifact</td></tr>
+      <tr><td>Change the seed</td><td>Sampling stability</td><td>One projection is insufficient evidence</td></tr>
+      <tr><td>Hide colours</td><td>Blind exploratory judgement</td><td>Labels can make weak separation look obvious</td></tr>
+      <tr><td>Compare K-means with latent regimes</td><td>Whether visible groups support a partition</td><td>A picture can suggest clusters that an algorithm cannot recover reliably</td></tr>
+    </tbody></table></div>
+
+    <h2>Engineering transfer</h2>
+    <p>Replace the synthetic features with latency, CPU, queue depth, error counts, network measures, traces, configuration fingerprints, or biometric quality indicators. Candidate clusters may suggest operating regimes, sites, device families, incidents, or hidden batches—but remain hypotheses until they are stable, interpretable, and linked to external evidence.</p>
+    <div class="callout red"><strong>Boundary.</strong> This is a deterministic teaching simulation and a derived pedagogical view. Removing it changes no scientific evidence, gate, or MMALS claim.</div>
+  </section>
+</div></main>
+
+<footer class="footer"><div class="footer-inner"><div><strong>Diderot — MMALS / ML Interactive Encyclopedia</strong><div class="small">Living explanations, interactive labs, and evidence status.</div></div><div class="small">Content: CC BY 4.0 · Code: MIT · Release v0.2.2 · Reviewed 2026-06-19</div></div></footer>
+<script src="../../assets/js/site.js"></script>
+<script src="../../assets/js/emergent-regimes.js"></script>
+</body>
+</html>
