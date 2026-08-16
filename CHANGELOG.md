@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — 2026-08-16
+
+- Add a comprehensive concept note connecting reinforcement learning, MDPs, return, policy, Q-values, deterministic and stochastic Bellman equations, and expected return.
+- Preserve the Andrew Ng course foundation while labeling risk-sensitive RL, CVaR, critical-system governance, and the MMALS belief-state bridge as separate extensions.
+- Add the permanent semantic URL `/go/rl-mdp-decision-risk` and register the concept and its relations in the Diderot graph.
+
 ## v0.2.2 — 2026-06-19
 
 - Register `mmals-ecospec` as a public MMALS EcoSpec 1.0 repository.
