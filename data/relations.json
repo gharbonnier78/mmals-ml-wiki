@@ -148,5 +148,29 @@
     "target": "cal",
     "label": "is evaluated by",
     "category": "evaluation"
+  },
+  {
+    "source": "rl-mdp-decision-risk",
+    "target": "tput",
+    "label": "provides a sequential decision foundation for",
+    "category": "control"
+  },
+  {
+    "source": "cal",
+    "target": "rl-mdp-decision-risk",
+    "label": "qualifies evidence used by",
+    "category": "evaluation"
+  },
+  {
+    "source": "inferred-context",
+    "target": "rl-mdp-decision-risk",
+    "label": "motivates belief-state uncertainty in",
+    "category": "control"
+  },
+  {
+    "source": "ecospec",
+    "target": "rl-mdp-decision-risk",
+    "label": "exposes a provisional interface to",
+    "category": "control"
   }
 ]
