@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Interactive Diderot lab for change-impact analysis, regression selection, coverage, fault injection and probability of detection.">
+  <title>Change impact & regression evidence — Diderot MMALS/ML</title>
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="stylesheet" href="../../assets/css/change-impact-regression.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav">
+  <a class="brand" href="../../index.html"><span class="brand-mark" aria-hidden="true">D</span><span>Diderot <small style="color:var(--muted);font-weight:500">MMALS / ML</small></span></a>
+  <div class="nav-links"><a href="../../explore/index.html">Explore</a><a href="../../concepts/mmals/index.html">Concepts</a><a href="../index.html" aria-current="page">Labs</a><a href="../../pathways/index.html">Pathways</a><a href="../../research/index.html">Research</a><a href="../../system/link-health/index.html">Link health</a><a href="../../docs/index.html">Docs</a></div>
+</nav></header>
+
+<main id="main"><div class="container">
+  <section class="page-hero">
+    <div class="breadcrumbs"><a href="../../index.html">Home</a> / <a href="../index.html">Labs</a> / Change impact & regression evidence</div>
+    <div class="eyebrow">Interactive lab · systems engineering · test evidence</div>
+    <h1>Change impact & regression evidence</h1>
+    <p class="lede">A high coverage score can still describe the wrong regression scope. Change the engineering view, select R0–R5, inject faults, and separate what was exercised from what could actually be detected.</p>
+    <div class="meta-row"><span class="tag">synthetic system</span><span class="tag">hidden ground truth</span><span class="tag">R0–R5</span><span class="tag">fault injection</span><span class="tag">POD</span><span class="tag">migration-parity fixture</span></div>
+  </section>
+
+  <section class="prose">
+    <div class="callout gold"><strong>The question.</strong> Does a regression strategy find the propagation paths that matter, and do the selected tests contain oracles capable of detecting the failures that matter?</div>
+    <p>The lab separates two graphs. <code>G_true</code> is the synthetic propagation reality used to generate outcomes. <code>G_observed</code> is the incomplete or noisy engineering view available to regression selectors. Hidden truth is revealed only after selection.</p>
+    <div class="formula">change → impact hypothesis → regression selection → coverage → fault injection → P<sub>D</sub> → residual uncertainty</div>
+  </section>
+
+  <section class="lab-shell cir-shell" aria-labelledby="cir-title">
+    <div><div class="eyebrow">Manipulate the assurance problem</div><h2 id="cir-title">Regression evidence simulator</h2></div>
+
+    <div class="cir-controls">
+      <div class="cir-control"><label for="cirChange">Change</label><select id="cirChange"></select></div>
+      <div class="cir-control"><label for="cirStrategy">Strategy</label><select id="cirStrategy"><option>R0</option><option>R1</option><option>R2</option><option>R3</option><option selected>R4</option><option>R5</option></select></div>
+      <div class="cir-control"><label for="cirCompleteness">Observed architecture completeness</label><input id="cirCompleteness" type="range" min="0.35" max="1" value="0.78" step="0.01"><output id="cirCompletenessOut">0.78</output></div>
+      <div class="cir-control"><label for="cirFalseRate">Spurious-edge rate</label><input id="cirFalseRate" type="range" min="0" max="0.15" value="0.03" step="0.01"><output id="cirFalseRateOut">0.03</output></div>
+      <div class="cir-control"><label for="cirBudget">Execution budget</label><input id="cirBudget" type="range" min="6" max="74" value="22" step="1"><output id="cirBudgetOut">22</output></div>
+      <div class="cir-control"><label for="cirSeed">Browser seed</label><input id="cirSeed" type="number" min="1" max="999999" value="11"></div>
+    </div>
+
+    <div class="cir-actions">
+      <button class="button primary" id="cirRun" type="button">Run synthetic world</button>
+      <button class="button" id="cirOracle" type="button">Load Python migration oracle</button>
+      <button class="button" id="cirReveal" type="button">Reveal / hide G_true</button>
+      <button class="button" id="cirInject" type="button">Inject diagnostic fault</button>
+    </div>
+    <div class="cir-status" id="cirStatus" role="status" aria-live="polite"></div>
+
+    <div class="cir-grid">
+      <article class="cir-panel cir-graph-wrap">
+        <div class="er-plot-title"><div><span>01 · system view</span><h3>Observed architecture and post-hoc truth</h3></div><span class="tag">truth hidden during selection</span></div>
+        <svg id="cirGraph" class="cir-graph" viewBox="0 0 1020 560" role="img" aria-label="Synthetic distributed-system graph"></svg>
+        <div class="cir-legend"><span><i class="cir-dot change"></i>changed element</span><span><i class="cir-dot pred"></i>predicted impact</span><span><i class="cir-dot actual"></i>true impact after reveal</span><span><i class="cir-dot fault"></i>injected fault</span></div>
+      </article>
+
+      <aside class="cir-panel">
+        <div class="eyebrow">02 · evidence summary</div><h3>Selected strategy</h3>
+        <div class="cir-metrics">
+          <div class="cir-metric"><div class="value" id="cirMetricTests">—</div><div class="label">tests</div></div>
+          <div class="cir-metric"><div class="value" id="cirMetricCost">—</div><div class="label">execution cost</div></div>
+          <div class="cir-metric"><div class="value" id="cirMetricRecall">—</div><div class="label">impact recall</div></div>
+          <div class="cir-metric"><div class="value" id="cirMetricCriticalRecall">—</div><div class="label">critical impact recall</div></div>
+          <div class="cir-metric"><div class="value" id="cirMetricCoverage">—</div><div class="label">impacted-node coverage</div></div>
+          <div class="cir-metric"><div class="value" id="cirMetricPod">—</div><div class="label">critical mean POD</div></div>
+          <div class="cir-metric"><div class="value" id="cirMetricMiss">—</div><div class="label">zero-POD critical miss rate</div></div>
+        </div>
+        <div class="cir-tests"><strong>Selected evidence</strong><p><code id="cirSelectedTests">—</code></p></div>
+        <div id="cirFaultBox" class="cir-fault-box"></div>
+      </aside>
+    </div>
+
+    <article class="cir-panel cir-table">
+      <div class="er-plot-title"><div><span>03 · strategy comparison</span><h3>R0–R5 on the same hidden outcome</h3></div><span class="tag">no scalar winner</span></div>
+      <div class="table-wrap"><table><thead><tr><th>Strategy</th><th>Tests</th><th>Cost</th><th>Impact recall</th><th>Critical recall</th><th>Coverage</th><th>Critical POD</th><th>Zero-POD miss</th></tr></thead><tbody id="cirCompareBody"></tbody></table></div>
+      <p class="cir-note">R0 is the full existing suite. R1 uses historical change/test relevance. R2 follows call/control dependencies. R3 uses the multi-layer observed graph. R4 adds criticality weighting. R5 adds a learned candidate-impact baseline. A lower test count is not considered a win if critical misses increase.</p>
+    </article>
+
+    <article class="cir-panel cir-sweep">
+      <div class="er-plot-title"><div><span>04 · sensitivity experiment</span><h3>What happens when architecture knowledge degrades?</h3></div><button id="cirSweepRun" class="button" type="button">Run 5-seed sweep</button></div>
+      <svg id="cirSweep" viewBox="0 0 900 360" aria-label="Critical-impact recall versus observed architecture completeness"></svg>
+      <p id="cirSweepNote" class="cir-note">Run the sweep to compare R2–R5 as the observable engineering graph becomes less complete.</p>
+    </article>
+  </section>
+
+  <section class="prose">
+    <h2>How to read the lab</h2>
+    <p><strong>Impact recall</strong> asks whether the selector's predicted scope contains the nodes that were truly affected. <strong>Coverage</strong> asks whether the chosen tests traverse those affected nodes. <strong>Probability of detection</strong> uses each test's failure-mode-specific oracle strength. These are deliberately different evidence planes.</p>
+    <div class="callout red"><strong>Falsification move.</strong> Use “Inject diagnostic fault”. The lab searches for a critical failure mode on a node exercised by the selected suite but weakly observed by its oracles. The parity fixture contains an explicit case with <code>covered = true</code> and <code>POD = 0</code>.</div>
+
+    <h2>Migration and parity</h2>
+    <p>The original executable prototype was created in the Diderot Machine Learning Specialization repository before the canonical Diderot home was corrected to this interactive encyclopedia. The “Python migration oracle” freezes one reference run from that implementation. CI checks that the browser core reproduces R0–R5 selected test sets, predicted impacts, evaluation metrics, and the coverage-versus-detection invariant on that fixture.</p>
+    <p>Interactive browser worlds use a small deterministic JavaScript RNG, so arbitrary browser seeds are <em>not</em> claimed to reproduce NumPy PCG64 sample-for-sample. The parity fixture is the cross-implementation contract.</p>
+
+    <h2>Evidence boundary</h2>
+    <p>The topology, change frequencies, edge probabilities, test costs and POD values are synthetic experimental parameters. They are not measurements of a production identity system and are not evidence that selective regression or AI-assisted selection is superior. Negative, tied, or worse R5 results are valid outcomes.</p>
+    <p>Read the associated concept note: <a href="../../concepts/change-impact-regression-evidence/index.html">Change impact & regression evidence</a>.</p>
+  </section>
+</div></main>
+
+<footer class="footer"><div class="footer-inner"><div><strong>Diderot — MMALS / ML Interactive Encyclopedia</strong><div class="small">Living explanations, interactive labs, and evidence status.</div></div><div class="small">Content: CC BY 4.0 · Code: MIT · Working lab branch</div></div></footer>
+<script src="../../assets/js/site.js"></script>
+<script src="../../assets/js/change-impact-core.js"></script>
+<script src="../../assets/js/change-impact-regression.js"></script>
+</body>
+</html>
