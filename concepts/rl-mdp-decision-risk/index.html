@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A complete bridge from reinforcement learning and Markov decision processes to stochastic Bellman equations, expected return, and risk-aware decision governance.">
+  <title>Reinforcement learning, MDPs, and decision risk — Diderot MMALS/ML</title>
+  <link rel="stylesheet" href="../../assets/css/site.css">
+</head>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav">
+<a class="brand" href="../../index.html"><span class="brand-mark" aria-hidden="true">D</span><span>Diderot <small style="color:var(--muted);font-weight:500">MMALS / ML</small></span></a>
+<div class="nav-links"><a href="../../explore/index.html">Explore</a><a href="../../concepts/mmals/index.html" aria-current="page">Concepts</a><a href="../../labs/index.html">Labs</a><a href="../../pathways/index.html">Pathways</a><a href="../../research/index.html">Research</a><a href="../../system/link-health/index.html">Link health</a><a href="../../docs/index.html">Docs</a></div>
+</nav></header>
+<main id="main"><div class="container narrow">
+<section class="page-hero">
+  <div class="breadcrumbs"><a href="../../index.html">Home</a> / <a href="../index.html">Concepts</a> / RL, MDPs, and decision risk</div>
+  <div class="eyebrow">Sequential decision-making</div>
+  <h1>Reinforcement learning, MDPs, and decision risk</h1>
+  <p class="lede">Reinforcement learning chooses actions through time; an MDP formalizes the environment in which those actions change state, produce rewards, and expose the agent to uncertain future consequences.</p>
+  <div class="meta-row"><span class="status foundational">Foundational synthesis</span><span class="tag">reviewed 2026-08-16</span><a class="tag" href="../../go/rl-mdp-decision-risk/index.html">stable /go/ link</a></div>
+</section>
+
+<section><div class="reading-levels" data-reading-levels>
+  <button class="level-btn" data-level="discover">Discover</button>
+  <button class="level-btn" data-level="engineer">Engineer</button>
+  <button class="level-btn" data-level="research">Research</button>
+</div>
+<div class="level-panel prose" data-level="discover"><h2>In plain language</h2><p>An agent repeatedly observes where it is, chooses what to do, and receives feedback. A good action is not merely one that pays immediately: it should lead toward a good total future. When actions can slip or fail, the agent compares the average return over all possible futures.</p></div>
+<div class="level-panel prose" data-level="engineer"><h2>Engineering view</h2><p>An MDP separates state, action, transition probability, reward, and discount. A policy maps state to action. The optimal state-action value <em>Q</em> obeys a Bellman recursion. In a stochastic environment, that recursion is an expectation over possible next states and rewards.</p></div>
+<div class="level-panel prose" data-level="research"><h2>Research view</h2><p>Expected-return optimization is risk-neutral with respect to the modeled return distribution. Safety-critical decision support may additionally require hard invariants, chance constraints, lower-tail quantiles, CVaR, uncertainty bounds, and explicit human judgment. Extending this foundation to MMALS belief-state control remains a research hypothesis, not an established result.</p></div>
+</section>
+
+<section class="prose">
+<h2>1. From reinforcement learning to an MDP—and back</h2>
+<p><strong>Reinforcement learning (RL)</strong> is the learning problem: an agent must discover how to act through interaction so that its long-term outcome is good. A <strong>Markov decision process (MDP)</strong> is the mathematical model used to state that problem precisely.</p>
+<div class="formula">MDP = (S, A, P, R, \gamma)</div>
+<div class="table-wrap"><table><thead><tr><th>Object</th><th>Meaning</th><th>Mars-rover example</th></tr></thead><tbody>
+<tr><td><strong>S</strong></td><td>Set of states describing the decision-relevant situation</td><td>Six rover positions</td></tr>
+<tr><td><strong>A</strong></td><td>Actions available to the agent</td><td>Move left or move right</td></tr>
+<tr><td><strong>P(s'|s,a)</strong></td><td>Probability of reaching next state <em>s'</em> after action <em>a</em> in state <em>s</em></td><td>A commanded move succeeds with probability 0.9 and slips with probability 0.1</td></tr>
+<tr><td><strong>R</strong></td><td>Immediate feedback associated with a transition or state</td><td>100 at the left terminal, 40 at the right terminal, 0 elsewhere</td></tr>
+<tr><td><strong>γ</strong></td><td>Discount factor controlling the weight of later rewards</td><td>For example, γ = 0.5</td></tr>
+</tbody></table></div>
+<p>The direction of explanation is therefore circular only in appearance:</p>
+<ol>
+  <li>RL gives the practical objective: learn how to act.</li>
+  <li>The MDP supplies the formal world: states, actions, transitions, rewards, and time preference.</li>
+  <li>RL algorithms use experience or a known model to solve that MDP approximately or exactly.</li>
+  <li>The result is a policy that maps situations back to actions.</li>
+</ol>
+<div class="callout"><strong>Markov property.</strong> Once the current state is known, earlier history adds no information needed to predict the next state under the selected action: <span class="formula-inline">P(S<sub>t+1</sub>|S<sub>t</sub>,A<sub>t</sub>,history)=P(S<sub>t+1</sub>|S<sub>t</sub>,A<sub>t</sub>)</span>. This is a modeling claim about the adequacy of the state representation, not a claim that the physical world has no history.</div>
+
+<h2>2. The agent–environment loop</h2>
+<p>At time <em>t</em>, the agent observes state <em>S<sub>t</sub></em>, selects action <em>A<sub>t</sub></em>, then the environment produces an immediate reward and a next state. The cycle repeats until a terminal state ends the episode.</p>
+<div class="formula">S_t \xrightarrow{\;A_t\;} (R_{t+1}, S_{t+1})</div>
+<p>An action is a command or decision, not necessarily its realized physical outcome. In the stochastic rover, “left” is the intended direction; slipping can still produce a move to the right.</p>
+
+<h2>3. Reward is local; return is temporal</h2>
+<p>A reward says whether one immediate outcome is desirable. It does not by itself compare trajectories whose useful consequences occur at different times. The <strong>return</strong> aggregates the reward sequence:</p>
+<div class="formula">G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \cdots</div>
+<p>The discount factor <em>γ</em>, usually between 0 and 1, makes distant rewards count less. A small γ produces an impatient agent; a γ close to 1 makes the agent more willing to wait. Discounting can represent time preference, uncertainty about distant outcomes, finite effective horizon, or a mathematical device ensuring convergence. These interpretations should not be silently conflated.</p>
+
+<h2>4. A policy tells the agent what to do</h2>
+<p>A deterministic policy maps each state to an action:</p>
+<div class="formula">\pi(s)=a</div>
+<p>A stochastic policy instead gives action probabilities, <span class="formula-inline">π(a|s)</span>. The course rover policy may, for example, command left in states 2, 3, and 4, and right in state 5. A policy describes behavior; it is not yet proof that the behavior is optimal.</p>
+
+<h2>5. State-action value Q(s,a)</h2>
+<p>The optimal state-action value answers a precise counterfactual question:</p>
+<blockquote>If the agent is in state <em>s</em>, takes action <em>a</em> now, and behaves optimally afterward, what total discounted return should it expect?</blockquote>
+<div class="formula">Q^*(s,a)=\text{expected return after taking }a\text{ in }s\text{, then following }\pi^*</div>
+<p>The first action is fixed by the argument <em>a</em>. Only subsequent actions follow the optimal policy. This resolves a common confusion: Q is defined relative to future behavior, but it is used to recover that behavior:</p>
+<div class="formula">\pi^*(s)=\arg\max_a Q^*(s,a)</div>
+<p>The associated optimal state value keeps only the value of the best available action:</p>
+<div class="formula">V^*(s)=\max_a Q^*(s,a)</div>
+<p>Thus <em>V*(s)</em> asks how valuable the state is under optimal behavior, while <em>Q*(s,a)</em> asks how valuable one particular first action is. The star emphasizes optimality. Some introductions, including parts of the course sequence, write <em>Q</em> when the optimal meaning is clear from context.</p>
+
+<h2>6. Bellman recursion in a deterministic environment</h2>
+<p>The Bellman equation decomposes long-term value into “reward now” plus “discounted value afterward.” If action <em>a</em> deterministically reaches <em>s'</em>:</p>
+<div class="formula">Q^*(s,a)=R(s,a,s')+\gamma\max_{a'}Q^*(s',a')</div>
+<p>Here <em>a'</em> means an action available in the next state. The maximum selects the best continuation, not the best immediate reward. At a terminal state there is no future continuation, so the recursive future term disappears under the course convention. The lesson often writes the immediate term as <em>R(s)</em>; the more general <em>R(s,a,s')</em> notation used here allows reward to depend on the action and realized transition.</p>
+
+<h2>7. Stochastic transitions: one action, several possible futures</h2>
+<p>In a stochastic environment, the same state and action do not determine one unique next state. From rover state 4:</p>
+<ul>
+  <li>command left: reach state 3 with probability 0.9, but state 5 with probability 0.1;</li>
+  <li>command right: reach state 5 with probability 0.9, but state 3 with probability 0.1.</li>
+</ul>
+<p>Repeated execution of the same policy can therefore generate different trajectories, different reward sequences, and different realized returns. The return <em>G</em> becomes a random variable.</p>
+
+<h2>8. The “famous E”: expected return</h2>
+<p>The symbol <strong>𝔼</strong> denotes mathematical expectation. It is a probability-weighted average, not a squared mean and not a mean-squared error.</p>
+<div class="formula">\mathbb E[G]=\sum_i P(G=g_i)\,g_i</div>
+<p>Empirically, one can execute a policy many times, calculate one discounted return per episode, and average those returns:</p>
+<div class="formula">\mathbb E[G] \approx \frac{1}{N}\sum_{i=1}^{N}G^{(i)}</div>
+<p>An expected return need not be a value ever observed in one episode. If the return is 100 with probability 0.9 and 40 with probability 0.1, then <span class="formula-inline">𝔼[G]=94</span>, even though an episode produces 100 or 40, not 94.</p>
+
+<h2>9. Stochastic Bellman equation</h2>
+<p>Because the next state and possibly the reward are random, Bellman now averages over their conditional distribution:</p>
+<div class="formula">Q^*(s,a)=\mathbb E\!\left[R_{t+1}+\gamma\max_{a'}Q^*(S_{t+1},a')\mid S_t=s,A_t=a\right]</div>
+<p>For discrete next states:</p>
+<div class="formula">Q^*(s,a)=\sum_{s'}P(s'|s,a)\left[R(s,a,s')+\gamma\max_{a'}Q^*(s',a')\right]</div>
+<p>Using the course notebook values <span class="formula-inline">V*(3)=21.25</span>, <span class="formula-inline">V*(5)=18.52</span>, and <span class="formula-inline">γ=0.5</span>, with zero immediate intermediate reward:</p>
+<div class="formula">Q^*(4,left)=0.9(0.5\times21.25)+0.1(0.5\times18.52)\approx10.49</div>
+<div class="formula">Q^*(4,right)=0.1(0.5\times21.25)+0.9(0.5\times18.52)\approx9.40</div>
+<p>The optimal action is left because 10.49 exceeds 9.40. Raising the misstep probability generally lowers the attainable values because the agent has less control, although the exact effect and whether the optimal policy changes depend on the full reward and transition structure.</p>
+
+<h2>10. What expected-return optimization leaves out</h2>
+<p>Standard RL commonly selects</p>
+<div class="formula">\pi^*=\arg\max_\pi \mathbb E[G_\pi]</div>
+<p>This is <strong>risk-neutral with respect to the modeled return distribution</strong>: policies with the same expectation are equivalent to this objective even when one is stable and the other has a catastrophic tail.</p>
+<div class="table-wrap"><table><thead><tr><th>Policy</th><th>Distribution</th><th>Expected return</th><th>Operational meaning</th></tr></thead><tbody>
+<tr><td>A</td><td>50 with probability 1</td><td>50</td><td>Stable outcome</td></tr>
+<tr><td>B</td><td>100 with probability 0.5; 0 with probability 0.5</td><td>50</td><td>Same mean, much greater dispersion</td></tr>
+<tr><td>C</td><td>60.61 with probability 0.99; −1000 with probability 0.01</td><td>approximately 50</td><td>Same mean, rare catastrophe</td></tr>
+</tbody></table></div>
+<p>This does not mean that standard RL must ignore every danger. A sufficiently negative catastrophe reward can lower expected return. The deeper problem is that safety, legality, irreversibility, and human harm are often poorly represented by a single compensatory scalar. Some outcomes should not become acceptable merely because frequent benefits offset them numerically.</p>
+
+<h2>11. Complementary risk criteria</h2>
+<div class="table-wrap"><table><thead><tr><th>Criterion</th><th>Formal idea</th><th>Question answered</th><th>Main limitation</th></tr></thead><tbody>
+<tr><td>Variance</td><td>Var(G)=𝔼[(G−𝔼G)²]</td><td>How unstable are outcomes around the mean?</td><td>Penalizes favorable and unfavorable deviations symmetrically</td></tr>
+<tr><td>Lower quantile / VaR</td><td>q<sub>α</sub>(G)</td><td>What return threshold characterizes the worst α fraction?</td><td>Does not describe severity beyond the threshold</td></tr>
+<tr><td>Failure probability</td><td>P(G&lt;L)≤ε</td><td>How often may an unacceptable threshold be crossed?</td><td>A small and a catastrophic violation may count equally</td></tr>
+<tr><td>Lower-tail CVaR</td><td>𝔼[G | G is in the worst α fraction]</td><td>How severe are the worst outcomes on average?</td><td>Requires reliable tail estimation and a declared α</td></tr>
+<tr><td>Hard invariant</td><td>Violation forbidden</td><td>What must never be traded against performance?</td><td>Feasibility and model completeness must be demonstrated</td></tr>
+</tbody></table></div>
+<p>A mean–variance objective, <span class="formula-inline">𝔼[G]−λVar(G)</span>, rewards performance and penalizes instability. A chance-constrained formulation maximizes expected return while requiring <span class="formula-inline">P(failure)≤ε</span>. CVaR focuses attention on the average severity of the worst tail. For losses rather than returns, the convention reverses: one usually minimizes upper-tail CVaR.</p>
+
+<h2>12. A governance ordering for critical systems</h2>
+<p>A defensible decision rule need not ask one metric to do every job:</p>
+<ol>
+  <li><strong>Declare non-compensatory invariants</strong>: safety, integrity, legal, audit, or human-rights constraints that average utility cannot buy away.</li>
+  <li><strong>Bound violation probability</strong>: use explicit chance constraints or reachability requirements.</li>
+  <li><strong>Characterize the tail</strong>: report quantiles, CVaR, worst credible scenarios, and recovery behavior.</li>
+  <li><strong>Optimize expected utility</strong>: among policies that remain admissible, select the strongest mean performance.</li>
+  <li><strong>Expose epistemic uncertainty</strong>: attach confidence bounds, model assumptions, data coverage, and residual unknowns.</li>
+  <li><strong>Keep judgment accountable</strong>: record who accepted the residual risk, on what evidence, for which operational context, and with what monitoring and rollback conditions.</li>
+</ol>
+<div class="formula">invariants \;\rightarrow\; tail\ risk \;\rightarrow\; expected\ performance \;\rightarrow\; accountable\ decision</div>
+<p>This matters in Test Authority work. Mean latency can pass while p99 violates an SLA; average detection can look strong while one critical failure class remains invisible; aggregate biometric performance can hide subgroup or tail harm; average availability can conceal an unacceptable probability of unrecoverable corruption.</p>
+
+<h2>13. Rare events require evidence beyond ordinary sampling</h2>
+<p>Observing no catastrophe in 10,000 trials does not demonstrate a probability below 10<sup>−6</sup>. Tail claims require evidence designed for the tail:</p>
+<ul>
+  <li>targeted simulation and importance sampling;</li>
+  <li>stress testing and Adaptive Stress Testing;</li>
+  <li>fault injection, mutation, and controlled interface or observability perturbations;</li>
+  <li>adversarial scenario generation;</li>
+  <li>causal analysis and domain expertise;</li>
+  <li>confidence bounds, sensitivity analysis, and conservative margins;</li>
+  <li>post-deployment monitoring with explicit stop or rollback rules.</li>
+</ul>
+<p>Evidence can constrain judgment; it cannot remove the normative decision about what counts as unacceptable.</p>
+
+<h2>14. Bridge to MMALS and evidence-guided governance</h2>
+<p>The RL vocabulary provides a useful—but currently hypothetical—bridge for MMALS:</p>
+<div class="table-wrap"><table><thead><tr><th>RL/MDP object</th><th>Candidate MMALS interpretation</th></tr></thead><tbody>
+<tr><td>State</td><td>A belief state over evidence, regime, context, system health, and unresolved contradiction</td></tr>
+<tr><td>Action</td><td>Replicate, collect targeted evidence, explore, falsify, exploit, abstain, or escalate</td></tr>
+<tr><td>Reward / cost</td><td>Information gain, decision utility, latency, compute, human effort, safety risk, and evidence debt</td></tr>
+<tr><td>Transition</td><td>How actions change the evidence state and system knowledge</td></tr>
+<tr><td>Policy</td><td>A governed rule for choosing the next evidence-producing action</td></tr>
+</tbody></table></div>
+<p>Because the true situation may be only partially observed, the eventual formalism may be closer to a belief-state MDP or POMDP than to the fully observed six-state rover. This is a research direction. It has not yet been validated as an operational MMALS or Test Authority controller.</p>
+
+<h2>Evidence and provenance</h2>
+<div class="evidence-box"><div><span class="status foundational">Foundational synthesis</span></div><div>
+  <strong>Current evidence</strong><p>Sections 1–9 synthesize the reinforcement-learning sequence taught in Andrew Ng's Machine Learning Specialization: agent–environment interaction, MDPs, return, policy, Q-values, Bellman recursion, stochastic transitions, and expected return. The numeric stochastic-rover values were checked against the associated course notebook screenshot.</p>
+  <strong>Boundary / non-claim</strong><p>Sections 10–14 are an original extension connecting expected-return RL to risk measures and accountable engineering governance. They should not be attributed to Andrew Ng's lesson. The MMALS belief-state mapping is explicitly an open hypothesis.</p>
+</div></div>
+
+<h2>Connected concepts</h2><div class="relation-list">
+  <a href="../tput/index.html">TPUT <span class="small">— may operationalize governed action selection</span></a>
+  <a href="../cal/index.html">CAL evidence layer <span class="small">— qualifies whether evidence is actionable</span></a>
+  <a href="../inferred-context/index.html">Inferred context <span class="small">— motivates belief-state uncertainty</span></a>
+  <a href="../ecospec/index.html">EcoSpec <span class="small">— exposes an RL/control interface as a design hypothesis</span></a>
+</div>
+
+<h2>Source note</h2>
+<ul>
+  <li>Andrew Ng, Machine Learning Specialization, Course 3, Week 3, reinforcement-learning sequence and optional stochastic-environment lesson, DeepLearning.AI / Stanford Online.</li>
+  <li>Course example: six-state Mars rover, terminal rewards 100 and 40, discount factor and misstep probability varied in the state-action-value notebook.</li>
+  <li>This page is an explanatory synthesis, not a transcript or substitute for the course.</li>
+</ul>
+
+<h2>Use this concept in an article</h2><div class="article-link"><p class="small">Stable semantic link</p><div class="copy-row"><input id="canonical" class="copy-field" value="https://gharbonnier78.github.io/mmals-ml-wiki/go/rl-mdp-decision-risk" readonly><button class="button" data-copy="#canonical">Copy</button></div><p class="small">A publication should also record its own frozen claim status and publication date.</p></div>
+<h2>Traceability note</h2><p>This page is part of the living interpretation layer. Historical article claims remain frozen in the article; this page may evolve as risk-sensitive RL, robust control, adaptive testing, and the MMALS bridge are studied more deeply.</p>
+</section></div></main>
+<footer class="footer"><div class="footer-inner"><div><strong>Diderot — MMALS / ML Interactive Encyclopedia</strong><div class="small">Living explanations, interactive labs, and evidence status.</div></div><div class="small">Content: CC BY 4.0 · Code: MIT · Release v0.2.2 · Reviewed 2026-06-19</div></div></footer>
+<script src="../../assets/js/site.js"></script></body></html>

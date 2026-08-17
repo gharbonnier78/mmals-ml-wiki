@@ -362,7 +362,29 @@
       "functional-memory",
       "inferred-context",
       "route",
-      "reconstructive-synthetic-memory"
+      "reconstructive-synthetic-memory",
+      "rl-mdp-decision-risk"
+    ]
+  },
+  {
+    "id": "rl-mdp-decision-risk",
+    "title": "Reinforcement learning, MDPs, and decision risk",
+    "kicker": "Sequential decision-making",
+    "summary": "A complete bridge from agent–environment interaction and Bellman recursion to stochastic expected return, tail risk, and accountable decision governance.",
+    "status": "foundational",
+    "status_label": "Foundational synthesis",
+    "updated": "2026-08-16",
+    "formula": "Q^*(s,a)=\\mathbb E[R+\\gamma\\max_{a'}Q^*(S',a')\\mid s,a]",
+    "discover": "An agent observes a state, chooses an action, receives a reward, and moves to a new state. When outcomes are uncertain, it compares probability-weighted average returns over possible futures.",
+    "engineer": "An MDP separates states, actions, transition probabilities, rewards, and discount. Policies select actions; Bellman recursion computes immediate reward plus discounted optimal continuation. Critical systems should supplement mean return with invariants, tail measures, and uncertainty evidence.",
+    "research": "Expected-return RL is risk-neutral with respect to the modeled return distribution. Risk-sensitive objectives, chance constraints, CVaR, robust control, and belief-state decision processes extend the foundation. The MMALS and Test Authority mapping remains an explicit research hypothesis.",
+    "evidence": "Foundational RL/MDP synthesis based on Andrew Ng's Machine Learning Specialization, with the stochastic rover calculations independently checked from the course example.",
+    "limits": "The risk-governance and MMALS sections are original extensions and must not be attributed to Andrew Ng; no operational MMALS controller is claimed.",
+    "related": [
+      "tput",
+      "cal",
+      "inferred-context",
+      "ecospec"
     ]
   }
 ]

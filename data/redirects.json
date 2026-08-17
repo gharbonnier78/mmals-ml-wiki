@@ -83,5 +83,10 @@
     "target": "/concepts/ecospec/",
     "status": "active",
     "reviewed": "2026-06-19"
+  },
+  "rl-mdp-decision-risk": {
+    "target": "/concepts/rl-mdp-decision-risk/",
+    "status": "active",
+    "reviewed": "2026-08-16"
   }
 }

@@ -12,7 +12,7 @@ Repository: `https://github.com/gharbonnier78/mmals-ml-wiki`
 
 ## Included in v0.2.2
 
-- 16 canonical concept pages
+- 18 canonical concept pages, including a comprehensive RL → MDP → Bellman → stochastic-risk synthesis
 - interactive concept graph
 - 6 interactive laboratories
 - 3 guided reading pathways
