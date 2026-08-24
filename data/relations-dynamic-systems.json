@@ -1,0 +1,16 @@
+[
+  {"source":"mmals","target":"minimal-sufficient-dynamic-inference","type":"research-frontier"},
+  {"source":"minimal-sufficient-dynamic-inference","target":"dynamic-compatibility-distance","type":"uses"},
+  {"source":"minimal-sufficient-dynamic-inference","target":"dynamical-regime","type":"governs-growth"},
+  {"source":"minimal-sufficient-dynamic-inference","target":"local-geometry","type":"domain-of-validity"},
+  {"source":"minimal-sufficient-dynamic-inference","target":"observability-reconstruction","type":"seeks-sufficient-state"},
+  {"source":"minimal-sufficient-dynamic-inference","target":"world-model","type":"possible-extension"},
+  {"source":"dynamical-regime","target":"stochastic-dynamics","type":"must-distinguish"},
+  {"source":"dynamical-regime","target":"deterministic-chaos","type":"must-distinguish"},
+  {"source":"dynamic-compatibility-distance","target":"local-geometry","type":"may-use-local-metric"},
+  {"source":"observability-reconstruction","target":"local-geometry","type":"reconstructs-state-space"},
+  {"source":"local-to-global-structure","target":"local-geometry","type":"connects-local-global"},
+  {"source":"world-model","target":"tput","type":"supports-planning-control"},
+  {"source":"outcome-bearing-execution","target":"cal","type":"governs-evidence"},
+  {"source":"outcome-bearing-execution","target":"tput","type":"governs-decision-evidence"}
+]
