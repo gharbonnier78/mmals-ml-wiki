@@ -1,0 +1,12 @@
+[
+  {"id":"minimal-sufficient-dynamic-inference","title":"Minimal sufficient dynamic inference"},
+  {"id":"stochastic-dynamics","title":"Stochastic dynamics"},
+  {"id":"deterministic-chaos","title":"Deterministic chaos"},
+  {"id":"dynamical-regime","title":"Dynamical regime"},
+  {"id":"observability-reconstruction","title":"Observability and reconstruction"},
+  {"id":"local-to-global-structure","title":"Local-to-global structure"},
+  {"id":"local-geometry","title":"Local geometry"},
+  {"id":"dynamic-compatibility-distance","title":"Dynamic compatibility distance"},
+  {"id":"world-model","title":"World model"},
+  {"id":"outcome-bearing-execution","title":"Outcome-bearing execution"}
+]
