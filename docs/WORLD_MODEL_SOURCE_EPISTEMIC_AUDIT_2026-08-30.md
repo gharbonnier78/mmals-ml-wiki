@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-30  
 **Scope:** all 59 individual concept pages in the current Diderot branch  
-**Status:** Step 2 audit layer implemented; independent scientific review still pending
+**Status:** Step 2 audit layer implemented; independent Claude review preserved under `docs/reviews/` and handled through a separate disposition record
 
 ## 1. Purpose
 
@@ -142,14 +142,20 @@ The audit makes the following rule explicit:
 
 > **Toy evidence is mechanism evidence, not evidence of general superiority or real-world validity.**
 
-Historical MMALS toys remain valid research-history artifacts:
+Historical MMALS reduced-task evidence remains valid research history, but it is named only at the level directly supported by the pinned public repository. The public record explicitly lists:
 
-- Split Digits;
-- Split-MNIST;
-- Split-FashionMNIST;
+- MNIST;
+- FashionMNIST;
+- RotatedMNIST;
+- PermutedMNIST;
 - controlled route/function counterexamples involving `D_r`, `D_z`, `D_y`.
 
-They may continue to be used to explain, falsify or isolate mechanisms. They must not be retrospectively promoted to world-model evidence.
+Traceability:
+
+- pinned MMALS README: https://github.com/gharbonnier78/mmals/blob/3d9c8e0284f83c9fb39570a7be9aa661062b3c4c/README.md
+- pinned FashionMNIST evidence directory: https://github.com/gharbonnier78/mmals/tree/3d9c8e0284f83c9fb39570a7be9aa661062b3c4c/raw_evidence
+
+Earlier shorthand such as “Split Digits / Split-MNIST / Split-FashionMNIST” is not treated as canonical provenance unless a corresponding immutable artifact is identified. The verified historical toys may continue to explain, falsify or isolate mechanisms, but they must not be retrospectively promoted to world-model evidence.
 
 New toys proposed for the dynamic/world-model direction should isolate one mechanism at a time: hidden regimes/POMDP belief, stochastic vs chaotic contributions, reuse/adapt/fork, local geometry, committor/transition risk, and minimal sufficient state.
 
@@ -203,7 +209,7 @@ Step 2 does not prove that:
 - the new concepts are useful for MMALS;
 - the proposed graph is the unique correct ontology;
 - MMALS can learn a world model;
-- GO-ED-POMDP improves decisions;
+- the tentative goal-oriented extension of ED-POMDP improves decisions;
 - local geometry improves routing;
 - committor prediction is useful in the intended benchmarks;
 - a compact state can preserve old competence and future predictability simultaneously.
