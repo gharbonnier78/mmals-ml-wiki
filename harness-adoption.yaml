@@ -2,10 +2,10 @@ schema_version: "0.1"
 
 harness:
   repository: gharbonnier78/scientific-research-harness
-  ref: "2d1cefe42676fafde9b4a2fa5bc6d300abdcfb4f"
+  ref: "13b26f717e66e36bb753f2885091d420a99ec878"
   entrypoint: HARNESS.md
-  status: "provisional_pin_to_pr18_head"
-  upgrade_rule: "After upstream review/merge, adopt the reviewed immutable merge/tag ref explicitly; never follow main silently."
+  status: "adopted_reviewed_merge_ref"
+  upgrade_rule: "Adopt future harness changes only through an explicit immutable merge/tag/commit ref; never follow main silently."
 
 consumer:
   repository: "gharbonnier78/mmals-ml-wiki"
@@ -54,7 +54,9 @@ execution:
   environment_lock: null
   replay_commands:
     - "python scripts/check_internal_links.py"
+    - "python scripts/check_notation_registry.py"
     - "python scripts/check_release_consistency.py"
+    - "python scripts/check_concept_audit.py"
   randomness:
     status: "not_applicable"
     root_entropy_policy: null
@@ -73,4 +75,4 @@ deviations: []
 adoption:
   adopted_at: "2026-08-30"
   adopted_by: "ChatGPT with explicit user authorization"
-  notes: "Initial adoption adds automatic agent bootstraps and the Diderot mathematical notation atlas. The harness pin references PR #18 head until upstream review is resolved."
+  notes: "Initial provisional pin to harness PR #18 was explicitly upgraded after PR #18 merged. The current ref is the immutable reviewed merge commit for mathematical-notation capitalization and repository-agent bootstraps."
