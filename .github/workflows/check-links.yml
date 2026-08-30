@@ -10,3 +10,4 @@ jobs:
       - uses: actions/checkout@v4
       - run: python scripts/check_internal_links.py
       - run: python scripts/check_release_consistency.py
+      - run: python scripts/check_concept_audit.py

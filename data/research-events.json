@@ -306,5 +306,16 @@
     "outcome": "Concepts, events, evidence, code, and publications are connected in one living layer.",
     "provenance": "this release",
     "public": true
+  },
+  {
+    "date": "2026-08-24",
+    "label": "24 August 2026",
+    "type": "transition",
+    "branch": "core-trunk",
+    "title": "Minimal sufficient dynamic inference becomes an explicit MMALS research direction",
+    "summary": "A cross-disciplinary synthesis proposes that MMALS should prefer reuse, then adaptation, then fork, and nominate a candidate new regime only when existing hosts are no longer dynamically compatible with the evidence.",
+    "outcome": "The idea is recorded as a falsifiable program extension—not validated evidence—with non-regression competence contracts, complexity-on-evidence, dynamic compatibility, local domains of validity, and tests against simpler continual-learning and mixture-of-experts baselines.",
+    "provenance": "MMALS program note and chronicle entry at commit 3d9c8e0284f83c9fb39570a7be9aa661062b3c4c",
+    "public": true
   }
 ]
