@@ -1,6 +1,70 @@
 
 (function(){
   const siteScript=document.currentScript;
+
+  // Render display-math blocks from their canonical TeX source.
+  // The repository stores formulas as plain TeX inside `.formula` elements so the
+  // source stays readable and diffable. MathJax is loaded only on pages that
+  // actually contain formulas; if the CDN is unavailable, the original TeX is restored.
+  const formulaNodes=[...document.querySelectorAll('.formula')].filter(el=>el.textContent.trim());
+  if(formulaNodes.length){
+    const renderWithMathJax=()=>{
+      if(!window.MathJax?.typesetPromise)return;
+      window.MathJax.typesetPromise(formulaNodes).then(()=>{
+        formulaNodes.forEach(el=>{
+          el.classList.remove('math-pending');
+          el.classList.add('math-rendered');
+          el.dataset.mathRendered='true';
+        });
+      }).catch(err=>{
+        console.warn('Diderot formula rendering failed:',err);
+        formulaNodes.forEach(el=>{
+          const tex=el.dataset.tex||el.textContent;
+          el.textContent=tex;
+          el.classList.remove('math-pending');
+          el.classList.add('math-fallback');
+        });
+      });
+    };
+
+    formulaNodes.forEach(el=>{
+      const tex=el.textContent.trim();
+      el.dataset.tex=tex;
+      el.textContent=`\\[${tex}\\]`;
+      el.classList.add('math-pending');
+    });
+
+    if(window.MathJax?.typesetPromise){
+      renderWithMathJax();
+    }else{
+      window.MathJax={
+        tex:{
+          inlineMath:[['\\(','\\)']],
+          displayMath:[['\\[','\\]']],
+          processEscapes:true
+        },
+        options:{
+          skipHtmlTags:['script','noscript','style','textarea','pre','code']
+        },
+        startup:{typeset:false}
+      };
+      const mathScript=document.createElement('script');
+      mathScript.src='https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js';
+      mathScript.async=true;
+      mathScript.dataset.diderotMath='mathjax-3.2.2';
+      mathScript.addEventListener('load',renderWithMathJax,{once:true});
+      mathScript.addEventListener('error',()=>{
+        console.warn('Diderot MathJax dependency unavailable; showing TeX fallback.');
+        formulaNodes.forEach(el=>{
+          el.textContent=el.dataset.tex||el.textContent;
+          el.classList.remove('math-pending');
+          el.classList.add('math-fallback');
+        });
+      },{once:true});
+      document.head.appendChild(mathScript);
+    }
+  }
+
   document.querySelectorAll('[data-reading-levels]').forEach(root=>{
     const buttons=[...root.querySelectorAll('.level-btn')];
     const panels=[...root.parentElement.querySelectorAll('.level-panel')];
