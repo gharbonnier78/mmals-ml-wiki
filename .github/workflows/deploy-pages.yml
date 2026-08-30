@@ -18,10 +18,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Prepare rendered Pages artifact
+        run: python scripts/prepare_pages.py
+      - name: Validate browser rendering contract
+        run: python scripts/check_render_contract.py
       - name: Validate internal links
         run: python scripts/check_internal_links.py
+      - name: Validate notation registry
+        run: python scripts/check_notation_registry.py
       - name: Validate release metadata
         run: python scripts/check_release_consistency.py
+      - name: Validate concept audit
+        run: python scripts/check_concept_audit.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
