@@ -22,10 +22,10 @@ Before substantive work:
    duplicated notation lists.
 
 Current immutable harness entrypoint:
-`https://raw.githubusercontent.com/gharbonnier78/scientific-research-harness/2d1cefe42676fafde9b4a2fa5bc6d300abdcfb4f/HARNESS.md`
+`https://raw.githubusercontent.com/gharbonnier78/scientific-research-harness/13b26f717e66e36bb753f2885091d420a99ec878/HARNESS.md`
 
 Current notation-capitalization contract:
-`https://raw.githubusercontent.com/gharbonnier78/scientific-research-harness/2d1cefe42676fafde9b4a2fa5bc6d300abdcfb4f/pedagogy/MATHEMATICAL_NOTATION_CAPITALIZATION.md`
+`https://raw.githubusercontent.com/gharbonnier78/scientific-research-harness/13b26f717e66e36bb753f2885091d420a99ec878/pedagogy/MATHEMATICAL_NOTATION_CAPITALIZATION.md`
 
 If either pinned dependency cannot be loaded, report it before claiming harness compliance.
 Do not release scientific gates from a remembered or summarized copy of the contract.
