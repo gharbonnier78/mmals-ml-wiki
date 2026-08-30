@@ -81,12 +81,13 @@ as proving that a given chat runtime loaded it.**
 
 At creation time Diderot pins harness commit:
 
-`e542c05814b0a317716c81dc9e22064c61e7d47a`
+`2d1cefe42676fafde9b4a2fa5bc6d300abdcfb4f`
 
-That commit is the head of upstream harness PR #18, which introduces mathematical-notation
-capitalization and reusable agent bootstrap templates. The local manifest marks this pin as
-provisional. If PR #18 is reviewed and merged, Diderot should upgrade explicitly to the
-reviewed immutable ref; it must not silently begin following `main`.
+That commit is the current head of upstream harness PR #18, which introduces mathematical-notation
+capitalization, integrates it into `HARNESS.md`, and adds reusable agent bootstrap templates.
+The local manifest marks this pin as provisional. If PR #18 is reviewed and merged, Diderot
+should upgrade explicitly to the reviewed immutable ref; it must not silently begin following
+`main`.
 
 ## Mathematical notation capitalization
 
