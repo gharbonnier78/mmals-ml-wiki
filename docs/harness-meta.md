@@ -79,19 +79,19 @@ as proving that a given chat runtime loaded it.**
 
 ## Current pinned adoption
 
-At creation time Diderot pins harness commit:
+Diderot now pins the reviewed immutable harness merge commit:
 
-`2d1cefe42676fafde9b4a2fa5bc6d300abdcfb4f`
+`13b26f717e66e36bb753f2885091d420a99ec878`
 
-That commit is the current head of upstream harness PR #18, which introduces mathematical-notation
+This is the merged result of harness PR #18, which introduces mathematical-notation
 capitalization, integrates it into `HARNESS.md`, and adds reusable agent bootstrap templates.
-The local manifest marks this pin as provisional. If PR #18 is reviewed and merged, Diderot
-should upgrade explicitly to the reviewed immutable ref; it must not silently begin following
-`main`.
+The earlier provisional pin to the PR head is retained in Git history but is no longer the
+active dependency. Future upgrades must be explicit to another immutable commit or tag;
+Diderot never follows a moving `main` silently.
 
 ## Mathematical notation capitalization
 
-The first Diderot consumer of the new pedagogy contract is:
+The first Diderot consumer of the pedagogy contract is:
 
 `mathematics/notation/registry.json`
 
