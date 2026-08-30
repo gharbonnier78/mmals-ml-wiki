@@ -20,6 +20,22 @@ Every concept page follows a shared contract.
 - **Engineer**: architecture, algorithm, metrics, observability, implementation consequences.
 - **Research**: assumptions, mathematical formulation, evidence design, ablations, limitations.
 
+## Mathematical notation
+
+When learning-oriented content introduces or meaningfully re-encounters a non-trivial
+notation, follow the pinned harness notation-capitalization contract and check
+`mathematics/notation/registry.json` before creating a new semantic entry.
+
+A useful entry records how the notation is read aloud, what it means formally and in plain
+language, why it appears, a small example, prerequisites, misconceptions, encounter
+provenance, connections/domains and its review maturity. Prefer appending a new encounter or
+alias to an existing concept over duplicating the same mathematical idea under a second
+glyph.
+
+The notation registry is pedagogical metadata, not mathematical authority. Stable promotion
+requires source provenance and review. The interactive atlas and printable poster must remain
+derived views of the same registry.
+
 ## Evidence language
 
 Use one of the canonical statuses: foundational, implemented, smoke tested, multi-seed evidence, mechanistic support, negative result, open hypothesis, or speculative branch.
