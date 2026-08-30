@@ -1,0 +1,798 @@
+{
+  "schema_version": "0.1",
+  "updated": "2026-08-30",
+  "language": "fr",
+  "source_note": "Seeded from a learner-supplied course page on applications and graphs (Definition 5 and following examples). Exact bibliographic identity is not yet catalogued.",
+  "maturity_levels": {
+    "L0": "Captured",
+    "L1": "Understood",
+    "L2": "Connected",
+    "L3": "Re-encountered",
+    "L4": "Cross-domain",
+    "L5": "Consolidated"
+  },
+  "entries": [
+    {
+      "id": "belongs-to",
+      "display": "∈",
+      "latex": "\\in",
+      "aliases": [],
+      "spoken": {
+        "fr_literal": "appartient à",
+        "fr_natural": "est un élément de"
+      },
+      "concept": "appartenance à un ensemble",
+      "category": "ensembles",
+      "formal": "x \\in E signifie que x est un élément de l'ensemble E.",
+      "plain_language": "On affirme que l'objet x fait partie de l'ensemble E.",
+      "why_here": "Permet de préciser d'où viennent les entrées x, les sorties y et les couples du graphe.",
+      "example": {
+        "statement": "2 \\in \\{1,2,3\\}",
+        "explanation": "Le nombre 2 figure parmi les éléments de l'ensemble."
+      },
+      "prerequisites": ["ensemble", "élément"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
+          "context": "Définition 5 du graphe d'une application",
+          "contribution": "Lecture orale et rôle de l'appartenance dans (x,y) ∈ E×F."
+        }
+      ],
+      "connections": ["subset", "cartesian-product", "function-graph"],
+      "domains": ["théorie des ensembles", "analyse", "probabilités", "algèbre"],
+      "misconception": {
+        "wrong": "∈ signifie inclus dans.",
+        "correction": "∈ relie un élément à un ensemble; l'inclusion relie deux ensembles."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Définition 5 — graphe d'une application",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "subset",
+      "display": "⊂ / ⊆",
+      "latex": "\\subset / \\subseteq",
+      "aliases": ["inclusion"],
+      "spoken": {
+        "fr_literal": "est inclus dans",
+        "fr_natural": "tous les éléments du premier ensemble appartiennent au second"
+      },
+      "concept": "inclusion d'ensembles",
+      "category": "ensembles",
+      "formal": "E' \\subseteq E signifie que tout élément de E' appartient à E. L'usage de \\subset pour l'inclusion stricte ou non stricte dépend des conventions de la source.",
+      "plain_language": "E' est une partie de E.",
+      "why_here": "La restriction f|E' commence par choisir une partie E' du domaine initial E.",
+      "example": {
+        "statement": "\\{1,2\\} \\subseteq \\{1,2,3\\}",
+        "explanation": "Chaque élément du premier ensemble se trouve dans le second."
+      },
+      "prerequisites": ["ensemble", "appartenance"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-example-3",
+          "context": "Exemple 3 — restriction d'une application à E'",
+          "contribution": "Lien entre sous-domaine et restriction."
+        }
+      ],
+      "connections": ["belongs-to", "function-restriction", "intersection"],
+      "domains": ["théorie des ensembles", "analyse", "topologie", "probabilités"],
+      "misconception": {
+        "wrong": "Le symbole ⊂ a partout exactement la même convention de stricte inclusion.",
+        "correction": "Les conventions varient; ⊆ est non ambigu pour l'inclusion avec égalité possible."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Exemple 3 après Définition 5",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "cartesian-product",
+      "display": "×",
+      "latex": "\\times",
+      "aliases": ["produit cartésien"],
+      "spoken": {
+        "fr_literal": "croix",
+        "fr_natural": "ensemble de tous les couples possibles formés avec un élément du premier ensemble et un du second"
+      },
+      "concept": "produit cartésien",
+      "category": "ensembles",
+      "formal": "E \\times F = \\{(x,y) : x \\in E, y \\in F\\}.",
+      "plain_language": "On fabrique toutes les combinaisons ordonnées possibles entre E et F.",
+      "why_here": "Le graphe d'une application est un sous-ensemble de E×F: E×F fournit l'univers de tous les couples candidats.",
+      "example": {
+        "statement": "\\{a,b\\} \\times \\{1,2\\}",
+        "explanation": "On obtient (a,1), (a,2), (b,1), (b,2)."
+      },
+      "prerequisites": ["ensemble", "couple ordonné"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
+          "context": "Définition du graphe Γf comme partie de E×F",
+          "contribution": "Interprétation comme espace de toutes les associations possibles."
+        }
+      ],
+      "connections": ["ordered-pair", "function-graph", "set-square"],
+      "domains": ["théorie des ensembles", "géométrie analytique", "analyse", "probabilités", "algèbre linéaire"],
+      "misconception": {
+        "wrong": "× est toujours une multiplication numérique.",
+        "correction": "Ici les objets sont des ensembles; × construit un ensemble de couples. Le contexte détermine l'opération."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Définition 5 — graphe d'une application",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "intersection",
+      "display": "∩",
+      "latex": "\\cap",
+      "aliases": ["intersection"],
+      "spoken": {
+        "fr_literal": "inter",
+        "fr_natural": "ce qui appartient aux deux ensembles à la fois"
+      },
+      "concept": "intersection de deux ensembles",
+      "category": "ensembles",
+      "formal": "A \\cap B = \\{x : x \\in A et x \\in B\\}.",
+      "plain_language": "On ne garde que les éléments communs aux deux ensembles.",
+      "why_here": "Dans Γf ∩ (E'×F), l'intersection agit comme un filtre qui conserve les couples du vrai graphe dont l'entrée appartient à E'.",
+      "example": {
+        "statement": "\\{1,2,3\\} \\cap \\{2,3,4\\}=\\{2,3\\}",
+        "explanation": "2 et 3 sont les seuls éléments présents dans les deux ensembles."
+      },
+      "prerequisites": ["ensemble", "appartenance"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-example-3",
+          "context": "Γf' = Γf ∩ (E'×F)",
+          "contribution": "Interprétation opérationnelle comme filtre sur la première coordonnée."
+        }
+      ],
+      "connections": ["subset", "function-restriction", "cartesian-product"],
+      "domains": ["théorie des ensembles", "probabilités", "topologie", "analyse"],
+      "misconception": {
+        "wrong": "L'intersection modifie les valeurs de la fonction.",
+        "correction": "Dans l'exemple de restriction, elle sélectionne des couples existants; elle ne recalcule pas f(x)."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Exemple 3 après Définition 5",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "for-all",
+      "display": "∀",
+      "latex": "\\forall",
+      "aliases": ["quantificateur universel"],
+      "spoken": {
+        "fr_literal": "pour tout",
+        "fr_natural": "quel que soit"
+      },
+      "concept": "quantification universelle",
+      "category": "logique",
+      "formal": "\\forall x \\in E, P(x) affirme que la propriété P est vraie pour chaque x de E.",
+      "plain_language": "La phrase doit fonctionner pour chaque élément considéré, sans exception.",
+      "why_here": "La définition d'une application impose une condition pour chaque entrée x du domaine.",
+      "example": {
+        "statement": "\\forall x \\in \\mathbb R, x^2 \\ge 0",
+        "explanation": "Le carré de chaque nombre réel est non négatif."
+      },
+      "prerequisites": ["proposition", "ensemble"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
+          "context": "∀x∈E, ∃!y∈F : (x,y)∈Γ",
+          "contribution": "Lecture de la définition d'une application comme phrase."
+        }
+      ],
+      "connections": ["exists", "exists-unique", "belongs-to"],
+      "domains": ["logique", "analyse", "algèbre", "probabilités", "informatique théorique"],
+      "misconception": {
+        "wrong": "∀ signifie qu'on a vérifié quelques exemples représentatifs.",
+        "correction": "La proposition porte sur tous les éléments du domaine déclaré."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Définition 5 — caractérisation du graphe d'une application",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "exists",
+      "display": "∃",
+      "latex": "\\exists",
+      "aliases": ["quantificateur existentiel"],
+      "spoken": {
+        "fr_literal": "il existe",
+        "fr_natural": "on peut trouver au moins un"
+      },
+      "concept": "quantification existentielle",
+      "category": "logique",
+      "formal": "\\exists y \\in F, P(y) affirme qu'au moins un élément y de F vérifie P.",
+      "plain_language": "Il suffit qu'au moins un objet satisfasse la propriété.",
+      "why_here": "Une application doit fournir une sortie pour chaque entrée.",
+      "example": {
+        "statement": "\\exists x \\in \\mathbb R : x^2=4",
+        "explanation": "Au moins une solution existe; en fait il y en a deux, 2 et -2."
+      },
+      "prerequisites": ["proposition", "ensemble"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
+          "context": "Lecture des quantificateurs de la définition d'une application",
+          "contribution": "Distinction entre existence et existence unique."
+        }
+      ],
+      "connections": ["for-all", "exists-unique"],
+      "domains": ["logique", "analyse", "algèbre", "équations différentielles"],
+      "misconception": {
+        "wrong": "∃ implique qu'il n'existe qu'une seule solution.",
+        "correction": "∃ signifie au moins une; l'unicité demande une condition supplémentaire."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Définition 5 — caractérisation du graphe d'une application",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "exists-unique",
+      "display": "∃!",
+      "latex": "\\exists!",
+      "aliases": ["existence unique"],
+      "spoken": {
+        "fr_literal": "il existe un unique",
+        "fr_natural": "il existe un et un seul"
+      },
+      "concept": "existence et unicité",
+      "category": "logique",
+      "formal": "\\exists! y \\in F : P(y) affirme qu'exactement un élément y de F vérifie P.",
+      "plain_language": "Il y a une solution, et aucune seconde solution différente n'est autorisée.",
+      "why_here": "C'est la condition qui transforme une relation générale en application: chaque x possède exactement une image y.",
+      "example": {
+        "statement": "\\exists! y \\in \\mathbb R : y=x+1, pour x fixé",
+        "explanation": "Une fois x choisi, y est déterminé sans ambiguïté."
+      },
+      "prerequisites": ["exists", "unicité"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
+          "context": "∀x∈E, ∃!y∈F : (x,y)∈Γ",
+          "contribution": "Identification du caractère univoque d'une application."
+        }
+      ],
+      "connections": ["relation", "application", "for-all", "exists"],
+      "domains": ["logique", "analyse", "algèbre", "équations différentielles", "optimisation"],
+      "misconception": {
+        "wrong": "∃! est seulement une façon emphatique d'écrire ∃.",
+        "correction": "Le point d'exclamation ajoute l'exigence d'unicité."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Définition 5 — caractérisation du graphe d'une application",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "function-arrow",
+      "display": "→",
+      "latex": "\\to",
+      "aliases": ["flèche de type d'application"],
+      "spoken": {
+        "fr_literal": "de E dans F",
+        "fr_natural": "l'application prend ses entrées dans E et produit ses sorties dans F"
+      },
+      "concept": "déclaration du domaine et du codomaine d'une application",
+      "category": "fonctions",
+      "formal": "f:E \\to F déclare une application f de domaine E et de codomaine F.",
+      "plain_language": "On annonce le type d'entrée et l'ensemble dans lequel les sorties sont censées vivre.",
+      "why_here": "Fixe E et F avant de définir le graphe comme ensemble de couples dans E×F.",
+      "example": {
+        "statement": "f:\\mathbb R \\to \\mathbb R, f(x)=x^2",
+        "explanation": "f reçoit un réel et renvoie un réel."
+      },
+      "prerequisites": ["ensemble", "application"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
+          "context": "f:E→F avant la définition de Γf",
+          "contribution": "Distinction entre domaine, codomaine et règle de calcul."
+        }
+      ],
+      "connections": ["maps-to", "function-evaluation", "cartesian-product"],
+      "domains": ["analyse", "algèbre", "topologie", "probabilités", "informatique"],
+      "misconception": {
+        "wrong": "La flèche → décrit toujours l'image d'un x particulier.",
+        "correction": "Dans f:E→F elle décrit le type de l'application; x↦f(x) décrit l'action sur un élément."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Définition 5 — f:E→F",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "maps-to",
+      "display": "↦",
+      "latex": "\\mapsto",
+      "aliases": ["envoyé sur"],
+      "spoken": {
+        "fr_literal": "x est envoyé sur f de x",
+        "fr_natural": "à l'entrée x, la règle associe la sortie f(x)"
+      },
+      "concept": "action d'une application sur un élément",
+      "category": "fonctions",
+      "formal": "x \\mapsto f(x) décrit la règle qui associe à x son image f(x).",
+      "plain_language": "Cette flèche décrit ce que la fonction fait à une entrée.",
+      "why_here": "Les exemples d'identité et de fonction constante utilisent la notation x↦x ou x↦a.",
+      "example": {
+        "statement": "x \\mapsto x^2",
+        "explanation": "Chaque entrée x est associée à son carré."
+      },
+      "prerequisites": ["application", "image"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-examples",
+          "context": "Applications identité et constante",
+          "contribution": "Distinction entre → et ↦."
+        }
+      ],
+      "connections": ["function-arrow", "function-evaluation", "identity-map"],
+      "domains": ["analyse", "algèbre", "probabilités", "informatique"],
+      "misconception": {
+        "wrong": "→ et ↦ sont toujours interchangeables.",
+        "correction": "→ sert souvent à déclarer domaine/codomaine; ↦ décrit l'association élément par élément."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Exemples après Définition 5",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "function-evaluation",
+      "display": "f(x)",
+      "latex": "f(x)",
+      "aliases": ["image de x par f"],
+      "spoken": {
+        "fr_literal": "f de x",
+        "fr_natural": "l'image de x par f"
+      },
+      "concept": "évaluation d'une fonction",
+      "category": "fonctions",
+      "formal": "Si f:E→F et x∈E, f(x) désigne l'unique image de x dans F.",
+      "plain_language": "On applique la règle f à l'entrée x et on nomme sa sortie.",
+      "why_here": "Le graphe est constitué précisément des couples (x,f(x)).",
+      "example": {
+        "statement": "f(x)=x^2, alors f(3)=9",
+        "explanation": "On remplace x par 3 dans la règle."
+      },
+      "prerequisites": ["application", "image"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
+          "context": "Γf={(x,f(x)) | x∈E}",
+          "contribution": "Lecture de f(x) comme sortie associée à x."
+        }
+      ],
+      "connections": ["maps-to", "function-graph", "function-arrow"],
+      "domains": ["analyse", "algèbre", "probabilités", "systèmes dynamiques", "machine learning"],
+      "misconception": {
+        "wrong": "f(x) signifie toujours f multiplié par x.",
+        "correction": "Dans ce contexte, les parenthèses indiquent l'évaluation de la fonction."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Définition 5 — graphe d'une application",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "function-graph",
+      "display": "Γf",
+      "latex": "\\Gamma_f",
+      "aliases": ["graphe de f"],
+      "spoken": {
+        "fr_literal": "Gamma indice f",
+        "fr_natural": "le graphe de l'application f"
+      },
+      "concept": "graphe d'une application",
+      "category": "fonctions",
+      "formal": "\\Gamma_f = \\{(x,y) \\in E\\times F : y=f(x)\\} = \\{(x,f(x)) : x \\in E\\}.",
+      "plain_language": "Le graphe mémorise toutes les associations entrée-sortie de f sous forme de couples.",
+      "why_here": "C'est l'objet central de la Définition 5 et le support des exemples identité, constante, restriction et application vide.",
+      "example": {
+        "statement": "f(x)=x^2 donne des couples comme (2,4) et (-2,4)",
+        "explanation": "Chaque couple contient une entrée puis son image."
+      },
+      "prerequisites": ["application", "couple ordonné", "produit cartésien"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
+          "context": "Définition 5 et quatre exemples qui suivent",
+          "contribution": "Distinction entre graphe comme ensemble de couples et dessin géométrique."
+        }
+      ],
+      "connections": ["cartesian-product", "ordered-pair", "function-restriction", "identity-map"],
+      "domains": ["analyse", "géométrie analytique", "théorie des ensembles", "topologie"],
+      "misconception": {
+        "wrong": "Le graphe est d'abord le dessin d'une courbe dans le plan.",
+        "correction": "Formellement, le graphe est un ensemble de couples; le dessin est une représentation possible."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Définition 5 — graphe d'une application",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "set-square",
+      "display": "E²",
+      "latex": "E^2",
+      "aliases": ["E×E dans ce contexte"],
+      "spoken": {
+        "fr_literal": "E au carré",
+        "fr_natural": "le produit cartésien de E avec lui-même"
+      },
+      "concept": "carré cartésien d'un ensemble",
+      "category": "ensembles",
+      "formal": "Dans ce contexte, E^2 = E \\times E.",
+      "plain_language": "On prend deux coordonnées, toutes deux choisies dans E.",
+      "why_here": "Le graphe de l'identité sur E est la diagonale de E².",
+      "example": {
+        "statement": "\\{1,2\\}^2=\\{(1,1),(1,2),(2,1),(2,2)\\}",
+        "explanation": "Tous les couples ont leurs deux coordonnées dans le même ensemble."
+      },
+      "prerequisites": ["produit cartésien"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-example-1",
+          "context": "Le graphe de IdE est la diagonale de E²",
+          "contribution": "Lecture de E² comme E×E dans le langage des ensembles."
+        }
+      ],
+      "connections": ["cartesian-product", "identity-map"],
+      "domains": ["théorie des ensembles", "géométrie", "topologie", "algèbre"],
+      "misconception": {
+        "wrong": "E² signifie toujours qu'on élève numériquement E au carré.",
+        "correction": "Pour un ensemble, E² désigne couramment le produit cartésien E×E; le type de l'objet fixe le sens."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Exemple 1 après Définition 5",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "identity-map",
+      "display": "IdE",
+      "latex": "\\mathrm{Id}_E",
+      "aliases": ["application identité"],
+      "spoken": {
+        "fr_literal": "identité de E",
+        "fr_natural": "l'application qui renvoie chaque élément de E sur lui-même"
+      },
+      "concept": "application identité",
+      "category": "fonctions",
+      "formal": "\\mathrm{Id}_E:E\\to E, x\\mapsto x.",
+      "plain_language": "La fonction ne change rien: l'entrée ressort identique.",
+      "why_here": "Son graphe fournit un premier cas simple: tous les couples sont de la forme (x,x), donc sur la diagonale.",
+      "example": {
+        "statement": "IdE(3)=3",
+        "explanation": "L'identité conserve son entrée."
+      },
+      "prerequisites": ["application", "maps-to"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-example-1",
+          "context": "Exemple 1 — graphe de IdE",
+          "contribution": "Lien entre identité et diagonale de E²."
+        }
+      ],
+      "connections": ["set-square", "function-graph", "maps-to"],
+      "domains": ["analyse", "algèbre", "topologie", "catégories"],
+      "misconception": {
+        "wrong": "IdE est le nombre 1 ou une multiplication par une identité dans tous les contextes.",
+        "correction": "Ici IdE est une application E→E définie par x↦x."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Exemple 1 après Définition 5",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "function-restriction",
+      "display": "f|E′",
+      "latex": "f_{\\mid E'}",
+      "aliases": ["restriction de f à E'", "f|_{E'}"],
+      "spoken": {
+        "fr_literal": "f restreinte à E prime",
+        "fr_natural": "la même fonction f, mais regardée seulement sur les entrées appartenant à E prime"
+      },
+      "concept": "restriction d'une application",
+      "category": "fonctions",
+      "formal": "Si f:E→F et E'⊆E, alors f|E':E'→F et f|E'(x)=f(x) pour tout x∈E'. Son graphe vérifie Γ(f|E') = Γf ∩ (E'×F).",
+      "plain_language": "On garde exactement la même règle, mais on réduit le domaine autorisé.",
+      "why_here": "L'exemple 3 montre comment obtenir le graphe restreint en filtrant le graphe complet sur les entrées de E'.",
+      "example": {
+        "statement": "f(x)=x^2 sur ℝ, puis f|[-1,1]",
+        "explanation": "La règle x² ne change pas; seules les entrées comprises entre -1 et 1 restent autorisées."
+      },
+      "prerequisites": ["application", "inclusion", "intersection", "produit cartésien", "graphe d'une application"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-example-3",
+          "context": "Exemple 3 — f'=f|E' et Γf'=Γf∩(E'×F)",
+          "contribution": "Restriction comprise comme filtre exact du domaine, puis reliée à la philosophie local/global."
+        }
+      ],
+      "connections": ["intersection", "subset", "function-graph", "local-analysis"],
+      "domains": ["analyse", "topologie", "géométrie différentielle", "équations différentielles", "probabilités"],
+      "misconception": {
+        "wrong": "Restreindre une fonction revient à l'approximer ou à modifier ses valeurs.",
+        "correction": "La restriction ne change pas f(x) sur les entrées conservées; elle change seulement le domaine."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Exemple 3 après Définition 5",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "empty-set",
+      "display": "∅",
+      "latex": "\\varnothing",
+      "aliases": ["ensemble vide"],
+      "spoken": {
+        "fr_literal": "ensemble vide",
+        "fr_natural": "l'ensemble qui ne contient aucun élément"
+      },
+      "concept": "ensemble vide",
+      "category": "ensembles",
+      "formal": "\\varnothing est l'unique ensemble ne contenant aucun élément.",
+      "plain_language": "Il n'y a rien à choisir dans cet ensemble.",
+      "why_here": "Le graphe de l'application vide est vide parce qu'il n'existe aucune entrée x à transformer en couple (x,f(x)).",
+      "example": {
+        "statement": "\\Gamma_f=\\varnothing pour f:\\varnothing\\to F",
+        "explanation": "Aucune entrée implique aucun couple dans le graphe."
+      },
+      "prerequisites": ["ensemble"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-example-4",
+          "context": "Exemple 4 — graphe de l'application vide",
+          "contribution": "Compréhension du cas vide et de la quantification sans contre-exemple."
+        }
+      ],
+      "connections": ["function-graph", "for-all"],
+      "domains": ["théorie des ensembles", "logique", "topologie", "algèbre"],
+      "misconception": {
+        "wrong": "∅ est la même chose que le nombre 0.",
+        "correction": "∅ est un ensemble sans élément; 0 est un nombre qui peut lui-même être élément d'un ensemble."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Exemple 4 après Définition 5",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "ordered-pair",
+      "display": "(x,y)",
+      "latex": "(x,y)",
+      "aliases": ["couple ordonné"],
+      "spoken": {
+        "fr_literal": "le couple x, y",
+        "fr_natural": "une paire où la première et la seconde position ont des rôles distincts"
+      },
+      "concept": "couple ordonné",
+      "category": "ensembles",
+      "formal": "(x,y) est ordonné: en général (x,y)≠(y,x) lorsque x≠y.",
+      "plain_language": "On mémorise deux objets avec leur ordre: ici d'abord l'entrée, puis la sortie.",
+      "why_here": "Chaque point du graphe d'une application est un couple entrée-sortie.",
+      "example": {
+        "statement": "(2,4)",
+        "explanation": "Pour f(x)=x², 2 est l'entrée et 4 son image; inverser les deux change le sens."
+      },
+      "prerequisites": ["objet mathématique"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
+          "context": "(x,y)∈E×F",
+          "contribution": "Interprétation du graphe comme ensemble de couples ordonnés."
+        }
+      ],
+      "connections": ["cartesian-product", "function-graph"],
+      "domains": ["théorie des ensembles", "géométrie analytique", "probabilités", "informatique"],
+      "misconception": {
+        "wrong": "(x,y) est une paire non ordonnée, donc l'ordre n'a pas d'importance.",
+        "correction": "Le premier et le second emplacement sont distingués."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Définition 5 — (x,y)∈E×F",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "definition-equals",
+      "display": ":=",
+      "latex": ":=",
+      "aliases": ["est défini par", "égalité de définition"],
+      "spoken": {
+        "fr_literal": "est défini comme",
+        "fr_natural": "ce qui suit fixe la définition de l'objet à gauche"
+      },
+      "concept": "égalité définitionnelle",
+      "category": "logique",
+      "formal": "A := B introduit A par définition comme l'objet B dans la convention considérée.",
+      "plain_language": "Ce n'est pas une équation à résoudre: on donne un nom à une construction.",
+      "why_here": "La formule Γf := {...} introduit formellement ce que l'on appellera le graphe de f.",
+      "example": {
+        "statement": "S := \\{1,2,3\\}",
+        "explanation": "On décide que le symbole S désignera cet ensemble."
+      },
+      "prerequisites": ["égalité", "définition"],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
+          "context": "Γf := {(x,y)∈E×F | y=f(x)}",
+          "contribution": "Lecture de := comme marqueur de définition plutôt que calcul."
+        }
+      ],
+      "connections": ["function-graph"],
+      "domains": ["analyse", "algèbre", "logique", "informatique"],
+      "misconception": {
+        "wrong": ":= signifie qu'on vient de démontrer une égalité entre deux expressions déjà définies.",
+        "correction": "Il signale généralement une définition ou une affectation conventionnelle selon le contexte."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_page",
+            "reference": "Définition 5 — notation de définition",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    }
+  ]
+}
