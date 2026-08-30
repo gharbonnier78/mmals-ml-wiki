@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: python scripts/prepare_pages.py
+      - run: python scripts/check_render_contract.py
       - run: python scripts/check_internal_links.py
       - run: python scripts/check_notation_registry.py
       - run: python scripts/check_release_consistency.py
