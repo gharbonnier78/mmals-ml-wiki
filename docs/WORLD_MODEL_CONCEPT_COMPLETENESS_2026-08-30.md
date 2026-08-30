@@ -2,6 +2,8 @@
 
 Status: **conceptual completeness pass, before source audit and independent review**.
 
+The Diderot Concepts index now exposes **59 individual concept pages**.
+
 ## Purpose
 
 Prevent the Diderot world-model pathway from containing undefined conceptual jumps and preserve a reviewable record of why individual concept pages were introduced.
@@ -12,7 +14,7 @@ This pass does **not** certify the scientific wording or bibliography of every p
 
 A reader should be able to navigate:
 
-`Encoder -> State -> Latent/Sufficient State -> Markov Property -> MDP/POMDP -> Belief -> Filtering -> Transition/Observation Models -> Observability/Reconstruction -> Stochastic/Chaotic Dynamics -> Attractors/Regimes -> Dynamic Compatibility -> Minimal Sufficient Dynamic Inference -> Action-conditioned Prediction -> Rollout/Planning -> World Model`
+`Encoder -> State -> Latent/Sufficient State -> Markov Property -> MDP/POMDP -> Belief -> Filtering -> Transition/Observation Models -> Observability/Reconstruction -> Stochastic/Chaotic Dynamics -> Attractors/Bifurcations/Regimes -> Dynamic Compatibility -> Minimal Sufficient Dynamic Inference -> Action-conditioned Prediction -> Rollout/Planning -> World Model`
 
 without an undefined semantic jump.
 
@@ -41,10 +43,13 @@ without an undefined semantic jump.
 - Counterfactual
 - Planning
 - Controllability
+- Probabilistic predictability
 
 ### Dynamical systems
 - Stochastic-chaotic system
 - Lyapunov exponent
+- Dynamical regime
+- Bifurcation
 - Attractor
 - Basin of attraction
 - Bistability
@@ -58,7 +63,7 @@ without an undefined semantic jump.
 ### Scientific method
 - Toy model / toy experiment
 
-Existing pages for stochastic dynamics, deterministic chaos, dynamical regime, observability/reconstruction, local-to-global structure, local geometry, dynamic compatibility distance, minimal sufficient dynamic inference and world model remain part of the same pathway.
+Existing pages for stochastic dynamics, deterministic chaos, observability/reconstruction, local-to-global structure, local geometry, dynamic compatibility distance, minimal sufficient dynamic inference and world model remain part of the same pathway.
 
 ## Toy rule
 
