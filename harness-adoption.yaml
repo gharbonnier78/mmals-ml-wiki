@@ -1,0 +1,76 @@
+schema_version: "0.1"
+
+harness:
+  repository: gharbonnier78/scientific-research-harness
+  ref: "e542c05814b0a317716c81dc9e22064c61e7d47a"
+  entrypoint: HARNESS.md
+  status: "provisional_pin_to_pr18_head"
+  upgrade_rule: "After upstream review/merge, adopt the reviewed immutable merge/tag ref explicitly; never follow main silently."
+
+consumer:
+  repository: "gharbonnier78/mmals-ml-wiki"
+  project_id: "diderot-mmals-ml"
+  instruction_entrypoints:
+    - AGENTS.md
+    - CLAUDE.md
+
+  canonical_pedagogy_surfaces:
+    - concepts/
+    - labs/
+    - pathways/
+    - mathematics/notation/registry.json
+    - docs/harness-meta.md
+
+authority:
+  sources:
+    - id: "diderot-source-registry"
+      reference: "research/sources/"
+      role: "Per-entry source provenance for research-derived statements."
+    - id: "notation-entry-authority"
+      reference: "mathematics/notation/registry.json#entries[].authority"
+      role: "Per-notation mathematical source/provenance; must be populated to the evidence level available for the entry."
+  domain_experts: []
+  prohibited_substitution:
+    - "The harness, Diderot, ChatGPT and Claude do not replace authoritative mathematical/scientific sources or accountable human review."
+
+artifacts:
+  claims:
+    - data/concepts.json
+    - research/
+  evidence:
+    - data/evidence.json
+    - research/provenance/
+  scientific_gates: []
+  chronicle:
+    - research/chronicle/
+  pedagogy:
+    - concepts/
+    - labs/
+    - pathways/
+    - mathematics/notation/registry.json
+  handoff: null
+
+execution:
+  environment_lock: null
+  replay_commands:
+    - "python scripts/check_internal_links.py"
+    - "python scripts/check_release_consistency.py"
+  randomness:
+    status: "not_applicable"
+    root_entropy_policy: null
+    lineage_artifact: null
+  concurrency:
+    status: "not_applicable"
+    reference_path: null
+    equivalence_evidence: null
+
+local_extensions:
+  - "docs/authoring-guide.md"
+  - "mathematics/notation/README.md"
+
+deviations: []
+
+adoption:
+  adopted_at: "2026-08-30"
+  adopted_by: "ChatGPT with explicit user authorization"
+  notes: "Initial adoption adds automatic agent bootstraps and the Diderot mathematical notation atlas. The harness pin references PR #18 head until upstream review is resolved."
