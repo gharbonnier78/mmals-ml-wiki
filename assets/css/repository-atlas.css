@@ -1,0 +1,20 @@
+.atlas-toolbar{display:grid;grid-template-columns:minmax(220px,2fr) minmax(180px,1fr) minmax(180px,1fr) auto;gap:.8rem;align-items:end;border:1px solid var(--line);background:var(--surface);border-radius:16px;padding:1rem}
+.atlas-toolbar label{display:grid;gap:.35rem;font-family:var(--mono);font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.atlas-toolbar input,.atlas-toolbar select{width:100%;border:1px solid var(--line);background:#0b110d;color:var(--ink);border-radius:9px;padding:.7rem .75rem;font:inherit;text-transform:none;letter-spacing:0}
+.atlas-toolbar input:focus,.atlas-toolbar select:focus{outline:2px solid var(--green2);outline-offset:2px}
+.atlas-summary{margin:.7rem 0 0;color:var(--muted);font-size:.9rem}
+.atlas-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.atlas-card{display:flex;flex-direction:column;gap:.25rem}
+.atlas-card h3{font-size:1.2rem}
+.atlas-role{font-family:var(--mono);font-size:.78rem;color:var(--green)!important;text-transform:uppercase;letter-spacing:.04em}
+.atlas-outcome{border-left:3px solid var(--gold);background:rgba(210,170,84,.055);border-radius:0 12px 12px 0;padding:.8rem .9rem;margin:.65rem 0}
+.atlas-outcome strong{font-family:var(--sans);font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gold)}
+.atlas-outcome p{color:#d9e2d8;margin:.3rem 0 .5rem}
+.atlas-outcome a{font-family:var(--sans);font-size:.84rem}
+.atlas-links{display:flex;gap:.45rem;flex-wrap:wrap;margin:.25rem 0 .45rem}
+.atlas-link{display:inline-flex;align-items:center;border:1px solid #3e5d49;border-radius:9px;padding:.4rem .6rem;background:#0c140f;color:var(--teal);font-family:var(--sans);font-size:.8rem;font-weight:650}
+.atlas-link:hover{text-decoration:none;border-color:var(--green)}
+.atlas-tags{margin-top:auto;padding-top:.35rem}
+.atlas-card code{overflow-wrap:anywhere}
+@media(max-width:900px){.atlas-toolbar{grid-template-columns:1fr 1fr}.atlas-toolbar .button{width:100%}.atlas-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.atlas-toolbar{grid-template-columns:1fr}}

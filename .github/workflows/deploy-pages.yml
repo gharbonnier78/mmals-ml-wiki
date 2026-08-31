@@ -30,6 +30,8 @@ jobs:
         run: python scripts/check_release_consistency.py
       - name: Validate concept audit
         run: python scripts/check_concept_audit.py
+      - name: Validate repository outcome atlas
+        run: python scripts/check_repository_atlas.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

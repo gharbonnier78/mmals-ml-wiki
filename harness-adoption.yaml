@@ -29,6 +29,9 @@ authority:
     - id: "notation-entry-authority"
       reference: "mathematics/notation/registry.json#entries[].authority"
       role: "Per-notation mathematical source/provenance; must be populated to the evidence level available for the entry."
+    - id: "repository-outcome-authority"
+      reference: "data/repository-outcomes.json#repositories[].outcome.source_url"
+      role: "Per-repository source artifact that supports the bounded outcome/status wording shown in the public atlas."
   domain_experts: []
   prohibited_substitution:
     - "The harness, Diderot, ChatGPT and Claude do not replace authoritative mathematical/scientific sources or accountable human review."
@@ -36,6 +39,7 @@ authority:
 artifacts:
   claims:
     - data/concepts.json
+    - data/repository-outcomes.json
     - research/
   evidence:
     - data/evidence.json
@@ -57,6 +61,7 @@ execution:
     - "python scripts/check_notation_registry.py"
     - "python scripts/check_release_consistency.py"
     - "python scripts/check_concept_audit.py"
+    - "python scripts/check_repository_atlas.py"
   randomness:
     status: "not_applicable"
     root_entropy_policy: null
@@ -75,4 +80,4 @@ deviations: []
 adoption:
   adopted_at: "2026-08-30"
   adopted_by: "ChatGPT with explicit user authorization"
-  notes: "Initial provisional pin to harness PR #18 was explicitly upgraded after PR #18 merged. The current ref is the immutable reviewed merge commit for mathematical-notation capitalization and repository-agent bootstraps."
+  notes: "Initial provisional pin to harness PR #18 was explicitly upgraded after PR #18 merged. The current ref is the immutable reviewed merge commit for mathematical-notation capitalization and repository-agent bootstraps. The repository outcome atlas is a curated claim/status index whose entries point back to repository-owned source artifacts; it is not itself scientific evidence."
