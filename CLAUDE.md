@@ -21,10 +21,10 @@ Before substantive work:
 7. Keep the registry as the single source for web/search/print views.
 
 Pinned harness entrypoint:
-`https://raw.githubusercontent.com/gharbonnier78/scientific-research-harness/13b26f717e66e36bb753f2885091d420a99ec878/HARNESS.md`
+`https://raw.githubusercontent.com/gharbonnier78/scientific-research-harness/e80097fe8eb88c9e9340732683710ba1dc2ae008/HARNESS.md`
 
 Pinned notation contract:
-`https://raw.githubusercontent.com/gharbonnier78/scientific-research-harness/13b26f717e66e36bb753f2885091d420a99ec878/pedagogy/MATHEMATICAL_NOTATION_CAPITALIZATION.md`
+`https://raw.githubusercontent.com/gharbonnier78/scientific-research-harness/e80097fe8eb88c9e9340732683710ba1dc2ae008/pedagogy/MATHEMATICAL_NOTATION_CAPITALIZATION.md`
 
 If the pinned dependency cannot be loaded, say so before claiming harness compliance or
 releasing a scientific gate. If a local immutable harness copy is later vendored, replace

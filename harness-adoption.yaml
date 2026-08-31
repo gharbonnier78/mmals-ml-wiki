@@ -2,7 +2,7 @@ schema_version: "0.1"
 
 harness:
   repository: gharbonnier78/scientific-research-harness
-  ref: "13b26f717e66e36bb753f2885091d420a99ec878"
+  ref: "e80097fe8eb88c9e9340732683710ba1dc2ae008"
   entrypoint: HARNESS.md
   status: "adopted_reviewed_merge_ref"
   upgrade_rule: "Adopt future harness changes only through an explicit immutable merge/tag/commit ref; never follow main silently."
@@ -80,4 +80,4 @@ deviations: []
 adoption:
   adopted_at: "2026-08-30"
   adopted_by: "ChatGPT with explicit user authorization"
-  notes: "Initial provisional pin to harness PR #18 was explicitly upgraded after PR #18 merged. The current ref is the immutable reviewed merge commit for mathematical-notation capitalization and repository-agent bootstraps. The repository outcome atlas is a curated claim/status index whose entries point back to repository-owned source artifacts; it is not itself scientific evidence."
+  notes: "Initial provisional pin to harness PR #18 was upgraded after independent review and merge. The current ref is the immutable reviewed merge commit after PR #19, which clarified the single-canonical-registry rule and concept/notation orchestration. The repository outcome atlas is a curated claim/status index whose entries point back to repository-owned source artifacts; it is not itself scientific evidence."
