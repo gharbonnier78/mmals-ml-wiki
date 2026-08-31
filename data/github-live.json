@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-17T07:36:43.734963+00:00",
+  "generated_at": "2026-08-31T14:23:28.555487+00:00",
   "mode": "github-api-refresh",
   "owner": "gharbonnier78",
-  "public_repository_count": 40,
+  "public_repository_count": 41,
   "missing_from_live": [],
   "unmapped_live": [
     "diderot-machine-learning-specialization",
@@ -11,6 +11,7 @@
     "evidence-guided-engineering-agents",
     "geometric-latent-dynamics",
     "identity-trust-inclusion-fabric",
+    "interactive-evidence-presenter",
     "mmals-g2-geometric-perspective",
     "mmals-geometric-path-memory",
     "mmals-regime-inference",
@@ -28,16 +29,16 @@
       "html_url": "https://github.com/gharbonnier78/mmals-ml-wiki",
       "description": "Interactive MMALS and machine-learning encyclopedia connecting concepts, geometry, experiments, evidence status, and stable article links.",
       "language": "HTML",
-      "updated_at": "2026-08-17T07:19:23Z",
+      "updated_at": "2026-08-31T10:08:21Z",
       "archived": false,
       "visibility": "public"
     },
     {
-      "name": "evidence-guided-engineering-agents",
-      "html_url": "https://github.com/gharbonnier78/evidence-guided-engineering-agents",
-      "description": "Governed AI personas that turn authorized enterprise evidence into falsifiable engineering, BOM, IP, legal, funding and delivery recommendations.",
-      "language": null,
-      "updated_at": "2026-08-10T14:01:40Z",
+      "name": "diderot-machine-learning-specialization",
+      "html_url": "https://github.com/gharbonnier78/diderot-machine-learning-specialization",
+      "description": "Andrew NG Machine Learning Specliazation",
+      "language": "Python",
+      "updated_at": "2026-08-31T10:07:35Z",
       "archived": false,
       "visibility": "public"
     },
@@ -46,7 +47,43 @@
       "html_url": "https://github.com/gharbonnier78/scientific-research-harness",
       "description": "A reusable scientific workflow harness for reproducible research, explicit reasoning, evidence traceability, rigorous gates, replayable experiments, and progressive learning artifacts.",
       "language": null,
-      "updated_at": "2026-08-09T15:06:57Z",
+      "updated_at": "2026-08-31T02:33:16Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "mmals",
+      "html_url": "https://github.com/gharbonnier78/mmals",
+      "description": "Mycelium-inspired continual learning research prototype for auditable inferred-context routing, functional memory, no-leakage policy selection, and comparative benchmark evaluation across MNIST-family tasks.",
+      "language": "Jupyter Notebook",
+      "updated_at": "2026-08-30T18:04:19Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "siamese-embedding-compression-lab",
+      "html_url": "https://github.com/gharbonnier78/siamese-embedding-compression-lab",
+      "description": "Replayable experiment comparing raw, random, PCA and Siamese embedding compression with MMALS-compatible evidence replay.",
+      "language": "Python",
+      "updated_at": "2026-08-27T17:29:51Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "interactive-evidence-presenter",
+      "html_url": "https://github.com/gharbonnier78/interactive-evidence-presenter",
+      "description": "Turn scientific results into interactive, explainable, multimodal presentations backed by evidence.",
+      "language": "JavaScript",
+      "updated_at": "2026-08-23T16:14:41Z",
+      "archived": false,
+      "visibility": "public"
+    },
+    {
+      "name": "evidence-guided-engineering-agents",
+      "html_url": "https://github.com/gharbonnier78/evidence-guided-engineering-agents",
+      "description": "Governed AI personas that turn authorized enterprise evidence into falsifiable engineering, BOM, IP, legal, funding and delivery recommendations.",
+      "language": null,
+      "updated_at": "2026-08-19T07:26:05Z",
       "archived": false,
       "visibility": "public"
     },
@@ -56,15 +93,6 @@
       "description": "Learning hidden dynamics on manifolds and Lie groups, with executable mathematics, pedagogical assurance, and reproducible experiments.",
       "language": null,
       "updated_at": "2026-08-09T11:45:46Z",
-      "archived": false,
-      "visibility": "public"
-    },
-    {
-      "name": "siamese-embedding-compression-lab",
-      "html_url": "https://github.com/gharbonnier78/siamese-embedding-compression-lab",
-      "description": "Replayable experiment comparing raw, random, PCA and Siamese embedding compression with MMALS-compatible evidence replay.",
-      "language": "Jupyter Notebook",
-      "updated_at": "2026-08-08T07:55:09Z",
       "archived": false,
       "visibility": "public"
     },
@@ -128,15 +156,6 @@
       "description": "Federated identity assurance combining biometrics, credentials, anomaly detection, graph ML, fraud prevention, inclusion monitoring, and accountable human decision-making.",
       "language": "TeX",
       "updated_at": "2026-07-19T22:54:45Z",
-      "archived": false,
-      "visibility": "public"
-    },
-    {
-      "name": "diderot-machine-learning-specialization",
-      "html_url": "https://github.com/gharbonnier78/diderot-machine-learning-specialization",
-      "description": "Andrew NG Machine Learning Specliazation",
-      "language": "TeX",
-      "updated_at": "2026-07-19T22:09:23Z",
       "archived": false,
       "visibility": "public"
     },
@@ -335,15 +354,6 @@
       "description": "A Bayesian engineering economics framework for deciding architecture, deployment, security, sovereignty, staging, and AI inference trade-offs under confidence constraints.  Alternative shorter description:",
       "language": "TeX",
       "updated_at": "2026-05-29T16:02:58Z",
-      "archived": false,
-      "visibility": "public"
-    },
-    {
-      "name": "mmals",
-      "html_url": "https://github.com/gharbonnier78/mmals",
-      "description": "Mycelium-inspired continual learning research prototype for auditable inferred-context routing, functional memory, no-leakage policy selection, and comparative benchmark evaluation across MNIST-family tasks.",
-      "language": "Jupyter Notebook",
-      "updated_at": "2026-05-27T13:58:45Z",
       "archived": false,
       "visibility": "public"
     },
