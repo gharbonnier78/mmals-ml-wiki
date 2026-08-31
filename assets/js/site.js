@@ -2,6 +2,60 @@
 (function(){
   const siteScript=document.currentScript;
 
+  // Global navigation contract.
+  // "Concepts" always means the complete concept catalogue, never one privileged
+  // concept page. On narrow screens expose the same navigation through an
+  // accessible toggle instead of hiding it completely.
+  const nav=document.querySelector('.nav');
+  const navLinks=nav?.querySelector('.nav-links');
+  if(nav && navLinks && siteScript){
+    const siteRoot=new URL('../../',siteScript.src);
+    [...navLinks.querySelectorAll('a')].forEach(link=>{
+      if(link.textContent.trim()==='Concepts'){
+        link.href=new URL('concepts/index.html',siteRoot).href;
+      }
+    });
+
+    if(!nav.querySelector('.nav-toggle')){
+      if(!navLinks.id)navLinks.id='primary-navigation';
+      const toggle=document.createElement('button');
+      toggle.type='button';
+      toggle.className='nav-toggle';
+      toggle.setAttribute('aria-controls',navLinks.id);
+      toggle.setAttribute('aria-expanded','false');
+      toggle.textContent='Menu';
+      toggle.addEventListener('click',()=>{
+        const open=nav.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded',String(open));
+        toggle.textContent=open?'Close':'Menu';
+      });
+      navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+        nav.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded','false');
+        toggle.textContent='Menu';
+      }));
+      nav.insertBefore(toggle,navLinks);
+    }
+
+    if(!document.querySelector('style[data-diderot-mobile-nav]')){
+      const mobileStyle=document.createElement('style');
+      mobileStyle.dataset.diderotMobileNav='true';
+      mobileStyle.textContent=`
+        .nav-toggle{display:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:.5rem .7rem;border-radius:8px;font:inherit;font-size:.9rem;cursor:pointer}
+        .nav-toggle:hover{border-color:#42604a}
+        @media(max-width:650px){
+          .nav{align-items:center;flex-wrap:wrap}
+          .nav-toggle{display:inline-flex;align-items:center;justify-content:center;margin-left:auto}
+          .nav-links{display:none!important;width:100%;padding:.35rem 0 .25rem;gap:.25rem;align-items:stretch}
+          .nav.nav-open .nav-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))}
+          .nav-links a{display:block;padding:.65rem .7rem;background:var(--surface);border:1px solid var(--line)}
+        }
+        @media(max-width:380px){.nav.nav-open .nav-links{grid-template-columns:1fr}}
+      `;
+      document.head.appendChild(mobileStyle);
+    }
+  }
+
   // Render display-math blocks from their canonical TeX source.
   // The repository stores formulas as plain TeX inside `.formula` elements so the
   // source stays readable and diffable. MathJax is loaded only on pages that
