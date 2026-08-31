@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-24T07:31:17.919357+00:00",
+  "generated_at": "2026-08-31T14:15:03.631264+00:00",
   "mode": "network-refresh",
   "summary": {
-    "internal_checked": 897,
-    "internal_ok": 897,
+    "internal_checked": 1362,
+    "internal_ok": 1362,
     "internal_broken": 0,
-    "external_checked": 40,
-    "external_ok": 40,
+    "external_checked": 22,
+    "external_ok": 22,
     "external_warning": 0,
     "external_broken": 0
   },
@@ -16,241 +16,133 @@
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/biological-mapping/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:54.737703+00:00"
+      "checked_at": "2026-08-31T14:14:53.758629+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/cal/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:55.037661+00:00"
+      "checked_at": "2026-08-31T14:14:54.028774+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/functional-memory/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:55.286046+00:00"
+      "checked_at": "2026-08-31T14:14:54.278855+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/functional-route/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:55.559544+00:00"
+      "checked_at": "2026-08-31T14:14:54.669939+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/fungal-medium/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:55.814911+00:00"
+      "checked_at": "2026-08-31T14:14:54.931332+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/host-specialization/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:56.064255+00:00"
+      "checked_at": "2026-08-31T14:14:55.173353+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/host/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:56.558767+00:00"
+      "checked_at": "2026-08-31T14:14:55.417346+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/inferred-context/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:56.799684+00:00"
+      "checked_at": "2026-08-31T14:14:55.671490+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/mmals/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:57.033892+00:00"
+      "checked_at": "2026-08-31T14:14:55.917005+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/mycorrhiza/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:57.271133+00:00"
+      "checked_at": "2026-08-31T14:14:56.377828+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/outcome-bearing-execution/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:57.526880+00:00"
+      "checked_at": "2026-08-31T14:14:56.612081+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/probability-simplex/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:57.786145+00:00"
+      "checked_at": "2026-08-31T14:14:56.853358+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/reconstructive-synthetic-memory/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:58.039229+00:00"
+      "checked_at": "2026-08-31T14:14:57.092981+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/route/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:58.289818+00:00"
+      "checked_at": "2026-08-31T14:14:57.330021+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/stability-plasticity/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:58.526230+00:00"
+      "checked_at": "2026-08-31T14:14:57.593742+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/torus/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:58.780035+00:00"
+      "checked_at": "2026-08-31T14:14:57.850514+00:00"
     },
     {
       "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/tput/",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:59.017691+00:00"
+      "checked_at": "2026-08-31T14:14:58.121607+00:00"
     },
     {
-      "url": "https://github.com/gharbonnier78/airport-travel-border-identity-architecture",
+      "url": "https://github.com/gharbonnier78/ed-pomdp/tree/2ad6d996fd9bb70badbb58bd75f8e6558fd4aba6",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:30:59.916055+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/bayesian-economic-quality-governance",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:00.644708+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/confidence-constrained-engineering-economics",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:01.416385+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/docker-react",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:02.253771+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/fingerprint-feature-extraction-lab",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:03.106921+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/from-hyperautomation-to-systemic-engineering-capability",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:03.867609+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/geometry-mmalls-g1",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:04.818957+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/lac-digital-identity-opportunity-framework",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:05.690930+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/mmals",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:06.449494+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/mmals-cal",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:07.284273+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/mmals-cal-evidence-contract",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:08.080667+00:00"
+      "checked_at": "2026-08-31T14:14:59.144065+00:00"
     },
     {
       "url": "https://github.com/gharbonnier78/mmals-ecospec",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:31:08.877886+00:00"
+      "checked_at": "2026-08-31T14:15:00.092104+00:00"
     },
     {
-      "url": "https://github.com/gharbonnier78/mmals-goal-adaptive-control",
+      "url": "https://github.com/gharbonnier78/mmals/blob/3d9c8e0284f83c9fb39570a7be9aa661062b3c4c/README.md",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:31:09.625224+00:00"
+      "checked_at": "2026-08-31T14:15:01.588475+00:00"
     },
     {
-      "url": "https://github.com/gharbonnier78/mmals-rc2o-prep-selector-regret-regime-audit",
+      "url": "https://github.com/gharbonnier78/mmals/tree/3d9c8e0284f83c9fb39570a7be9aa661062b3c4c/raw_evidence",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:31:10.392663+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/mmals-rc2o-splitcifar10-continual-learning",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:11.229690+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/mmals-science-magazine",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:12.005515+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/mmals-stable-plastic-context-memory",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:12.766010+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/mmals-tput",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:13.561266+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/mmals-v1.1-continual-learning-evidence",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:14.422343+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/quality-intelligence-systems-governance",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:15.251657+00:00"
+      "checked_at": "2026-08-31T14:15:02.407618+00:00"
     },
     {
       "url": "https://github.com/gharbonnier78/siamese-embedding-compression-lab/blob/main/STUDY0_FINAL_REPORT.md",
       "ok": true,
       "status": "200",
-      "checked_at": "2026-08-24T07:31:16.094855+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/stratq-ai",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:16.805412+00:00"
-    },
-    {
-      "url": "https://github.com/gharbonnier78/synthetic-data-scaling-mmals",
-      "ok": true,
-      "status": "200",
-      "checked_at": "2026-08-24T07:31:17.660150+00:00"
+      "checked_at": "2026-08-31T14:15:03.280607+00:00"
     }
   ]
 }
