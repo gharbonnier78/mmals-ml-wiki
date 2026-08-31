@@ -81,13 +81,14 @@ as proving that a given chat runtime loaded it.**
 
 Diderot now pins the reviewed immutable harness merge commit:
 
-`13b26f717e66e36bb753f2885091d420a99ec878`
+`e80097fe8eb88c9e9340732683710ba1dc2ae008`
 
-This is the merged result of harness PR #18, which introduces mathematical-notation
-capitalization, integrates it into `HARNESS.md`, and adds reusable agent bootstrap templates.
-The earlier provisional pin to the PR head is retained in Git history but is no longer the
-active dependency. Future upgrades must be explicit to another immutable commit or tag;
-Diderot never follows a moving `main` silently.
+This is the reviewed merged state after harness PR #18 introduced mathematical-notation
+capitalization and reusable agent bootstraps, and PR #19 clarified the single-canonical-registry
+rule plus the orchestration between the pedagogical concept contract and the notation
+capitalization contract. The earlier pins remain in Git history but are no longer the active
+dependency. Future upgrades must be explicit to another immutable commit or tag; Diderot
+never follows a moving `main` silently.
 
 ## Mathematical notation capitalization
 
