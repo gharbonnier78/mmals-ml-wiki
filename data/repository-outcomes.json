@@ -1,1 +1,880 @@
-__PLACEHOLDER__
+{
+  "schema_version": "0.2",
+  "updated": "2026-08-31",
+  "scope": {
+    "description": "Curated public research, engineering, governance and pedagogy repositories connected to MMALS/Diderot and adjacent evidence-driven work.",
+    "inclusion": "Public repositories with a research, engineering, governance, evidence or pedagogy relationship useful to Diderot readers.",
+    "exclusion": "Private repositories and repositories whose own publication boundary says they are not approved for external publication are excluded even if technically public.",
+    "interpretation": "An Outcome link points to the strongest currently registered repository-level result/status artifact. A repository, tool, specification, CI pass or citation is not automatically scientific evidence."
+  },
+  "status_definitions": {
+    "supported": "A bounded claim has supporting executed evidence; read the source for exact scope.",
+    "mixed": "Evidence supports some bounded aspects while other claims/gates fail or remain unqualified.",
+    "negative": "A predeclared or load-bearing claim is not demonstrated / not supported in the registered evidence.",
+    "hypothesis": "Research direction, protocol or theory bridge not yet established by qualifying evidence.",
+    "specification": "Architecture/specification outcome; not a scientific validation by itself.",
+    "tool": "Implemented/replayable tool or infrastructure outcome; not a scientific result by itself.",
+    "governance": "Reusable method, contract or assurance outcome.",
+    "pedagogy": "Learning/publication artifact that explains primary sources without replacing them.",
+    "legacy": "Retained for history; no current research outcome."
+  },
+  "repositories": [
+    {
+      "id": "mmals",
+      "name": "MMALS",
+      "repository": "mmals",
+      "category": "mmals-core",
+      "role": "Primary research program",
+      "summary": "Inferred-context continual-learning program and research chronicle.",
+      "outcome": {
+        "status": "mixed",
+        "statement": "Promising replay-beating evidence exists on bounded FashionMNIST overlap-chain tests, but the automatic selector is not yet reliable enough to replace safe anchored policies. Minimal-sufficient-dynamic-inference remains a parallel research-program hypothesis.",
+        "evidence_class": "executed-evidence",
+        "source_url": "https://github.com/gharbonnier78/mmals/blob/main/README.md",
+        "source_label": "Current scientific status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals", "kind": "repo"},
+        {"label": "Article", "url": "https://github.com/gharbonnier78/mmals/blob/main/paper/MMALS_Full_Story_PhD_Article.pdf", "kind": "paper"},
+        {"label": "Dynamic program", "url": "https://github.com/gharbonnier78/mmals/blob/main/docs/program/MMALS_DYNAMIC_MINIMAL_INFERENCE_PROGRAM_2026-08-24.md", "kind": "program"},
+        {"label": "Chronicle", "url": "https://github.com/gharbonnier78/mmals/blob/main/docs/chronicle/2026-08-24_dynamic_minimal_inference.md", "kind": "chronicle"}
+      ],
+      "tags": ["continual-learning", "inferred-context", "dynamic-inference"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "mmals-v11",
+      "name": "MMALS v1.1 Continual-Learning Evidence",
+      "repository": "mmals-v1.1-continual-learning-evidence",
+      "category": "mmals-evidence",
+      "role": "Consolidated qualification evidence",
+      "summary": "Consolidated benchmark status and external qualification package.",
+      "outcome": {
+        "status": "mixed",
+        "statement": "Evidence-bearing qualification package; use its current repository status/claims as the authority rather than inferring universal superiority from benchmark results.",
+        "evidence_class": "executed-evidence",
+        "source_url": "https://github.com/gharbonnier78/mmals-v1.1-continual-learning-evidence/blob/main/README.md",
+        "source_label": "Current evidence status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-v1.1-continual-learning-evidence", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/mmals-v1.1-continual-learning-evidence/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["continual-learning", "qualification"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "mmals-cal",
+      "name": "MMALS-CAL",
+      "repository": "mmals-cal",
+      "category": "mmals-evidence",
+      "role": "Calibration and evidence-verification layer",
+      "summary": "Regime-aware conformal evidence verification for continual-learning systems.",
+      "outcome": {
+        "status": "mixed",
+        "statement": "Fresh oracle-regime calibration recovers approximately 0.90 marginal coverage on seven benchmarks, while inferred-context selection can materially degrade coverage; calibration restores coverage, not competence.",
+        "evidence_class": "executed-evidence",
+        "source_url": "https://github.com/gharbonnier78/mmals-cal/blob/main/README.md",
+        "source_label": "v0.3.2 main evidence"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-cal", "kind": "repo"},
+        {"label": "Status", "url": "https://github.com/gharbonnier78/mmals-cal/blob/main/docs/CURRENT_STATUS_AND_REVIEWER_ORIENTATION.md", "kind": "outcome"},
+        {"label": "Paper", "url": "https://github.com/gharbonnier78/mmals-cal/blob/main/paper/main.pdf", "kind": "paper"}
+      ],
+      "tags": ["conformal", "calibration", "evidence"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "geometry-g1",
+      "name": "Geometry-MMALS G1",
+      "repository": "geometry-mmalls-g1",
+      "category": "mmals-geometry",
+      "role": "Geometry research program",
+      "summary": "Tests whether MMALS learns meaningful context, route, host and memory geometry.",
+      "outcome": {
+        "status": "mixed",
+        "statement": "Context geometry and non-arbitrary route-function structure have bounded support; smooth residual routing did not qualify against the simpler R1 baseline, and mature host specialization / memory transport remain unqualified.",
+        "evidence_class": "executed-evidence",
+        "source_url": "https://github.com/gharbonnier78/geometry-mmalls-g1/blob/main/README.md",
+        "source_label": "Latest executed evidence"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/geometry-mmalls-g1", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/geometry-mmalls-g1/blob/main/README.md", "kind": "outcome"},
+        {"label": "Report", "url": "https://github.com/gharbonnier78/geometry-mmalls-g1/blob/main/docs/reports/Geometry_MMALS_G1_v1_1_0_Results_and_v1_1_1_Roadmap.pdf", "kind": "paper"}
+      ],
+      "tags": ["geometry", "routing", "causal-audit"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "stable-plastic",
+      "name": "Stable–Plastic Context Memory",
+      "repository": "mmals-stable-plastic-context-memory",
+      "category": "mmals-core",
+      "role": "Context-memory research package",
+      "summary": "Context-memory fusion, distillation and regression-gate experiments.",
+      "outcome": {
+        "status": "mixed",
+        "statement": "Evidence package for the stability–plasticity / context-memory branch. Diderot does not promote a stronger cross-domain outcome than the repository itself currently states.",
+        "evidence_class": "executed-evidence",
+        "source_url": "https://github.com/gharbonnier78/mmals-stable-plastic-context-memory/blob/main/README.md",
+        "source_label": "Current repository outcome"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-stable-plastic-context-memory", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/mmals-stable-plastic-context-memory/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["memory", "stability-plasticity"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "tput",
+      "name": "MMALS-TPUT",
+      "repository": "mmals-tput",
+      "category": "mmals-control",
+      "role": "Control and routing specification",
+      "summary": "Minimal ecosystem-aware continual-routing specification and executable infrastructure.",
+      "outcome": {
+        "status": "specification",
+        "statement": "v1.1 provides a working specification, executable static router and synthetic C0 smoke path; G1-A/G1-B qualification, G2 control and G3 hypotheses remain explicitly unqualified.",
+        "evidence_class": "specification",
+        "source_url": "https://github.com/gharbonnier78/mmals-tput/blob/main/README.md",
+        "source_label": "v1.1 release status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-tput", "kind": "repo"},
+        {"label": "Status", "url": "https://github.com/gharbonnier78/mmals-tput/blob/main/docs/STATUS_AND_CLAIMS.md", "kind": "outcome"},
+        {"label": "Spec PDF", "url": "https://github.com/gharbonnier78/mmals-tput/blob/main/paper/MMALS_TPUT_Specification_v1_1.pdf", "kind": "paper"}
+      ],
+      "tags": ["routing", "control", "specification"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "goal-control",
+      "name": "MMALS Goal-Adaptive Control",
+      "repository": "mmals-goal-adaptive-control",
+      "category": "mmals-control",
+      "role": "Goal-conditioned control research",
+      "summary": "Objective-conditioned Geo/RL/forward–backward control layer.",
+      "outcome": {
+        "status": "hypothesis",
+        "statement": "Goal-adaptive control is a research extension; Diderot records the repository as a controlled experimental branch, not as evidence that goal-conditioned control is already superior.",
+        "evidence_class": "research-program",
+        "source_url": "https://github.com/gharbonnier78/mmals-goal-adaptive-control/blob/main/README.md",
+        "source_label": "Current research status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-goal-adaptive-control", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/mmals-goal-adaptive-control/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["goal-conditioning", "control", "rl"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "rc2o-splitcifar",
+      "name": "MMALS RC2O SplitCIFAR10",
+      "repository": "mmals-rc2o-splitcifar10-continual-learning",
+      "category": "mmals-evidence",
+      "role": "External continual-learning bridge",
+      "summary": "SplitCIFAR10 external continual-learning evidence package.",
+      "outcome": {
+        "status": "mixed",
+        "statement": "External bridge evidence exists for the RC2O line; interpretation remains benchmark-bounded and must follow the repository's current status.",
+        "evidence_class": "executed-evidence",
+        "source_url": "https://github.com/gharbonnier78/mmals-rc2o-splitcifar10-continual-learning/blob/main/README.md",
+        "source_label": "Current evidence status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-rc2o-splitcifar10-continual-learning", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/mmals-rc2o-splitcifar10-continual-learning/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["rc2o", "splitcifar10"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "rc2o-regret",
+      "name": "RC2O Selector Regret & Regime Audit",
+      "repository": "mmals-rc2o-prep-selector-regret-regime-audit",
+      "category": "mmals-evidence",
+      "role": "Selector/regime audit",
+      "summary": "Selector regret, feature-only regimes and deployment audit.",
+      "outcome": {
+        "status": "mixed",
+        "statement": "Audit repository for selector regret and inferred regimes; no statistical cluster is promoted as a real or causal regime solely from clustering.",
+        "evidence_class": "executed-evidence",
+        "source_url": "https://github.com/gharbonnier78/mmals-rc2o-prep-selector-regret-regime-audit/blob/main/README.md",
+        "source_label": "Current audit outcome"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-rc2o-prep-selector-regret-regime-audit", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/mmals-rc2o-prep-selector-regret-regime-audit/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["selector-regret", "regime-audit"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "ecospec",
+      "name": "MMALS EcoSpec 1.0",
+      "repository": "mmals-ecospec",
+      "category": "mmals-control",
+      "role": "Public systemic specification",
+      "summary": "Axioms, mathematical model, TPUT loop, goal routing, dual memory and audit traces.",
+      "outcome": {
+        "status": "specification",
+        "statement": "Public specification and smoke/reference implementation package; it defines a system contract and examples, not a universal scientific validation of MMALS.",
+        "evidence_class": "specification",
+        "source_url": "https://github.com/gharbonnier78/mmals-ecospec/blob/main/README.md",
+        "source_label": "Specification status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-ecospec", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/mmals-ecospec/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["ecospec", "architecture", "control"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "cal-contract",
+      "name": "MMALS-CAL Evidence Contract",
+      "repository": "mmals-cal-evidence-contract",
+      "category": "methods-governance",
+      "role": "Evidence contract",
+      "summary": "Versioned evidence schemas, adapters and validation tooling.",
+      "outcome": {
+        "status": "governance",
+        "statement": "Produces a reusable evidence interchange/validation contract. This is governance/infrastructure evidence, not a scientific result by itself.",
+        "evidence_class": "governance",
+        "source_url": "https://github.com/gharbonnier78/mmals-cal-evidence-contract/blob/main/README.md",
+        "source_label": "Contract status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-cal-evidence-contract", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/mmals-cal-evidence-contract/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["evidence-contract", "reproducibility"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "activity-replay",
+      "name": "MMALS Route-Function Activity Replay",
+      "repository": "mmals-activity-replay",
+      "category": "mmals-evidence",
+      "role": "Interactive audit tool",
+      "summary": "Browser replay of routes, specialization, drift, gains and cost proxies.",
+      "outcome": {
+        "status": "tool",
+        "statement": "v0.1.1 is a working interactive replay/audit tool. Its interpolations, carbon-cost proxy and change ribbon are explicitly not promoted to physical or causal measurements.",
+        "evidence_class": "tool",
+        "source_url": "https://github.com/gharbonnier78/mmals-activity-replay/blob/main/README.md",
+        "source_label": "v0.1.1 tool outcome"
+      },
+      "quick_links": [
+        {"label": "Live tool", "url": "https://gharbonnier78.github.io/mmals-activity-replay/", "kind": "live"},
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-activity-replay", "kind": "repo"},
+        {"label": "Fidelity", "url": "https://github.com/gharbonnier78/mmals-activity-replay/blob/main/docs/scientific-fidelity.md", "kind": "evidence"}
+      ],
+      "tags": ["observability", "replay", "audit"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "symplectic",
+      "name": "MMALS Symplectic Dynamics",
+      "repository": "mmals-symplectic-dynamics",
+      "category": "mmals-geometry",
+      "role": "Theory bridge",
+      "summary": "Symplectic transport, dissipative learning and Fisher–Rao control perspective.",
+      "outcome": {
+        "status": "hypothesis",
+        "statement": "Theoretical foundation paper only. It explicitly does not claim that a larger transformation group proves greater computational power; dedicated MMALS experiments are still required.",
+        "evidence_class": "theory",
+        "source_url": "https://github.com/gharbonnier78/mmals-symplectic-dynamics/blob/main/README.md",
+        "source_label": "Scientific status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-symplectic-dynamics", "kind": "repo"},
+        {"label": "Paper", "url": "https://github.com/gharbonnier78/mmals-symplectic-dynamics/blob/main/MMALS_Symplectic_Dynamics_v0.1.0.pdf", "kind": "paper"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/mmals-symplectic-dynamics/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["symplectic", "information-geometry", "theory"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "path-memory",
+      "name": "MMALS Geometric Path Memory",
+      "repository": "mmals-geometric-path-memory",
+      "category": "mmals-geometry",
+      "role": "Path-sensitive dynamics lab",
+      "summary": "Engineering study translating open-system geometry into path-sensitive diagnostics.",
+      "outcome": {
+        "status": "hypothesis",
+        "statement": "Provides a reproducible report and two live labs demonstrating order/path-sensitive mechanisms; the proposed tangent/transverse MMALS diagnostics remain a research program, not a proved equivalence with quantum dynamics.",
+        "evidence_class": "mechanism-demo",
+        "source_url": "https://github.com/gharbonnier78/mmals-geometric-path-memory/blob/main/README.md",
+        "source_label": "Scientific stance and engineering hypothesis"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-geometric-path-memory", "kind": "repo"},
+        {"label": "Report", "url": "https://gharbonnier78.github.io/mmals-geometric-path-memory/report/Geometric_Path_Memory.pdf", "kind": "paper"},
+        {"label": "Quantum lab", "url": "https://gharbonnier78.github.io/mmals-geometric-path-memory/tools/open_quantum_order_lab.html", "kind": "live"},
+        {"label": "MMALS lab", "url": "https://gharbonnier78.github.io/mmals-geometric-path-memory/tools/mmals_path_memory_lab.html", "kind": "live"}
+      ],
+      "tags": ["path-memory", "open-systems", "geometry"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "regime-inference",
+      "name": "MMALS Regime Inference",
+      "repository": "mmals-regime-inference",
+      "category": "mmals-core",
+      "role": "Pre-research benchmark design",
+      "summary": "Comparison design for unsupervised, probabilistic and energy-based routing without task-id.",
+      "outcome": {
+        "status": "hypothesis",
+        "statement": "Defines a 12,600-run controlled benchmark matrix and epistemic safeguards, but the README reports protocol/tool verification rather than completed scientific benchmark outcomes.",
+        "evidence_class": "research-program",
+        "source_url": "https://github.com/gharbonnier78/mmals-regime-inference/blob/main/README.md",
+        "source_label": "Pre-research status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-regime-inference", "kind": "repo"},
+        {"label": "Research note", "url": "https://github.com/gharbonnier78/mmals-regime-inference/blob/main/output/pdf/mmals_inference_regimes.pdf", "kind": "paper"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/mmals-regime-inference/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["regime-inference", "routing", "benchmark"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "geometric-latent",
+      "name": "Geometric Latent Dynamics",
+      "repository": "geometric-latent-dynamics",
+      "category": "adjacent-ml",
+      "role": "Pedagogical research lab",
+      "summary": "Hidden-state dynamics on manifolds and Lie groups from first principles.",
+      "outcome": {
+        "status": "hypothesis",
+        "statement": "Current repository outcome is a reproducible pedagogical/research scaffold around the same-observation/different-hidden-state question; it does not yet claim reproduced LLPNN performance.",
+        "evidence_class": "research-program",
+        "source_url": "https://github.com/gharbonnier78/geometric-latent-dynamics/blob/main/README.md",
+        "source_label": "Initial research question and status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/geometric-latent-dynamics", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/geometric-latent-dynamics/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["lie-poisson", "hidden-state", "pedagogy"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "ed-pomdp",
+      "name": "ED-POMDP",
+      "repository": "ed-pomdp",
+      "category": "testing-decision",
+      "role": "Evidence-driven decision research",
+      "summary": "Evidence-Driven POMDPs for governed software-release assurance.",
+      "outcome": {
+        "status": "negative",
+        "statement": "Step 2 closed with CLM-VOI-001 not supported and CLM-EQ-001 broad form not supported. Better evidence often improved belief without changing the terminal action; a mandatory Theory and Claim Reset precedes further confirmation.",
+        "evidence_class": "executed-evidence",
+        "source_url": "https://github.com/gharbonnier78/ed-pomdp/blob/main/README.md",
+        "source_label": "Step 2 scientific status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/ed-pomdp", "kind": "repo"},
+        {"label": "Step 2 close-out", "url": "https://github.com/gharbonnier78/ed-pomdp/blob/main/paper/step2_closeout.pdf", "kind": "paper"},
+        {"label": "Main paper", "url": "https://github.com/gharbonnier78/ed-pomdp/blob/main/paper/main.pdf", "kind": "paper"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/ed-pomdp/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["pomdp", "evidence-acquisition", "negative-result"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "track-b",
+      "name": "Track B — Test Prioritization",
+      "repository": "track-b-test-prioritization",
+      "category": "testing-decision",
+      "role": "Pre-research test prioritization",
+      "summary": "Latent-regime test prioritization under strong budget constraints.",
+      "outcome": {
+        "status": "hypothesis",
+        "statement": "Provides a synthetic pedagogical scaffold, metrics and ablations. Real-world value is not yet established; the protocol explicitly warns that statistical clusters are not real or causal regimes.",
+        "evidence_class": "research-program",
+        "source_url": "https://github.com/gharbonnier78/track-b-test-prioritization/blob/main/README.md",
+        "source_label": "Pre-research status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/track-b-test-prioritization", "kind": "repo"},
+        {"label": "Research note", "url": "https://github.com/gharbonnier78/track-b-test-prioritization/blob/main/output/pdf/track_b_priorisation_tests.pdf", "kind": "paper"}
+      ],
+      "tags": ["test-prioritization", "budget", "regime"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "eoir",
+      "name": "EO/IR Domain Shift Diagnostics",
+      "repository": "eoir-domain-shift-diagnostics",
+      "category": "adjacent-ml",
+      "role": "Domain-shift diagnostics",
+      "summary": "Diagnostic research package for EO/IR distribution shift.",
+      "outcome": {
+        "status": "hypothesis",
+        "statement": "Diderot registers this as a domain-shift diagnostics workstream. No stronger validated outcome is promoted here until the repository's own evidence package establishes one.",
+        "evidence_class": "repository-status",
+        "source_url": "https://github.com/gharbonnier78/eoir-domain-shift-diagnostics/blob/main/README.md",
+        "source_label": "Current repository status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/eoir-domain-shift-diagnostics", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/eoir-domain-shift-diagnostics/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["domain-shift", "diagnostics"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "siamese",
+      "name": "Siamese Embedding Compression Lab",
+      "repository": "siamese-embedding-compression-lab",
+      "category": "adjacent-ml",
+      "role": "Controlled biometric compression research",
+      "summary": "Tests 512→128 learned and matched compression routes for face verification.",
+      "outcome": {
+        "status": "negative",
+        "statement": "Study 0 is closed: non-inferiority is not demonstrated for random, PCA or Siamese 128D compression, and pair supervision does not demonstrate added value over matched controls. The corrected subject-level bootstrap widened uncertainty.",
+        "evidence_class": "executed-evidence",
+        "source_url": "https://github.com/gharbonnier78/siamese-embedding-compression-lab/blob/main/STUDY0_FINAL_REPORT.md",
+        "source_label": "Study 0 final report"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/siamese-embedding-compression-lab", "kind": "repo"},
+        {"label": "Final report", "url": "https://github.com/gharbonnier78/siamese-embedding-compression-lab/blob/main/STUDY0_FINAL_REPORT.md", "kind": "outcome"},
+        {"label": "Paper", "url": "https://github.com/gharbonnier78/siamese-embedding-compression-lab/blob/main/paper/siamese_embedding_compression_study0_v0.2.3.pdf", "kind": "paper"},
+        {"label": "Erratum", "url": "https://github.com/gharbonnier78/siamese-embedding-compression-lab/blob/main/ERRATA_STUDY_0.md", "kind": "evidence"}
+      ],
+      "tags": ["biometrics", "compression", "negative-result"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "fingerprint",
+      "name": "Fingerprint Feature Extraction Lab",
+      "repository": "fingerprint-feature-extraction-lab",
+      "category": "adjacent-ml",
+      "role": "Biometric CV lab",
+      "summary": "Classical fingerprint structure, minutiae/core/delta experimentation.",
+      "outcome": {
+        "status": "tool",
+        "statement": "Engineering/learning lab; Diderot does not infer biometric product validity from the demonstration package.",
+        "evidence_class": "tool",
+        "source_url": "https://github.com/gharbonnier78/fingerprint-feature-extraction-lab/blob/main/README.md",
+        "source_label": "Current lab status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/fingerprint-feature-extraction-lab", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/fingerprint-feature-extraction-lab/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["fingerprint", "computer-vision"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "fraud-gnn",
+      "name": "National Identity Fraud Risk Engine GNN",
+      "repository": "national-identity-fraud-risk-engine-gnn",
+      "category": "systems-identity",
+      "role": "Fraud graph learning lab",
+      "summary": "Graph-based fraud/risk research for identity ecosystems.",
+      "outcome": {
+        "status": "hypothesis",
+        "statement": "Public research/lab artifact. Diderot does not promote operational fraud-detection performance or production validity without repository-level evidence supporting it.",
+        "evidence_class": "repository-status",
+        "source_url": "https://github.com/gharbonnier78/national-identity-fraud-risk-engine-gnn/blob/main/README.md",
+        "source_label": "Current repository status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/national-identity-fraud-risk-engine-gnn", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/national-identity-fraud-risk-engine-gnn/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["gnn", "fraud", "identity"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "airport-identity",
+      "name": "Airport Travel & Border Identity Architecture",
+      "repository": "airport-travel-border-identity-architecture",
+      "category": "systems-identity",
+      "role": "Architecture research",
+      "summary": "Architecture analysis of airport, airline, border and identity ecosystems.",
+      "outcome": {
+        "status": "specification",
+        "statement": "Architecture/system-analysis outcome rather than a controlled scientific experiment; use the repository documents as the source of the architectural claims.",
+        "evidence_class": "architecture",
+        "source_url": "https://github.com/gharbonnier78/airport-travel-border-identity-architecture/blob/main/README.md",
+        "source_label": "Architecture outcome"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/airport-travel-border-identity-architecture", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/airport-travel-border-identity-architecture/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["identity", "architecture", "border"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "lac-identity",
+      "name": "LAC Digital Identity Opportunity Framework",
+      "repository": "lac-digital-identity-opportunity-framework",
+      "category": "systems-identity",
+      "role": "Market/identity framework",
+      "summary": "Digital-identity maturity and opportunity mapping across LAC.",
+      "outcome": {
+        "status": "specification",
+        "statement": "Structured opportunity/maturity framework; not MMALS evidence and not a scientific causal result.",
+        "evidence_class": "framework",
+        "source_url": "https://github.com/gharbonnier78/lac-digital-identity-opportunity-framework/blob/main/README.md",
+        "source_label": "Framework outcome"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/lac-digital-identity-opportunity-framework", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/lac-digital-identity-opportunity-framework/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["identity", "market", "latam"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "identity-trust",
+      "name": "Identity Trust Inclusion Fabric",
+      "repository": "identity-trust-inclusion-fabric",
+      "category": "systems-identity",
+      "role": "Identity systems research",
+      "summary": "Identity, trust and inclusion systems-engineering workstream.",
+      "outcome": {
+        "status": "hypothesis",
+        "statement": "Public systems/research workstream. No stronger scientific or deployment claim is promoted in Diderot without explicit evidence from the repository.",
+        "evidence_class": "repository-status",
+        "source_url": "https://github.com/gharbonnier78/identity-trust-inclusion-fabric/blob/main/README.md",
+        "source_label": "Current repository status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/identity-trust-inclusion-fabric", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/identity-trust-inclusion-fabric/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["identity", "trust", "inclusion"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "stratq-cetra",
+      "name": "STRAT-Q CETRA Nigeria Identity",
+      "repository": "stratq-cetra-nigeria-identity",
+      "category": "systems-identity",
+      "role": "Public identity/testing case",
+      "summary": "STRAT-Q / identity case-study workstream.",
+      "outcome": {
+        "status": "hypothesis",
+        "statement": "Case-study/research artifact; no industrial acceptance, customer result or production claim is inferred by Diderot.",
+        "evidence_class": "repository-status",
+        "source_url": "https://github.com/gharbonnier78/stratq-cetra-nigeria-identity/blob/main/README.md",
+        "source_label": "Current case-study status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/stratq-cetra-nigeria-identity", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/stratq-cetra-nigeria-identity/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["identity", "testing", "case-study"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "harness",
+      "name": "Scientific Research Harness",
+      "repository": "scientific-research-harness",
+      "category": "methods-governance",
+      "role": "Reusable research/pedagogy contract",
+      "summary": "Normative process contract for LLM-assisted scientific and pedagogical work.",
+      "outcome": {
+        "status": "governance",
+        "statement": "Provides the reusable Bind→Frame→Execute→Verify→Explain→Chronicle/Handoff contract, source/claim/evidence separation, engineering-care profiles and direct-review navigation rules. It constrains method; it is not a scientific authority.",
+        "evidence_class": "governance",
+        "source_url": "https://github.com/gharbonnier78/scientific-research-harness/blob/main/HARNESS.md",
+        "source_label": "Harness contract"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/scientific-research-harness", "kind": "repo"},
+        {"label": "Harness", "url": "https://github.com/gharbonnier78/scientific-research-harness/blob/main/HARNESS.md", "kind": "outcome"}
+      ],
+      "tags": ["governance", "reproducibility", "pedagogy"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "observatory",
+      "name": "MMALS Research Observatory",
+      "repository": "mmals-research-observatory",
+      "category": "methods-governance",
+      "role": "Research observatory infrastructure",
+      "summary": "Governed source→claim→experiment→evidence→Diderot pipeline.",
+      "outcome": {
+        "status": "tool",
+        "statement": "v0.1.0 delivers the architecture baseline, schemas, CLI and publication skeleton. It intentionally does not act as an autonomous paper factory and does not itself establish scientific claims.",
+        "evidence_class": "tool",
+        "source_url": "https://github.com/gharbonnier78/mmals-research-observatory/blob/main/README.md",
+        "source_label": "v0.1.0 deliverable status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-research-observatory", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/mmals-research-observatory/blob/main/README.md", "kind": "outcome"},
+        {"label": "Plan", "url": "https://github.com/gharbonnier78/mmals-research-observatory/blob/main/docs/IMPLEMENTATION_PLAN.md", "kind": "program"}
+      ],
+      "tags": ["observatory", "claims", "evidence"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "evidence-agents",
+      "name": "Evidence-Guided Engineering Agents",
+      "repository": "evidence-guided-engineering-agents",
+      "category": "methods-governance",
+      "role": "Governed agent reference architecture",
+      "summary": "AI personas for bounded engineering, BOM, IP/legal, funding and delivery recommendations.",
+      "outcome": {
+        "status": "hypothesis",
+        "statement": "Exploratory reference architecture and working-group proposal. The first intended outcome is a replayable comparison of a governed agent-assisted workflow against an existing human workflow on synthetic/public cases.",
+        "evidence_class": "research-program",
+        "source_url": "https://github.com/gharbonnier78/evidence-guided-engineering-agents/blob/main/README.md",
+        "source_label": "Current phase"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/evidence-guided-engineering-agents", "kind": "repo"},
+        {"label": "Working group", "url": "https://github.com/gharbonnier78/evidence-guided-engineering-agents/blob/main/docs/working-group-proposal.md", "kind": "program"},
+        {"label": "Governance", "url": "https://github.com/gharbonnier78/evidence-guided-engineering-agents/tree/main/governance", "kind": "evidence"}
+      ],
+      "tags": ["agents", "systems-engineering", "human-gate"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "interactive-presenter",
+      "name": "Interactive Evidence Presenter",
+      "repository": "interactive-evidence-presenter",
+      "category": "methods-governance",
+      "role": "Evidence presentation MVP",
+      "summary": "Interactive multimodal presentation of evidence-bounded scientific results.",
+      "outcome": {
+        "status": "tool",
+        "statement": "MVP v0.1 implements one real evidence path using Siamese Study 0, with deterministic evidence-bounded explanation, local camera processing, browser tests and Cloud Run deployment path.",
+        "evidence_class": "tool",
+        "source_url": "https://github.com/gharbonnier78/interactive-evidence-presenter/blob/main/README.md",
+        "source_label": "MVP v0.1 outcome"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/interactive-evidence-presenter", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/interactive-evidence-presenter/blob/main/README.md", "kind": "outcome"},
+        {"label": "Architecture", "url": "https://github.com/gharbonnier78/interactive-evidence-presenter/blob/main/docs/ARCHITECTURE.md", "kind": "architecture"}
+      ],
+      "tags": ["evidence", "presentation", "multimodal"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "stratq-ai",
+      "name": "STRAT-Q AI",
+      "repository": "stratq-ai",
+      "category": "testing-decision",
+      "role": "Evidence-centric testing framework",
+      "summary": "Evidence-centric and observability-driven AI-assisted testing framework.",
+      "outcome": {
+        "status": "specification",
+        "statement": "Governance/framework artifact. It informs evidence-driven test decisions but is not counted as MMALS experimental evidence.",
+        "evidence_class": "framework",
+        "source_url": "https://github.com/gharbonnier78/stratq-ai/blob/main/README.md",
+        "source_label": "Framework status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/stratq-ai", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/stratq-ai/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["testing", "evidence", "observability"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "quality-governance",
+      "name": "Quality Intelligence Systems Governance",
+      "repository": "quality-intelligence-systems-governance",
+      "category": "testing-decision",
+      "role": "Quality intelligence architecture",
+      "summary": "Architecture linking evidence, risk, economics and obligations.",
+      "outcome": {
+        "status": "specification",
+        "statement": "Systems/governance architecture outcome; not a controlled scientific result and not MMALS evidence.",
+        "evidence_class": "architecture",
+        "source_url": "https://github.com/gharbonnier78/quality-intelligence-systems-governance/blob/main/README.md",
+        "source_label": "Architecture status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/quality-intelligence-systems-governance", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/quality-intelligence-systems-governance/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["quality", "governance", "architecture"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "bayesian-quality",
+      "name": "Bayesian Economic Quality Governance",
+      "repository": "bayesian-economic-quality-governance",
+      "category": "testing-decision",
+      "role": "Bayesian release governance",
+      "summary": "Bayesian risk-and-margin release governance under uncertainty.",
+      "outcome": {
+        "status": "hypothesis",
+        "statement": "Decision/governance research package. Diderot keeps economic/Bayesian modeling separate from validated operational benefit.",
+        "evidence_class": "repository-status",
+        "source_url": "https://github.com/gharbonnier78/bayesian-economic-quality-governance/blob/main/README.md",
+        "source_label": "Current repository status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/bayesian-economic-quality-governance", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/bayesian-economic-quality-governance/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["bayesian", "quality", "economics"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "confidence-economics",
+      "name": "Confidence-Constrained Engineering Economics",
+      "repository": "confidence-constrained-engineering-economics",
+      "category": "testing-decision",
+      "role": "Engineering economics research",
+      "summary": "Architecture/deployment decisions under confidence and economic constraints.",
+      "outcome": {
+        "status": "hypothesis",
+        "statement": "Research package for confidence-constrained engineering economics; no universal decision-optimality claim is inferred here.",
+        "evidence_class": "repository-status",
+        "source_url": "https://github.com/gharbonnier78/confidence-constrained-engineering-economics/blob/main/README.md",
+        "source_label": "Current repository status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/confidence-constrained-engineering-economics", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/confidence-constrained-engineering-economics/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["economics", "decision", "confidence"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "hyperautomation",
+      "name": "From Hyperautomation to Systemic Engineering Capability",
+      "repository": "from-hyperautomation-to-systemic-engineering-capability",
+      "category": "methods-governance",
+      "role": "Systems-engineering reflection",
+      "summary": "Reflection on AI, organizational learning and systemic engineering capability.",
+      "outcome": {
+        "status": "pedagogy",
+        "statement": "Argument/perspective artifact rather than experimental evidence.",
+        "evidence_class": "perspective",
+        "source_url": "https://github.com/gharbonnier78/from-hyperautomation-to-systemic-engineering-capability/blob/main/README.md",
+        "source_label": "Perspective artifact"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/from-hyperautomation-to-systemic-engineering-capability", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/from-hyperautomation-to-systemic-engineering-capability/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["systems-engineering", "ai", "capability"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "diderot",
+      "name": "Diderot MMALS/ML Wiki",
+      "repository": "mmals-ml-wiki",
+      "category": "pedagogy",
+      "role": "Knowledge and evidence layer",
+      "summary": "Interactive encyclopedia, research chronicle, concept graph and evidence-status surface.",
+      "outcome": {
+        "status": "pedagogy",
+        "statement": "Publishes a curated, audited learning/evidence layer. Concept/source audits and CI support navigation and provenance; they do not validate scientific claims by themselves.",
+        "evidence_class": "pedagogy",
+        "source_url": "https://github.com/gharbonnier78/mmals-ml-wiki/blob/main/README.md",
+        "source_label": "Knowledge-layer status"
+      },
+      "quick_links": [
+        {"label": "Live site", "url": "https://gharbonnier78.github.io/mmals-ml-wiki/", "kind": "live"},
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-ml-wiki", "kind": "repo"},
+        {"label": "Concepts", "url": "https://gharbonnier78.github.io/mmals-ml-wiki/concepts/", "kind": "diderot"}
+      ],
+      "tags": ["diderot", "pedagogy", "evidence-status"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "science-magazine",
+      "name": "MMALS Science Magazine",
+      "repository": "mmals-science-magazine",
+      "category": "pedagogy",
+      "role": "Narrative publication",
+      "summary": "Illustrated narrative of the MMALS research program.",
+      "outcome": {
+        "status": "pedagogy",
+        "statement": "Pedagogical/publication artifact; it explains the program but does not supersede primary evidence repositories.",
+        "evidence_class": "pedagogy",
+        "source_url": "https://github.com/gharbonnier78/mmals-science-magazine/blob/main/README.md",
+        "source_label": "Publication artifact"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/mmals-science-magazine", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/mmals-science-magazine/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["magazine", "pedagogy"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "diderot-ml-specialization",
+      "name": "Diderot Machine Learning Specialization",
+      "repository": "diderot-machine-learning-specialization",
+      "category": "pedagogy",
+      "role": "Learning capitalization",
+      "summary": "Pedagogical capitalization of machine-learning specialization material.",
+      "outcome": {
+        "status": "pedagogy",
+        "statement": "Learning/knowledge artifact; not a research-evidence repository.",
+        "evidence_class": "pedagogy",
+        "source_url": "https://github.com/gharbonnier78/diderot-machine-learning-specialization/blob/main/README.md",
+        "source_label": "Learning artifact"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/diderot-machine-learning-specialization", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/diderot-machine-learning-specialization/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["learning", "diderot"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "synthetic-data",
+      "name": "Synthetic Data Scaling for MMALS",
+      "repository": "synthetic-data-scaling-mmals",
+      "category": "adjacent-ml",
+      "role": "Synthetic-data research",
+      "summary": "Synthetic-data scaling, collapse and MMALS governance research.",
+      "outcome": {
+        "status": "hypothesis",
+        "statement": "Adjacent research branch; Diderot does not treat it as proof that synthetic scaling improves MMALS unless its own controlled evidence supports that claim.",
+        "evidence_class": "repository-status",
+        "source_url": "https://github.com/gharbonnier78/synthetic-data-scaling-mmals/blob/main/README.md",
+        "source_label": "Current repository status"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/synthetic-data-scaling-mmals", "kind": "repo"},
+        {"label": "Outcome", "url": "https://github.com/gharbonnier78/synthetic-data-scaling-mmals/blob/main/README.md", "kind": "outcome"}
+      ],
+      "tags": ["synthetic-data", "scaling"],
+      "last_reviewed": "2026-08-31"
+    },
+    {
+      "id": "docker-react",
+      "name": "docker-react",
+      "repository": "docker-react",
+      "category": "legacy",
+      "role": "Legacy utility",
+      "summary": "Legacy JavaScript/Docker repository not currently mapped to the research program.",
+      "outcome": {
+        "status": "legacy",
+        "statement": "No research outcome registered.",
+        "evidence_class": "legacy",
+        "source_url": "https://github.com/gharbonnier78/docker-react",
+        "source_label": "Legacy repository"
+      },
+      "quick_links": [
+        {"label": "GitHub", "url": "https://github.com/gharbonnier78/docker-react", "kind": "repo"}
+      ],
+      "tags": ["legacy"],
+      "last_reviewed": "2026-08-31"
+    }
+  ]
+}
