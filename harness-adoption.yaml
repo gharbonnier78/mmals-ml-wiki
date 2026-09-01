@@ -52,16 +52,33 @@ artifacts:
     - labs/
     - pathways/
     - mathematics/notation/registry.json
-  handoff: null
+  handoff: "research/chronicle/2026-09-01--belief-sufficiency-adaptive-planning-startup.md"
 
 execution:
   environment_lock: null
+  engineering:
+    care_profile: "MVP"
+    rationale: "Diderot is a public static teaching site with executable browser interactions. It has no account, secret-bearing backend or mutable server-side state, but browser behavior, link integrity, mathematical rendering and provenance surfaces are decision-relevant."
+    required_checks:
+      - "python scripts/prepare_pages.py"
+      - "python scripts/check_render_contract.py"
+      - "python scripts/check_internal_links.py"
+      - "python scripts/check_notation_registry.py"
+      - "python scripts/check_release_consistency.py"
+      - "python scripts/check_concept_audit.py"
+      - "python scripts/check_repository_atlas.py"
+      - "python tests/browser/run_belief_adaptive_planning_browser.py"
   replay_commands:
+    - "python scripts/prepare_pages.py"
+    - "python scripts/check_render_contract.py"
     - "python scripts/check_internal_links.py"
     - "python scripts/check_notation_registry.py"
     - "python scripts/check_release_consistency.py"
     - "python scripts/check_concept_audit.py"
     - "python scripts/check_repository_atlas.py"
+    - "python -m pip install -r requirements-browser.txt"
+    - "python -m playwright install chromium"
+    - "python tests/browser/run_belief_adaptive_planning_browser.py"
   randomness:
     status: "not_applicable"
     root_entropy_policy: null
@@ -74,10 +91,11 @@ execution:
 local_extensions:
   - "docs/authoring-guide.md"
   - "mathematics/notation/README.md"
+  - "docs/browser-interaction-contract.md"
 
 deviations: []
 
 adoption:
   adopted_at: "2026-08-30"
   adopted_by: "ChatGPT with explicit user authorization"
-  notes: "Initial provisional pin to harness PR #18 was upgraded after independent review and merge. The current ref is the immutable reviewed merge commit after PR #19, which clarified the single-canonical-registry rule and concept/notation orchestration. The repository outcome atlas is a curated claim/status index whose entries point back to repository-owned source artifacts; it is not itself scientific evidence."
+  notes: "Initial provisional pin to harness PR #18 was upgraded after independent review and merge. The current ref is the immutable reviewed merge commit after PR #19, which clarified the single-canonical-registry rule and concept/notation orchestration. The repository outcome atlas is a curated claim/status index whose entries point back to repository-owned source artifacts; it is not itself scientific evidence. On 2026-09-01 the public-site engineering profile was made explicit as MVP before adding the belief/sufficiency/adaptive-planning teaching path and browser-level interaction checks."

@@ -1,0 +1,19 @@
+[
+  {"source":"belief-state","target":"policy","type":"conditions"},
+  {"source":"policy","target":"value-function","type":"evaluated-by"},
+  {"source":"value-function","target":"epistemic-action","type":"can-value"},
+  {"source":"epistemic-action","target":"value-of-information","type":"quantified-by"},
+  {"source":"value-of-information","target":"contingent-policy","type":"changes-future-branches"},
+  {"source":"contingent-policy","target":"receding-horizon-planning","type":"can-be-implemented-by"},
+  {"source":"belief-state","target":"predictive-state-representation","type":"alternative-state-coordinate"},
+  {"source":"sufficient-state","target":"decision-regret","type":"tested-by"},
+  {"source":"decision-regret","target":"contingent-sufficiency","type":"operationalizes"},
+  {"source":"contingent-policy","target":"contingent-sufficiency","type":"motivates"},
+  {"source":"predictive-state-representation","target":"contingent-sufficiency","type":"candidate-representation"},
+  {"source":"belief-state","target":"belief-model-memory","type":"distinguished-from-model-memory"},
+  {"source":"functional-memory","target":"belief-model-memory","type":"memory-instance"},
+  {"source":"belief-model-memory","target":"non-regression-evidence","type":"motivates-protection-boundary"},
+  {"source":"stability-plasticity","target":"non-regression-evidence","type":"requires-assurance"},
+  {"source":"planning","target":"policy","type":"selects"},
+  {"source":"planning","target":"receding-horizon-planning","type":"pattern"}
+]

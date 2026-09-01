@@ -2,14 +2,16 @@
 (async function(){
 const root=document.getElementById('graphApp'); if(!root)return;
 const base='../';
-const [coreConcepts,coreRelations,dynamicConcepts,dynamicRelations]=await Promise.all([
+const [coreConcepts,coreRelations,dynamicConcepts,dynamicRelations,decisionConcepts,decisionRelations]=await Promise.all([
  fetch(base+'data/concepts.json').then(r=>r.json()),
  fetch(base+'data/relations.json').then(r=>r.json()),
  fetch(base+'data/concepts-dynamic-systems.json').then(r=>r.json()),
- fetch(base+'data/relations-dynamic-systems.json').then(r=>r.json())
+ fetch(base+'data/relations-dynamic-systems.json').then(r=>r.json()),
+ fetch(base+'data/concepts-adaptive-decisions.json').then(r=>r.json()),
+ fetch(base+'data/relations-adaptive-decisions.json').then(r=>r.json())
 ]);
-const concepts=[...coreConcepts,...dynamicConcepts];
-const relations=[...coreRelations,...dynamicRelations];
+const concepts=[...coreConcepts,...dynamicConcepts,...decisionConcepts];
+const relations=[...coreRelations,...dynamicRelations,...decisionRelations];
 const svg=document.getElementById('conceptGraph'); const ns='http://www.w3.org/2000/svg';
 const cats=['all','architecture','routing','memory','geometry','dynamics','signal','systems','predictive','inference','decision','information','evaluation','control','ecology','semantics','continual-learning','method'];
 const colors={architecture:'#82c95d',routing:'#53b9ac',memory:'#d2aa54',geometry:'#6fa8dc',dynamics:'#8ab4f8',signal:'#79c2b0',systems:'#b7a36b',predictive:'#a78bda',inference:'#70b7b1',decision:'#c99569',information:'#83a6cc',evaluation:'#c08ade',control:'#eea843',ecology:'#9fcf65',semantics:'#b6c3b8','continual-learning':'#d86a6a',method:'#d0b06f'};
@@ -19,6 +21,7 @@ const W=1000,H=650,cx=W/2,cy=H/2;
 const categoryById={
  mmals:'architecture','biological-mapping':'semantics',host:'architecture','fungal-medium':'architecture',mycorrhiza:'ecology','inferred-context':'routing',route:'routing','functional-route':'memory','functional-memory':'memory','reconstructive-synthetic-memory':'memory','host-specialization':'ecology','probability-simplex':'geometry',torus:'geometry','stability-plasticity':'continual-learning',cal:'evaluation',tput:'control',ecospec:'control','outcome-bearing-execution':'evaluation','minimal-sufficient-dynamic-inference':'continual-learning',
  state:'dynamics','latent-state':'inference','sufficient-state':'information',encoder:'inference','state-estimator':'inference','markov-property':'systems',mdp:'decision',pomdp:'decision','belief-state':'inference','bayesian-filtering':'inference','transition-model':'predictive','observation-model':'inference','action-conditioned-prediction':'predictive',rollout:'predictive',counterfactual:'decision',planning:'decision',controllability:'control',
+ policy:'decision','value-function':'decision','epistemic-action':'decision','value-of-information':'decision','contingent-policy':'decision','receding-horizon-planning':'control','predictive-state-representation':'inference','decision-regret':'evaluation','contingent-sufficiency':'information','belief-model-memory':'memory','non-regression-evidence':'continual-learning',
  'stochastic-dynamics':'dynamics','deterministic-chaos':'dynamics','stochastic-chaotic-system':'dynamics','probabilistic-predictability':'predictive','lyapunov-exponent':'dynamics','dynamical-regime':'dynamics',bifurcation:'dynamics',attractor:'dynamics','basin-of-attraction':'dynamics',bistability:'dynamics','langevin-sde':'dynamics',committor:'predictive',recurrence:'dynamics','local-dimension':'geometry','observability-reconstruction':'signal','sampling-reconstruction':'signal','delay-embedding-takens':'signal','information-preserving-compression':'information','local-to-global-structure':'systems','local-geometry':'geometry','dynamic-compatibility-distance':'routing','toy-model':'method','world-model':'predictive'
 };
 const ring=concepts.filter(c=>c.id!=='mmals');
