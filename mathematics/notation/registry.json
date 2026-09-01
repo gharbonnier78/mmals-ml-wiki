@@ -1,8 +1,8 @@
 {
   "schema_version": "0.1",
-  "updated": "2026-08-30",
+  "updated": "2026-09-01",
   "language": "fr",
-  "source_note": "Seeded from a learner-supplied course page on applications and graphs (Definition 5 and following examples). Exact bibliographic identity is not yet catalogued.",
+  "source_note": "Canonical Diderot notation registry. Initial entries were seeded from the 2026-08-30 function/graph learning session; adaptive-decision notation was appended on 2026-09-01 under the pinned pedagogical harness with per-entry authority records.",
   "maturity_levels": {
     "L0": "Captured",
     "L1": "Understood",
@@ -30,7 +30,10 @@
         "statement": "2 \\in \\{1,2,3\\}",
         "explanation": "Le nombre 2 figure parmi les éléments de l'ensemble."
       },
-      "prerequisites": ["ensemble", "élément"],
+      "prerequisites": [
+        "ensemble",
+        "élément"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
@@ -38,8 +41,17 @@
           "contribution": "Lecture orale et rôle de l'appartenance dans (x,y) ∈ E×F."
         }
       ],
-      "connections": ["subset", "cartesian-product", "function-graph"],
-      "domains": ["théorie des ensembles", "analyse", "probabilités", "algèbre"],
+      "connections": [
+        "subset",
+        "cartesian-product",
+        "function-graph"
+      ],
+      "domains": [
+        "théorie des ensembles",
+        "analyse",
+        "probabilités",
+        "algèbre"
+      ],
       "misconception": {
         "wrong": "∈ signifie inclus dans.",
         "correction": "∈ relie un élément à un ensemble; l'inclusion relie deux ensembles."
@@ -52,7 +64,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -62,7 +76,9 @@
       "id": "subset",
       "display": "⊂ / ⊆",
       "latex": "\\subset / \\subseteq",
-      "aliases": ["inclusion"],
+      "aliases": [
+        "inclusion"
+      ],
       "spoken": {
         "fr_literal": "est inclus dans",
         "fr_natural": "tous les éléments du premier ensemble appartiennent au second"
@@ -76,7 +92,10 @@
         "statement": "\\{1,2\\} \\subseteq \\{1,2,3\\}",
         "explanation": "Chaque élément du premier ensemble se trouve dans le second."
       },
-      "prerequisites": ["ensemble", "appartenance"],
+      "prerequisites": [
+        "ensemble",
+        "appartenance"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-example-3",
@@ -84,8 +103,17 @@
           "contribution": "Lien entre sous-domaine et restriction."
         }
       ],
-      "connections": ["belongs-to", "function-restriction", "intersection"],
-      "domains": ["théorie des ensembles", "analyse", "topologie", "probabilités"],
+      "connections": [
+        "belongs-to",
+        "function-restriction",
+        "intersection"
+      ],
+      "domains": [
+        "théorie des ensembles",
+        "analyse",
+        "topologie",
+        "probabilités"
+      ],
       "misconception": {
         "wrong": "Le symbole ⊂ a partout exactement la même convention de stricte inclusion.",
         "correction": "Les conventions varient; ⊆ est non ambigu pour l'inclusion avec égalité possible."
@@ -98,7 +126,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -108,7 +138,9 @@
       "id": "cartesian-product",
       "display": "×",
       "latex": "\\times",
-      "aliases": ["produit cartésien"],
+      "aliases": [
+        "produit cartésien"
+      ],
       "spoken": {
         "fr_literal": "croix",
         "fr_natural": "ensemble de tous les couples possibles formés avec un élément du premier ensemble et un du second"
@@ -122,7 +154,10 @@
         "statement": "\\{a,b\\} \\times \\{1,2\\}",
         "explanation": "On obtient (a,1), (a,2), (b,1), (b,2)."
       },
-      "prerequisites": ["ensemble", "couple ordonné"],
+      "prerequisites": [
+        "ensemble",
+        "couple ordonné"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
@@ -130,8 +165,18 @@
           "contribution": "Interprétation comme espace de toutes les associations possibles."
         }
       ],
-      "connections": ["ordered-pair", "function-graph", "set-square"],
-      "domains": ["théorie des ensembles", "géométrie analytique", "analyse", "probabilités", "algèbre linéaire"],
+      "connections": [
+        "ordered-pair",
+        "function-graph",
+        "set-square"
+      ],
+      "domains": [
+        "théorie des ensembles",
+        "géométrie analytique",
+        "analyse",
+        "probabilités",
+        "algèbre linéaire"
+      ],
       "misconception": {
         "wrong": "× est toujours une multiplication numérique.",
         "correction": "Ici les objets sont des ensembles; × construit un ensemble de couples. Le contexte détermine l'opération."
@@ -144,7 +189,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -154,7 +201,9 @@
       "id": "intersection",
       "display": "∩",
       "latex": "\\cap",
-      "aliases": ["intersection"],
+      "aliases": [
+        "intersection"
+      ],
       "spoken": {
         "fr_literal": "inter",
         "fr_natural": "ce qui appartient aux deux ensembles à la fois"
@@ -168,7 +217,10 @@
         "statement": "\\{1,2,3\\} \\cap \\{2,3,4\\}=\\{2,3\\}",
         "explanation": "2 et 3 sont les seuls éléments présents dans les deux ensembles."
       },
-      "prerequisites": ["ensemble", "appartenance"],
+      "prerequisites": [
+        "ensemble",
+        "appartenance"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-example-3",
@@ -176,8 +228,17 @@
           "contribution": "Interprétation opérationnelle comme filtre sur la première coordonnée."
         }
       ],
-      "connections": ["subset", "function-restriction", "cartesian-product"],
-      "domains": ["théorie des ensembles", "probabilités", "topologie", "analyse"],
+      "connections": [
+        "subset",
+        "function-restriction",
+        "cartesian-product"
+      ],
+      "domains": [
+        "théorie des ensembles",
+        "probabilités",
+        "topologie",
+        "analyse"
+      ],
       "misconception": {
         "wrong": "L'intersection modifie les valeurs de la fonction.",
         "correction": "Dans l'exemple de restriction, elle sélectionne des couples existants; elle ne recalcule pas f(x)."
@@ -190,7 +251,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -200,7 +263,9 @@
       "id": "for-all",
       "display": "∀",
       "latex": "\\forall",
-      "aliases": ["quantificateur universel"],
+      "aliases": [
+        "quantificateur universel"
+      ],
       "spoken": {
         "fr_literal": "pour tout",
         "fr_natural": "quel que soit"
@@ -214,7 +279,10 @@
         "statement": "\\forall x \\in \\mathbb R, x^2 \\ge 0",
         "explanation": "Le carré de chaque nombre réel est non négatif."
       },
-      "prerequisites": ["proposition", "ensemble"],
+      "prerequisites": [
+        "proposition",
+        "ensemble"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
@@ -222,8 +290,18 @@
           "contribution": "Lecture de la définition d'une application comme phrase."
         }
       ],
-      "connections": ["exists", "exists-unique", "belongs-to"],
-      "domains": ["logique", "analyse", "algèbre", "probabilités", "informatique théorique"],
+      "connections": [
+        "exists",
+        "exists-unique",
+        "belongs-to"
+      ],
+      "domains": [
+        "logique",
+        "analyse",
+        "algèbre",
+        "probabilités",
+        "informatique théorique"
+      ],
       "misconception": {
         "wrong": "∀ signifie qu'on a vérifié quelques exemples représentatifs.",
         "correction": "La proposition porte sur tous les éléments du domaine déclaré."
@@ -236,7 +314,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -246,7 +326,9 @@
       "id": "exists",
       "display": "∃",
       "latex": "\\exists",
-      "aliases": ["quantificateur existentiel"],
+      "aliases": [
+        "quantificateur existentiel"
+      ],
       "spoken": {
         "fr_literal": "il existe",
         "fr_natural": "on peut trouver au moins un"
@@ -260,7 +342,10 @@
         "statement": "\\exists x \\in \\mathbb R : x^2=4",
         "explanation": "Au moins une solution existe; en fait il y en a deux, 2 et -2."
       },
-      "prerequisites": ["proposition", "ensemble"],
+      "prerequisites": [
+        "proposition",
+        "ensemble"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
@@ -268,8 +353,16 @@
           "contribution": "Distinction entre existence et existence unique."
         }
       ],
-      "connections": ["for-all", "exists-unique"],
-      "domains": ["logique", "analyse", "algèbre", "équations différentielles"],
+      "connections": [
+        "for-all",
+        "exists-unique"
+      ],
+      "domains": [
+        "logique",
+        "analyse",
+        "algèbre",
+        "équations différentielles"
+      ],
       "misconception": {
         "wrong": "∃ implique qu'il n'existe qu'une seule solution.",
         "correction": "∃ signifie au moins une; l'unicité demande une condition supplémentaire."
@@ -282,7 +375,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -292,7 +387,9 @@
       "id": "exists-unique",
       "display": "∃!",
       "latex": "\\exists!",
-      "aliases": ["existence unique"],
+      "aliases": [
+        "existence unique"
+      ],
       "spoken": {
         "fr_literal": "il existe un unique",
         "fr_natural": "il existe un et un seul"
@@ -306,7 +403,10 @@
         "statement": "\\exists! y \\in \\mathbb R : y=x+1, pour x fixé",
         "explanation": "Une fois x choisi, y est déterminé sans ambiguïté."
       },
-      "prerequisites": ["exists", "unicité"],
+      "prerequisites": [
+        "exists",
+        "unicité"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
@@ -314,8 +414,19 @@
           "contribution": "Identification du caractère univoque d'une application."
         }
       ],
-      "connections": ["relation", "application", "for-all", "exists"],
-      "domains": ["logique", "analyse", "algèbre", "équations différentielles", "optimisation"],
+      "connections": [
+        "relation",
+        "application",
+        "for-all",
+        "exists"
+      ],
+      "domains": [
+        "logique",
+        "analyse",
+        "algèbre",
+        "équations différentielles",
+        "optimisation"
+      ],
       "misconception": {
         "wrong": "∃! est seulement une façon emphatique d'écrire ∃.",
         "correction": "Le point d'exclamation ajoute l'exigence d'unicité."
@@ -328,7 +439,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -338,7 +451,9 @@
       "id": "function-arrow",
       "display": "→",
       "latex": "\\to",
-      "aliases": ["flèche de type d'application"],
+      "aliases": [
+        "flèche de type d'application"
+      ],
       "spoken": {
         "fr_literal": "de E dans F",
         "fr_natural": "l'application prend ses entrées dans E et produit ses sorties dans F"
@@ -352,7 +467,10 @@
         "statement": "f:\\mathbb R \\to \\mathbb R, f(x)=x^2",
         "explanation": "f reçoit un réel et renvoie un réel."
       },
-      "prerequisites": ["ensemble", "application"],
+      "prerequisites": [
+        "ensemble",
+        "application"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
@@ -360,8 +478,18 @@
           "contribution": "Distinction entre domaine, codomaine et règle de calcul."
         }
       ],
-      "connections": ["maps-to", "function-evaluation", "cartesian-product"],
-      "domains": ["analyse", "algèbre", "topologie", "probabilités", "informatique"],
+      "connections": [
+        "maps-to",
+        "function-evaluation",
+        "cartesian-product"
+      ],
+      "domains": [
+        "analyse",
+        "algèbre",
+        "topologie",
+        "probabilités",
+        "informatique"
+      ],
       "misconception": {
         "wrong": "La flèche → décrit toujours l'image d'un x particulier.",
         "correction": "Dans f:E→F elle décrit le type de l'application; x↦f(x) décrit l'action sur un élément."
@@ -374,7 +502,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -384,7 +514,9 @@
       "id": "maps-to",
       "display": "↦",
       "latex": "\\mapsto",
-      "aliases": ["envoyé sur"],
+      "aliases": [
+        "envoyé sur"
+      ],
       "spoken": {
         "fr_literal": "x est envoyé sur f de x",
         "fr_natural": "à l'entrée x, la règle associe la sortie f(x)"
@@ -398,7 +530,10 @@
         "statement": "x \\mapsto x^2",
         "explanation": "Chaque entrée x est associée à son carré."
       },
-      "prerequisites": ["application", "image"],
+      "prerequisites": [
+        "application",
+        "image"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-examples",
@@ -406,8 +541,17 @@
           "contribution": "Distinction entre → et ↦."
         }
       ],
-      "connections": ["function-arrow", "function-evaluation", "identity-map"],
-      "domains": ["analyse", "algèbre", "probabilités", "informatique"],
+      "connections": [
+        "function-arrow",
+        "function-evaluation",
+        "identity-map"
+      ],
+      "domains": [
+        "analyse",
+        "algèbre",
+        "probabilités",
+        "informatique"
+      ],
       "misconception": {
         "wrong": "→ et ↦ sont toujours interchangeables.",
         "correction": "→ sert souvent à déclarer domaine/codomaine; ↦ décrit l'association élément par élément."
@@ -420,7 +564,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -430,7 +576,9 @@
       "id": "function-evaluation",
       "display": "f(x)",
       "latex": "f(x)",
-      "aliases": ["image de x par f"],
+      "aliases": [
+        "image de x par f"
+      ],
       "spoken": {
         "fr_literal": "f de x",
         "fr_natural": "l'image de x par f"
@@ -444,7 +592,10 @@
         "statement": "f(x)=x^2, alors f(3)=9",
         "explanation": "On remplace x par 3 dans la règle."
       },
-      "prerequisites": ["application", "image"],
+      "prerequisites": [
+        "application",
+        "image"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
@@ -452,8 +603,18 @@
           "contribution": "Lecture de f(x) comme sortie associée à x."
         }
       ],
-      "connections": ["maps-to", "function-graph", "function-arrow"],
-      "domains": ["analyse", "algèbre", "probabilités", "systèmes dynamiques", "machine learning"],
+      "connections": [
+        "maps-to",
+        "function-graph",
+        "function-arrow"
+      ],
+      "domains": [
+        "analyse",
+        "algèbre",
+        "probabilités",
+        "systèmes dynamiques",
+        "machine learning"
+      ],
       "misconception": {
         "wrong": "f(x) signifie toujours f multiplié par x.",
         "correction": "Dans ce contexte, les parenthèses indiquent l'évaluation de la fonction."
@@ -466,7 +627,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -476,7 +639,9 @@
       "id": "function-graph",
       "display": "Γf",
       "latex": "\\Gamma_f",
-      "aliases": ["graphe de f"],
+      "aliases": [
+        "graphe de f"
+      ],
       "spoken": {
         "fr_literal": "Gamma indice f",
         "fr_natural": "le graphe de l'application f"
@@ -490,7 +655,11 @@
         "statement": "f(x)=x^2 donne des couples comme (2,4) et (-2,4)",
         "explanation": "Chaque couple contient une entrée puis son image."
       },
-      "prerequisites": ["application", "couple ordonné", "produit cartésien"],
+      "prerequisites": [
+        "application",
+        "couple ordonné",
+        "produit cartésien"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
@@ -498,8 +667,18 @@
           "contribution": "Distinction entre graphe comme ensemble de couples et dessin géométrique."
         }
       ],
-      "connections": ["cartesian-product", "ordered-pair", "function-restriction", "identity-map"],
-      "domains": ["analyse", "géométrie analytique", "théorie des ensembles", "topologie"],
+      "connections": [
+        "cartesian-product",
+        "ordered-pair",
+        "function-restriction",
+        "identity-map"
+      ],
+      "domains": [
+        "analyse",
+        "géométrie analytique",
+        "théorie des ensembles",
+        "topologie"
+      ],
       "misconception": {
         "wrong": "Le graphe est d'abord le dessin d'une courbe dans le plan.",
         "correction": "Formellement, le graphe est un ensemble de couples; le dessin est une représentation possible."
@@ -512,7 +691,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -522,7 +703,9 @@
       "id": "set-square",
       "display": "E²",
       "latex": "E^2",
-      "aliases": ["E×E dans ce contexte"],
+      "aliases": [
+        "E×E dans ce contexte"
+      ],
       "spoken": {
         "fr_literal": "E au carré",
         "fr_natural": "le produit cartésien de E avec lui-même"
@@ -536,7 +719,9 @@
         "statement": "\\{1,2\\}^2=\\{(1,1),(1,2),(2,1),(2,2)\\}",
         "explanation": "Tous les couples ont leurs deux coordonnées dans le même ensemble."
       },
-      "prerequisites": ["produit cartésien"],
+      "prerequisites": [
+        "produit cartésien"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-example-1",
@@ -544,8 +729,16 @@
           "contribution": "Lecture de E² comme E×E dans le langage des ensembles."
         }
       ],
-      "connections": ["cartesian-product", "identity-map"],
-      "domains": ["théorie des ensembles", "géométrie", "topologie", "algèbre"],
+      "connections": [
+        "cartesian-product",
+        "identity-map"
+      ],
+      "domains": [
+        "théorie des ensembles",
+        "géométrie",
+        "topologie",
+        "algèbre"
+      ],
       "misconception": {
         "wrong": "E² signifie toujours qu'on élève numériquement E au carré.",
         "correction": "Pour un ensemble, E² désigne couramment le produit cartésien E×E; le type de l'objet fixe le sens."
@@ -558,7 +751,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -568,7 +763,9 @@
       "id": "identity-map",
       "display": "IdE",
       "latex": "\\mathrm{Id}_E",
-      "aliases": ["application identité"],
+      "aliases": [
+        "application identité"
+      ],
       "spoken": {
         "fr_literal": "identité de E",
         "fr_natural": "l'application qui renvoie chaque élément de E sur lui-même"
@@ -582,7 +779,10 @@
         "statement": "IdE(3)=3",
         "explanation": "L'identité conserve son entrée."
       },
-      "prerequisites": ["application", "maps-to"],
+      "prerequisites": [
+        "application",
+        "maps-to"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-example-1",
@@ -590,8 +790,17 @@
           "contribution": "Lien entre identité et diagonale de E²."
         }
       ],
-      "connections": ["set-square", "function-graph", "maps-to"],
-      "domains": ["analyse", "algèbre", "topologie", "catégories"],
+      "connections": [
+        "set-square",
+        "function-graph",
+        "maps-to"
+      ],
+      "domains": [
+        "analyse",
+        "algèbre",
+        "topologie",
+        "catégories"
+      ],
       "misconception": {
         "wrong": "IdE est le nombre 1 ou une multiplication par une identité dans tous les contextes.",
         "correction": "Ici IdE est une application E→E définie par x↦x."
@@ -604,7 +813,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -614,7 +825,10 @@
       "id": "function-restriction",
       "display": "f|E′",
       "latex": "f_{\\mid E'}",
-      "aliases": ["restriction de f à E'", "f|_{E'}"],
+      "aliases": [
+        "restriction de f à E'",
+        "f|_{E'}"
+      ],
       "spoken": {
         "fr_literal": "f restreinte à E prime",
         "fr_natural": "la même fonction f, mais regardée seulement sur les entrées appartenant à E prime"
@@ -628,7 +842,13 @@
         "statement": "f(x)=x^2 sur ℝ, puis f|[-1,1]",
         "explanation": "La règle x² ne change pas; seules les entrées comprises entre -1 et 1 restent autorisées."
       },
-      "prerequisites": ["application", "inclusion", "intersection", "produit cartésien", "graphe d'une application"],
+      "prerequisites": [
+        "application",
+        "inclusion",
+        "intersection",
+        "produit cartésien",
+        "graphe d'une application"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-example-3",
@@ -636,8 +856,19 @@
           "contribution": "Restriction comprise comme filtre exact du domaine, puis reliée à la philosophie local/global."
         }
       ],
-      "connections": ["intersection", "subset", "function-graph", "local-analysis"],
-      "domains": ["analyse", "topologie", "géométrie différentielle", "équations différentielles", "probabilités"],
+      "connections": [
+        "intersection",
+        "subset",
+        "function-graph",
+        "local-analysis"
+      ],
+      "domains": [
+        "analyse",
+        "topologie",
+        "géométrie différentielle",
+        "équations différentielles",
+        "probabilités"
+      ],
       "misconception": {
         "wrong": "Restreindre une fonction revient à l'approximer ou à modifier ses valeurs.",
         "correction": "La restriction ne change pas f(x) sur les entrées conservées; elle change seulement le domaine."
@@ -650,7 +881,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -660,7 +893,9 @@
       "id": "empty-set",
       "display": "∅",
       "latex": "\\varnothing",
-      "aliases": ["ensemble vide"],
+      "aliases": [
+        "ensemble vide"
+      ],
       "spoken": {
         "fr_literal": "ensemble vide",
         "fr_natural": "l'ensemble qui ne contient aucun élément"
@@ -674,7 +909,9 @@
         "statement": "\\Gamma_f=\\varnothing pour f:\\varnothing\\to F",
         "explanation": "Aucune entrée implique aucun couple dans le graphe."
       },
-      "prerequisites": ["ensemble"],
+      "prerequisites": [
+        "ensemble"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-example-4",
@@ -682,8 +919,16 @@
           "contribution": "Compréhension du cas vide et de la quantification sans contre-exemple."
         }
       ],
-      "connections": ["function-graph", "for-all"],
-      "domains": ["théorie des ensembles", "logique", "topologie", "algèbre"],
+      "connections": [
+        "function-graph",
+        "for-all"
+      ],
+      "domains": [
+        "théorie des ensembles",
+        "logique",
+        "topologie",
+        "algèbre"
+      ],
       "misconception": {
         "wrong": "∅ est la même chose que le nombre 0.",
         "correction": "∅ est un ensemble sans élément; 0 est un nombre qui peut lui-même être élément d'un ensemble."
@@ -696,7 +941,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -706,7 +953,9 @@
       "id": "ordered-pair",
       "display": "(x,y)",
       "latex": "(x,y)",
-      "aliases": ["couple ordonné"],
+      "aliases": [
+        "couple ordonné"
+      ],
       "spoken": {
         "fr_literal": "le couple x, y",
         "fr_natural": "une paire où la première et la seconde position ont des rôles distincts"
@@ -720,7 +969,9 @@
         "statement": "(2,4)",
         "explanation": "Pour f(x)=x², 2 est l'entrée et 4 son image; inverser les deux change le sens."
       },
-      "prerequisites": ["objet mathématique"],
+      "prerequisites": [
+        "objet mathématique"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
@@ -728,8 +979,16 @@
           "contribution": "Interprétation du graphe comme ensemble de couples ordonnés."
         }
       ],
-      "connections": ["cartesian-product", "function-graph"],
-      "domains": ["théorie des ensembles", "géométrie analytique", "probabilités", "informatique"],
+      "connections": [
+        "cartesian-product",
+        "function-graph"
+      ],
+      "domains": [
+        "théorie des ensembles",
+        "géométrie analytique",
+        "probabilités",
+        "informatique"
+      ],
       "misconception": {
         "wrong": "(x,y) est une paire non ordonnée, donc l'ordre n'a pas d'importance.",
         "correction": "Le premier et le second emplacement sont distingués."
@@ -742,7 +1001,9 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
@@ -752,7 +1013,10 @@
       "id": "definition-equals",
       "display": ":=",
       "latex": ":=",
-      "aliases": ["est défini par", "égalité de définition"],
+      "aliases": [
+        "est défini par",
+        "égalité de définition"
+      ],
       "spoken": {
         "fr_literal": "est défini comme",
         "fr_natural": "ce qui suit fixe la définition de l'objet à gauche"
@@ -766,7 +1030,10 @@
         "statement": "S := \\{1,2,3\\}",
         "explanation": "On décide que le symbole S désignera cet ensemble."
       },
-      "prerequisites": ["égalité", "définition"],
+      "prerequisites": [
+        "égalité",
+        "définition"
+      ],
       "encounters": [
         {
           "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
@@ -774,8 +1041,15 @@
           "contribution": "Lecture de := comme marqueur de définition plutôt que calcul."
         }
       ],
-      "connections": ["function-graph"],
-      "domains": ["analyse", "algèbre", "logique", "informatique"],
+      "connections": [
+        "function-graph"
+      ],
+      "domains": [
+        "analyse",
+        "algèbre",
+        "logique",
+        "informatique"
+      ],
       "misconception": {
         "wrong": ":= signifie qu'on vient de démontrer une égalité entre deux expressions déjà définies.",
         "correction": "Il signale généralement une définition ou une affectation conventionnelle selon le contexte."
@@ -788,7 +1062,453 @@
             "status": "source_identity_not_yet_catalogued"
           }
         ],
-        "pedagogical_sources": ["Diderot learning synthesis 2026-08-30"],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-08-30"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "belief-state-notation",
+      "display": "bₜ(s)",
+      "latex": "b_t(s)",
+      "aliases": [
+        "belief distribution at time t"
+      ],
+      "spoken": {
+        "fr_literal": "b indice t de s",
+        "fr_natural": "la probabilité attribuée à l'état s au temps t par le belief courant"
+      },
+      "concept": "belief state / distribution postérieure sur l'état caché",
+      "category": "probabilités et décision séquentielle",
+      "formal": "b_t(s)=P(s_t=s\\mid o_{\\le t},a_{<t}).",
+      "plain_language": "Après tout ce qui a été observé et fait jusqu'à t, b_t(s) indique à quel point l'état caché s reste plausible.",
+      "why_here": "Le POMDP remplace l'accès direct à l'état caché par une distribution de croyance mise à jour avec l'historique action-observation.",
+      "example": {
+        "statement": "b_t(\\mathrm{fault})=0.70",
+        "explanation": "Le modèle attribue 70 % de probabilité au régime fault à l'instant t."
+      },
+      "prerequisites": [
+        "probabilité conditionnelle",
+        "état caché",
+        "observation",
+        "POMDP"
+      ],
+      "encounters": [
+        {
+          "source_ref": "2026-09-01--kaelbling-littman-cassandra-pomdp",
+          "context": "Belief-state page and adaptive-decision pathway",
+          "contribution": "Belief externalized as an information state distinct from the hidden state and from durable memory."
+        }
+      ],
+      "connections": [
+        "policy-notation",
+        "predictive-state-representation",
+        "bayesian-filtering"
+      ],
+      "domains": [
+        "POMDP",
+        "filtrage bayésien",
+        "contrôle",
+        "machine learning"
+      ],
+      "misconception": {
+        "wrong": "b_t est l'état vrai du système.",
+        "correction": "b_t est une distribution sur les états cachés compatible avec l'information disponible."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "peer_reviewed_primary",
+            "reference": "Kaelbling, Littman & Cassandra (1998), Planning and Acting in Partially Observable Stochastic Domains",
+            "status": "catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-01"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "policy-notation",
+      "display": "π",
+      "latex": "\\pi",
+      "aliases": [
+        "policy",
+        "politique de décision"
+      ],
+      "spoken": {
+        "fr_literal": "pi",
+        "fr_natural": "la politique ou règle de décision"
+      },
+      "concept": "politique de décision séquentielle",
+      "category": "décision séquentielle",
+      "formal": "Une politique déterministe peut être écrite a_t=\\pi(b_t); une politique stochastique renvoie une distribution sur les actions.",
+      "plain_language": "π dit comment choisir l'action à partir de l'information courante, puis peut être réappliquée après chaque nouvelle observation.",
+      "why_here": "La discussion distingue une action ponctuelle d'une règle capable de continuer à décider après mise à jour du belief.",
+      "example": {
+        "statement": "a_t=\\pi(b_t)",
+        "explanation": "Le belief courant entre dans la politique; l'action courante en est une sortie."
+      },
+      "prerequisites": [
+        "fonction",
+        "action",
+        "belief state"
+      ],
+      "encounters": [
+        {
+          "source_ref": "2026-09-01--kaelbling-littman-cassandra-pomdp",
+          "context": "Policy concept page",
+          "contribution": "Action séparée de la politique contingente."
+        }
+      ],
+      "connections": [
+        "belief-state-notation",
+        "finite-horizon-value",
+        "action-value"
+      ],
+      "domains": [
+        "reinforcement learning",
+        "POMDP",
+        "contrôle",
+        "planification"
+      ],
+      "misconception": {
+        "wrong": "π est une séquence d'actions figée calculée une fois pour toutes.",
+        "correction": "Une politique est une règle qui peut produire des actions différentes après des observations différentes."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "peer_reviewed_primary",
+            "reference": "Kaelbling, Littman & Cassandra (1998), Planning and Acting in Partially Observable Stochastic Domains",
+            "status": "catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-01"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "finite-horizon",
+      "display": "H",
+      "latex": "H",
+      "aliases": [
+        "horizon"
+      ],
+      "spoken": {
+        "fr_literal": "H",
+        "fr_natural": "l'horizon de planification"
+      },
+      "concept": "horizon fini de décision",
+      "category": "décision séquentielle",
+      "formal": "H fixe le nombre d'étapes futures incluses dans la valeur ou le problème de planification considéré.",
+      "plain_language": "H indique jusqu'où dans le futur le calcul accepte de regarder.",
+      "why_here": "Un état peut être suffisant pour la prochaine action et insuffisant lorsqu'on inclut des conséquences ou observations plus tardives.",
+      "example": {
+        "statement": "H=2",
+        "explanation": "La décision actuelle et une étape de continuation sont prises en compte."
+      },
+      "prerequisites": [
+        "temps discret",
+        "séquence",
+        "planification"
+      ],
+      "encounters": [
+        {
+          "source_ref": "2026-09-01--kaelbling-littman-cassandra-pomdp",
+          "context": "Value and contingent-sufficiency pages",
+          "contribution": "H rendu explicite comme variable de portée de la suffisance."
+        }
+      ],
+      "connections": [
+        "finite-horizon-value",
+        "action-value",
+        "decision-regret"
+      ],
+      "domains": [
+        "POMDP",
+        "reinforcement learning",
+        "contrôle optimal"
+      ],
+      "misconception": {
+        "wrong": "Augmenter H améliore toujours la décision gratuitement.",
+        "correction": "Un horizon plus long peut mieux représenter les effets retardés mais augmente le coût de calcul et la dépendance au modèle."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "peer_reviewed_primary",
+            "reference": "Kaelbling, Littman & Cassandra (1998), Planning and Acting in Partially Observable Stochastic Domains",
+            "status": "catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-01"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "discount-factor",
+      "display": "γ",
+      "latex": "\\gamma",
+      "aliases": [
+        "discount factor",
+        "facteur d'actualisation"
+      ],
+      "spoken": {
+        "fr_literal": "gamma",
+        "fr_natural": "le facteur qui pondère les conséquences futures"
+      },
+      "concept": "facteur d'actualisation temporelle",
+      "category": "décision séquentielle",
+      "formal": "Dans une somme actualisée, le terme à k étapes est pondéré par \\gamma^k, typiquement avec 0\\le\\gamma\\le1.",
+      "plain_language": "γ règle combien les conséquences éloignées comptent par rapport aux conséquences immédiates.",
+      "why_here": "Le toy de planification permet de faire disparaître ou apparaître la valeur d'une information retardée en modifiant le poids du futur.",
+      "example": {
+        "statement": "\\gamma=0.9",
+        "explanation": "Une conséquence située une étape plus tard reçoit 90 % du poids nominal utilisé dans ce toy."
+      },
+      "prerequisites": [
+        "puissance",
+        "somme",
+        "récompense ou coût"
+      ],
+      "encounters": [
+        {
+          "source_ref": "2026-09-01--kaelbling-littman-cassandra-pomdp",
+          "context": "Value-function page and belief/adaptive-planning lab",
+          "contribution": "γ relié explicitement aux résultats retardés et à la frontière du mécanisme pédagogique."
+        }
+      ],
+      "connections": [
+        "finite-horizon-value",
+        "action-value",
+        "finite-horizon"
+      ],
+      "domains": [
+        "reinforcement learning",
+        "contrôle optimal",
+        "économie dynamique"
+      ],
+      "misconception": {
+        "wrong": "γ est une probabilité de transition.",
+        "correction": "Ici γ est un poids temporel dans l'objectif, pas le modèle de transition."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "peer_reviewed_primary",
+            "reference": "Kaelbling, Littman & Cassandra (1998), Planning and Acting in Partially Observable Stochastic Domains",
+            "status": "catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-01"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "finite-horizon-value",
+      "display": "Vᴴπ(b)",
+      "latex": "V_H^\\pi(b)",
+      "aliases": [
+        "state value",
+        "policy value"
+      ],
+      "spoken": {
+        "fr_literal": "V indice H exposant pi de b",
+        "fr_natural": "la valeur de la politique pi depuis le belief b sur l'horizon H"
+      },
+      "concept": "valeur attendue d'une politique sur horizon fini",
+      "category": "décision séquentielle",
+      "formal": "V_H^\\pi(b_t)=\\mathbb E[\\sum_{k=0}^{H-1}\\gamma^k r_{t+k}\\mid b_t,\\pi].",
+      "plain_language": "V résume la qualité attendue de tout le futur induit par une politique, pas seulement le gain de la prochaine action.",
+      "why_here": "La valeur multi-étapes permet d'exprimer des résultats retardés et de comparer des plans contingents.",
+      "example": {
+        "statement": "V_2^\\pi(b)=7.6",
+        "explanation": "Sur deux étapes, cette politique obtient une valeur attendue totale de 7,6 selon le modèle et l'objectif déclarés."
+      },
+      "prerequisites": [
+        "espérance",
+        "politique",
+        "horizon",
+        "facteur d'actualisation"
+      ],
+      "encounters": [
+        {
+          "source_ref": "2026-09-01--kaelbling-littman-cassandra-pomdp",
+          "context": "Value-function and contingent-policy pages",
+          "contribution": "V utilisé pour séparer valeur d'une politique et préférence d'une seule action immédiate."
+        }
+      ],
+      "connections": [
+        "policy-notation",
+        "action-value",
+        "decision-regret"
+      ],
+      "domains": [
+        "reinforcement learning",
+        "POMDP",
+        "contrôle optimal"
+      ],
+      "misconception": {
+        "wrong": "V est le résultat effectivement observé d'une trajectoire unique.",
+        "correction": "V est une espérance selon le modèle, la politique et l'incertitude déclarés."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "peer_reviewed_primary",
+            "reference": "Kaelbling, Littman & Cassandra (1998), Planning and Acting in Partially Observable Stochastic Domains",
+            "status": "catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-01"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "action-value",
+      "display": "Qᴴπ(b,a)",
+      "latex": "Q_H^\\pi(b,a)",
+      "aliases": [
+        "action value",
+        "Q-value"
+      ],
+      "spoken": {
+        "fr_literal": "Q indice H exposant pi de b virgule a",
+        "fr_natural": "la valeur de commencer par l'action a depuis b puis de continuer avec la politique pi"
+      },
+      "concept": "valeur attendue d'une action suivie d'une politique",
+      "category": "décision séquentielle",
+      "formal": "Q_H^\\pi(b_t,a_t)=\\mathbb E[r_t+\\gamma V_{H-1}^\\pi(b_{t+1})\\mid b_t,a_t].",
+      "plain_language": "Q compare les conséquences d'un premier choix tout en tenant compte de ce qui pourra être fait ensuite.",
+      "why_here": "Le projet distingue un vecteur de valeurs à un pas d'une vraie valeur contingente à horizon plus long.",
+      "example": {
+        "statement": "Q_2(b,\\mathrm{probe})>Q_2(b,\\mathrm{reuse})",
+        "explanation": "Le probe peut être préféré même s'il coûte maintenant lorsque l'information améliore la continuation."
+      },
+      "prerequisites": [
+        "valeur V",
+        "action",
+        "espérance",
+        "transition de belief"
+      ],
+      "encounters": [
+        {
+          "source_ref": "2026-09-01--kaelbling-littman-cassandra-pomdp",
+          "context": "Value-function page and adaptive-planning lab",
+          "contribution": "Q utilisé pour rendre visible la différence entre payoff immédiat et conséquence adaptative."
+        }
+      ],
+      "connections": [
+        "finite-horizon-value",
+        "policy-notation",
+        "value-of-information"
+      ],
+      "domains": [
+        "reinforcement learning",
+        "POMDP",
+        "planification"
+      ],
+      "misconception": {
+        "wrong": "Q est toujours une valeur à une seule étape.",
+        "correction": "Q peut inclure une continuation multi-étapes; sa définition dépend de l'horizon ou de l'objectif considéré."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "peer_reviewed_primary",
+            "reference": "Kaelbling, Littman & Cassandra (1998), Planning and Acting in Partially Observable Stochastic Domains",
+            "status": "catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-01"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "decision-regret",
+      "display": "Rᴴ(z)",
+      "latex": "R_H(z)",
+      "aliases": [
+        "finite-horizon decision regret"
+      ],
+      "spoken": {
+        "fr_literal": "R indice H de z",
+        "fr_natural": "le regret décisionnel induit par la représentation z sur l'horizon H"
+      },
+      "concept": "perte de valeur décisionnelle relative à une référence",
+      "category": "évaluation de représentation",
+      "formal": "R_H(z)=V_H^*(b)-V_H^{\\pi_z}(b) dans le cadre local où b est l'état d'information de référence et \\pi_z la politique induite par z.",
+      "plain_language": "R mesure combien la compression z fait perdre dans le processus de décision par rapport à la référence déclarée.",
+      "why_here": "Le programme veut distinguer fidélité prédictive, reconstruction d'un belief et utilité réelle pour une décision séquentielle déclarée.",
+      "example": {
+        "statement": "R_H(z)=0",
+        "explanation": "Pour ce goal, cet horizon, ces actions et ce modèle de référence, aucune valeur n'a été perdue; cela ne prouve pas que z contient tout sur le monde."
+      },
+      "prerequisites": [
+        "valeur V",
+        "politique",
+        "référence optimale",
+        "représentation"
+      ],
+      "encounters": [
+        {
+          "source_ref": "DIDEROT-BELIEF-SUFF-ADAPT-20260901",
+          "context": "Decision-regret and contingent-sufficiency pages",
+          "contribution": "Notation enregistrée comme métrique locale de suffisance décisionnelle, avec portée explicitement query-relative."
+        }
+      ],
+      "connections": [
+        "finite-horizon-value",
+        "contingent-sufficiency",
+        "sufficient-state"
+      ],
+      "domains": [
+        "decision theory",
+        "continual learning",
+        "world-model research"
+      ],
+      "misconception": {
+        "wrong": "R_H(z)=0 implique que z reconstruit exactement l'état caché ou le belief.",
+        "correction": "Zéro regret porte seulement sur le problème décisionnel, l'horizon et la référence déclarés."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "project_pedagogical_synthesis",
+            "reference": "Diderot belief/sufficiency/adaptive-planning pathway, 2026-09-01",
+            "status": "project_synthesis_not_external_authority"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-01"
+        ],
         "scientific_authority": false
       },
       "status": "draft",
