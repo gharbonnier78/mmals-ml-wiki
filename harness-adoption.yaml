@@ -67,7 +67,7 @@ execution:
       - "python scripts/check_release_consistency.py"
       - "python scripts/check_concept_audit.py"
       - "python scripts/check_repository_atlas.py"
-      - "npm run test:browser"
+      - "python tests/browser/run_belief_adaptive_planning_browser.py"
   replay_commands:
     - "python scripts/prepare_pages.py"
     - "python scripts/check_render_contract.py"
@@ -76,7 +76,9 @@ execution:
     - "python scripts/check_release_consistency.py"
     - "python scripts/check_concept_audit.py"
     - "python scripts/check_repository_atlas.py"
-    - "npm run test:browser"
+    - "python -m pip install -r requirements-browser.txt"
+    - "python -m playwright install chromium"
+    - "python tests/browser/run_belief_adaptive_planning_browser.py"
   randomness:
     status: "not_applicable"
     root_entropy_policy: null
@@ -89,6 +91,7 @@ execution:
 local_extensions:
   - "docs/authoring-guide.md"
   - "mathematics/notation/README.md"
+  - "docs/browser-interaction-contract.md"
 
 deviations: []
 
