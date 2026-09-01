@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Browser-level smoke test for the belief/adaptive-planning teaching lab.
+"""Browser-level smoke test for the belief/adaptive-planning teaching path.
 
 This test intentionally drives the same public controls available to a human user. It is
 engineering/test evidence that the pedagogical interaction behaves as declared; it is not
@@ -87,10 +87,18 @@ def main() -> int:
                 page.locator("#contingent-cost").fill("8")
                 expect(page.locator("#contingent-verdict").get_attribute("data-diverges") == "false", "high probe cost should remove the divergence")
 
-                # Human-visible navigation path should remain executable.
+                # Human-visible pathway navigation should remain executable.
                 page.get_by_role("link", name="Open the belief → adaptive decisions pathway").click()
                 page.wait_for_load_state("networkidle")
                 expect("From belief to adaptive decision sufficiency" in page.locator("h1").inner_text(), "pathway navigation failed")
+
+                # The semantic graph must also load the new registry shard and expose a canonical page.
+                page.goto(f"http://127.0.0.1:{PORT}/explore/index.html", wait_until="networkidle")
+                policy_node = page.get_by_role("link", name="Policy", exact=True)
+                expect(policy_node.count() == 1, "Policy node missing from concept graph")
+                policy_node.click()
+                page.wait_for_load_state("networkidle")
+                expect(page.locator("h1").inner_text().strip() == "Policy", "concept-graph navigation did not open canonical Policy page")
 
                 page.screenshot(path=str(ARTIFACTS / "belief-adaptive-planning-smoke.png"), full_page=True)
             except Exception:
@@ -105,7 +113,7 @@ def main() -> int:
         if server.poll() is None:
             server.kill()
 
-    print("Browser interaction contract OK: belief update, certainty/decision boundary, contingent-plan divergence, and pathway navigation exercised.")
+    print("Browser interaction contract OK: belief update, certainty/decision boundary, contingent-plan divergence, pathway navigation, and concept-graph discovery exercised.")
     return 0
 
 
