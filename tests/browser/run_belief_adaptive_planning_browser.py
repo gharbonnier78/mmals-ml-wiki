@@ -14,7 +14,7 @@ import sys
 import time
 from pathlib import Path
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import Locator, sync_playwright
 
 ROOT = Path(__file__).resolve().parents[2]
 PORT = 8765
@@ -42,6 +42,28 @@ def value(page, selector: str) -> str:
     return page.locator(selector).inner_text().strip()
 
 
+def set_range_like_user(locator: Locator, target: float) -> None:
+    """Move an HTML range input with keyboard controls a user can actually operate."""
+    lo = float(locator.get_attribute("min") or 0.0)
+    hi = float(locator.get_attribute("max") or 100.0)
+    step = float(locator.get_attribute("step") or 1.0)
+    expect(lo <= target <= hi, f"target {target} outside [{lo}, {hi}]")
+
+    locator.focus()
+    if abs(target - lo) < step / 2:
+        locator.press("Home")
+    elif abs(target - hi) < step / 2:
+        locator.press("End")
+    else:
+        locator.press("Home")
+        increments = round((target - lo) / step)
+        for _ in range(increments):
+            locator.press("ArrowRight")
+
+    actual = float(locator.input_value())
+    expect(abs(actual - target) <= step / 2 + 1e-9, f"range control reached {actual}, expected {target}")
+
+
 def main() -> int:
     ARTIFACTS.mkdir(exist_ok=True)
     server = subprocess.Popen(
@@ -65,7 +87,7 @@ def main() -> int:
                 page.locator("#sensor-observation").select_option("clear")
                 posterior_clear = float(value(page, "#posterior-value"))
                 expect(posterior_clear < posterior_warning, "clear observation should reduce fault posterior in default toy")
-                page.locator("#belief-prior").fill("0.70")
+                set_range_like_user(page.locator("#belief-prior"), 0.70)
                 posterior_high_prior = float(value(page, "#posterior-value"))
                 expect(posterior_high_prior > posterior_clear, "raising the prior should raise the posterior for the same clear observation")
 
@@ -74,7 +96,7 @@ def main() -> int:
                 expect(value(page, "#decision-before-action") == "REUSE", "unexpected default before action")
                 expect(value(page, "#decision-after-action") == "REUSE", "unexpected default after action")
                 expect(value(page, "#certainty-change") == "certainty increased", "default example should increase certainty")
-                page.locator("#decision-after").fill("0.85")
+                set_range_like_user(page.locator("#decision-after"), 0.85)
                 expect(page.locator("#decision-change").get_attribute("data-changed") == "true", "crossing threshold should change action")
                 expect(value(page, "#decision-after-action") == "ADAPT", "threshold-crossing action should be ADAPT")
 
@@ -84,8 +106,11 @@ def main() -> int:
                 expect(value(page, "#h2-a-best") == "REUSE", "default Situation A should prefer REUSE")
                 expect(value(page, "#h2-b-best") == "PROBE", "default Situation B should prefer PROBE")
                 expect(page.locator("#contingent-verdict").get_attribute("data-diverges") == "true", "default contingent plans should diverge")
-                page.locator("#contingent-cost").fill("8")
+                set_range_like_user(page.locator("#contingent-cost"), 8.0)
                 expect(page.locator("#contingent-verdict").get_attribute("data-diverges") == "false", "high probe cost should remove the divergence")
+
+                # Preserve a reviewable rendering of the manipulated lab before navigation.
+                page.screenshot(path=str(ARTIFACTS / "belief-adaptive-planning-lab.png"), full_page=True)
 
                 # Human-visible pathway navigation should remain executable.
                 page.get_by_role("link", name="Open the belief → adaptive decisions pathway").click()
