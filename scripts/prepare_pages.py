@@ -21,9 +21,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_JS = ROOT / "assets" / "js" / "site.js"
 CONFIG = json.loads((ROOT / "site.config.json").read_text(encoding="utf-8"))
+EXPECTED_RELEASE = f"Release v{CONFIG['version']} · Reviewed {CONFIG['last_reviewed']}"
 EXPECTED_FOOTER = (
-    f"Content: {CONFIG['content_license']} · Code: {CONFIG['code_license']} · "
-    f"Release v{CONFIG['version']} · Reviewed {CONFIG['last_reviewed']}"
+    f"Content: {CONFIG['content_license']} · Code: {CONFIG['code_license']} · {EXPECTED_RELEASE}"
 )
 FOOTER_METADATA_RE = re.compile(r'(<div class="small">)Content:.*?(</div>)', re.S)
 
@@ -46,12 +46,14 @@ def normalize(page: Path) -> tuple[bool, bool]:
     footer_changed = False
     runtime_changed = False
 
-    if '<footer class="footer">' in updated and EXPECTED_FOOTER not in updated:
+    # Existing pages are allowed to carry additional footer prose as long as the canonical
+    # release signature is already present. New/derived pages without it are normalized.
+    if '<footer class="footer">' in updated and EXPECTED_RELEASE not in updated:
         replacement = rf"\1{EXPECTED_FOOTER}\2"
         normalized, count = FOOTER_METADATA_RE.subn(replacement, updated, count=1)
         if count == 0:
             raise RuntimeError(
-                f"{page.relative_to(ROOT)}: footer exists but no canonical Content/Code metadata slot was found"
+                f"{page.relative_to(ROOT)}: footer lacks release metadata and no Content/Code slot was found"
             )
         updated = normalized
         footer_changed = True
