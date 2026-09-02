@@ -10,6 +10,7 @@ a cited source or accepted review makes an MMALS hypothesis scientifically true.
 """
 from __future__ import annotations
 
+from copy import deepcopy
 import json
 from pathlib import Path
 from typing import Any
@@ -34,13 +35,18 @@ def nonempty(value: Any) -> bool:
     return value is not None
 
 
-def validate_ingestion(errors: list[str], audited: dict[str, Any], groups: dict[str, Any]) -> int:
-    if not INGESTION.exists():
-        errors.append("missing research ingestion registry: data/research-evidence-ingestion.json")
-        return 0
+def normalized_repo(value: Any) -> str:
+    return str(value).strip().casefold() if value is not None else ""
 
-    data = json.loads(INGESTION.read_text(encoding="utf-8"))
+
+def validate_ingestion_data(
+    errors: list[str],
+    audited: dict[str, Any],
+    groups: dict[str, Any],
+    data: dict[str, Any],
+) -> int:
     diderot_repo = data.get("diderot_repository")
+    diderot_repo_normalized = normalized_repo(diderot_repo)
     allowed_dispositions = set(data.get("allowed_dispositions", []))
     allowed_outcomes = set(data.get("allowed_outcomes", []))
     records = data.get("records", {})
@@ -57,7 +63,7 @@ def validate_ingestion(errors: list[str], audited: dict[str, Any], groups: dict[
 
     required_source = ("repository", "immutable_ref", "artifact_url")
     required_review = ("repository", "url", "reviewed_ref", "disposition")
-    moving_refs = {"main", "master", "head", "HEAD"}
+    moving_refs = {"main", "master", "head"}
 
     for record_id, record in records.items():
         if not isinstance(record, dict):
@@ -83,15 +89,16 @@ def validate_ingestion(errors: list[str], audited: dict[str, Any], groups: dict[
             if not nonempty(record.get(field)):
                 errors.append(f"qualified evidence {record_id}: missing {field}")
 
-        source_repo = source.get("repository")
-        review_repo = review.get("repository")
-        if diderot_repo and source_repo == diderot_repo:
+        source_repo = normalized_repo(source.get("repository"))
+        review_repo = normalized_repo(review.get("repository"))
+        if diderot_repo_normalized and source_repo == diderot_repo_normalized:
             errors.append(f"qualified evidence {record_id}: Diderot cannot be its own upstream scientific source")
-        if diderot_repo and review_repo == diderot_repo:
+        if diderot_repo_normalized and review_repo == diderot_repo_normalized:
             errors.append(f"qualified evidence {record_id}: Diderot review cannot qualify Diderot scientific evidence")
 
         immutable_ref = source.get("immutable_ref")
-        if immutable_ref in moving_refs:
+        immutable_ref_normalized = str(immutable_ref).strip().casefold() if immutable_ref is not None else ""
+        if immutable_ref_normalized in moving_refs:
             errors.append(f"qualified evidence {record_id}: source immutable_ref is a moving ref: {immutable_ref}")
         if review.get("reviewed_ref") and immutable_ref and review.get("reviewed_ref") != immutable_ref:
             errors.append(
@@ -142,6 +149,74 @@ def validate_ingestion(errors: list[str], audited: dict[str, Any], groups: dict[
     return len(referenced)
 
 
+def validate_ingestion(errors: list[str], audited: dict[str, Any], groups: dict[str, Any]) -> int:
+    if not INGESTION.exists():
+        errors.append("missing research ingestion registry: data/research-evidence-ingestion.json")
+        return 0
+    data = json.loads(INGESTION.read_text(encoding="utf-8"))
+    return validate_ingestion_data(errors, audited, groups, data)
+
+
+def selftest_registry() -> dict[str, Any]:
+    return {
+        "diderot_repository": "gharbonnier78/mmals-ml-wiki",
+        "allowed_dispositions": ["ACCEPT"],
+        "allowed_outcomes": ["positive", "negative", "null", "mixed", "method"],
+        "records": {
+            "probe": {
+                "source": {
+                    "repository": "example/research",
+                    "immutable_ref": "abc123",
+                    "artifact_url": "https://example.invalid/research/abc123",
+                },
+                "review": {
+                    "repository": "example/independent-review",
+                    "url": "https://example.invalid/review/abc123",
+                    "reviewed_ref": "abc123",
+                    "disposition": "ACCEPT",
+                },
+                "outcome": "null",
+                "claim": "bounded self-test claim",
+                "scope": "checker self-test only",
+                "caveats": ["not research evidence"],
+            }
+        },
+    }
+
+
+def run_ingestion_negative_selftests(errors: list[str]) -> None:
+    valid_errors: list[str] = []
+    validate_ingestion_data(valid_errors, {}, {}, selftest_registry())
+    if valid_errors:
+        errors.append(f"ingestion self-test baseline unexpectedly failed: {valid_errors}")
+        return
+
+    cases: list[tuple[str, dict[str, Any], str]] = []
+
+    case = deepcopy(selftest_registry())
+    case["records"]["probe"]["source"]["repository"] = "Gharbonnier78/MMALS-ML-WIKI"
+    cases.append(("case-insensitive Diderot source", case, "cannot be its own upstream scientific source"))
+
+    case = deepcopy(selftest_registry())
+    case["records"]["probe"]["review"]["repository"] = "GHARBONNIER78/MMALS-ML-WIKI"
+    cases.append(("case-insensitive Diderot review", case, "Diderot review cannot qualify"))
+
+    case = deepcopy(selftest_registry())
+    case["records"]["probe"]["source"]["immutable_ref"] = "MAIN"
+    case["records"]["probe"]["review"]["reviewed_ref"] = "MAIN"
+    cases.append(("moving source ref", case, "source immutable_ref is a moving ref"))
+
+    case = deepcopy(selftest_registry())
+    case["records"]["probe"]["review"]["disposition"] = "PARTIAL ACCEPT / REQUEST CHANGES"
+    cases.append(("non-qualifying disposition", case, "is not qualifying"))
+
+    for label, registry, expected in cases:
+        case_errors: list[str] = []
+        validate_ingestion_data(case_errors, {}, {}, registry)
+        if not any(expected in message for message in case_errors):
+            errors.append(f"ingestion negative self-test did not reject {label}: expected {expected!r}, got {case_errors}")
+
+
 def main() -> None:
     data = json.loads(AUDIT.read_text(encoding="utf-8"))
     groups = data.get("groups", {})
@@ -151,6 +226,8 @@ def main() -> None:
     pages = {p.parent.name for p in CONCEPTS.glob("*/index.html")}
     audited_ids = set(audited)
     errors: list[str] = []
+
+    run_ingestion_negative_selftests(errors)
 
     for concept_id in sorted(pages - audited_ids):
         errors.append(f"concept page has no audit entry: {concept_id}")
@@ -193,6 +270,7 @@ def main() -> None:
         fail(errors)
 
     review_focus = sum(1 for entry in audited.values() if entry.get("review_focus"))
+    print("Research-ingestion negative self-tests: PASS (4 rejection paths + valid baseline)")
     print(f"Concept pages checked: {len(pages)}")
     print(f"Audit entries checked: {len(audited)}")
     print(f"Reference anchors checked: {len(sources)}")
