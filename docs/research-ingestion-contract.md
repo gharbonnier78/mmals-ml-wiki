@@ -59,6 +59,8 @@ A record in `data/research-evidence-ingestion.json` MUST NOT name `gharbonnier78
 
 This does not prohibit Diderot code review, editorial review or pedagogical review. It prevents those reviews from being reinterpreted as scientific qualification of the claim being taught.
 
+Repository-name distinctness is only a structural proxy. The checker cannot establish social or organizational independence: a mirror, fork or separately named repository controlled by the same author could still pass that structural test. A reviewer must therefore inspect whether the claimed independent review is substantively independent rather than infer independence from repository naming alone.
+
 ## Teaching constructions and scientific results
 
 Teaching constructions may reproduce a mechanism, intuition or falsification shape without being scientific outcome evidence.
@@ -124,6 +126,7 @@ The hard dependency is one-way: a future visible `qualified research evidence` s
 An independent reviewer of this contract should challenge at least:
 
 - whether an author can make Diderot qualify its own science through an indirect path;
+- whether claimed review independence is substantively credible rather than merely encoded as a different repository name;
 - whether a `PARTIAL ACCEPT` could be misused as final qualification;
 - whether negative/null results remain first-class;
 - whether the registry overreaches into external foundational-source governance;
