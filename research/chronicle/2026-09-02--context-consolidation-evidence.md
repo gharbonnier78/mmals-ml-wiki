@@ -2,7 +2,7 @@
 
 Recorded: 2026-09-02
 
-\`\`\`yaml
+```yaml
 harness_ref: e80097fe8eb88c9e9340732683710ba1dc2ae008
 manifest: harness-adoption.yaml
 task_id: DIDEROT-CONTEXT-CONSOLIDATION-20260902
@@ -19,7 +19,7 @@ current_gates:
   - vendor robot descriptions are self-reported, not independent reliability evidence
   - MMALS context-to-consolidation boundary remains a hypothesis and experimental programme
 intended_action: preserve the full reasoning chain and prevent future lossy summaries
-\`\`\`
+```
 
 ## Decision history preserved
 
@@ -50,8 +50,8 @@ A later summary must not erase:
 
 ## Produced artifacts
 
-- \`research/2026-09-02--context-memory-model-evidence-decision-boundary.md\`
-- \`research/sources/2026/2026-09-02--jetson-llm-maxperf.md\`
+- `research/2026-09-02--context-memory-model-evidence-decision-boundary.md`
+- `research/sources/2026/2026-09-02--jetson-llm-maxperf.md`
 - this append-only chronicle record
 
 ## Exact next admissible action
