@@ -57,4 +57,4 @@ Retain this source as one runtime-measurement block for a larger experiment comp
 ## Provenance note
 
 Source-reported benchmark facts, screenshot transcriptions and Diderot/MMALS inferences are kept separate in the companion synthesis:
-\`research/2026-09-02--context-memory-model-evidence-decision-boundary.md\`.
+`research/2026-09-02--context-memory-model-evidence-decision-boundary.md`.
