@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.1",
+  "purpose": "Canonical Diderot registry for local research results that have passed independent qualification before pedagogical capitalization. Registry presence establishes traceability eligibility only; it does not itself prove scientific truth.",
+  "diderot_repository": "gharbonnier78/mmals-ml-wiki",
+  "allowed_dispositions": ["ACCEPT"],
+  "allowed_outcomes": ["positive", "negative", "null", "mixed", "method"],
+  "records": {},
+  "known_nonqualified_boundaries": {
+    "toy-f2": {
+      "status": "preregistered_not_run_or_qualified",
+      "diderot_role": "not qualified research evidence",
+      "note": "Scientific Toy F2 is distinct from the Diderot teaching construction. No qualified-evidence record may be created until an immutable upstream result and independent ACCEPT disposition exist."
+    }
+  }
+}
