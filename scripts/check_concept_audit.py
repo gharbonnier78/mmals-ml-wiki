@@ -2,8 +2,9 @@
 """Validate Diderot concept source/epistemic audit and research-ingestion coverage.
 
 This check is structural. It verifies that every concept page is represented in the
-central audit registry, source references resolve, and any local qualified-research
-evidence reference resolves to an independently qualified upstream record.
+central audit registry, source references resolve, learner-facing epistemic status
+comes from the canonical vocabulary, and any local qualified-research evidence
+reference resolves to an independently qualified upstream record.
 
 Passing this check establishes traceability/consistency only. It does not claim that
 a cited source or accepted review makes an MMALS hypothesis scientifically true.
@@ -19,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CONCEPTS = ROOT / "concepts"
 AUDIT = ROOT / "data" / "concept-audit.json"
 INGESTION = ROOT / "data" / "research-evidence-ingestion.json"
+STATUS_REGISTRY = ROOT / "data" / "epistemic-statuses.json"
 
 
 def fail(messages: list[str]) -> None:
@@ -217,6 +219,107 @@ def run_ingestion_negative_selftests(errors: list[str]) -> None:
             errors.append(f"ingestion negative self-test did not reject {label}: expected {expected!r}, got {case_errors}")
 
 
+def validate_status_registry(
+    errors: list[str], audited: dict[str, Any], groups: dict[str, Any]
+) -> tuple[int, int]:
+    if not STATUS_REGISTRY.exists():
+        errors.append("missing epistemic status registry: data/epistemic-statuses.json")
+        return 0, 0
+
+    data = json.loads(STATUS_REGISTRY.read_text(encoding="utf-8"))
+    statuses = data.get("statuses", {})
+    group_defaults = data.get("group_defaults", {})
+    overrides = data.get("concept_overrides", {})
+    surfaces = data.get("surfaces", {})
+    axes = data.get("axis_separation", {})
+
+    required_statuses = {
+        "source-derived",
+        "diderot-synthesis",
+        "project-hypothesis",
+        "teaching-toy",
+        "qualified-research-evidence",
+    }
+    if not isinstance(statuses, dict):
+        errors.append("epistemic status registry statuses must be an object")
+        statuses = {}
+    missing_statuses = required_statuses - set(statuses)
+    if missing_statuses:
+        errors.append(f"epistemic status registry missing canonical statuses: {sorted(missing_statuses)}")
+
+    for key, definition in statuses.items():
+        if not isinstance(definition, dict):
+            errors.append(f"epistemic status {key}: definition must be an object")
+            continue
+        for field in ("label", "description", "css_class"):
+            if not nonempty(definition.get(field)):
+                errors.append(f"epistemic status {key}: missing {field}")
+
+    if not isinstance(axes, dict) or not nonempty(axes.get("epistemic_authority")) or not nonempty(axes.get("pedagogical_maturity")):
+        errors.append("epistemic status registry must keep epistemic_authority and pedagogical_maturity as explicit separate axes")
+
+    if not isinstance(group_defaults, dict):
+        errors.append("epistemic status registry group_defaults must be an object")
+        group_defaults = {}
+    for group_id in groups:
+        if group_id not in group_defaults:
+            errors.append(f"epistemic status registry missing group default for {group_id}")
+    for group_id, key in group_defaults.items():
+        if group_id not in groups:
+            errors.append(f"epistemic status registry has unknown group default {group_id}")
+        if key not in statuses:
+            errors.append(f"epistemic status registry group {group_id}: unknown canonical status {key!r}")
+
+    if not isinstance(overrides, dict):
+        errors.append("epistemic status registry concept_overrides must be an object")
+        overrides = {}
+    for concept_id, key in overrides.items():
+        if concept_id not in audited:
+            errors.append(f"epistemic status registry override refers to unknown concept {concept_id}")
+        if key not in statuses:
+            errors.append(f"epistemic status registry override {concept_id}: unknown canonical status {key!r}")
+
+    ingestion_records: dict[str, Any] = {}
+    if INGESTION.exists():
+        ingestion_data = json.loads(INGESTION.read_text(encoding="utf-8"))
+        if isinstance(ingestion_data.get("records"), dict):
+            ingestion_records = ingestion_data["records"]
+
+    for concept_id, entry in audited.items():
+        group_id = entry.get("group")
+        key = overrides.get(concept_id, group_defaults.get(group_id))
+        if key not in statuses:
+            errors.append(f"{concept_id}: no valid canonical learner-facing epistemic status resolves")
+            continue
+        if key == "qualified-research-evidence":
+            refs = entry.get("qualified_evidence_refs")
+            if not isinstance(refs, list) or not refs:
+                errors.append(f"{concept_id}: qualified learner-facing status requires qualified_evidence_refs from issue #15 ingestion")
+            else:
+                for record_id in refs:
+                    if record_id not in ingestion_records:
+                        errors.append(f"{concept_id}: qualified learner-facing status references unknown ingestion record {record_id}")
+
+    if not isinstance(surfaces, dict):
+        errors.append("epistemic status registry surfaces must be an object")
+        surfaces = {}
+    expected_surfaces = {
+        page.relative_to(ROOT).as_posix()
+        for root_name in ("labs", "pathways")
+        for page in (ROOT / root_name).glob("*/index.html")
+    }
+    declared_surfaces = set(surfaces)
+    for path in sorted(expected_surfaces - declared_surfaces):
+        errors.append(f"learner-facing detail surface has no canonical epistemic status: {path}")
+    for path in sorted(declared_surfaces - expected_surfaces):
+        errors.append(f"epistemic status registry references unknown lab/pathway detail surface: {path}")
+    for path, key in surfaces.items():
+        if key not in statuses:
+            errors.append(f"epistemic status surface {path}: unknown canonical status {key!r}")
+
+    return len(statuses), len(expected_surfaces)
+
+
 def main() -> None:
     data = json.loads(AUDIT.read_text(encoding="utf-8"))
     groups = data.get("groups", {})
@@ -265,6 +368,7 @@ def main() -> None:
                 errors.append(f"source {key} missing {field}")
 
     qualified_refs = validate_ingestion(errors, audited, groups)
+    status_count, surface_count = validate_status_registry(errors, audited, groups)
 
     if errors:
         fail(errors)
@@ -276,7 +380,9 @@ def main() -> None:
     print(f"Reference anchors checked: {len(sources)}")
     print(f"Independent-review focus entries: {review_focus}")
     print(f"Qualified local research evidence refs checked: {qualified_refs}")
-    print("Concept source/epistemic and research-ingestion audit is structurally complete.")
+    print(f"Canonical learner-facing epistemic statuses checked: {status_count}")
+    print(f"Lab/pathway status surfaces checked: {surface_count}")
+    print("Concept source/epistemic, learner-status and research-ingestion audit is structurally complete.")
 
 
 if __name__ == "__main__":

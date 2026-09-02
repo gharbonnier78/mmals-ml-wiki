@@ -9,18 +9,25 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_JS = ROOT / "assets" / "js" / "site.js"
+EPISTEMIC_JS = ROOT / "assets" / "js" / "epistemic-status.js"
 
 errors: list[str] = []
 
 
-def expected_runtime(page: Path) -> str:
-    rel = os.path.relpath(SITE_JS, page.parent).replace(os.sep, "/")
+def expected_runtime(page: Path, script: Path) -> str:
+    rel = os.path.relpath(script, page.parent).replace(os.sep, "/")
     return f'<script src="{rel}"></script>'
 
 
 concept_pages = sorted((ROOT / "concepts").glob("*/index.html"))
 if not concept_pages:
     errors.append("no concept pages found")
+
+detail_surfaces = sorted(
+    page
+    for root_name in ("concepts", "labs", "pathways")
+    for page in (ROOT / root_name).glob("*/index.html")
+)
 
 formula_pages: list[Path] = []
 formula_count = 0
@@ -34,13 +41,18 @@ for page in sorted(ROOT.rglob("*.html")):
         formula_count += len(matches)
         if any(not re.sub(r"<[^>]+>", "", item).strip() for item in matches):
             errors.append(f"{page.relative_to(ROOT)}: empty formula block")
-        if expected_runtime(page) not in text:
+        if expected_runtime(page, SITE_JS) not in text:
             errors.append(f"{page.relative_to(ROOT)}: formula page does not load shared site runtime")
 
 for page in concept_pages:
     text = page.read_text(encoding="utf-8")
-    if expected_runtime(page) not in text:
+    if expected_runtime(page, SITE_JS) not in text:
         errors.append(f"{page.relative_to(ROOT)}: concept page does not load shared site runtime")
+
+for page in detail_surfaces:
+    text = page.read_text(encoding="utf-8")
+    if expected_runtime(page, EPISTEMIC_JS) not in text:
+        errors.append(f"{page.relative_to(ROOT)}: learner-facing detail page does not load epistemic-status runtime")
 
 site_js = SITE_JS.read_text(encoding="utf-8") if SITE_JS.exists() else ""
 for required in (
@@ -53,6 +65,17 @@ for required in (
     if required not in site_js:
         errors.append(f"assets/js/site.js: missing rendering contract token {required!r}")
 
+epistemic_js = EPISTEMIC_JS.read_text(encoding="utf-8") if EPISTEMIC_JS.exists() else ""
+for required in (
+    "data/epistemic-statuses.json",
+    "data-epistemic-badge",
+    "data-epistemic-status",
+    "qualified-research-evidence",
+    "qualified_evidence_refs",
+):
+    if required not in epistemic_js:
+        errors.append(f"assets/js/epistemic-status.js: missing rendering contract token {required!r}")
+
 if errors:
     print("Diderot rendering contract FAILED")
     for err in errors:
@@ -62,6 +85,7 @@ if errors:
 print(
     "Diderot rendering contract OK: "
     f"{len(concept_pages)} concept pages; "
+    f"{len(detail_surfaces)} epistemic-status detail surfaces; "
     f"{len(formula_pages)} formula pages; "
     f"{formula_count} formula blocks; MathJax 3.2.2 pinned."
 )
