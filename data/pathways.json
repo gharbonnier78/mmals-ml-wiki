@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1",
+  "purpose": "Canonical card metadata and ordering for learner-facing Diderot pathways. Detail-page prose remains authored in the pathway pages; this registry controls the derived pathway index.",
+  "pathways": [
+    {
+      "id": "belief-sufficiency-adaptive-decisions",
+      "order": 10,
+      "tag": "decision pathway",
+      "title": "Belief → adaptive decisions",
+      "summary": "Hidden state, belief, policy, value of information, delayed outcomes, contingent planning, predictive state and query-relative sufficiency without conceptual jumps."
+    },
+    {
+      "id": "understand-mmals",
+      "order": 20,
+      "tag": "guided pathway",
+      "title": "Understand MMALS in 30 minutes",
+      "summary": "A guided route from the biological mapping to context inference, routes, functional memory, specialization, and evaluation."
+    },
+    {
+      "id": "geometry-of-intelligence",
+      "order": 30,
+      "tag": "guided pathway",
+      "title": "Geometry of intelligence",
+      "summary": "A guided route through the geometric structures that make MMALS explanations and diagnostics precise."
+    },
+    {
+      "id": "hypothesis-to-evidence",
+      "order": 40,
+      "tag": "guided pathway",
+      "title": "From hypothesis to evidence",
+      "summary": "How MMALS turns an analogy into progressively qualified, falsifiable claims."
+    },
+    {
+      "id": "dynamic-systems-for-mmals",
+      "order": 50,
+      "tag": "research bridge",
+      "title": "From local structure to adaptive regimes",
+      "summary": "Signal reconstruction, local-to-global constraints, local geometry, stochastic and chaotic dynamics, regime inference, minimal adaptive MMALS, and the bounded connection to world models."
+    }
+  ]
+}
