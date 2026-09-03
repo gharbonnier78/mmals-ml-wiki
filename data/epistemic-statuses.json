@@ -1,0 +1,67 @@
+{
+  "schema_version": "0.1",
+  "purpose": "Canonical learner-facing epistemic-status vocabulary for Diderot. These labels describe epistemic authority, not pedagogical maturity or scientific truth.",
+  "axis_separation": {
+    "epistemic_authority": "Encoded here and rendered to learners.",
+    "pedagogical_maturity": "Separate axis. Draft/reviewed/release state must not change epistemic authority by itself."
+  },
+  "statuses": {
+    "source-derived": {
+      "label": "source-derived",
+      "css_class": "foundational",
+      "description": "Terminology or framing derived from cited source material. This does not by itself validate an MMALS transfer, analogy or project claim."
+    },
+    "diderot-synthesis": {
+      "label": "Diderot synthesis",
+      "css_class": "mechanistic",
+      "description": "A Diderot editorial or pedagogical synthesis that combines or reorganizes sources. It is not an upstream scientific result."
+    },
+    "project-hypothesis": {
+      "label": "project hypothesis",
+      "css_class": "hypothesis",
+      "description": "A project-local proposition, working definition or refinement whose scope remains bounded by current evidence."
+    },
+    "teaching-toy": {
+      "label": "teaching toy",
+      "css_class": "hypothesis",
+      "description": "A deliberately constructed pedagogical example or simulation. It can illustrate a mechanism but is not outcome evidence."
+    },
+    "qualified-research-evidence": {
+      "label": "qualified research evidence",
+      "css_class": "implemented",
+      "description": "A bounded local research result admitted only through the research → independent review → Diderot ingestion contract with a qualifying ACCEPT disposition."
+    }
+  },
+  "group_defaults": {
+    "mmals-internal": "source-derived",
+    "mmals-hypothesis": "project-hypothesis",
+    "decision-hypothesis": "project-hypothesis",
+    "math-geometry": "source-derived",
+    "continual-learning": "source-derived",
+    "state-belief": "source-derived",
+    "planning-control": "source-derived",
+    "causal": "source-derived",
+    "dynamics": "source-derived",
+    "reconstruction-information": "source-derived",
+    "methodology": "diderot-synthesis",
+    "world-model": "diderot-synthesis"
+  },
+  "concept_overrides": {
+    "belief-model-memory": "diderot-synthesis"
+  },
+  "surfaces": {
+    "labs/belief-adaptive-planning/index.html": "teaching-toy",
+    "labs/emergent-regimes/index.html": "teaching-toy",
+    "labs/host-specialization/index.html": "teaching-toy",
+    "labs/inferred-context/index.html": "teaching-toy",
+    "labs/route-vs-function/index.html": "teaching-toy",
+    "labs/simplex-router/index.html": "teaching-toy",
+    "labs/stability-plasticity/index.html": "teaching-toy",
+    "labs/two-angles-one-torus/index.html": "teaching-toy",
+    "pathways/belief-sufficiency-adaptive-decisions/index.html": "diderot-synthesis",
+    "pathways/dynamic-systems-for-mmals/index.html": "diderot-synthesis",
+    "pathways/geometry-of-intelligence/index.html": "diderot-synthesis",
+    "pathways/hypothesis-to-evidence/index.html": "diderot-synthesis",
+    "pathways/understand-mmals/index.html": "diderot-synthesis"
+  }
+}
