@@ -2,16 +2,13 @@
 (async function(){
 const root=document.getElementById('graphApp'); if(!root)return;
 const base='../';
-const [coreConcepts,coreRelations,dynamicConcepts,dynamicRelations,decisionConcepts,decisionRelations]=await Promise.all([
- fetch(base+'data/concepts.json').then(r=>r.json()),
- fetch(base+'data/relations.json').then(r=>r.json()),
- fetch(base+'data/concepts-dynamic-systems.json').then(r=>r.json()),
- fetch(base+'data/relations-dynamic-systems.json').then(r=>r.json()),
- fetch(base+'data/concepts-adaptive-decisions.json').then(r=>r.json()),
- fetch(base+'data/relations-adaptive-decisions.json').then(r=>r.json())
+const manifest=await fetch(base+'data/navigation-registries.json').then(r=>r.json());
+const [conceptSets,relationSets]=await Promise.all([
+ Promise.all(manifest.concepts.map(name=>fetch(base+'data/'+name).then(r=>r.json()))),
+ Promise.all(manifest.relations.map(name=>fetch(base+'data/'+name).then(r=>r.json())))
 ]);
-const concepts=[...coreConcepts,...dynamicConcepts,...decisionConcepts];
-const relations=[...coreRelations,...dynamicRelations,...decisionRelations];
+const concepts=conceptSets.flat();
+const relations=relationSets.flat();
 const svg=document.getElementById('conceptGraph'); const ns='http://www.w3.org/2000/svg';
 const cats=['all','architecture','routing','memory','geometry','dynamics','signal','systems','predictive','inference','decision','information','evaluation','control','ecology','semantics','continual-learning','method'];
 const colors={architecture:'#82c95d',routing:'#53b9ac',memory:'#d2aa54',geometry:'#6fa8dc',dynamics:'#8ab4f8',signal:'#79c2b0',systems:'#b7a36b',predictive:'#a78bda',inference:'#70b7b1',decision:'#c99569',information:'#83a6cc',evaluation:'#c08ade',control:'#eea843',ecology:'#9fcf65',semantics:'#b6c3b8','continual-learning':'#d86a6a',method:'#d0b06f'};

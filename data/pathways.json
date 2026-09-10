@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "purpose": "Canonical card metadata and ordering for learner-facing Diderot pathways. Detail-page prose remains authored in the pathway pages; this registry controls the derived pathway index.",
+  "purpose": "Canonical card metadata and ordering for learner-facing Diderot pathways. Detail-page prose remains authored in the pathway pages; this registry controls derived pathway navigation. Exactly one pathway is the home primary CTA.",
   "pathways": [
     {
       "id": "belief-sufficiency-adaptive-decisions",
@@ -14,7 +14,8 @@
       "order": 20,
       "tag": "guided pathway",
       "title": "Understand MMALS in 30 minutes",
-      "summary": "A guided route from the biological mapping to context inference, routes, functional memory, specialization, and evaluation."
+      "summary": "A guided route from the biological mapping to context inference, routes, functional memory, specialization, and evaluation.",
+      "home_primary": true
     },
     {
       "id": "geometry-of-intelligence",
