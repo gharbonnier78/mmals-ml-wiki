@@ -1,0 +1,14 @@
+{
+  "schema_version": "0.1",
+  "purpose": "Single manifest for registry files consumed by derived navigation and the Explore graph. CI verifies that it exactly covers the matching data/*.json registry files.",
+  "concepts": [
+    "concepts.json",
+    "concepts-dynamic-systems.json",
+    "concepts-adaptive-decisions.json"
+  ],
+  "relations": [
+    "relations.json",
+    "relations-dynamic-systems.json",
+    "relations-adaptive-decisions.json"
+  ]
+}

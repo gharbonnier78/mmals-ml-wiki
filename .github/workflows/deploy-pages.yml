@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Test derived-navigation fail-closed logic
+        run: python -m unittest tests/test_generate_navigation.py
       - name: Prepare rendered Pages artifact
         run: python scripts/prepare_pages.py
       - name: Validate browser rendering contract

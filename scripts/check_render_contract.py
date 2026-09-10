@@ -7,6 +7,8 @@ import re
 import sys
 from pathlib import Path
 
+from generate_navigation import NavigationError, generate_navigation
+
 ROOT = Path(__file__).resolve().parents[1]
 SITE_JS = ROOT / "assets" / "js" / "site.js"
 EPISTEMIC_JS = ROOT / "assets" / "js" / "epistemic-status.js"
@@ -76,6 +78,13 @@ for required in (
     if required not in epistemic_js:
         errors.append(f"assets/js/epistemic-status.js: missing rendering contract token {required!r}")
 
+navigation_counts = (0, 0)
+try:
+    concept_navigation, pathway_navigation, _ = generate_navigation(write=False)
+    navigation_counts = (concept_navigation, pathway_navigation)
+except (NavigationError, ValueError) as exc:
+    errors.append(f"generated navigation contract failed: {exc}")
+
 if errors:
     print("Diderot rendering contract FAILED")
     for err in errors:
@@ -85,6 +94,8 @@ if errors:
 print(
     "Diderot rendering contract OK: "
     f"{len(concept_pages)} concept pages; "
+    f"{navigation_counts[0]} generated concept cards; "
+    f"{navigation_counts[1]} generated pathway cards; "
     f"{len(detail_surfaces)} epistemic-status detail surfaces; "
     f"{len(formula_pages)} formula pages; "
     f"{formula_count} formula blocks; MathJax 3.2.2 pinned."
