@@ -1,8 +1,8 @@
 {
   "schema_version": "0.1",
-  "updated": "2026-09-01",
+  "updated": "2026-09-20",
   "language": "fr",
-  "source_note": "Canonical Diderot notation registry. Initial entries were seeded from the 2026-08-30 function/graph learning session; adaptive-decision notation was appended on 2026-09-01 under the pinned pedagogical harness with per-entry authority records.",
+  "source_note": "Canonical Diderot notation registry. Initial entries were seeded from the 2026-08-30 function/graph learning session; adaptive-decision notation was appended on 2026-09-01; injectivity was added on 2026-09-20 from the successor-map learning session, under the pinned pedagogical harness with per-entry authority records.",
   "maturity_levels": {
     "L0": "Captured",
     "L1": "Understood",
@@ -1513,6 +1513,74 @@
       },
       "status": "draft",
       "maturity": "L1"
+    },
+    {
+      "id": "injectivity",
+      "display": "f(x)=f(y) ⇒ x=y",
+      "latex": "f(x)=f(y) \\\\Rightarrow x=y",
+      "aliases": [
+        "application injective",
+        "fonction injective",
+        "one-to-one"
+      ],
+      "spoken": {
+        "fr_literal": "si f de x égale f de y, alors x égale y",
+        "fr_natural": "une même valeur d'arrivée ne peut pas provenir de deux valeurs de départ différentes"
+      },
+      "concept": "injectivité d'une application",
+      "category": "applications",
+      "formal": "Une application f:E\\\\to F est injective si, pour tous x,y\\\\in E, f(x)=f(y) implique x=y.",
+      "plain_language": "Une même valeur d'arrivée ne peut pas provenir de deux valeurs de départ différentes.",
+      "why_here": "Dans l'axiome du successeur, s(m)=s(n) \\\\Rightarrow m=n affirme précisément que l'application successeur est injective. La même structure réapparaît ensuite en L1, notamment en algèbre linéaire.",
+      "example": {
+        "statement": "s:\\\\mathbb N\\\\to\\\\mathbb N,\\\\quad s(n)=n+1;\\\\quad s(m)=s(n)\\\\Rightarrow m=n",
+        "explanation": "Si deux entiers ont le même successeur, ils étaient déjà égaux: aucune valeur de sortie de s ne vient de deux entiers distincts."
+      },
+      "prerequisites": [
+        "application",
+        "domaine",
+        "image",
+        "égalité",
+        "quantification universelle"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-20-successor-injectivity",
+          "context": "Axiome/propriété du successeur: deux entiers m et n ayant le même successeur sont égaux.",
+          "contribution": "Identification explicite de la propriété comme injectivité et fixation de l'intuition: une même valeur d'arrivée ne peut pas provenir de deux valeurs de départ différentes."
+        }
+      ],
+      "connections": [
+        "function-arrow",
+        "function-evaluation",
+        "for-all",
+        "exists-unique"
+      ],
+      "domains": [
+        "théorie des ensembles",
+        "arithmétique",
+        "algèbre",
+        "algèbre linéaire"
+      ],
+      "misconception": {
+        "wrong": "Injective signifie que chaque élément du codomaine est atteint exactement une fois.",
+        "correction": "L'injectivité dit seulement qu'une valeur atteinte a au plus un antécédent; elle n'impose pas que toutes les valeurs du codomaine soient atteintes."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_excerpt",
+            "reference": "Propriété/axiome du successeur: s(m)=s(n) implique m=n, fourni dans la session d'apprentissage du 2026-09-20",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-20"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
     }
   ]
 }
