@@ -2,7 +2,7 @@
   "schema_version": "0.1",
   "updated": "2026-09-20",
   "language": "fr",
-  "source_note": "Canonical Diderot notation registry. Initial entries were seeded from the 2026-08-30 function/graph learning session; adaptive-decision notation was appended on 2026-09-01; injectivity was added on 2026-09-20 from the successor-map learning session, under the pinned pedagogical harness with per-entry authority records.",
+  "source_note": "Canonical Diderot notation registry. Initial entries were seeded from the 2026-08-30 function/graph learning session; adaptive-decision notation was appended on 2026-09-01; injectivity was added on 2026-09-20 from the successor-map learning session, under the pinned pedagogical harness with per-entry authority records; binary operations / internal composition laws were added on 2026-09-20 from the addition-on-N learning session.",
   "maturity_levels": {
     "L0": "Captured",
     "L1": "Understood",
@@ -1571,6 +1571,74 @@
           {
             "type": "learner_supplied_course_excerpt",
             "reference": "Propriété/axiome du successeur: s(m)=s(n) implique m=n, fourni dans la session d'apprentissage du 2026-09-20",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-20"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "binary-operation",
+      "display": "⋆ : E×E → E",
+      "latex": "\\\\star : E\\\\times E \\\\to E",
+      "aliases": [
+        "opération binaire",
+        "loi de composition interne",
+        "binary operation"
+      ],
+      "spoken": {
+        "fr_literal": "étoile, de E croix E vers E",
+        "fr_natural": "on prend deux éléments de E et on les combine pour obtenir encore un élément de E"
+      },
+      "concept": "opération binaire (loi de composition interne)",
+      "category": "algèbre",
+      "formal": "Une opération binaire sur un ensemble E est une application \\\\star:E\\\\times E\\\\to E qui associe à chaque couple (x,y)\\\\in E\\\\times E un élément x\\\\star y\\\\in E.",
+      "plain_language": "Une opération binaire prend deux éléments d'un même ensemble et produit un résultat qui reste dans cet ensemble.",
+      "why_here": "L'addition sur \\\\mathbb N s'écrit comme une application +:\\\\mathbb N\\\\times\\\\mathbb N\\\\to\\\\mathbb N, (n,p)\\\\mapsto n+p. Cette structure devient centrale en algèbre pour définir groupes, anneaux et autres systèmes munis d'opérations.",
+      "example": {
+        "statement": "+ : \\\\mathbb N\\\\times\\\\mathbb N \\\\to \\\\mathbb N,\\\\quad (n,p)\\\\mapsto n+p",
+        "explanation": "Par exemple, (3,5) est envoyé sur 8. Les deux entrées et le résultat appartiennent à \\\\mathbb N."
+      },
+      "prerequisites": [
+        "application",
+        "produit cartésien",
+        "couple ordonné",
+        "domaine",
+        "codomaine"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-20-addition-as-binary-operation",
+          "context": "Présentation de l'addition comme application de N×N dans N associant (n,p) à n+p.",
+          "contribution": "Identification de la forme générale E×E→E comme opération binaire / loi de composition interne et explicitation du fait que la notation infixe x⋆y masque une application à deux arguments."
+        }
+      ],
+      "connections": [
+        "cartesian-product",
+        "function-arrow",
+        "maps-to",
+        "ordered-pair"
+      ],
+      "domains": [
+        "arithmétique",
+        "algèbre",
+        "théorie des groupes",
+        "théorie des anneaux"
+      ],
+      "misconception": {
+        "wrong": "Une opération binaire est simplement une fonction qui possède deux arguments.",
+        "correction": "Pour être une opération binaire interne sur E, ses deux entrées viennent de E et son résultat doit aussi appartenir à E."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_excerpt",
+            "reference": "Addition sur N présentée comme application N×N→N, (n,p)↦n+p, fournie dans la session d'apprentissage du 2026-09-20",
             "status": "source_identity_not_yet_catalogued"
           }
         ],
