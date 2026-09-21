@@ -2,7 +2,7 @@
   "schema_version": "0.1",
   "updated": "2026-09-21",
   "language": "fr",
-  "source_note": "Canonical Diderot notation registry. Initial entries were seeded from the 2026-08-30 function/graph learning session; adaptive-decision notation was appended on 2026-09-01; injectivity was added on 2026-09-20 from the successor-map learning session, under the pinned pedagogical harness with per-entry authority records; binary operations / internal composition laws were added on 2026-09-20 from the addition-on-N learning session; parameterized properties/predicates and their associated truth sets were added on 2026-09-21 from the induction-principle learning session.",
+  "source_note": "Canonical Diderot notation registry. Initial entries were seeded from the 2026-08-30 function/graph learning session; adaptive-decision notation was appended on 2026-09-01; injectivity was added on 2026-09-20 from the successor-map learning session, under the pinned pedagogical harness with per-entry authority records; binary operations / internal composition laws were added on 2026-09-20 from the addition-on-N learning session; parameterized properties/predicates and their associated truth sets were added on 2026-09-21 from the induction-principle learning session; successor/stability, induction, result labels, groups, structured spaces, and basic topology were capitalized from the 2026-09-21 learning sequence.",
   "maturity_levels": {
     "L0": "Captured",
     "L1": "Understood",
@@ -1916,6 +1916,585 @@
       },
       "status": "draft",
       "maturity": "L1"
+    },
+    {
+      "id": "successor-map",
+      "display": "s(n)",
+      "latex": "s(n)",
+      "aliases": [
+        "successeur",
+        "application successeur",
+        "fonction successeur",
+        "successor map"
+      ],
+      "spoken": {
+        "fr_literal": "s de n",
+        "fr_natural": "le successeur de n, c'est-à-dire l'entier qui vient juste après n"
+      },
+      "concept": "application successeur sur les entiers naturels",
+      "category": "arithmétique et fondements",
+      "formal": "Dans une présentation axiomatique des entiers naturels, s:\\\\mathbb N\\\\to\\\\mathbb N associe à chaque entier naturel n son successeur s(n). Après construction de l'addition, on identifie usuellement s(n) à n+1.",
+      "plain_language": "s(n) désigne le nombre naturel qui vient juste après n. Dans l'approche axiomatique, le successeur est une notion primitive; l'écriture n+1 vient ensuite.",
+      "why_here": "Le successeur intervient dans les axiomes de Peano, dans l'injectivité de s et dans le principe de récurrence.",
+      "example": {
+        "statement": "s(3)=4",
+        "explanation": "4 est le successeur de 3. Dans le langage arithmétique usuel, cela correspond à 3+1."
+      },
+      "prerequisites": [
+        "entiers naturels",
+        "application"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-successor",
+          "context": "Lecture du principe de récurrence et de l'axiome de stabilité par le successeur.",
+          "contribution": "Clarification du rôle de s et de la nuance fondationnelle entre s(n) et l'écriture ultérieure n+1."
+        }
+      ],
+      "connections": [
+        "injectivity",
+        "stable-under-map",
+        "induction-principle",
+        "function-arrow"
+      ],
+      "domains": [
+        "arithmétique",
+        "logique",
+        "fondements des mathématiques"
+      ],
+      "misconception": {
+        "wrong": "Dans l'axiomatique de Peano, s(n)=n+1 est la définition primitive du successeur.",
+        "correction": "Le successeur peut être pris comme notion primitive; l'addition et donc l'écriture n+1 sont construites ensuite."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Foundational mathematics learning sequence on successor, induction, groups, spaces and open sets, session 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "stable-under-map",
+      "display": "s(E) ⊆ E",
+      "latex": "s(E)\\\\subseteq E",
+      "aliases": [
+        "stable par s",
+        "stable par une application",
+        "ensemble invariant par une application",
+        "closed under a map"
+      ],
+      "spoken": {
+        "fr_literal": "s de E est inclus dans E",
+        "fr_natural": "appliquer s à un élément de E ne fait pas sortir de E"
+      },
+      "concept": "stabilité d'un ensemble par une application",
+      "category": "ensembles et applications",
+      "formal": "Un ensemble E est stable par une application f lorsque x\\\\in E implique f(x)\\\\in E pour tout x\\\\in E; de façon condensée, f(E)\\\\subseteq E.",
+      "plain_language": "On peut appliquer l'opération ou l'application considérée à un élément de E et on reste dans E.",
+      "why_here": "Dans la récurrence, l'hérédité P(n)\\\\Rightarrow P(n+1) devient la stabilité de l'ensemble de vérité E par le successeur.",
+      "example": {
+        "statement": "n\\\\in E \\\\Rightarrow s(n)\\\\in E",
+        "explanation": "Si n appartient à E, son successeur appartient encore à E; E est donc stable par s."
+      },
+      "prerequisites": [
+        "ensemble",
+        "application",
+        "image d'un ensemble",
+        "inclusion"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-stability",
+          "context": "Traduction de l'hérédité dans le langage des ensembles.",
+          "contribution": "Fixation de l'intuition « appliquer s ne fait pas sortir de E » et de l'écriture s(E)⊆E."
+        }
+      ],
+      "connections": [
+        "successor-map",
+        "property-predicate",
+        "induction-principle",
+        "subset"
+      ],
+      "domains": [
+        "théorie des ensembles",
+        "arithmétique",
+        "algèbre",
+        "systèmes dynamiques"
+      ],
+      "misconception": {
+        "wrong": "Stable signifie nécessairement f(E)=E.",
+        "correction": "La stabilité demande seulement f(E)\\\\subseteq E; l'image peut être une partie stricte de E."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Foundational mathematics learning sequence on successor, induction, groups, spaces and open sets, session 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "induction-principle",
+      "display": "P(0), [P(n)⇒P(n+1)] ⇒ ∀n P(n)",
+      "latex": "P(0),\\\\;[P(n)\\\\Rightarrow P(n+1)]\\\\;\\\\Rightarrow\\\\;\\\\forall n\\\\in\\\\mathbb N,\\\\,P(n)",
+      "aliases": [
+        "principe de récurrence",
+        "preuve par récurrence",
+        "mathematical induction"
+      ],
+      "spoken": {
+        "fr_literal": "P de zéro et P de n implique P de n plus un, donc P de n pour tout n",
+        "fr_natural": "on vérifie le départ puis que la propriété se transmet au successeur; elle vaut alors pour tous les naturels"
+      },
+      "concept": "principe de récurrence",
+      "category": "logique et preuve",
+      "formal": "Si P(0) est vraie et si, pour tout n\\\\in\\\\mathbb N, P(n)\\\\Rightarrow P(n+1), alors P(n) est vraie pour tout n\\\\in\\\\mathbb N. En posant E=\\\\{n\\\\in\\\\mathbb N\\\\mid P(n)\\\\}, cela correspond à 0\\\\in E et s(E)\\\\subseteq E, donc E=\\\\mathbb N.",
+      "plain_language": "On montre que la propriété est vraie au point de départ puis qu'elle passe d'un entier au suivant; cela suffit pour couvrir tous les entiers naturels.",
+      "why_here": "La preuve étudiée montre que la récurrence est l'axiome de stabilité par le successeur réécrit dans le langage des propriétés.",
+      "example": {
+        "statement": "E=\\\\{n\\\\in\\\\mathbb N\\\\mid P(n)\\\\};\\\\quad P(0)\\\\Leftrightarrow 0\\\\in E,\\\\quad P(n)\\\\Rightarrow P(n+1)\\\\Leftrightarrow n\\\\in E\\\\Rightarrow s(n)\\\\in E",
+        "explanation": "Le langage logique de P(n) et le langage ensembliste de E décrivent la même structure."
+      },
+      "prerequisites": [
+        "property-predicate",
+        "successor-map",
+        "stable-under-map",
+        "for-all"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-induction",
+          "context": "Théorème 2.5 — Principe de récurrence.",
+          "contribution": "Décomposition détaillée de l'initialisation et de l'hérédité, puis traduction vers l'ensemble E des entiers qui vérifient P."
+        }
+      ],
+      "connections": [
+        "property-predicate",
+        "successor-map",
+        "stable-under-map",
+        "for-all"
+      ],
+      "domains": [
+        "arithmétique",
+        "logique",
+        "preuves",
+        "informatique théorique"
+      ],
+      "misconception": {
+        "wrong": "L'hérédité affirme directement que P(n+1) est vraie pour tout n.",
+        "correction": "Elle affirme seulement l'implication P(n)\\\\Rightarrow P(n+1); pour conclure P(n+1), il faut disposer de P(n)."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Foundational mathematics learning sequence on successor, induction, groups, spaces and open sets, session 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "theorem-lemma-proposition",
+      "display": "lemme / proposition / théorème",
+      "latex": "\\\\text{lemme / proposition / théorème}",
+      "aliases": [
+        "lemma",
+        "proposition",
+        "theorem",
+        "énoncé démontré"
+      ],
+      "spoken": {
+        "fr_literal": "lemme, proposition, théorème",
+        "fr_natural": "trois étiquettes usuelles pour des résultats mathématiques démontrés"
+      },
+      "concept": "vocabulaire des résultats démontrés",
+      "category": "méthodologie mathématique",
+      "formal": "Lemme, proposition et théorème désignent tous des énoncés mathématiques accompagnés d'une démonstration. Les différences de dénomination reflètent surtout leur rôle éditorial ou leur importance dans un développement, sans hiérarchie formelle universelle.",
+      "plain_language": "Un lemme sert souvent d'étape intermédiaire, une proposition est un résultat autonome souvent local, et un théorème est généralement mis en avant comme résultat important.",
+      "why_here": "Ce vocabulaire apparaît constamment dans les cours de L1 et aide à distinguer les résultats démontrés des définitions et des axiomes.",
+      "example": {
+        "statement": "axiome → lemme → théorème",
+        "explanation": "Un axiome est admis; un lemme peut servir à démontrer un théorème. La chaîne est illustrative, pas obligatoire."
+      },
+      "prerequisites": [
+        "proposition logique",
+        "démonstration"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-result-labels",
+          "context": "Question sur la différence entre lemme, proposition et théorème.",
+          "contribution": "Clarification qu'il s'agit surtout de rôles dans l'exposé, pas de catégories formelles de vérité différentes."
+        }
+      ],
+      "connections": [
+        "induction-principle"
+      ],
+      "domains": [
+        "méthodologie mathématique",
+        "logique",
+        "rédaction de preuves"
+      ],
+      "misconception": {
+        "wrong": "Un lemme est mathématiquement moins vrai ou moins rigoureux qu'un théorème.",
+        "correction": "Tous doivent être démontrés avec la même rigueur; le nom indique surtout leur rôle dans l'exposé."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Foundational mathematics learning sequence on successor, induction, groups, spaces and open sets, session 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "group-structure",
+      "display": "(G, ⋆)",
+      "latex": "(G,\\\\star)",
+      "aliases": [
+        "groupe",
+        "group"
+      ],
+      "spoken": {
+        "fr_literal": "G muni de étoile",
+        "fr_natural": "l'ensemble G muni d'une loi interne qui satisfait les axiomes d'un groupe"
+      },
+      "concept": "groupe comme ensemble muni d'une structure",
+      "category": "algèbre",
+      "formal": "Un groupe est un couple (G,\\\\star) où \\\\star:G\\\\times G\\\\to G est une loi de composition interne associative, possède un élément neutre et où tout élément de G possède un inverse pour cette loi.",
+      "plain_language": "On part d'un ensemble G et on lui ajoute une manière de combiner ses éléments, avec des règles précises qui rendent cette combinaison cohérente et réversible.",
+      "why_here": "La notion prolonge directement l'opération binaire E×E→E et illustre l'idée générale « ensemble + structure ».",
+      "example": {
+        "statement": "(\\\\mathbb Z,+)",
+        "explanation": "Les entiers avec l'addition forment un groupe: addition interne et associative, neutre 0, inverse de n égal à -n."
+      },
+      "prerequisites": [
+        "binary-operation",
+        "ensemble",
+        "associativité",
+        "élément neutre",
+        "inverse"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-group-vs-set",
+          "context": "Comparaison entre un groupe et un ensemble.",
+          "contribution": "Fixation de l'idée qu'un groupe est un ensemble sous-jacent muni d'une loi interne satisfaisant des axiomes."
+        }
+      ],
+      "connections": [
+        "binary-operation",
+        "structured-space"
+      ],
+      "domains": [
+        "algèbre",
+        "théorie des groupes",
+        "géométrie",
+        "physique mathématique"
+      ],
+      "misconception": {
+        "wrong": "Un groupe est simplement un ensemble particulier.",
+        "correction": "Un groupe comprend un ensemble sous-jacent et une opération avec des axiomes; si l'opération est déjà donnée comme G×G→G, la fermeture est intégrée dans cette définition."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Foundational mathematics learning sequence on successor, induction, groups, spaces and open sets, session 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "structured-space",
+      "display": "ensemble + structure → espace",
+      "latex": "\\\\text{ensemble}+\\\\text{structure}\\\\to\\\\text{espace}",
+      "aliases": [
+        "espace mathématique",
+        "ensemble structuré",
+        "structured set",
+        "mathematical space"
+      ],
+      "spoken": {
+        "fr_literal": "ensemble plus structure donne espace",
+        "fr_natural": "un espace mathématique est généralement un ensemble sur lequel on a ajouté une structure"
+      },
+      "concept": "espace mathématique comme ensemble structuré",
+      "category": "structures mathématiques",
+      "formal": "Dans de nombreux contextes, un espace mathématique est constitué d'un ensemble sous-jacent muni d'une structure supplémentaire: opérations, distance, topologie, produit scalaire, etc. Le mot « espace » est toutefois un terme générique dont la structure précise dépend du contexte.",
+      "plain_language": "Un ensemble dit quels objets on possède; la structure supplémentaire dit ce qu'on peut faire avec eux ou comment ils sont reliés.",
+      "why_here": "Cette distinction relie naturellement ensemble, groupe, espace vectoriel, espace métrique et espace topologique.",
+      "example": {
+        "statement": "(X,d) : espace métrique",
+        "explanation": "X est l'ensemble sous-jacent et d ajoute une notion de distance entre ses éléments."
+      },
+      "prerequisites": [
+        "ensemble"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-set-vs-space",
+          "context": "Question sur la différence entre ensemble et espace.",
+          "contribution": "Formulation de l'idée « ensemble sous-jacent + structure supplémentaire »."
+        }
+      ],
+      "connections": [
+        "group-structure",
+        "open-set",
+        "binary-operation"
+      ],
+      "domains": [
+        "algèbre",
+        "analyse",
+        "géométrie",
+        "topologie"
+      ],
+      "misconception": {
+        "wrong": "Le mot espace désigne une catégorie unique avec toujours les mêmes opérations.",
+        "correction": "La structure dépend du contexte: vectorielle, métrique, topologique, probabiliste, etc."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Foundational mathematics learning sequence on successor, induction, groups, spaces and open sets, session 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "open-set",
+      "display": "U ouvert",
+      "latex": "U\\\\text{ ouvert}",
+      "aliases": [
+        "ensemble ouvert",
+        "open set"
+      ],
+      "spoken": {
+        "fr_literal": "U ouvert",
+        "fr_natural": "autour de chacun des points de U, on peut rester un peu dans U sans en sortir"
+      },
+      "concept": "ensemble ouvert",
+      "category": "topologie",
+      "formal": "Dans un espace métrique (X,d), U\\\\subseteq X est ouvert si, pour tout x\\\\in U, il existe \\\\varepsilon>0 tel que B(x,\\\\varepsilon)\\\\subseteq U. Dans \\\\mathbb R, cela signifie qu'un petit intervalle centré en chaque point de U reste contenu dans U.",
+      "plain_language": "Aucun point de l'ensemble n'est coincé sur un bord appartenant à l'ensemble: autour de chaque point, il existe une petite marge qui reste entièrement dedans.",
+      "why_here": "La notion d'ouvert est l'une des structures de base permettant de définir un espace topologique.",
+      "example": {
+        "statement": "(0,1)\\\\subset\\\\mathbb R\\\\text{ est ouvert}",
+        "explanation": "Pour chaque x entre 0 et 1, on peut choisir un petit intervalle autour de x qui reste entre 0 et 1."
+      },
+      "prerequisites": [
+        "ensemble",
+        "distance",
+        "intervalle",
+        "epsilon"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-open-set",
+          "context": "Question sur la notion d'ouvert après la distinction ensemble/espace.",
+          "contribution": "Fixation de l'intuition locale: autour de chaque point, une petite marge reste dans l'ensemble."
+        }
+      ],
+      "connections": [
+        "closed-set",
+        "closure",
+        "structured-space"
+      ],
+      "domains": [
+        "topologie",
+        "analyse",
+        "géométrie"
+      ],
+      "misconception": {
+        "wrong": "Un ensemble ouvert est simplement un ensemble qui ne contient pas ses deux extrémités.",
+        "correction": "Cette image vaut pour certains intervalles de ℝ; la définition générale est locale et s'exprime avec des voisinages ou des boules."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Foundational mathematics learning sequence on successor, induction, groups, spaces and open sets, session 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "closed-set",
+      "display": "F fermé",
+      "latex": "F\\\\text{ fermé}",
+      "aliases": [
+        "ensemble fermé",
+        "closed set"
+      ],
+      "spoken": {
+        "fr_literal": "F fermé",
+        "fr_natural": "un ensemble dont le complémentaire est ouvert"
+      },
+      "concept": "ensemble fermé",
+      "category": "topologie",
+      "formal": "Dans un espace topologique X, un sous-ensemble F\\\\subseteq X est fermé si son complémentaire X\\\\setminus F est ouvert.",
+      "plain_language": "Dans ℝ, un fermé contient typiquement ses points limites; la définition générale est que son complémentaire est ouvert.",
+      "why_here": "La notion complète celle d'ouvert et prépare la définition de la fermeture d'un ensemble.",
+      "example": {
+        "statement": "[0,1]\\\\subset\\\\mathbb R\\\\text{ est fermé}",
+        "explanation": "Son complémentaire (-∞,0)∪(1,+∞) est ouvert dans ℝ."
+      },
+      "prerequisites": [
+        "open-set",
+        "set-difference"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-open-closed",
+          "context": "Clarification « ouvert, fermé, fermeture ».",
+          "contribution": "Distinction entre la propriété « fermé » et l'opération de fermeture."
+        }
+      ],
+      "connections": [
+        "open-set",
+        "closure",
+        "set-difference"
+      ],
+      "domains": [
+        "topologie",
+        "analyse"
+      ],
+      "misconception": {
+        "wrong": "Ouvert et fermé sont des opposés exclusifs.",
+        "correction": "Un ensemble peut être ouvert et fermé à la fois, ou n'être ni ouvert ni fermé; « fermé » signifie que le complémentaire est ouvert."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Foundational mathematics learning sequence on successor, induction, groups, spaces and open sets, session 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "closure",
+      "display": "Ā",
+      "latex": "\\\\overline{A}",
+      "aliases": [
+        "fermeture",
+        "adhérence",
+        "closure"
+      ],
+      "spoken": {
+        "fr_literal": "A barre",
+        "fr_natural": "la fermeture ou l'adhérence de A"
+      },
+      "concept": "fermeture (adhérence) d'un ensemble",
+      "category": "topologie",
+      "formal": "La fermeture \\\\overline A d'un sous-ensemble A est le plus petit fermé contenant A; dans un espace métrique, elle contient A ainsi que tous ses points limites.",
+      "plain_language": "On complète A en ajoutant les points de bord ou de limite nécessaires pour obtenir un ensemble fermé.",
+      "why_here": "Il faut distinguer « fermé », qui est une propriété d'un ensemble, de « fermeture », qui transforme A en un ensemble fermé contenant A.",
+      "example": {
+        "statement": "A=(0,1)\\\\quad\\\\Rightarrow\\\\quad\\\\overline A=[0,1]",
+        "explanation": "On ajoute les deux points limites 0 et 1."
+      },
+      "prerequisites": [
+        "closed-set",
+        "ensemble",
+        "inclusion"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-closure",
+          "context": "Question sur ouvert par opposition à fermeture.",
+          "contribution": "Clarification: ouvert se compare à fermé; la fermeture A↦Ā est une opération distincte."
+        }
+      ],
+      "connections": [
+        "open-set",
+        "closed-set",
+        "subset"
+      ],
+      "domains": [
+        "topologie",
+        "analyse"
+      ],
+      "misconception": {
+        "wrong": "La fermeture est simplement l'opposé d'un ouvert.",
+        "correction": "« Fermé » est une propriété; la fermeture \\\\overline A est l'opération qui associe à A le plus petit fermé qui le contient."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Foundational mathematics learning sequence on successor, induction, groups, spaces and open sets, session 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
     }
   ]
 }
