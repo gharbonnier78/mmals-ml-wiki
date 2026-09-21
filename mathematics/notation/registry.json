@@ -1849,6 +1849,73 @@
       },
       "status": "draft",
       "maturity": "L1"
+    },
+    {
+      "id": "cardinality",
+      "display": "Card(E)",
+      "latex": "\\\\operatorname{Card}(E)",
+      "aliases": [
+        "cardinal de E",
+        "cardinalité",
+        "|E|",
+        "#E",
+        "cardinality"
+      ],
+      "spoken": {
+        "fr_literal": "card de E",
+        "fr_natural": "le cardinal de E, c'est-à-dire la taille de l'ensemble E"
+      },
+      "concept": "cardinal d'un ensemble",
+      "category": "ensembles",
+      "formal": "Le cardinal d'un ensemble E mesure sa taille. Si E est fini, \\\\operatorname{Card}(E) est le nombre de ses éléments. La notion s'étend aussi aux ensembles infinis.",
+      "plain_language": "Le cardinal indique combien d'éléments contient un ensemble; pour un ensemble fini, c'est simplement son nombre d'éléments.",
+      "why_here": "La notation Card(E) apparaît fréquemment en L1 pour compter les éléments d'un ensemble fini, puis sert plus généralement à comparer la taille d'ensembles finis ou infinis.",
+      "example": {
+        "statement": "E=\\\\{2,5,9\\\\} \\\\quad\\\\Rightarrow\\\\quad \\\\operatorname{Card}(E)=3",
+        "explanation": "L'ensemble E contient trois éléments distincts."
+      },
+      "prerequisites": [
+        "ensemble",
+        "élément",
+        "appartenance"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-cardinality",
+          "context": "Lecture de la notation Card(E) / cardinal d'un ensemble.",
+          "contribution": "Fixation de l'intuition « taille de l'ensemble » et des notations usuelles Card(E), |E| et #E."
+        }
+      ],
+      "connections": [
+        "finite-set",
+        "counting",
+        "bijection"
+      ],
+      "domains": [
+        "théorie des ensembles",
+        "combinatoire",
+        "probabilités",
+        "algèbre"
+      ],
+      "misconception": {
+        "wrong": "Le cardinal n'est défini que pour les ensembles finis.",
+        "correction": "Pour un ensemble fini, il compte les éléments; la notion de cardinalité s'étend aussi aux ensembles infinis."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Notation Card / cardinal rencontrée dans la session d'apprentissage du 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
     }
   ]
 }
