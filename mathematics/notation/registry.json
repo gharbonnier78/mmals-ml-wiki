@@ -2511,6 +2511,198 @@
       },
       "status": "draft",
       "maturity": "L2"
+    },
+    {
+      "id": "divisibility",
+      "display": "a ∣ b",
+      "latex": "a\\\\mid b",
+      "aliases": [
+        "a divise b",
+        "divisibilité",
+        "a est un diviseur de b",
+        "b est un multiple de a",
+        "divides"
+      ],
+      "spoken": {
+        "fr_literal": "a divise b",
+        "fr_natural": "b est un multiple entier de a"
+      },
+      "concept": "relation de divisibilité",
+      "category": "arithmétique",
+      "formal": "Pour a,b\\\\in\\\\mathbb Z, on écrit a\\\\mid b s'il existe u\\\\in\\\\mathbb Z tel que b=au.",
+      "plain_language": "a divise b signifie qu'on peut obtenir b en multipliant a par un entier. Le symbole se lit de gauche à droite: le nombre à gauche divise celui de droite.",
+      "why_here": "Cette notation relie directement les notions de diviseur, multiple et quotient entier, et prépare la congruence modulo n.",
+      "example": {
+        "statement": "3\\\\mid 12 \\\\iff \\\\exists u\\\\in\\\\mathbb Z,\\\\;12=3u",
+        "explanation": "On peut choisir u=4. Ainsi 3 est un diviseur de 12, 12 est un multiple de 3, et 4 est le quotient entier correspondant."
+      },
+      "prerequisites": [
+        "entiers relatifs",
+        "multiplication",
+        "exists"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-divisibility",
+          "context": "Introduction de la division, du quotient, des multiples et de la notation a|b.",
+          "contribution": "Fixation de la lecture a|b = « a divise b » et du lien b=au."
+        }
+      ],
+      "connections": [
+        "congruence-modulo",
+        "binary-operation"
+      ],
+      "domains": [
+        "arithmétique",
+        "théorie des nombres",
+        "algèbre"
+      ],
+      "misconception": {
+        "wrong": "Dans a|b, b divise a.",
+        "correction": "C'est l'inverse: a|b se lit « a divise b »; a est à gauche et b est le multiple à droite."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Arithmetic learning sequence on divisibility, quotient, multiples, congruence and periodicity, session 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "congruence-modulo",
+      "display": "a ≡ b (mod n)",
+      "latex": "a\\\\equiv b\\\\pmod n",
+      "aliases": [
+        "congruence modulo n",
+        "modulo",
+        "arithmétique modulaire",
+        "modular congruence"
+      ],
+      "spoken": {
+        "fr_literal": "a est congru à b modulo n",
+        "fr_natural": "a et b occupent la même position dans un cycle de longueur n"
+      },
+      "concept": "congruence modulo n",
+      "category": "arithmétique modulaire",
+      "formal": "Pour n\\\\ge 1, a\\\\equiv b\\\\pmod n si et seulement si n\\\\mid(a-b). Équivalemment, a et b ont le même reste dans la division euclidienne par n.",
+      "plain_language": "Deux entiers sont congrus modulo n lorsqu'ils retombent au même endroit après des cycles de longueur n.",
+      "why_here": "La congruence donne une écriture mathématique précise à l'intuition de périodicité en arithmétique: heures d'une horloge, jours de la semaine, cycles répétés.",
+      "example": {
+        "statement": "14\\\\equiv 2\\\\pmod{12}",
+        "explanation": "14 et 2 correspondent à la même position sur un cycle de 12, car 14-2=12 est divisible par 12."
+      },
+      "prerequisites": [
+        "divisibility",
+        "division euclidienne",
+        "reste"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-congruence-periodicity",
+          "context": "Lien entre congruence et « idée de congruence et de périodicité dans le monde réel ».",
+          "contribution": "Ancrage de la congruence comme formalisation arithmétique d'une intuition de cycle."
+        }
+      ],
+      "connections": [
+        "divisibility",
+        "arithmetic-periodicity"
+      ],
+      "domains": [
+        "arithmétique",
+        "théorie des nombres",
+        "cryptographie",
+        "informatique"
+      ],
+      "misconception": {
+        "wrong": "a≡b (mod n) signifie que a=b.",
+        "correction": "Cela signifie seulement qu'ils ont le même reste modulo n, ou que leur différence est un multiple de n."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Arithmetic learning sequence on divisibility, quotient, multiples, congruence and periodicity, session 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "arithmetic-periodicity",
+      "display": "cycle de période n",
+      "latex": "\\\\text{période }n",
+      "aliases": [
+        "périodicité",
+        "cycle",
+        "periodicity"
+      ],
+      "spoken": {
+        "fr_literal": "période n",
+        "fr_natural": "après n pas, on revient à la même position dans le cycle"
+      },
+      "concept": "périodicité comme intuition des congruences",
+      "category": "arithmétique et modélisation",
+      "formal": "Dans un contexte discret, une structure est périodique de période n lorsqu'un décalage de n laisse la position dans le cycle inchangée. En arithmétique modulaire, cela se traduit par a et a+n appartenant à la même classe modulo n.",
+      "plain_language": "On avance, puis après un nombre fixe d'étapes on revient au même état ou à la même position relative.",
+      "why_here": "La périodicité fournit une intuition concrète avant la notation de congruence: horloge de 12 heures, semaine de 7 jours, alternances et cycles.",
+      "example": {
+        "statement": "14\\\\equiv 2\\\\pmod{12}",
+        "explanation": "Sur une horloge de 12 heures, avancer de 12 heures ramène à la même position: 14 h correspond à 2 h sur le cadran."
+      },
+      "prerequisites": [
+        "entiers naturels",
+        "cycle"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-congruence-periodicity",
+          "context": "La périodicité a été identifiée comme intuition plus naturelle que le formalisme de congruence.",
+          "contribution": "Séparation explicite entre intuition de cycle et formalisation par congruence modulo n."
+        }
+      ],
+      "connections": [
+        "congruence-modulo"
+      ],
+      "domains": [
+        "arithmétique",
+        "systèmes périodiques",
+        "informatique",
+        "signal"
+      ],
+      "misconception": {
+        "wrong": "Toute périodicité est une congruence modulo n.",
+        "correction": "La congruence modulo n formalise une périodicité discrète sur les entiers; la notion générale de périodicité est plus large, par exemple pour des fonctions réelles."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Arithmetic learning sequence on divisibility, quotient, multiples, congruence and periodicity, session 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
     }
   ]
 }
