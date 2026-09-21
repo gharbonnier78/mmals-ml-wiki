@@ -1015,20 +1015,23 @@
       "latex": ":=",
       "aliases": [
         "est défini par",
-        "égalité de définition"
+        "égalité de définition",
+        "par définition",
+        "défini comme",
+        "defined as"
       ],
       "spoken": {
-        "fr_literal": "est défini comme",
-        "fr_natural": "ce qui suit fixe la définition de l'objet à gauche"
+        "fr_literal": "est défini par",
+        "fr_natural": "à partir de maintenant, le symbole de gauche désigne par définition l'objet de droite"
       },
       "concept": "égalité définitionnelle",
       "category": "logique",
-      "formal": "A := B introduit A par définition comme l'objet B dans la convention considérée.",
-      "plain_language": "Ce n'est pas une équation à résoudre: on donne un nom à une construction.",
-      "why_here": "La formule Γf := {...} introduit formellement ce que l'on appellera le graphe de f.",
+      "formal": "A := B introduit A par définition comme l'objet B dans la convention considérée. Contrairement à une égalité ordinaire A=B, la notation := indique ici que l'on fixe le sens du symbole A.",
+      "plain_language": "Le symbole := ne dit pas seulement que deux objets sont égaux: il sert à introduire une définition. On décide que le symbole placé à gauche désignera ce qui est écrit à droite.",
+      "why_here": "La notation réapparaît dans la construction des ensembles numériques, par exemple \\mathbb N^* := \\mathbb N\\setminus\\{0\\}. Elle aide à distinguer une définition d'une égalité à démontrer.",
       "example": {
-        "statement": "S := \\{1,2,3\\}",
-        "explanation": "On décide que le symbole S désignera cet ensemble."
+        "statement": "\\mathbb N^* := \\mathbb N\\setminus\\{0\\}",
+        "explanation": "On définit ℕ* comme l'ensemble des entiers naturels privés de 0. Le symbole := marque la définition; le symbole = sert ensuite à exprimer des égalités entre objets déjà définis."
       },
       "prerequisites": [
         "égalité",
@@ -1039,10 +1042,18 @@
           "source_ref": "learning-session-2026-08-30-function-graph-definition-5",
           "context": "Γf := {(x,y)∈E×F | y=f(x)}",
           "contribution": "Lecture de := comme marqueur de définition plutôt que calcul."
+        },
+        {
+          "source_ref": "learning-session-2026-09-21-definition-equals-n-star",
+          "context": "Lecture de la ligne ℕ* := ℕ\\{0} dans le chapitre de construction de ℤ.",
+          "contribution": "Renforcement de la distinction entre := (« est défini par ») et = (« est égal à »), avec un exemple concret sur ℕ*."
         }
       ],
       "connections": [
-        "function-graph"
+        "function-graph",
+        "nonzero-reals",
+        "set-difference",
+        "property-predicate"
       ],
       "domains": [
         "analyse",
@@ -1059,6 +1070,11 @@
           {
             "type": "learner_supplied_course_page",
             "reference": "Définition 5 — notation de définition",
+            "status": "source_identity_not_yet_catalogued"
+          },
+          {
+            "type": "learner_supplied_course_screenshot",
+            "reference": "Chapitre 5 — Anneau ℤ des entiers relatifs; ligne ℕ* := ℕ\\{0}, fournie dans la session d'apprentissage du 2026-09-21",
             "status": "source_identity_not_yet_catalogued"
           }
         ],
