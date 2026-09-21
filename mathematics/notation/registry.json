@@ -1719,6 +1719,136 @@
       },
       "status": "draft",
       "maturity": "L2"
+    },
+    {
+      "id": "nonzero-reals",
+      "display": "ℝ*",
+      "latex": "\\\\mathbb{R}^*",
+      "aliases": [
+        "réels non nuls",
+        "R étoile",
+        "nonzero reals"
+      ],
+      "spoken": {
+        "fr_literal": "R étoile",
+        "fr_natural": "l'ensemble des nombres réels non nuls"
+      },
+      "concept": "ensemble des réels non nuls",
+      "category": "ensembles de nombres",
+      "formal": "\\\\mathbb{R}^*=\\\\mathbb{R}\\\\setminus\\\\{0\\\\}.",
+      "plain_language": "On part de tous les réels et on enlève 0.",
+      "why_here": "La notation étoilée est fréquente en L1 pour exclure l'élément nul d'un ensemble numérique, par exemple dans les domaines de définition ou lorsqu'une division impose x\\\\neq0.",
+      "example": {
+        "statement": "-3,\\\\; \\\\frac12,\\\\; \\\\pi \\\\in \\\\mathbb{R}^*, \\\\qquad 0\\\\notin\\\\mathbb{R}^*",
+        "explanation": "Tous les réels appartiennent à ℝ*, sauf 0."
+      },
+      "prerequisites": [
+        "ensemble",
+        "nombres réels",
+        "appartenance",
+        "différence ensembliste"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-nonzero-reals",
+          "context": "Lecture de la notation ℝ* en L1.",
+          "contribution": "Fixation de la lecture « réels non nuls » et du lien ℝ*=ℝ\\{0}."
+        }
+      ],
+      "connections": [
+        "set-difference",
+        "belongs-to"
+      ],
+      "domains": [
+        "analyse",
+        "algèbre",
+        "équations",
+        "fonctions"
+      ],
+      "misconception": {
+        "wrong": "L'étoile signifie la même chose dans toutes les notations mathématiques.",
+        "correction": "Dans ℝ* ou ℕ*, elle signifie généralement qu'on retire 0; le sens de * dépend néanmoins du contexte dans d'autres domaines."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Notation ℝ* rencontrée dans la session d'apprentissage du 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "set-difference",
+      "display": "A \\ B",
+      "latex": "A\\\\setminus B",
+      "aliases": [
+        "différence ensembliste",
+        "privé de",
+        "sauf",
+        "set difference"
+      ],
+      "spoken": {
+        "fr_literal": "A privé de B",
+        "fr_natural": "les éléments de A sauf ceux qui appartiennent à B"
+      },
+      "concept": "différence ensembliste",
+      "category": "ensembles",
+      "formal": "A\\\\setminus B=\\\\{x\\\\in A\\\\mid x\\\\notin B\\\\}.",
+      "plain_language": "On garde les éléments de A et on enlève ceux qui sont aussi dans B.",
+      "why_here": "Cette notation permet notamment de lire \\\\mathbb{R}^*=\\\\mathbb{R}\\\\setminus\\\\{0\\\\}: tous les réels sauf 0.",
+      "example": {
+        "statement": "\\\\mathbb{R}\\\\setminus\\\\{0\\\\}=\\\\mathbb{R}^*",
+        "explanation": "On retire uniquement 0 de l'ensemble des réels."
+      },
+      "prerequisites": [
+        "ensemble",
+        "appartenance"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-set-difference",
+          "context": "Décomposition de ℝ*=ℝ\\{0}.",
+          "contribution": "Lecture intuitive du symbole \\ comme « sauf / privé de »."
+        }
+      ],
+      "connections": [
+        "nonzero-reals",
+        "belongs-to",
+        "not-belongs-to"
+      ],
+      "domains": [
+        "théorie des ensembles",
+        "analyse",
+        "algèbre",
+        "probabilités"
+      ],
+      "misconception": {
+        "wrong": "A\\\\setminus B est une soustraction numérique.",
+        "correction": "Il s'agit d'une opération sur des ensembles: on retire de A les éléments qui appartiennent à B."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Notation de différence ensembliste rencontrée via ℝ*=ℝ\\{0} dans la session du 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
     }
   ]
 }
