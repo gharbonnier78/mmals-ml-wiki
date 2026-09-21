@@ -1,8 +1,8 @@
 {
   "schema_version": "0.1",
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "language": "fr",
-  "source_note": "Canonical Diderot notation registry. Initial entries were seeded from the 2026-08-30 function/graph learning session; adaptive-decision notation was appended on 2026-09-01; injectivity was added on 2026-09-20 from the successor-map learning session, under the pinned pedagogical harness with per-entry authority records; binary operations / internal composition laws were added on 2026-09-20 from the addition-on-N learning session.",
+  "source_note": "Canonical Diderot notation registry. Initial entries were seeded from the 2026-08-30 function/graph learning session; adaptive-decision notation was appended on 2026-09-01; injectivity was added on 2026-09-20 from the successor-map learning session, under the pinned pedagogical harness with per-entry authority records; binary operations / internal composition laws were added on 2026-09-20 from the addition-on-N learning session; parameterized properties/predicates and their associated truth sets were added on 2026-09-21 from the induction-principle learning session.",
   "maturity_levels": {
     "L0": "Captured",
     "L1": "Understood",
@@ -1644,6 +1644,76 @@
         ],
         "pedagogical_sources": [
           "Diderot learning synthesis 2026-09-20"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "property-predicate",
+      "display": "P(n)",
+      "latex": "P(n)",
+      "aliases": [
+        "propriété P(n)",
+        "prédicat",
+        "propriété paramétrée par n",
+        "predicate"
+      ],
+      "spoken": {
+        "fr_literal": "P de n",
+        "fr_natural": "la propriété P évaluée pour l'entier n"
+      },
+      "concept": "propriété (ou prédicat) dépendant d'un entier n",
+      "category": "logique et ensembles",
+      "formal": "Une propriété P(n) est une assertion contenant la variable n et susceptible d'être vraie ou fausse pour chaque n du domaine considéré. À P sur \\\\mathbb N on associe l'ensemble de vérité E=\\\\{n\\\\in\\\\mathbb N\\\\mid P(n)\\\\text{ est vraie}\\\\}, de sorte que n\\\\in E \\\\Longleftrightarrow P(n)\\\\text{ est vraie}.",
+      "plain_language": "P(n) est une phrase mathématique dont la vérité dépend de n. Regrouper tous les n pour lesquels elle est vraie transforme cette propriété logique en un ensemble.",
+      "why_here": "Dans le principe de récurrence, ce passage permet de traduire une propriété P(n) en l'ensemble E des entiers qui la vérifient. L'initialisation P(0) devient 0\\\\in E et l'hérédité P(n)\\\\Rightarrow P(n+1) devient la stabilité de E par le successeur.",
+      "example": {
+        "statement": "P(n): « n est pair »; \\\\quad E=\\\\{n\\\\in\\\\mathbb N\\\\mid P(n)\\\\}=\\\\{0,2,4,6,\\\\ldots\\\\}",
+        "explanation": "P(4) est vraie, donc 4 appartient à E; P(5) est fausse, donc 5 n'appartient pas à E."
+      },
+      "prerequisites": [
+        "proposition",
+        "variable",
+        "ensemble",
+        "appartenance"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-21-induction-property-to-set",
+          "context": "Principe de récurrence: compréhension de l'ensemble E des entiers n qui vérifient P(n).",
+          "contribution": "Externalisation du pont central: une propriété paramétrée par n permet de passer du langage logique P(n) au langage des ensembles E, avec n∈E si et seulement si P(n) est vraie."
+        }
+      ],
+      "connections": [
+        "belongs-to",
+        "for-all",
+        "exists",
+        "successor-stability",
+        "induction-principle"
+      ],
+      "domains": [
+        "logique",
+        "théorie des ensembles",
+        "arithmétique",
+        "preuves par récurrence",
+        "informatique théorique"
+      ],
+      "misconception": {
+        "wrong": "P(n) désigne nécessairement une fonction numérique qui calcule un nombre.",
+        "correction": "Ici P(n) est d'abord une assertion vraie ou fausse pour chaque n. On peut la représenter par une fonction à valeurs de vérité, mais ce point de vue n'est pas nécessaire pour utiliser le principe de récurrence."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_excerpt",
+            "reference": "Théorème 2.5 — Principe de récurrence; ensemble E des entiers n qui vérifient P(n), fourni dans la session d'apprentissage du 2026-09-21",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-21"
         ],
         "scientific_authority": false
       },
