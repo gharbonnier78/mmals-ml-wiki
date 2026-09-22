@@ -1,8 +1,8 @@
 {
   "schema_version": "0.1",
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "language": "fr",
-  "source_note": "Canonical Diderot notation registry. Initial entries were seeded from the 2026-08-30 function/graph learning session; adaptive-decision notation was appended on 2026-09-01; injectivity was added on 2026-09-20 from the successor-map learning session, under the pinned pedagogical harness with per-entry authority records; binary operations / internal composition laws were added on 2026-09-20 from the addition-on-N learning session; parameterized properties/predicates and their associated truth sets were added on 2026-09-21 from the induction-principle learning session; successor/stability, induction, result labels, groups, structured spaces, and basic topology were capitalized from the 2026-09-21 learning sequence.",
+  "source_note": "Canonical Diderot notation registry. Initial entries were seeded from the 2026-08-30 function/graph learning session; adaptive-decision notation was appended on 2026-09-01; injectivity was added on 2026-09-20 from the successor-map learning session, under the pinned pedagogical harness with per-entry authority records; binary operations / internal composition laws were added on 2026-09-20 from the addition-on-N learning session; parameterized properties/predicates and their associated truth sets were added on 2026-09-21 from the induction-principle learning session; successor/stability, induction, result labels, groups, structured spaces, and basic topology were capitalized from the 2026-09-21 learning sequence; Z/nZ, congruence classes, nZ, rings and fields were capitalized from the 2026-09-22 learning sequence.",
   "maturity_levels": {
     "L0": "Captured",
     "L1": "Understood",
@@ -2703,6 +2703,337 @@
       },
       "status": "draft",
       "maturity": "L1"
+    },
+    {
+      "id": "multiples-nZ",
+      "display": "nℤ",
+      "latex": "n\\\\mathbb{Z}",
+      "aliases": [
+        "multiples de n",
+        "nZ",
+        "ensemble des multiples de n"
+      ],
+      "spoken": {
+        "fr_literal": "n Z",
+        "fr_natural": "l'ensemble de tous les multiples entiers de n"
+      },
+      "concept": "ensemble des multiples entiers de n",
+      "category": "arithmétique et ensembles",
+      "formal": "Pour n\\\\in\\\\mathbb N, n\\\\mathbb Z=\\\\{nk\\\\mid k\\\\in\\\\mathbb Z\\\\}.",
+      "plain_language": "nℤ rassemble tous les entiers obtenus en multipliant n par un entier positif, nul ou négatif.",
+      "why_here": "Dans la congruence modulo n, deux entiers a et b sont équivalents lorsque leur différence appartient à nℤ. Cette notation apparaît directement dans ℤ/nℤ.",
+      "example": {
+        "statement": "5\\\\mathbb Z=\\\\{\\\\ldots,-10,-5,0,5,10,\\\\ldots\\\\}",
+        "explanation": "Ce sont exactement les multiples entiers de 5."
+      },
+      "prerequisites": [
+        "entiers relatifs",
+        "multiplication",
+        "set-builder notation"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-22-nZ",
+          "context": "Décomposition de la notation ℤ/nℤ.",
+          "contribution": "Identification de nℤ comme ensemble des multiples de n, et non comme un produit numérique isolé."
+        }
+      ],
+      "connections": [
+        "divisibility",
+        "congruence-modulo",
+        "quotient-integers-mod-n"
+      ],
+      "domains": [
+        "arithmétique",
+        "théorie des nombres",
+        "algèbre"
+      ],
+      "misconception": {
+        "wrong": "nℤ désigne un seul nombre obtenu en multipliant n par ℤ.",
+        "correction": "ℤ est ici un ensemble; nℤ désigne l'ensemble de tous les produits nk avec k entier."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Learning sequence on rings, fields, divisibility, congruence and Z/nZ, session 2026-09-22",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-22"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "congruence-class",
+      "display": "[a]ₙ",
+      "latex": "[a]_n",
+      "aliases": [
+        "classe de congruence",
+        "classe modulo n",
+        "residue class",
+        "classe de a modulo n"
+      ],
+      "spoken": {
+        "fr_literal": "classe de a modulo n",
+        "fr_natural": "tous les entiers qui occupent la même position que a dans le cycle modulo n"
+      },
+      "concept": "classe de congruence modulo n",
+      "category": "arithmétique modulaire",
+      "formal": "La classe de a modulo n est [a]_n=\\\\{b\\\\in\\\\mathbb Z\\\\mid b\\\\equiv a\\\\pmod n\\\\}=a+n\\\\mathbb Z.",
+      "plain_language": "On regroupe dans [a]ₙ tous les entiers qui ont le même reste que a lorsqu'on divise par n.",
+      "why_here": "ℤ/nℤ n'est pas un ensemble d'entiers ordinaires mais un ensemble de classes de congruence.",
+      "example": {
+        "statement": "[2]_5=\\\\{\\\\ldots,-8,-3,2,7,12,\\\\ldots\\\\}",
+        "explanation": "Tous ces entiers diffèrent de 2 par un multiple de 5; ils représentent donc la même classe modulo 5."
+      },
+      "prerequisites": [
+        "congruence-modulo",
+        "multiples-nZ",
+        "set-builder notation"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-22-congruence-class",
+          "context": "Compréhension de ℤ/5ℤ comme cinq classes [0], [1], [2], [3], [4].",
+          "contribution": "Passage de l'intuition de cycle à l'objet mathématique « classe d'équivalence »."
+        }
+      ],
+      "connections": [
+        "congruence-modulo",
+        "multiples-nZ",
+        "quotient-integers-mod-n",
+        "arithmetic-periodicity"
+      ],
+      "domains": [
+        "arithmétique modulaire",
+        "algèbre",
+        "théorie des nombres"
+      ],
+      "misconception": {
+        "wrong": "[a]ₙ est simplement l'entier a écrit entre crochets.",
+        "correction": "[a]ₙ est un ensemble d'entiers congrus à a modulo n; a n'en est qu'un représentant."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Learning sequence on rings, fields, divisibility, congruence and Z/nZ, session 2026-09-22",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-22"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "quotient-integers-mod-n",
+      "display": "ℤ/nℤ",
+      "latex": "\\\\mathbb Z/n\\\\mathbb Z",
+      "aliases": [
+        "Z modulo nZ",
+        "quotient de Z par nZ",
+        "entiers modulo n",
+        "integers modulo n"
+      ],
+      "spoken": {
+        "fr_literal": "Z modulo n Z",
+        "fr_natural": "l'ensemble des classes d'entiers lorsque l'on identifie ceux qui sont congrus modulo n"
+      },
+      "concept": "quotient des entiers par la congruence modulo n",
+      "category": "arithmétique modulaire et algèbre",
+      "formal": "Pour n\\\\ge1, \\\\mathbb Z/n\\\\mathbb Z est l'ensemble des classes de congruence modulo n. Il possède exactement n classes, que l'on peut représenter par [0]_n,\\\\ldots,[n-1]_n. Les opérations sont définies par [a]+[b]=[a+b] et [a][b]=[ab].",
+      "plain_language": "On replie la droite infinie des entiers sur un cycle de n positions: tous les entiers qui tombent sur la même position sont considérés comme un même élément de ℤ/nℤ.",
+      "why_here": "Cette construction relie périodicité, congruence et structures algébriques. Elle fournit des exemples fondamentaux d'anneaux finis et, lorsque n est premier, de corps finis.",
+      "example": {
+        "statement": "\\\\mathbb Z/5\\\\mathbb Z=\\\\{[0]_5,[1]_5,[2]_5,[3]_5,[4]_5\\\\}",
+        "explanation": "7 appartient à [2]₅ car 7≡2 mod 5. Il n'ajoute donc pas un sixième élément."
+      },
+      "prerequisites": [
+        "congruence-class",
+        "congruence-modulo",
+        "multiples-nZ",
+        "cardinality"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-22-ZmodnZ",
+          "context": "Introduction de la notation ℤ/nℤ après divisibilité, congruence et périodicité.",
+          "contribution": "Lecture du slash comme quotient et visualisation de ℤ/nℤ comme cycle de n classes plutôt que comme division numérique."
+        }
+      ],
+      "connections": [
+        "congruence-class",
+        "multiples-nZ",
+        "congruence-modulo",
+        "ring-structure",
+        "field-structure",
+        "cardinality"
+      ],
+      "domains": [
+        "arithmétique modulaire",
+        "algèbre",
+        "théorie des nombres",
+        "cryptographie"
+      ],
+      "misconception": {
+        "wrong": "ℤ/nℤ signifie que l'on divise numériquement l'ensemble ℤ par nℤ.",
+        "correction": "Le slash indique ici un quotient: on regroupe les entiers en classes selon la relation de congruence modulo n."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Learning sequence on rings, fields, divisibility, congruence and Z/nZ, session 2026-09-22",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-22"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "ring-structure",
+      "display": "(A,+,×)",
+      "latex": "(A,+,\\\\times)",
+      "aliases": [
+        "anneau",
+        "anneau commutatif",
+        "ring",
+        "commutative ring"
+      ],
+      "spoken": {
+        "fr_literal": "A muni de plus et fois",
+        "fr_natural": "un ensemble muni d'une addition et d'une multiplication compatibles"
+      },
+      "concept": "anneau et anneau commutatif",
+      "category": "algèbre",
+      "formal": "Un anneau est un ensemble A muni de deux lois internes + et × telles que (A,+) soit un groupe commutatif, que la multiplication soit associative et distributive sur l'addition. Un anneau est commutatif lorsque ab=ba pour tous a,b. Selon les conventions du cours, la présence d'un neutre multiplicatif 1 peut être incluse dans la définition d'anneau.",
+      "plain_language": "Un anneau est un ensemble dans lequel on peut additionner, soustraire et multiplier de façon cohérente; dans un anneau commutatif, l'ordre des facteurs ne change pas le produit.",
+      "why_here": "ℤ est l'exemple fondamental d'anneau commutatif, et ℤ/nℤ est un anneau fini pour tout n≥1.",
+      "example": {
+        "statement": "(\\\\mathbb Z,+,\\\\times)",
+        "explanation": "Les entiers forment un anneau commutatif: l'addition possède des opposés, et la multiplication est associative, commutative et distributive."
+      },
+      "prerequisites": [
+        "group-structure",
+        "binary-operation",
+        "distributivité",
+        "associativité"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-22-rings",
+          "context": "Arrivée des notions d'anneau, anneau commutatif et corps avant ℤ/nℤ.",
+          "contribution": "Positionnement de l'anneau comme ensemble muni de deux opérations compatibles."
+        }
+      ],
+      "connections": [
+        "group-structure",
+        "field-structure",
+        "quotient-integers-mod-n"
+      ],
+      "domains": [
+        "algèbre",
+        "théorie des nombres",
+        "algèbre linéaire"
+      ],
+      "misconception": {
+        "wrong": "Un anneau permet toujours de diviser par tout élément non nul.",
+        "correction": "Cette propriété caractérise un corps, pas un anneau général; par exemple 2 n'a pas d'inverse multiplicatif dans ℤ."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Learning sequence on rings, fields, divisibility, congruence and Z/nZ, session 2026-09-22",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-22"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "field-structure",
+      "display": "(K,+,×)",
+      "latex": "(K,+,\\\\times)",
+      "aliases": [
+        "corps",
+        "field"
+      ],
+      "spoken": {
+        "fr_literal": "K muni de plus et fois",
+        "fr_natural": "un anneau commutatif dans lequel tout élément non nul possède un inverse multiplicatif"
+      },
+      "concept": "corps",
+      "category": "algèbre",
+      "formal": "Un corps K est un anneau commutatif non trivial dans lequel tout élément a\\\\ne0 admet un inverse multiplicatif a^{-1}. Équivalemment, (K\\\\setminus\\\\{0\\\\},\\\\times) est un groupe commutatif.",
+      "plain_language": "Dans un corps, on peut additionner, soustraire, multiplier et diviser par tout élément non nul tout en restant dans le même ensemble.",
+      "why_here": "Cette notion explique pourquoi ℚ, ℝ et ℂ sont des corps alors que ℤ ne l'est pas, et pourquoi ℤ/nℤ est un corps exactement lorsque n est premier.",
+      "example": {
+        "statement": "\\\\mathbb Z/5\\\\mathbb Z\\\\text{ est un corps, mais }\\\\mathbb Z/6\\\\mathbb Z\\\\text{ ne l'est pas}",
+        "explanation": "Modulo 5, chaque classe non nulle possède un inverse multiplicatif. Modulo 6, [2] n'en possède pas; par exemple [2][3]=[0]."
+      },
+      "prerequisites": [
+        "ring-structure",
+        "nonzero-reals",
+        "group-structure",
+        "inverse multiplicatif"
+      ],
+      "encounters": [
+        {
+          "source_ref": "learning-session-2026-09-22-fields",
+          "context": "Comparaison anneau/corps puis application à ℤ/nℤ.",
+          "contribution": "Fixation du critère « tout non-zéro est inversible multiplicativement »."
+        }
+      ],
+      "connections": [
+        "ring-structure",
+        "quotient-integers-mod-n",
+        "group-structure"
+      ],
+      "domains": [
+        "algèbre",
+        "théorie des nombres",
+        "algèbre linéaire",
+        "cryptographie"
+      ],
+      "misconception": {
+        "wrong": "Tout anneau commutatif est un corps.",
+        "correction": "Il faut en plus que chaque élément non nul soit inversible pour la multiplication; ℤ est commutatif mais n'est pas un corps."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "learner_supplied_course_context",
+            "reference": "Learning sequence on rings, fields, divisibility, congruence and Z/nZ, session 2026-09-22",
+            "status": "source_identity_not_yet_catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-22"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
     }
   ]
 }
