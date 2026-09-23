@@ -105,14 +105,13 @@ PubMed: https://pubmed.ncbi.nlm.nih.gov/42044345/
 
 ## Mathematical identity: diversity prediction theorem
 
-For numerical predictions (s_i), truth (	heta), and mean prediction (c = N^{-1}sum_i s_i),
+For numerical predictions `s_i`, truth `theta`, and mean prediction `c = (1/N) sum_i s_i`:
 
-[
-(c-	heta)^2 =
-rac{1}{N}sum_{i=1}^{N}(s_i-	heta)^2
--
-rac{1}{N}sum_{i=1}^{N}(s_i-c)^2.
-]
+```text
+(c - theta)^2
+  = (1/N) sum_i (s_i - theta)^2
+  - (1/N) sum_i (s_i - c)^2
+```
 
 This is an algebraic identity under arithmetic-mean aggregation and squared error. It shows that the error of the mean can be decomposed into mean individual squared error minus prediction diversity.
 
