@@ -3,13 +3,14 @@
 
 Source pages intentionally stay compact. This deterministic, idempotent build step:
 
-1. guarantees that every concept page (and every page carrying a `.formula` block) loads
+1. derives concept/pathway navigation from its canonical authorities;
+2. guarantees that every concept page (and every page carrying a `.formula` block) loads
    the shared site runtime used for epistemic-audit overlays and MathJax rendering;
-2. guarantees that learner-facing concept/lab/pathway detail pages load the canonical
+3. guarantees that learner-facing concept/lab/pathway detail pages load the canonical
    epistemic-status runtime; and
-3. normalizes public footer release metadata from the single `site.config.json` authority.
+4. normalizes public footer release metadata from the single `site.config.json` authority.
 
-The third rule matters for generated/pedagogical pages: source HTML may describe itself as a
+The fourth rule matters for generated/pedagogical pages: source HTML may describe itself as a
 derived teaching view, but the deployed artifact must still expose the repository's canonical
 release/version metadata and pass `check_release_consistency.py`.
 """
@@ -19,6 +20,8 @@ import json
 import os
 import re
 from pathlib import Path
+
+from generate_navigation import generate_navigation
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_JS = ROOT / "assets" / "js" / "site.js"
@@ -93,6 +96,8 @@ def normalize(page: Path) -> tuple[bool, bool, bool]:
 
 
 def main() -> None:
+    concept_navigation, pathway_navigation, _ = generate_navigation(write=True)
+
     runtime_changed: list[str] = []
     epistemic_changed: list[str] = []
     footer_changed: list[str] = []
@@ -117,6 +122,8 @@ def main() -> None:
 
     print(
         "Prepared Pages artifact: "
+        f"{concept_navigation} generated concept cards; "
+        f"{pathway_navigation} generated pathway cards; "
         f"{len(concept_pages)} concept pages; "
         f"{len(detail_surfaces)} epistemic-status detail surfaces; "
         f"{len(formula_pages)} formula pages; "
