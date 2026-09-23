@@ -104,3 +104,24 @@ The synthesis explicitly defines the next review questions but does not authoriz
 2. request independent source-fidelity and experimental-design review;
 3. do not merge or promote to stable concept pages until the review is resolved;
 4. separately consider a **bounded harness issue** documenting the gap between current reviewer independence and experimentally controlled interaction cadence — do not change normative `HARNESS.md` before evidence exists.
+
+
+## Unreviewed continuation: I-POMDP / ED / GO bridge
+
+A subsequent discussion connected the collective-intelligence thread with previously defined POMDP / Evidence-Driven / Goal-Oriented work.
+
+Two additional artifacts were preserved on the same branch:
+
+- `research/sources/2026/2026-09--interactive-pomdp-foundational-sources.md`
+- `research/2026-09-23--go-ed-i-pomdp-working-hypothesis.md`
+
+Important epistemic boundary:
+
+- **I-POMDP is established literature** (Gmytrasiewicz & Doshi, JAIR 2005, with later approximation/learning work);
+- **GO-ED-I-POMDP is not an established literature framework** and is only a local working label;
+- the proposed mapping of ED to evidence/interaction actions, GO to explicit multi-actor goals/constraints, and mutualism to longitudinal reciprocal value is **unchallenged and unreviewed**;
+- no concept page, harness rule, scientific gate or validated MMALS mechanism is promoted from these reflections.
+
+The note deliberately records objections to test later: whether ordinary POMDP observation modeling is sufficient, whether Dec-POMDP is the correct formalism for shared-goal cases, whether multi-goal GO requires additional game-theoretic/social-choice machinery, whether utility increments capture mutualism at all, and whether nested-agent modeling justifies its computational cost.
+
+**Disposition:** preserve now, challenge before promotion.
