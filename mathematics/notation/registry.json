@@ -3103,6 +3103,137 @@
       },
       "status": "draft",
       "maturity": "L2"
+    },
+    {
+      "id": "forecast-contract-notation",
+      "display": "𝓕ⱼ",
+      "latex": "\\mathcal F_j",
+      "aliases": [
+        "Forecast Contract j"
+      ],
+      "spoken": {
+        "fr_literal": "F calligraphique indice j",
+        "fr_natural": "le Forecast Contract numéro j, c'est-à-dire l'objet qui fige la question et sa résolution"
+      },
+      "concept": "project-local Forecast Contract object",
+      "category": "prévision et preuve",
+      "formal": "Dans Engineering Collective Forecasting, \\mathcal F_j désigne le tuple prospectivement figé contenant notamment question, espace de résultat, temps, règle de résolution, preuve d'autorité, resolver, exclusions et safeguards.",
+      "plain_language": "C'est le dossier contractuel minimal qui dit exactement ce qui est prévu et comment on saura plus tard si l'événement s'est produit.",
+      "why_here": "La notation compacte évite de confondre une phrase de sondage avec l'objet versionné/auditable utilisé par Study 0.",
+      "example": {
+        "statement": "\\mathcal F_{17}=(Q_{17},\\Omega_{17},T_{17},R_{17},E_{17},A_{17},\\ldots)",
+        "explanation": "Le contrat 17 regroupe la question, l'issue possible, les temps, la règle de résolution, la preuve d'autorité et l'autorité de résolution."
+      },
+      "prerequisites": [
+        "tuple",
+        "variable indexée",
+        "ensemble de résultats",
+        "preuve/règle de résolution"
+      ],
+      "encounters": [
+        {
+          "source_ref": "2026-09-25--engineering-collective-forecasting-protocol",
+          "context": "Forecast Contract concept page and Study 0 protocol",
+          "contribution": "Notation locale distinguée explicitement d'un standard externe."
+        }
+      ],
+      "connections": [
+        "forecast-contract",
+        "collective-forecasting",
+        "brier-score-notation"
+      ],
+      "domains": [
+        "prévision",
+        "ingénierie sous incertitude",
+        "gouvernance de preuve"
+      ],
+      "misconception": {
+        "wrong": "𝓕ⱼ est une notation standard reconnue des prediction markets.",
+        "correction": "C'est une convention locale du projet Engineering Collective Forecasting, documentée comme telle."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "project_protocol",
+            "reference": "Engineering Collective Forecasting bootstrap commit c8a35166870d578efade26eef0eaaef9f5a5251e",
+            "status": "project-local"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-25"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "market-forecast-probability-notation",
+      "display": "pᵐₜ",
+      "latex": "p_t^M",
+      "aliases": [
+        "market probability at time t",
+        "market forecast"
+      ],
+      "spoken": {
+        "fr_literal": "p indice t exposant M",
+        "fr_natural": "la probabilité agrégée affichée par le marché au temps t"
+      },
+      "concept": "time-indexed prediction-market forecast probability",
+      "category": "prévision probabiliste",
+      "formal": "p_t^M\\in[0,1] désigne, dans ce projet, la probabilité de l'événement produite par l'état du marché au temps t sous une configuration de mécanisme donnée.",
+      "plain_language": "C'est le chiffre de probabilité porté par le marché à un instant précis, pas la vérité future.",
+      "why_here": "Study 0 distingue la trajectoire p_t^M du seul p^M à la fermeture utilisé dans la comparaison primaire.",
+      "example": {
+        "statement": "p_{close}^M=0.68",
+        "explanation": "À la fermeture du contrat, le marché donne 68% à l'événement; ce 0.68 sera ensuite scoré contre le résultat 0/1."
+      },
+      "prerequisites": [
+        "probabilité",
+        "indice temporel",
+        "prediction market"
+      ],
+      "encounters": [
+        {
+          "source_ref": "2026-09-25--engineering-collective-forecasting-protocol",
+          "context": "Prediction market concept and Study 0 analysis",
+          "contribution": "Séparation entre trajectoire du marché et probabilité terminale gelée."
+        }
+      ],
+      "connections": [
+        "prediction-market",
+        "forecast-calibration",
+        "brier-score-notation"
+      ],
+      "domains": [
+        "prévision",
+        "prediction markets",
+        "ingénierie sous incertitude"
+      ],
+      "misconception": {
+        "wrong": "p_t^M est une probabilité objective vraie de l'événement.",
+        "correction": "C'est une prévision dépendante du mécanisme, des participants, des informations et de la configuration au temps t."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "project_protocol",
+            "reference": "Engineering Collective Forecasting bootstrap commit c8a35166870d578efade26eef0eaaef9f5a5251e",
+            "status": "project-local"
+          },
+          {
+            "type": "peer_reviewed_primary",
+            "reference": "Hanson (2007), DOI 10.5750/jpm.v1i1.417",
+            "status": "catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-25"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
     }
   ]
 }
