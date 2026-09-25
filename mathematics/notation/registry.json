@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "updated": "2026-09-22",
+  "updated": "2026-09-25",
   "language": "fr",
   "source_note": "Canonical Diderot notation registry. Initial entries were seeded from the 2026-08-30 function/graph learning session; adaptive-decision notation was appended on 2026-09-01; injectivity was added on 2026-09-20 from the successor-map learning session, under the pinned pedagogical harness with per-entry authority records; binary operations / internal composition laws were added on 2026-09-20 from the addition-on-N learning session; parameterized properties/predicates and their associated truth sets were added on 2026-09-21 from the induction-principle learning session; successor/stability, induction, result labels, groups, structured spaces, and basic topology were capitalized from the 2026-09-21 learning sequence; Z/nZ, congruence classes, nZ, rings and fields were capitalized from the 2026-09-22 learning sequence.",
   "maturity_levels": {
@@ -3029,6 +3029,75 @@
         ],
         "pedagogical_sources": [
           "Diderot learning synthesis 2026-09-22"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L2"
+    },
+    {
+      "id": "brier-score-notation",
+      "display": "BS(p,y)",
+      "latex": "BS(p,y)=(p-y)^2",
+      "aliases": [
+        "Brier score",
+        "quadratic probability score (binary loss form)"
+      ],
+      "spoken": {
+        "fr_literal": "B S de p et y égale p moins y au carré",
+        "fr_natural": "l'erreur quadratique entre la probabilité annoncée p et le résultat binaire y"
+      },
+      "concept": "Brier score for a binary probabilistic forecast",
+      "category": "probabilités et évaluation",
+      "formal": "Pour p∈[0,1] et y∈{0,1}, BS(p,y)=(p-y)^2. Une valeur plus faible indique une perte quadratique plus faible sur l'observation considérée.",
+      "plain_language": "On mesure à quelle distance la probabilité annoncée se trouve du résultat 0 ou 1 finalement observé.",
+      "why_here": "Engineering Collective Forecasting utilise le Brier score comme métrique primaire appariée pour comparer un marché à l'agrégation simple sur les mêmes Forecast Contracts résolus.",
+      "example": {
+        "statement": "y=1, p=0.8 ⇒ BS=0.04; p=0.2 ⇒ BS=0.64",
+        "explanation": "Une prévision confiante dans la mauvaise direction reçoit une perte beaucoup plus grande."
+      },
+      "prerequisites": [
+        "probabilité",
+        "variable binaire",
+        "erreur quadratique"
+      ],
+      "encounters": [
+        {
+          "source_ref": "2026-09-25--prediction-markets-proper-scoring",
+          "context": "Diderot concepts Brier score / proper scoring rule and Engineering Collective Forecasting Study 0",
+          "contribution": "Brier score capitalisé comme langage de comparaison probabiliste, avec frontière explicite entre un événement et une comparaison de méthodes."
+        }
+      ],
+      "connections": [
+        "proper-scoring-rule",
+        "forecast-calibration",
+        "prediction-market"
+      ],
+      "domains": [
+        "probabilités",
+        "prévision",
+        "machine learning",
+        "ingénierie sous incertitude"
+      ],
+      "misconception": {
+        "wrong": "Une méthode avec le meilleur Brier score sur un seul événement est démontrée supérieure.",
+        "correction": "Un événement donne une seule observation; comparer des méthodes exige un ensemble prospectif de contrats et une analyse de dépendance/incertitude."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "primary_classic",
+            "reference": "Brier, G. W. (1950), Verification of Forecasts Expressed in Terms of Probability",
+            "status": "catalogued"
+          },
+          {
+            "type": "peer_reviewed_primary",
+            "reference": "Gneiting & Raftery (2007), Strictly Proper Scoring Rules, Prediction, and Estimation, DOI 10.1198/016214506000001437",
+            "status": "catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-25"
         ],
         "scientific_authority": false
       },
