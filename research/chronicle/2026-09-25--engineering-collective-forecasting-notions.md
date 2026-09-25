@@ -21,7 +21,7 @@ The first five are anchored in external forecasting/statistical literature. Fore
 
 ## Pedagogical obligations applied
 
-Each concept exposes intuition, concrete example, formal anchor or mathematical descent, plain-language interpretation, misconception and understanding gate. Brier notation is added to the canonical notation registry rather than being maintained as a parallel symbol list.
+Each concept exposes intuition, concrete example, formal anchor or mathematical descent, plain-language interpretation, misconception and understanding gate. The canonical notation registry captures the Brier score together with the project-local Forecast Contract and time-indexed market-probability notation, rather than maintaining parallel symbol lists. Project-local symbols remain explicitly labelled as conventions.
 
 ## Scientific boundary
 
