@@ -364,5 +364,129 @@
       "route",
       "reconstructive-synthetic-memory"
     ]
+  },
+  {
+    "id": "collective-forecasting",
+    "title": "Collective forecasting",
+    "kicker": "Forecasting",
+    "summary": "Combining multiple probabilistic judgments under an explicit aggregation rule to estimate an uncertain future event.",
+    "status": "foundational",
+    "status_label": "Foundational forecasting concept",
+    "updated": "2026-09-25",
+    "formula": "p_{agg}=A(p_1,\\ldots,p_n)",
+    "discover": "Several people can each hold a different piece of information. Collective forecasting keeps their judgments probabilistic and combines them instead of forcing an early yes/no consensus.",
+    "engineer": "The aggregation rule is part of the system: arithmetic mean, weighted pool, prediction market and human-machine ensemble are different mechanisms that should be scored on the same resolved events.",
+    "research": "The central empirical question is whether a defined aggregator adds information beyond explicit baselines under a known information structure, not whether crowds are universally wise.",
+    "evidence": "Foundational aggregation concept supported by forecasting literature; engineering-specific value remains an open empirical question.",
+    "limits": "Group size alone does not prevent correlated error, common misinformation, social pressure or poor question design.",
+    "related": [
+      "prediction-market",
+      "proper-scoring-rule",
+      "forecast-calibration",
+      "belief-state"
+    ]
+  },
+  {
+    "id": "prediction-market",
+    "title": "Prediction market",
+    "kicker": "Information aggregation",
+    "summary": "A mechanism in which trades or score-linked updates aggregate participants' probabilistic beliefs into a market forecast.",
+    "status": "foundational",
+    "status_label": "Foundational mechanism with corporate evidence",
+    "updated": "2026-09-25",
+    "formula": "p_t^M=M(orders_{\\le t};\\theta_M)",
+    "discover": "Participants move a collective probability when their own belief differs from the current market state.",
+    "engineer": "A prediction market is not a neural network: normally there are no hidden-layer weights or backpropagation. Market-maker parameters, information visibility, liquidity and incentives are part of the mechanism.",
+    "research": "Market prices are forecasts conditional on mechanism and participants. Corporate studies support feasibility but also expose thinness, optimism and information-structure effects.",
+    "evidence": "Supported by prediction-market theory and field/corporate studies; no Diderot claim of universal engineering superiority.",
+    "limits": "The market probability is neither ground truth nor a release decision, and causal effects cannot be read directly from conditional market probabilities.",
+    "related": [
+      "collective-forecasting",
+      "proper-scoring-rule",
+      "forecast-contract",
+      "forecast-calibration"
+    ]
+  },
+  {
+    "id": "proper-scoring-rule",
+    "title": "Proper scoring rule",
+    "kicker": "Probabilistic evaluation",
+    "summary": "A forecast evaluation rule designed so truthful probability reporting optimizes expected score under the scoring assumptions.",
+    "status": "foundational",
+    "status_label": "Foundational probabilistic evaluation",
+    "updated": "2026-09-25",
+    "formula": "\\mathbb E_Q[S(Q,Y)]\\ge \\mathbb E_Q[S(P,Y)]",
+    "discover": "A good probability score should not reward bluffing with fake certainty.",
+    "engineer": "Use proper scores such as Brier or logarithmic score when the system outputs probabilities rather than only hard classes.",
+    "research": "Strict propriety is an expectation-level incentive/evaluation property; it is not empirical calibration, unbiasedness or causal validity.",
+    "evidence": "Established in the statistical forecasting literature.",
+    "limits": "A proper score does not make the forecaster or data-generating process reliable by itself.",
+    "related": [
+      "brier-score",
+      "forecast-calibration",
+      "collective-forecasting"
+    ]
+  },
+  {
+    "id": "brier-score",
+    "title": "Brier score",
+    "kicker": "Probabilistic evaluation",
+    "summary": "Squared error between a binary event probability and the realized 0/1 outcome.",
+    "status": "foundational",
+    "status_label": "Foundational scoring rule",
+    "updated": "2026-09-25",
+    "formula": "BS(p,y)=(p-y)^2",
+    "discover": "Say 80% and the event happens: small error. Say 20% and it happens: large error.",
+    "engineer": "Brier loss retains confidence information discarded by threshold accuracy and supports paired comparisons of probabilistic methods.",
+    "research": "The Brier score is proper for probability forecasts; repeated/event dependence and finite-sample uncertainty still matter when comparing methods.",
+    "evidence": "Classical forecast-verification measure originating with Brier (1950), situated in modern proper-scoring-rule theory.",
+    "limits": "A lower score on one event does not establish that a method is generally better.",
+    "related": [
+      "proper-scoring-rule",
+      "forecast-calibration",
+      "prediction-market"
+    ]
+  },
+  {
+    "id": "forecast-calibration",
+    "title": "Forecast calibration",
+    "kicker": "Probabilistic evaluation",
+    "summary": "Agreement between stated forecast probabilities and observed event frequencies across a suitable set of comparable forecasts.",
+    "status": "foundational",
+    "status_label": "Foundational forecast diagnostic",
+    "updated": "2026-09-25",
+    "formula": "P(Y=1\\mid p\\approx q)\\approx q",
+    "discover": "Events called 70% likely should occur about seven times in ten over many comparable cases.",
+    "engineer": "Reliability plots need bin counts and uncertainty. Sharpness is useful only alongside adequate calibration.",
+    "research": "Calibration is a property of forecast/outcome collections and is unstable to assess in small samples; proper scoring and calibration answer related but distinct questions.",
+    "evidence": "Foundational probabilistic forecasting concept.",
+    "limits": "A small pilot cannot justify fine-grained calibration claims, and extreme probabilities are not automatically better.",
+    "related": [
+      "proper-scoring-rule",
+      "brier-score",
+      "collective-forecasting",
+      "cal"
+    ]
+  },
+  {
+    "id": "forecast-contract",
+    "title": "Forecast Contract",
+    "kicker": "Evidence contract",
+    "summary": "Project-local prospective object fixing forecast semantics, timing, resolution evidence, resolver and safeguards before the outcome is known.",
+    "status": "hypothesis",
+    "status_label": "Project-local research formalism",
+    "updated": "2026-09-25",
+    "formula": "\\mathcal F_j=(Q_j,\\Omega_j,T_j,R_j,E_j,A_j,\\ldots)",
+    "discover": "Turn a vague question such as 'will it go well?' into an event future evidence can resolve without rewriting success afterward.",
+    "engineer": "The contract versions and freezes outcome type, open/close/resolve times, resolution rule, authoritative evidence, resolver role, exclusions/void conditions, shared context and shadow-mode safeguards.",
+    "research": "Introduced in Engineering Collective Forecasting to reduce ambiguity and post-hoc reinterpretation; it is local terminology and not claimed as an external standard.",
+    "evidence": "Defined in the 2026-09-25 protocol bootstrap; no empirical Study 0 result exists yet.",
+    "limits": "Perfectly precise wording does not make an event relevant, ungameable, independent or causally meaningful.",
+    "related": [
+      "prediction-market",
+      "collective-forecasting",
+      "proper-scoring-rule",
+      "non-regression-evidence"
+    ]
   }
 ]
