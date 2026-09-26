@@ -326,6 +326,62 @@
       "year": "2026",
       "type": "project protocol / no empirical Study 0 evidence",
       "url": "https://github.com/gharbonnier78/engineering-collective-forecasting/commit/c8a35166870d578efade26eef0eaaef9f5a5251e"
+    },
+    "COWGILL2009": {
+      "title": "Using Prediction Markets to Track Information Flows: Evidence from Google",
+      "authors": "Bo Cowgill, Justin Wolfers & Eric Zitzewitz",
+      "year": "2009",
+      "type": "corporate field evidence",
+      "url": "https://doi.org/10.1007/978-3-642-03821-1_2"
+    },
+    "BARON2014": {
+      "title": "Two Reasons to Make Aggregated Probability Forecasts More Extreme",
+      "authors": "Jonathan Baron et al.",
+      "year": "2014",
+      "type": "peer-reviewed decision analysis",
+      "url": "https://doi.org/10.1287/deca.2014.0293"
+    },
+    "DANA2019": {
+      "title": "Are Markets More Accurate than Polls? The Surprising Informational Value of Just Asking",
+      "authors": "Jason Dana et al.",
+      "year": "2019",
+      "type": "peer-reviewed forecasting study",
+      "url": "https://doi.org/10.1017/S1930297500003375"
+    },
+    "PALLEY2019": {
+      "title": "Extracting the Wisdom of Crowds When Information Is Shared",
+      "authors": "Asa B. Palley & Jack B. Soll",
+      "year": "2019",
+      "type": "peer-reviewed aggregation study",
+      "url": "https://doi.org/10.1287/mnsc.2018.3047"
+    },
+    "MARTINIE2020": {
+      "title": "Using Meta-Predictions to Identify Experts in the Crowd When Past Performance Is Unknown",
+      "authors": "Marcellin Martinie, Tom Wilkening & Piers D. L. Howe",
+      "year": "2020",
+      "type": "peer-reviewed open-access study",
+      "url": "https://doi.org/10.1371/journal.pone.0232058"
+    },
+    "PEKER2025": {
+      "title": "Robust Recalibration of Aggregate Probability Forecasts Using Meta-Beliefs",
+      "authors": "Cem Peker & Tom Wilkening",
+      "year": "2025",
+      "type": "peer-reviewed forecasting study",
+      "url": "https://doi.org/10.1016/j.ijforecast.2024.09.005"
+    },
+    "BUEHLER1994": {
+      "title": "Exploring the Planning Fallacy: Why People Underestimate Their Task Completion Times",
+      "authors": "Roger Buehler, Dale Griffin & Michael Ross",
+      "year": "1994",
+      "type": "peer-reviewed psychology study",
+      "url": "https://doi.org/10.1037/0022-3514.67.3.366"
+    },
+    "HOWARD1988": {
+      "title": "Decision Analysis: Practice and Promise",
+      "authors": "Ronald A. Howard",
+      "year": "1988",
+      "type": "peer-reviewed decision analysis",
+      "url": "https://doi.org/10.1287/mnsc.34.6.679"
     }
   },
   "concepts": {
@@ -815,24 +871,26 @@
       "group": "probabilistic-forecasting",
       "sources": [
         "ATANASOV2017",
-        "COWGILL2015"
+        "DANA2019",
+        "PALLEY2019"
       ],
-      "review_focus": "Keep aggregation-mechanism claims separate from universal wisdom-of-crowds claims and from engineering transfer."
+      "review_focus": "Aggregation must be compared with explicit baselines; shared-information structure limits simple wisdom-of-crowds claims."
     },
     "prediction-market": {
       "group": "probabilistic-forecasting",
       "sources": [
         "HANSON2007",
+        "COWGILL2009",
         "COWGILL2015"
       ],
-      "review_focus": "Market probability is a mechanism-dependent forecast, not truth, governance authority, or a neural-network output."
+      "review_focus": "Market probability is mechanism-dependent, and visible prices can become interventions for actors who influence outcomes."
     },
     "proper-scoring-rule": {
       "group": "probabilistic-forecasting",
       "sources": [
         "GNEITING2007"
       ],
-      "review_focus": "Distinguish strict propriety from empirical calibration and finite-sample performance."
+      "review_focus": "Expected-loss propriety must remain distinct from finite-sample calibration."
     },
     "brier-score": {
       "group": "probabilistic-forecasting",
@@ -840,21 +898,40 @@
         "BRIER1950",
         "GNEITING2007"
       ],
-      "review_focus": "Do not turn a one-event score difference into method superiority."
+      "review_focus": "State normalized binary convention and factor-of-two relation to original two-category sum."
     },
     "forecast-calibration": {
       "group": "probabilistic-forecasting",
       "sources": [
         "GNEITING2007"
       ],
-      "review_focus": "Small-sample reliability plots are descriptive; sharpness does not substitute for calibration."
+      "review_focus": "Small-sample calibration diagnostics remain descriptive."
     },
     "forecast-contract": {
       "group": "engineering-forecasting-hypothesis",
       "sources": [
-        "ECF2026"
+        "ECF2026",
+        "HOWARD1988"
       ],
-      "review_focus": "Project-local formalism only; preserve protocol-stage status and do not imply an external standard or empirical validation."
+      "review_focus": "Project-local formalism only; clarity-test lineage does not turn it into an external standard."
+    },
+    "meta-prediction": {
+      "group": "probabilistic-forecasting",
+      "sources": [
+        "PALLEY2019",
+        "MARTINIE2020",
+        "PEKER2025"
+      ],
+      "review_focus": "Published methods differ; project meta-recalibration must not be represented as an exact published algorithm."
+    },
+    "brier-diversity-identity": {
+      "group": "probabilistic-forecasting",
+      "sources": [
+        "BRIER1950",
+        "GNEITING2007",
+        "BARON2014"
+      ],
+      "review_focus": "Exact algebraic identity is not an optimality theorem for pooling independent evidence."
     }
   }
 }
