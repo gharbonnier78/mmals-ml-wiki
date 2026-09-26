@@ -382,6 +382,13 @@
       "year": "1988",
       "type": "peer-reviewed decision analysis",
       "url": "https://doi.org/10.1287/mnsc.34.6.679"
+    },
+    "CHENVAUGHAN2010": {
+      "title": "A New Understanding of Prediction Markets via No-Regret Learning",
+      "authors": "Yiling Chen & Jennifer Wortman Vaughan",
+      "year": "2010",
+      "type": "peer-reviewed ACM EC paper / learning-theory interpretation",
+      "url": "https://arxiv.org/abs/1003.0034"
     }
   },
   "concepts": {
@@ -881,7 +888,8 @@
       "sources": [
         "HANSON2007",
         "COWGILL2009",
-        "COWGILL2015"
+        "COWGILL2015",
+        "CHENVAUGHAN2010"
       ],
       "review_focus": "Market probability is mechanism-dependent, and visible prices can become interventions for actors who influence outcomes."
     },
