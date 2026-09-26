@@ -26,10 +26,11 @@ retention_verdict: "retain"
 - Peker, C. & Wilkening, T. (2025), *Robust Recalibration of Aggregate Probability Forecasts Using Meta-Beliefs*, DOI 10.1016/j.ijforecast.2024.09.005.
 - Buehler, R., Griffin, D. & Ross, M. (1994), *Exploring the Planning Fallacy*, DOI 10.1037/0022-3514.67.3.366.
 - Howard, R. A. (1988), *Decision Analysis: Practice and Promise*, DOI 10.1287/mnsc.34.6.679.
+- Chen, Y. & Wortman Vaughan, J. (2010), *A New Understanding of Prediction Markets via No-Regret Learning*, ACM EC '10 / arXiv:1003.0034.
 
 ## What the sources support
 
-Prediction markets are one mechanism for information aggregation, but direct probability elicitation and carefully designed non-market aggregation are serious comparators. Simple averaging can be conservative; shared information can correlate errors; meta-predictions can provide additional information about shared beliefs or latent expertise. Proper scoring rules provide principled evaluation of probabilistic forecasts, while Brier loss supplies a concrete squared-error score.
+Prediction markets are one mechanism for information aggregation. LMSR prices have a softmax form over outstanding shares, and convex cost-function market makers have a no-regret/FTRL interpretation in the learning-theory literature. Direct probability elicitation and carefully designed non-market aggregation are serious comparators. Simple averaging can be conservative; shared information can correlate errors; meta-predictions can provide additional information about shared beliefs or latent expertise. Proper scoring rules provide principled evaluation of probabilistic forecasts, while Brier loss supplies a concrete squared-error score.
 
 Actor/observer differences and corporate-market biases are relevant threats when forecasters can influence or identify with the outcome. These findings motivate design factors; they do not provide transferable engineering effect sizes.
 
