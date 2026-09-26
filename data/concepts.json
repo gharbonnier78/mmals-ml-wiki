@@ -397,8 +397,8 @@
     "updated": "2026-09-26",
     "formula": "p_t^M=M(\\mathrm{orders}_{\\le t};\\theta_M)",
     "discover": "Participants move a shared probability when their own beliefs differ from the market state.",
-    "engineer": "The mechanism is not neural-network training. Liquidity, market maker, timing, information visibility and incentives are part of the system and can affect the resulting forecast.",
-    "research": "A visible market state can itself affect participants. Corporate studies also document optimism and correlated trading, so a market is not automatically a passive sensor when traders influence the outcome.",
+    "engineer": "The mechanism is not neural-network training. Liquidity, market maker, timing, information visibility and incentives are part of the system and can affect the resulting forecast. In the logarithmic market scoring rule, outcome prices have a softmax form over outstanding shares with liquidity parameter b; this creates a useful mathematical bridge to modern ML rather than an identity with a neural network.",
+    "research": "A visible market state can itself affect participants. Corporate studies document optimism and correlated trading. Convex cost-function market makers also admit a no-regret online-learning interpretation closely related to Follow-the-Regularized-Leader, which helps connect market aggregation to learning theory without collapsing the two mechanisms.",
     "evidence": "Prediction-market theory and corporate field evidence support feasibility and identify biases; no engineering superiority claim is made.",
     "limits": "A market price is neither truth nor a governance decision, and market exposure can become an intervention.",
     "related": [
