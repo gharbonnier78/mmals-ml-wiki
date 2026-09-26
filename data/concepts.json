@@ -364,5 +364,172 @@
       "route",
       "reconstructive-synthetic-memory"
     ]
+  },
+  {
+    "id": "collective-forecasting",
+    "title": "Collective forecasting",
+    "kicker": "Forecasting",
+    "summary": "Combining multiple probabilistic judgments under an explicit aggregation rule and explicit reference forecasts.",
+    "status": "foundational",
+    "status_label": "Source-derived forecasting concept",
+    "updated": "2026-09-26",
+    "formula": "p_{agg}=A(p_1,\\ldots,p_n)",
+    "discover": "Several people can hold different pieces of evidence. Collective forecasting keeps those judgments probabilistic and combines them under a declared rule rather than forcing a yes/no vote.",
+    "engineer": "Mean, median, meta-belief recalibration, prediction markets and human-machine ensembles are different aggregators. Compare them on the same resolved events and against explicit institutional or historical references.",
+    "research": "The relevant question is conditional: which aggregation mechanism adds information under which information structure? Shared information, correlated errors and actor/observer composition can change the answer.",
+    "evidence": "Established forecasting literature supports multiple aggregation approaches; engineering-specific incremental value remains an open empirical question.",
+    "limits": "More forecasters do not guarantee correctness when information and errors are correlated.",
+    "related": [
+      "meta-prediction",
+      "brier-diversity-identity",
+      "prediction-market",
+      "proper-scoring-rule",
+      "forecast-contract"
+    ]
+  },
+  {
+    "id": "prediction-market",
+    "title": "Prediction market",
+    "kicker": "Information aggregation",
+    "summary": "A market mechanism in which trades or score-linked updates aggregate probabilistic beliefs into a shared state.",
+    "status": "foundational",
+    "status_label": "Source-derived mechanism with corporate evidence",
+    "updated": "2026-09-26",
+    "formula": "p_t^M=M(\\mathrm{orders}_{\\le t};\\theta_M)",
+    "discover": "Participants move a shared probability when their own beliefs differ from the market state.",
+    "engineer": "The mechanism is not neural-network training. Liquidity, market maker, timing, information visibility and incentives are part of the system and can affect the resulting forecast. In the logarithmic market scoring rule, outcome prices have a softmax form over outstanding shares with liquidity parameter b; this creates a useful mathematical bridge to modern ML rather than an identity with a neural network.",
+    "research": "A visible market state can itself affect participants. Corporate studies document optimism and correlated trading. Convex cost-function market makers also admit a no-regret online-learning interpretation closely related to Follow-the-Regularized-Leader, which helps connect market aggregation to learning theory without collapsing the two mechanisms.",
+    "evidence": "Prediction-market theory and corporate field evidence support feasibility and identify biases; no engineering superiority claim is made.",
+    "limits": "A market price is neither truth nor a governance decision, and market exposure can become an intervention.",
+    "related": [
+      "collective-forecasting",
+      "meta-prediction",
+      "proper-scoring-rule",
+      "forecast-contract"
+    ]
+  },
+  {
+    "id": "proper-scoring-rule",
+    "title": "Proper scoring rule",
+    "kicker": "Probabilistic evaluation",
+    "summary": "A probability evaluation rule whose expected score is optimized by truthful reporting under the scoring assumptions.",
+    "status": "foundational",
+    "status_label": "Foundational probabilistic evaluation",
+    "updated": "2026-09-26",
+    "formula": "\\mathbb E_Q[S(Q,Y)]\\ge \\mathbb E_Q[S(P,Y)]",
+    "discover": "A good probability score should not make bluffing with fake certainty advantageous in expectation.",
+    "engineer": "Brier and logarithmic scores evaluate probabilities rather than hard labels. Expected-loss propriety is different from finite-sample calibration.",
+    "research": "Strict propriety is an expectation-level property; it does not imply unbiasedness, calibration or causal validity.",
+    "evidence": "Established in statistical forecasting literature.",
+    "limits": "Penalizing confident errors is not by itself enough to establish propriety.",
+    "related": [
+      "brier-score",
+      "forecast-calibration",
+      "collective-forecasting"
+    ]
+  },
+  {
+    "id": "brier-score",
+    "title": "Brier score",
+    "kicker": "Probabilistic evaluation",
+    "summary": "Squared-error scoring of probability forecasts; this project states the normalized binary convention explicitly.",
+    "status": "foundational",
+    "status_label": "Foundational scoring rule",
+    "updated": "2026-09-26",
+    "formula": "BS(p,y)=(p-y)^2",
+    "discover": "The score squares the distance between the probability you announced and the 0/1 outcome that occurred.",
+    "engineer": "This project uses the normalized binary one-component loss. Brier's original two-category vector sum equals twice this quantity for a binary event.",
+    "research": "Brier loss is proper for binary probability forecasts; method comparisons still require prospectively sampled events and dependence-aware uncertainty.",
+    "evidence": "Classical forecast-verification measure, situated in modern proper-scoring-rule theory.",
+    "limits": "One lower event score cannot establish method superiority.",
+    "related": [
+      "brier-diversity-identity",
+      "proper-scoring-rule",
+      "forecast-calibration"
+    ]
+  },
+  {
+    "id": "forecast-calibration",
+    "title": "Forecast calibration",
+    "kicker": "Probabilistic evaluation",
+    "summary": "Agreement between stated forecast probabilities and observed event frequencies across a suitable set of comparable forecasts.",
+    "status": "foundational",
+    "status_label": "Foundational forecast diagnostic",
+    "updated": "2026-09-25",
+    "formula": "P(Y=1\\mid p\\approx q)\\approx q",
+    "discover": "Events called 70% likely should occur about seven times in ten over many comparable cases.",
+    "engineer": "Reliability plots need bin counts and uncertainty. Sharpness is useful only alongside adequate calibration.",
+    "research": "Calibration is a property of forecast/outcome collections and is unstable to assess in small samples; proper scoring and calibration answer related but distinct questions.",
+    "evidence": "Foundational probabilistic forecasting concept.",
+    "limits": "A small pilot cannot justify fine-grained calibration claims, and extreme probabilities are not automatically better.",
+    "related": [
+      "proper-scoring-rule",
+      "brier-score",
+      "collective-forecasting",
+      "cal"
+    ]
+  },
+  {
+    "id": "forecast-contract",
+    "title": "Forecast Contract",
+    "kicker": "Evidence contract",
+    "summary": "Project-local prospective object fixing forecast semantics, institutional references, resolution evidence, resolver and safeguards before the outcome is known.",
+    "status": "hypothesis",
+    "status_label": "Project-local research formalism",
+    "updated": "2026-09-26",
+    "formula": "\\mathcal F_j=(Q_j,\\Omega_j,T_j,R_j,E_j,A_j,B_j,C_j,X_j,S_j)",
+    "discover": "Turn a vague question into an event that future evidence can resolve without rewriting success after the answer is known.",
+    "engineer": "The revised contract includes cluster/timing, resolution evidence, base-rate reference class, accountable owner, official-status source, data custodian, exclusions and visibility safeguards.",
+    "research": "Introduced by Engineering Collective Forecasting and revised after independent review; it is local terminology, not an external standard.",
+    "evidence": "Protocol-stage formalism only; no empirical Study 0 result exists.",
+    "limits": "Precise wording does not make an event important, non-gameable, independent or causally meaningful.",
+    "related": [
+      "collective-forecasting",
+      "meta-prediction",
+      "brier-score",
+      "prediction-market"
+    ]
+  },
+  {
+    "id": "meta-prediction",
+    "title": "Meta-prediction",
+    "kicker": "Collective forecasting",
+    "summary": "A forecast about what other forecasters are expected to report, used to characterize shared information or latent expertise.",
+    "status": "foundational",
+    "status_label": "Source-derived aggregation concept",
+    "updated": "2026-09-26",
+    "formula": "m_i\\approx\\mathbb E_i[\\bar p_{-i}]",
+    "discover": "Give your own probability and also estimate the average probability you expect other people to give.",
+    "engineer": "Own forecasts p_i and meta-predictions m_i can be used jointly by aggregation methods designed to account for shared information without requiring long individual track records.",
+    "research": "Published meta-prediction methods differ in assumptions and algorithms; project-specific transforms require prospective evaluation and explicit provenance.",
+    "evidence": "Supported by peer-reviewed work on shared-information aggregation and meta-beliefs.",
+    "limits": "A meta-prediction is noisy and can contain projection or false-consensus bias; it is not the true shared prior.",
+    "related": [
+      "collective-forecasting",
+      "brier-diversity-identity",
+      "forecast-calibration",
+      "prediction-market"
+    ]
+  },
+  {
+    "id": "brier-diversity-identity",
+    "title": "Brier diversity identity",
+    "kicker": "Forecast aggregation",
+    "summary": "Exact squared-error decomposition relating the Brier loss of an arithmetic mean to average individual loss and forecast diversity.",
+    "status": "foundational",
+    "status_label": "Mathematical identity",
+    "updated": "2026-09-26",
+    "formula": "BS(\\bar p,y)=\\frac1n\\sum_i BS(p_i,y)-\\frac1n\\sum_i(p_i-\\bar p)^2",
+    "discover": "Averaging can cancel part of individual squared errors; the identity says exactly how much disagreement is subtracted.",
+    "engineer": "The mean forecast's Brier loss equals mean individual Brier loss minus the average squared deviation of forecasts around their mean.",
+    "research": "This is an algebraic identity, not an optimality theorem for pooling independent evidence.",
+    "evidence": "Exact algebra under the normalized binary squared-loss convention.",
+    "limits": "Error cancellation does not imply that arithmetic averaging reconstructs the posterior from all independent clues.",
+    "related": [
+      "brier-score",
+      "collective-forecasting",
+      "meta-prediction",
+      "proper-scoring-rule"
+    ]
   }
 ]
