@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "updated": "2026-09-25",
+  "updated": "2026-09-26",
   "language": "fr",
   "source_note": "Canonical Diderot notation registry. Initial entries were seeded from the 2026-08-30 function/graph learning session; adaptive-decision notation was appended on 2026-09-01; injectivity was added on 2026-09-20 from the successor-map learning session, under the pinned pedagogical harness with per-entry authority records; binary operations / internal composition laws were added on 2026-09-20 from the addition-on-N learning session; parameterized properties/predicates and their associated truth sets were added on 2026-09-21 from the induction-principle learning session; successor/stability, induction, result labels, groups, structured spaces, and basic topology were capitalized from the 2026-09-21 learning sequence; Z/nZ, congruence classes, nZ, rings and fields were capitalized from the 2026-09-22 learning sequence.",
   "maturity_levels": {
@@ -3040,21 +3040,21 @@
       "display": "BS(p,y)",
       "latex": "BS(p,y)=(p-y)^2",
       "aliases": [
-        "Brier score",
-        "quadratic probability score (binary loss form)"
+        "normalized binary Brier loss",
+        "binary quadratic probability loss"
       ],
       "spoken": {
         "fr_literal": "B S de p et y égale p moins y au carré",
-        "fr_natural": "l'erreur quadratique entre la probabilité annoncée p et le résultat binaire y"
+        "fr_natural": "la perte quadratique normalisée entre la probabilité p et le résultat binaire y"
       },
-      "concept": "Brier score for a binary probabilistic forecast",
+      "concept": "normalized binary Brier loss",
       "category": "probabilités et évaluation",
-      "formal": "Pour p∈[0,1] et y∈{0,1}, BS(p,y)=(p-y)^2. Une valeur plus faible indique une perte quadratique plus faible sur l'observation considérée.",
-      "plain_language": "On mesure à quelle distance la probabilité annoncée se trouve du résultat 0 ou 1 finalement observé.",
-      "why_here": "Engineering Collective Forecasting utilise le Brier score comme métrique primaire appariée pour comparer un marché à l'agrégation simple sur les mêmes Forecast Contracts résolus.",
+      "formal": "Pour p∈[0,1] et y∈{0,1}, ce projet définit BS(p,y)=(p-y)^2. Le score catégoriel original de Brier somme les erreurs des deux catégories et vaut 2(p-y)^2 dans le cas binaire.",
+      "plain_language": "On met au carré l'écart entre la probabilité annoncée et le résultat 0 ou 1; ici on utilise explicitement la convention binaire normalisée.",
+      "why_here": "Study 0 compare prospectivement le collectif privé au forecast du responsable et au taux de base sur les mêmes Forecast Contracts.",
       "example": {
-        "statement": "y=1, p=0.8 ⇒ BS=0.04; p=0.2 ⇒ BS=0.64",
-        "explanation": "Une prévision confiante dans la mauvaise direction reçoit une perte beaucoup plus grande."
+        "statement": "y=1, p=0.8 ⇒ BS=0.04",
+        "explanation": "Avec la convention binaire normalisée; la somme sur deux catégories donnerait 0.08."
       },
       "prerequisites": [
         "probabilité",
@@ -3064,14 +3064,14 @@
       "encounters": [
         {
           "source_ref": "2026-09-25--prediction-markets-proper-scoring",
-          "context": "Diderot concepts Brier score / proper scoring rule and Engineering Collective Forecasting Study 0",
-          "contribution": "Brier score capitalisé comme langage de comparaison probabiliste, avec frontière explicite entre un événement et une comparaison de méthodes."
+          "context": "Revised Study 0 private collective forecasting",
+          "contribution": "Convention binaire normalisée rendue explicite après revue indépendante."
         }
       ],
       "connections": [
         "proper-scoring-rule",
         "forecast-calibration",
-        "prediction-market"
+        "brier-diversity-identity"
       ],
       "domains": [
         "probabilités",
@@ -3080,24 +3080,24 @@
         "ingénierie sous incertitude"
       ],
       "misconception": {
-        "wrong": "Une méthode avec le meilleur Brier score sur un seul événement est démontrée supérieure.",
-        "correction": "Un événement donne une seule observation; comparer des méthodes exige un ensemble prospectif de contrats et une analyse de dépendance/incertitude."
+        "wrong": "Tous les articles appelés Brier score utilisent numériquement exactement la même convention binaire.",
+        "correction": "La somme originale sur deux catégories vaut deux fois la convention BS(p,y)=(p-y)^2 utilisée ici."
       },
       "authority": {
         "mathematical_sources": [
           {
             "type": "primary_classic",
-            "reference": "Brier, G. W. (1950), Verification of Forecasts Expressed in Terms of Probability",
+            "reference": "Brier (1950), Verification of Forecasts Expressed in Terms of Probability",
             "status": "catalogued"
           },
           {
             "type": "peer_reviewed_primary",
-            "reference": "Gneiting & Raftery (2007), Strictly Proper Scoring Rules, Prediction, and Estimation, DOI 10.1198/016214506000001437",
+            "reference": "Gneiting & Raftery (2007), DOI 10.1198/016214506000001437",
             "status": "catalogued"
           }
         ],
         "pedagogical_sources": [
-          "Diderot learning synthesis 2026-09-25"
+          "Diderot learning synthesis 2026-09-26"
         ],
         "scientific_authority": false
       },
@@ -3113,16 +3113,16 @@
       ],
       "spoken": {
         "fr_literal": "F calligraphique indice j",
-        "fr_natural": "le Forecast Contract numéro j, c'est-à-dire l'objet qui fige la question et sa résolution"
+        "fr_natural": "le Forecast Contract j, l'objet qui fige la question, ses références et sa résolution"
       },
       "concept": "project-local Forecast Contract object",
       "category": "prévision et preuve",
-      "formal": "Dans Engineering Collective Forecasting, \\mathcal F_j désigne le tuple prospectivement figé contenant notamment question, espace de résultat, temps, règle de résolution, preuve d'autorité, resolver, exclusions et safeguards.",
-      "plain_language": "C'est le dossier contractuel minimal qui dit exactement ce qui est prévu et comment on saura plus tard si l'événement s'est produit.",
-      "why_here": "La notation compacte évite de confondre une phrase de sondage avec l'objet versionné/auditable utilisé par Study 0.",
+      "formal": "Dans Engineering Collective Forecasting, \\mathcal F_j=(Q_j,\\Omega_j,T_j,R_j,E_j,A_j,B_j,C_j,X_j,S_j) regroupe question, issue, timing, résolution, preuve, resolver, références institutionnelles, contexte, exclusions et safeguards.",
+      "plain_language": "Le dossier minimal qui fixe à l'avance ce qui est prévu, par rapport à quoi, et comment le résultat sera établi.",
+      "why_here": "Study 0A qualifie d'abord la capacité à construire ces contrats; Study 0B n'utilise que les contrats admissibles.",
       "example": {
-        "statement": "\\mathcal F_{17}=(Q_{17},\\Omega_{17},T_{17},R_{17},E_{17},A_{17},\\ldots)",
-        "explanation": "Le contrat 17 regroupe la question, l'issue possible, les temps, la règle de résolution, la preuve d'autorité et l'autorité de résolution."
+        "statement": "\\mathcal F_{17}=(Q_{17},\\Omega_{17},T_{17},R_{17},E_{17},A_{17},B_{17},\\ldots)",
+        "explanation": "B17 porte notamment la définition des références institutionnelles telles que taux de base et rôle responsable."
       },
       "prerequisites": [
         "tuple",
@@ -3133,14 +3133,15 @@
       "encounters": [
         {
           "source_ref": "2026-09-25--engineering-collective-forecasting-protocol",
-          "context": "Forecast Contract concept page and Study 0 protocol",
-          "contribution": "Notation locale distinguée explicitement d'un standard externe."
+          "context": "Study 0A/0B redesign",
+          "contribution": "Ajout explicite des références institutionnelles et du data-custody boundary après revue."
         }
       ],
       "connections": [
         "forecast-contract",
         "collective-forecasting",
-        "brier-score-notation"
+        "brier-score-notation",
+        "meta-prediction-notation"
       ],
       "domains": [
         "prévision",
@@ -3148,19 +3149,19 @@
         "gouvernance de preuve"
       ],
       "misconception": {
-        "wrong": "𝓕ⱼ est une notation standard reconnue des prediction markets.",
-        "correction": "C'est une convention locale du projet Engineering Collective Forecasting, documentée comme telle."
+        "wrong": "𝓕ⱼ est un standard externe des prediction markets.",
+        "correction": "C'est une convention locale du projet Engineering Collective Forecasting."
       },
       "authority": {
         "mathematical_sources": [
           {
             "type": "project_protocol",
-            "reference": "Engineering Collective Forecasting bootstrap commit c8a35166870d578efade26eef0eaaef9f5a5251e",
+            "reference": "Engineering Collective Forecasting revised protocol commit a936054a68b2fd11918000c47ddc751a19ffc520",
             "status": "project-local"
           }
         ],
         "pedagogical_sources": [
-          "Diderot learning synthesis 2026-09-25"
+          "Diderot learning synthesis 2026-09-26"
         ],
         "scientific_authority": false
       },
@@ -3177,16 +3178,16 @@
       ],
       "spoken": {
         "fr_literal": "p indice t exposant M",
-        "fr_natural": "la probabilité agrégée affichée par le marché au temps t"
+        "fr_natural": "la probabilité agrégée portée par le marché au temps t"
       },
       "concept": "time-indexed prediction-market forecast probability",
       "category": "prévision probabiliste",
-      "formal": "p_t^M\\in[0,1] désigne, dans ce projet, la probabilité de l'événement produite par l'état du marché au temps t sous une configuration de mécanisme donnée.",
-      "plain_language": "C'est le chiffre de probabilité porté par le marché à un instant précis, pas la vérité future.",
-      "why_here": "Study 0 distingue la trajectoire p_t^M du seul p^M à la fermeture utilisé dans la comparaison primaire.",
+      "formal": "p_t^M∈[0,1] désigne la probabilité issue de l'état d'un marché de prédiction au temps t sous une configuration de mécanisme donnée.",
+      "plain_language": "Le chiffre de probabilité affiché par un marché à cet instant; ce n'est ni la vérité ni une décision.",
+      "why_here": "Le marché est désormais réservé à une étude ultérieure de valeur résiduelle, comparée à un agrégateur privé au même temps d'information.",
       "example": {
         "statement": "p_{close}^M=0.68",
-        "explanation": "À la fermeture du contrat, le marché donne 68% à l'événement; ce 0.68 sera ensuite scoré contre le résultat 0/1."
+        "explanation": "Une future étude de marché scorerait 0.68 contre l'issue, mais Study 0 n'expose aucun prix de marché."
       },
       "prerequisites": [
         "probabilité",
@@ -3196,14 +3197,14 @@
       "encounters": [
         {
           "source_ref": "2026-09-25--engineering-collective-forecasting-protocol",
-          "context": "Prediction market concept and Study 0 analysis",
-          "contribution": "Séparation entre trajectoire du marché et probabilité terminale gelée."
+          "context": "Post-review research roadmap",
+          "contribution": "Notation conservée comme notion générale, explicitement sortie de Study 0."
         }
       ],
       "connections": [
         "prediction-market",
         "forecast-calibration",
-        "brier-score-notation"
+        "collective-forecasting"
       ],
       "domains": [
         "prévision",
@@ -3211,16 +3212,11 @@
         "ingénierie sous incertitude"
       ],
       "misconception": {
-        "wrong": "p_t^M est une probabilité objective vraie de l'événement.",
-        "correction": "C'est une prévision dépendante du mécanisme, des participants, des informations et de la configuration au temps t."
+        "wrong": "p_t^M est une probabilité objective vraie.",
+        "correction": "C'est une prévision dépendante du mécanisme, des participants, de l'information et de la configuration."
       },
       "authority": {
         "mathematical_sources": [
-          {
-            "type": "project_protocol",
-            "reference": "Engineering Collective Forecasting bootstrap commit c8a35166870d578efade26eef0eaaef9f5a5251e",
-            "status": "project-local"
-          },
           {
             "type": "peer_reviewed_primary",
             "reference": "Hanson (2007), DOI 10.5750/jpm.v1i1.417",
@@ -3228,7 +3224,75 @@
           }
         ],
         "pedagogical_sources": [
-          "Diderot learning synthesis 2026-09-25"
+          "Diderot learning synthesis 2026-09-26"
+        ],
+        "scientific_authority": false
+      },
+      "status": "draft",
+      "maturity": "L1"
+    },
+    {
+      "id": "meta-prediction-notation",
+      "display": "mᵢ",
+      "latex": "m_i",
+      "aliases": [
+        "meta-prediction",
+        "predicted peer mean"
+      ],
+      "spoken": {
+        "fr_literal": "m indice i",
+        "fr_natural": "la prévision par la personne i de la probabilité moyenne qu'annonceront les autres"
+      },
+      "concept": "meta-prediction of peer-average forecast",
+      "category": "prévision probabiliste",
+      "formal": "m_i approxime l'espérance subjective de la moyenne des forecasts des autres répondants, conditionnellement à l'information de i.",
+      "plain_language": "En plus de donner son propre pourcentage, i essaie de prévoir le pourcentage moyen que donneront les autres.",
+      "why_here": "Les méta-prédictions peuvent aider à distinguer information partagée et information privée sans exposer un agrégat avant résolution.",
+      "example": {
+        "statement": "p_i=0.70, m_i=0.50",
+        "explanation": "i pense l'événement plus probable que ce qu'il anticipe comme consensus de ses pairs."
+      },
+      "prerequisites": [
+        "probabilité",
+        "espérance",
+        "prévision collective"
+      ],
+      "encounters": [
+        {
+          "source_ref": "2026-09-25--prediction-markets-proper-scoring",
+          "context": "Meta-prediction concept added after Study 0 independent review",
+          "contribution": "Nouvelle variable d'élicitation privée pour étudier l'information partagée."
+        }
+      ],
+      "connections": [
+        "meta-prediction",
+        "collective-forecasting",
+        "forecast-calibration"
+      ],
+      "domains": [
+        "prévision",
+        "wisdom of crowds",
+        "ingénierie sous incertitude"
+      ],
+      "misconception": {
+        "wrong": "m_i est le vrai prior partagé du groupe.",
+        "correction": "m_i est une croyance humaine bruitée sur les autres et peut contenir projection ou faux consensus."
+      },
+      "authority": {
+        "mathematical_sources": [
+          {
+            "type": "peer_reviewed_primary",
+            "reference": "Palley & Soll (2019), DOI 10.1287/mnsc.2018.3047",
+            "status": "catalogued"
+          },
+          {
+            "type": "peer_reviewed_primary",
+            "reference": "Peker & Wilkening (2025), DOI 10.1016/j.ijforecast.2024.09.005",
+            "status": "catalogued"
+          }
+        ],
+        "pedagogical_sources": [
+          "Diderot learning synthesis 2026-09-26"
         ],
         "scientific_authority": false
       },
