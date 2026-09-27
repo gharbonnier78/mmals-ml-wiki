@@ -44,7 +44,9 @@
     "dynamics": "source-derived",
     "reconstruction-information": "source-derived",
     "methodology": "diderot-synthesis",
-    "world-model": "diderot-synthesis"
+    "world-model": "diderot-synthesis",
+    "probabilistic-forecasting": "source-derived",
+    "engineering-forecasting-hypothesis": "project-hypothesis"
   },
   "concept_overrides": {
     "belief-model-memory": "diderot-synthesis"
