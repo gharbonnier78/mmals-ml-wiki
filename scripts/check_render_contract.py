@@ -71,8 +71,11 @@ for page in sorted(ROOT.rglob("*.html")):
     if matches:
         formula_pages.append(page)
         formula_count += len(matches)
-        if any(not plain_text(item).strip() for item in matches):
+        clean_all = [plain_text(item).strip() for item in matches]
+        if any(not item for item in clean_all):
             errors.append(f"{page.relative_to(ROOT)}: empty formula block")
+        if any(any(ord(ch) < 32 and ch not in "\n\r" for ch in formula) for formula in clean_all):
+            errors.append(f"{page.relative_to(ROOT)}: control character found inside formula block")
         if expected_runtime(page, SITE_JS) not in text:
             errors.append(f"{page.relative_to(ROOT)}: formula page does not load shared site runtime")
 
