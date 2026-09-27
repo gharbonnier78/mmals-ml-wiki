@@ -1,13 +1,13 @@
 ---
 title: "Engineering Collective Forecasting — Study 0A/0B revised protocol"
-canonical_url: "https://github.com/gharbonnier78/engineering-collective-forecasting/commit/a936054a68b2fd11918000c47ddc751a19ffc520"
+canonical_url: "https://github.com/gharbonnier78/engineering-collective-forecasting/commit/b38feb509f9b3ed94e37f590b441e0e906601341"
 author_or_publisher: "Guillaume Harbonnier"
 publication_date: "2026-09-25"
-updated_at: "2026-09-26"
+updated_at: "2026-09-27"
 source_type: "project protocol / research design"
-reviewed_at: "2026-09-26"
+reviewed_at: "2026-09-27"
 relevance: "P0"
-evidence_quality: "protocol only; bootstrap received PARTIAL ACCEPT and revised protocol awaits rereview; no empirical Study 0 evidence"
+evidence_quality: "accepted protocol; G1 released; no empirical Study 0 evidence"
 related_tracks: ["engineering collective forecasting", "uncertainty", "evidence-guided engineering"]
 related_concepts: ["Forecast Contract", "collective forecasting", "meta-prediction", "prediction market", "Brier score", "forecast calibration", "Brier diversity identity"]
 retention_verdict: "retain as project-local formalism and protocol history"
@@ -19,7 +19,7 @@ retention_verdict: "retain as project-local formalism and protocol history"
 
 The original bootstrap at commit `c8a3516` centered Study 0 on a prediction-market-versus-private-mean contrast. Independent review returned **PARTIAL ACCEPT**: the scaffold was accepted, but G1 was not released.
 
-The revised protocol at commit `a936054a68b2fd11918000c47ddc751a19ffc520` applies the minimum-sufficient-mechanism critique before any Study 0 outcomes exist.
+The accepted protocol was squash-merged at commit `b38feb509f9b3ed94e37f590b441e0e906601341` after independent bounded verification of the revised design and R1--R6 closure. No Study 0 outcomes existed at merge time.
 
 ## Central contribution of the revised protocol
 
@@ -51,4 +51,4 @@ Forecast Contract remains project terminology, not an external standard. The fix
 
 - Primary PR: https://github.com/gharbonnier78/engineering-collective-forecasting/pull/1
 - Original reviewed bootstrap: https://github.com/gharbonnier78/engineering-collective-forecasting/commit/c8a35166870d578efade26eef0eaaef9f5a5251e
-- Revised protocol head used by this Diderot update: https://github.com/gharbonnier78/engineering-collective-forecasting/commit/a936054a68b2fd11918000c47ddc751a19ffc520
+- Accepted merged protocol used by this Diderot update: https://github.com/gharbonnier78/engineering-collective-forecasting/commit/b38feb509f9b3ed94e37f590b441e0e906601341
